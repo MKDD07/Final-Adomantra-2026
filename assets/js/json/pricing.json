@@ -1,0 +1,53 @@
+[
+  {
+    "id": "starter",
+    "name": "Starter Plan",
+    "subtitle": "For startups",
+    "icon": "fa-solid fa-rocket",
+    "priceMonth": 1000,
+    "priceYear": 9900,
+    "description": "Prove value in two weeks with a clickable UX, tech spike, and a clear go/no-go roadmap.",
+    "features": [
+      "Discovery workshop",
+      "Opportunity brief",
+      "Clickable UX",
+      "1 data source & 1 integration"
+    ],
+    "styleClass": "",
+    "delay": "0"
+  },
+  {
+    "id": "growth",
+    "name": "Growth Plan",
+    "subtitle": "For scaling businesses",
+    "icon": "fa-solid fa-chart-line",
+    "priceMonth": 1400,
+    "priceYear": 14900,
+    "description": "Accelerate growth with scalable tech stack, optimized conversion funnels, and robust analytics.",
+    "features": [
+      "Everything in Starter",
+      "Full digital audit & SEO plan",
+      "Custom components & integrations",
+      "Monthly optimization & scaling"
+    ],
+    "styleClass": "style-black",
+    "delay": "0.1"
+  },
+  {
+    "id": "enterprise",
+    "name": "Enterprise Plan",
+    "subtitle": "For organisations",
+    "icon": "fa-solid fa-building",
+    "priceMonth": 1700,
+    "priceYear": 19900,
+    "description": "Compliance-ready delivery for complex orgs—multi-env releases, canaries, and change management.",
+    "features": [
+      "Everything in Growth",
+      "CI/CD, tracing, alerts, guardrails",
+      "Full evaluation & custom dashboards",
+      "Unlimited data sources & support"
+    ],
+    "styleClass": "",
+    "delay": "0.2"
+  }
+]
