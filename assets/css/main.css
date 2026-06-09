@@ -910,6 +910,13 @@ p {
   display: block;
 }
 
+@media (max-width: 575px) {
+  #loader-logo-svg svg {
+    width: 80px !important;
+    height: auto !important;
+  }
+}
+
 #loader-logo-svg path {
   fill: none;
   stroke: white;
@@ -5482,7 +5489,7 @@ p {
 }
 
 .testimonial-review-logo img {
-  width: 100px;
+  width: 30px;
   position: absolute;
   top: 0;
   right: 0;
