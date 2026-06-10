@@ -780,7 +780,37 @@
         </div>
       </section>
       <!--===== Team-vision Section    S T A R T =====-->
+      <section id="ado-hscroll-section" class="ado-hs-section">
+        <div id="ado-hscroll-pin" class="ado-hs-pin">
+          <!-- Scroll hint -->
+          <div id="ado-hscroll-hint" class="ado-hs-hint">
+            <span>Scroll</span>
+            <svg width="28" height="14" viewBox="0 0 28 14" fill="none">
+              <path d="M0 7h26M20 1l6 6-6 6" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
 
+          <!-- Horizontal track — GSAP translates this -->
+          <div id="ado-hscroll-track" class="ado-hs-track mb-5">
+            <!-- Skeleton placeholders (delay set inline — only dynamic value) -->
+            <div class=" ado-hs-skeleton ado-hs-card--lg" style="animation-delay:0s;"></div>
+            <div class="ado-hs-skeleton ado-hs-card--sm" style="animation-delay:.08s;"></div>
+            <div class="ado-hs-skeleton ado-hs-card--xl" style="animation-delay:.16s;"></div>
+            <div class="ado-hs-skeleton ado-hs-card--md" style="animation-delay:.24s;"></div>
+            <div class="ado-hs-skeleton ado-hs-card--lg" style="animation-delay:.32s;"></div>
+            <div class="ado-hs-skeleton ado-hs-card--sm" style="animation-delay:.40s;"></div>
+            <div class="ado-hs-skeleton ado-hs-card--md" style="animation-delay:.48s;"></div>
+            <div class="ado-hs-skeleton ado-hs-card--xl" style="animation-delay:.56s;"></div>
+            <div class="ado-hs-skeleton ado-hs-card--sm" style="animation-delay:.64s;"></div>
+            <div class="ado-hs-skeleton ado-hs-card--lg" style="animation-delay:.72s;"></div>
+            <div class="ado-hs-skeleton ado-hs-card--md" style="animation-delay:.80s;"></div>
+            <div class="ado-hs-skeleton ado-hs-card--sm" style="animation-delay:.88s;"></div>
+          </div>
+        </div>
+        <h2 class="text-center mt-5 rr-text-move scaleup">Our <r>Team</r>
+        </h2>
+      </section>
       <div class="team-vision overflow-hidden bg-img"
         style="background-image: url(assets/imgs/inner/team/team-vision-bg.png);">
         <div class="container rr-container-1800">
@@ -962,7 +992,7 @@
   <script src="assets/js/header.js"></script>
   <script src="assets/js/contact-drawer.js"></script>
   <script src="assets/js/offline-cache.js"></script>
-  <script src="assets/js/pexels_services.js"></script>
+  <script src="assets/js/pexels-service-final.js"></script>
   <script src="assets/js/news_config.js"></script>
   <script src="assets/js/breadcrumb-data.js"></script>
   <script src="assets/js/team_data.js"></script>
@@ -976,21 +1006,14 @@
     (function () {
       /* ── Pexels fetch (page-offset so each member gets a unique photo) ── */
       async function fetchPortrait(query, page) {
-        var img = await fetchPexelsImage(query, false, {
-          page: page + 1,
-          orientation: 'portrait',
-          fallback: ''
-        });
-        if (img && img !== PEXELS_API_CONFIG.fallbackImage) {
+        var westernQuery = (query || '').replace(/indian/gi, 'american');
+        var img = await PexelsLoader.fetch(westernQuery, false, 'portrait');
+        if (img && img.indexOf('service_0001.jpg') === -1 && img.indexOf('team-thumb1_2.jpg') === -1) {
           return img;
         }
         /* Fallback */
         var gender = /woman|female/i.test(query) ? 'woman' : 'man';
-        return fetchPexelsImage('american ' + gender + ' professional', false, {
-          page: page + 1,
-          orientation: 'portrait',
-          fallback: 'assets/imgs/inner/team/team-thumb1_2.jpg'
-        });
+        return PexelsLoader.fetch('american ' + gender + ' professional portrait', false, 'portrait');
       }
 
       /* ── Build flip-card HTML ── */
