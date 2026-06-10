@@ -1764,9 +1764,14 @@ p {
   display: flex;
   border-radius: 500px;
   text-transform: uppercase;
-  border: 1px solid var(--neutral-300);
   font-family: var(--font_kanit);
   width: fit-content;
+  background: #ffffff61;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    0 4px 5px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .section__subtitle span {
