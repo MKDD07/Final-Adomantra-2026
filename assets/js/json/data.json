@@ -1,0 +1,3144 @@
+{
+  "services": [
+    {
+      "id": "ctv-advertising",
+      "icon": "fa-solid fa-tv",
+      "category": "Media & Advertising",
+      "title": "CTV Advertising",
+      "slug": "ctv-advertising",
+      "order": 1,
+      "metaDescription": "Connect with TV viewers in the streaming age. Our CTV advertising solutions deliver targeted, high-impact ads across connected devices with precise audience segmentation and real-time performance tracking.",
+      "metaKeywords": "CTV advertising, connected TV ads, streaming ads, OTT advertising, video advertising, cord-cutting advertising",
+      "serviceIcon": "assets/imgs/inner/service-details/services_geo_001.png",
+      "serviceThumb": "assets/images/service/services-card/service_0001.jpg",
+      "sections": {
+        "hero": {
+          "id": "hero",
+          "enabled": true,
+          "type": "hero_section",
+          "title": "Reach Your Audience Where They're Watching",
+          "subtitle": "Streaming-First Ad Solutions",
+          "description": "The traditional TV audience today is shifting to streaming platforms. Viewing this, connected TV (CTV) has become an essential for reaching engaged audiences. Adomanta specializes in CTV advertising strategies that can put your brand exactly where your targeted audiences are. The team here precisely combines television-scale visibility with digital-level targeting, analytics, and optimization. Be it awareness campaigns or performance-focused video advertising, our strategies ensure your brand captures full-screen attention without interruption.",
+          "cta": {
+            "text": "Start Your CTV Campaign",
+            "url": "#"
+          }
+        },
+        "overview": {
+          "id": "overview",
+          "enabled": true,
+          "type": "content_section",
+          "title": "Connected TV Advertising Explained",
+          "image": "assets/imgs/inner/service-details/services_geo_002.jpg",
+          "content": "In a revolutionary era, CTV advertising is referred to as the next growth in digital media. Unlike traditional broadcast television, it delivers ads programmatically to viewers streaming content across internet-connected devices. This way, our approach combines the broad reach of television with the precision targeting of digital marketing. Result? It allows brands to reach the right audience at the right moment with compelling video content on platforms like JioCinema, Disney+ Hotstar, Amazon Prime Video, etc. And the best part? They can measure every impression, view, and conversation in real time.",
+          "steps": [
+            "Audience Identification.",
+            "Programmatic Inventory Procurement.",
+            "Full-Screen Ad Delivery.",
+            "Real-Time Measurement and Optimization."
+          ]
+        },
+        "benefits": {
+          "id": "benefits",
+          "enabled": true,
+          "type": "benefits_section",
+          "title": "Why CTV Advertising benifits for Your Business",
+          "benefits": [
+            {
+              "number": 1,
+              "icon": "fa-solid fa-bullseye",
+              "title": "Massive Reach with Precision Scale",
+              "description": "You can get a chance to connect with India's 129M+ CTV viewers while targeting specific demographics, geographies, interests, and behaviours simultaneously."
+            },
+            {
+              "number": 2,
+              "icon": "fa-solid fa-crown",
+              "title": "Premium Brand-Safe Placement",
+              "description": "It enables the ads to appear in high-quality brand-safe content environments on leading streaming platforms."
+            },
+            {
+              "number": 3,
+              "icon": "fa-solid fa-users",
+              "title": "Advanced Audience Targeting",
+              "description": "With first-party data, behavioural insights, demographic profiles, and purchase intent signals, CTV can target who you want."
+            },
+            {
+              "number": 4,
+              "icon": "fa-solid fa-tv",
+              "title": "Full-Screen, Undivided Attention",
+              "description": "CTV ads enable you to play full-screen with no browser tabs, notifications, or competing content. But compared to standard display ads, which only offer 50% viewability, it offers 95%+."
+            },
+            {
+              "number": 5,
+              "icon": "fa-solid fa-chart-line",
+              "title": "Real-Time Performance Tracking",
+              "description": "When it comes to real results, our CTV advertising solution lets brands monitor impressions, view-through rates, engagement metrics, and conversion data instantly."
+            },
+            {
+              "number": 6,
+              "icon": "fa-solid fa-mobile-screen",
+              "title": "Cross-Device Consistency",
+              "description": "Maintain flawless distribution of messages across smart TVs, tablets, smartphones, etc., while building a complete customer journey."
+            }
+          ],
+          "closingStatement": "We create CTV campaigns that don't just reach viewers; they capture attention, build brand recall, and turn streaming audiences into real customers."
+        },
+        "solutions": {
+          "id": "solutions",
+          "enabled": true,
+          "type": "solutions_section",
+          "title": "Why Choose Adomantra for CTV Advertising?",
+          "description": "",
+          "solutions": [
+            {
+              "title": "Strategic CTV Campaign Planning",
+              "description": "We begin with an audit of your brand's audience, including mapping viewer personas, content consumption patterns, and competitive media positioning.",
+              "icon": "fa-solid fa-chart-line"
+            },
+            {
+              "title": "Premium Partnerships",
+              "description": "We partner with the major CTV platforms, which give brands access to our exclusive inventory and enhanced targeting capabilities unavailable elsewhere.",
+              "icon": "fa-solid fa-handshake"
+            },
+            {
+              "title": "Creative Development",
+              "description": "Our creative team produces video content made specifically for the CTV viewing experience.",
+              "icon": "fa-solid fa-clapperboard"
+            },
+            {
+              "title": "Advanced Audience Segmentation",
+              "description": "We build proprietary audience segments using first-party data, lookalike modeling, content affinity signals, purchase intent data, and geofencing.",
+              "icon": "fa-solid fa-users-viewfinder"
+            },
+            {
+              "title": "Real-Time Campaign Management",
+              "description": "Campaign experts monitor performance 24/7, adjusting bids, creative rotation, frequency caps, and audience parameters.",
+              "icon": "fa-solid fa-sliders"
+            },
+            {
+              "title": "Detailed Performance Analytics",
+              "description": "Reporting dashboards give metrics like impressions, view-through rates, click-through rates, cross-device attribution, etc.",
+              "icon": "fa-solid fa-gauge-high"
+            }
+          ]
+        },
+        "industries": {
+          "id": "industries",
+          "enabled": true,
+          "type": "industries_section",
+          "title": "Industries That Benefit from CTV Advertising",
+          "industries": [
+            "FMCG and D2C Brands",
+            "Education",
+            "Travel and Hospitality",
+            "Fintech and Banking",
+            "Real Estate",
+            "E-commerce"
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "enabled": true,
+          "type": "faq_section",
+          "title": "FAQs about <r>CTV Advertising</r>",
+          "faqs": [
+            {
+              "question": "What is CTV advertising, and how is it different from traditional TV?",
+              "answer": "CTV advertising is a form of digital video advertising that delivers ads through internet-connected devices like smart TVs, Roku, Apple TV, Fire TV, and more. Unlike traditional broadcast TV, CTV is entirely data-driven. This means ads are targeted based on audience behaviour, demographics, and intent, then measured in real time."
+            },
+            {
+              "question": "Can CTV advertising drive conversions?",
+              "answer": "Yes. Our CTV campaigns are capable enough to support attribution tracking. Hence, it allows brands to gauge website visits, leads, purchases, and cross-device engagement."
+            },
+            {
+              "question": "How is CTV advertising priced, and what are typical budget requirements?",
+              "answer": "CTV advertising is priced using a CPM (cost per thousand impressions) pricing model. And to provide you with a rough idea, it is priced depending on platform, audience targeting, and creative quality."
+            },
+            {
+              "question": "Which businesses should invest in CTV advertising?",
+              "answer": "CTV advertising works satisfactorily for brands that want to increase their brand awareness, improve brand recall, launch products, or target premium streaming audiences."
+            },
+            {
+              "question": "How do you ensure brand safety in CTV advertising?",
+              "answer": "Adomantra works with strong safety practices. For example, we carry out content whitelisting, blacklist inappropriate categories, work only with premium inventory sources, and monitor placements continuously."
+            },
+            {
+              "question": "Can CTV advertising be combined with other digital channels?",
+              "answer": "Unquestionably yes. We even suggest brands to work with multichannel strategies. For example, they can mix CTV with programmatic display, search, social media, and other channels. Doing so creates consistent promotional material, improves frequency management, and supports complete customer journey tracking across touchpoints."
+            },
+            {
+              "question": "How long does it take to launch a CTV campaign?",
+              "answer": "Most of the campaigns can be planned and launched within a time period of 2-4 weeks. However, it also depends on the creative production and targeting requirements."
+            },
+            {
+              "question": "What kind of ROI can we expect from CTV advertising?",
+              "answer": "The fact that CTV advertising ROI changes by industry, targeting precision, and creative quality. But to give you a rough idea, it typically ranges from 2:1 to 5:1+ return. On the contrary, E-commerce and performance-based campaigns are often seen enjoying higher ROI."
+            },
+            {
+              "question": "Why should I choose Adomantra for CTV advertising?",
+              "answer": "You can trust Adomantra since we've got premium inventory access, advanced targeting capabilities, creative expertise, and factual optimization to present high-performing campaigns."
+            }
+          ]
+        },
+        "testimonials": {
+          "id": "testimonials",
+          "enabled": true,
+          "type": "testimonials_section",
+          "title": "What Our Clients Say",
+          "displayCount": 3
+        },
+        "caseStudies": {
+          "id": "case-studies",
+          "enabled": true,
+          "type": "case_studies_section",
+          "title": "CTV Success Stories",
+          "displayCount": 2,
+          "link": "/case-studies"
+        },
+        "cta": {
+          "id": "cta",
+          "enabled": true,
+          "type": "cta_section",
+          "title": "Ready to Reach Your Audience on Connected TV?",
+          "subtitle": "Let's create a CTV strategy that drives real business results",
+          "buttonText": "Get Your Free CTV Strategy",
+          "buttonUrl": "#contact"
+        }
+      }
+    },
+    {
+      "id": "programmatic-advertising",
+      "category": "Media & Advertising",
+      "title": "Programmatic Advertising",
+      "slug": "programmatic-advertising",
+      "order": 2,
+      "metaDescription": "Automate your ad buying with precision targeting. Adomantra's programmatic advertising solutions leverage real-time bidding and advanced algorithms to reach 1.5B+ audiences with brand-safe, high-performing campaigns.",
+      "metaKeywords": "programmatic advertising, real-time bidding, RTB advertising, DSP, automated ads, display advertising, programmatic media buying",
+      "serviceIcon": "https://www.adomantra.com/asstes/img/solutions/1.png",
+      "serviceThumb": "assets/images/service/services-card/service_0002.jpg",
+      "sections": {
+        "hero": {
+          "id": "hero",
+          "enabled": true,
+          "type": "hero_section",
+          "title": "Programmatic Advertising: Precision Meets Automation",
+          "subtitle": "Reach 1.5 Billion Audiences with Data-Driven Intelligence",
+          "description": "Programmatic advertising automates the buying and selling of online ad space using advanced algorithms and real-time bidding. This technology-driven approach streamlines ad purchasing, enables precise targeting, and maximizes ROI by serving the right message to the right audience at the right moment.",
+          "cta": {
+            "text": "Start Your Programmatic Campaign",
+            "url": "#"
+          }
+        },
+        "overview": {
+          "id": "overview",
+          "enabled": true,
+          "type": "content_section",
+          "title": "Understanding Programmatic Advertising",
+          "content": "Programmatic advertising represents the automated buying and selling of online ad space using advanced algorithms and real-time bidding (RTB). Unlike traditional media buying, programmatic leverages data and machine learning to optimize every impression, ensuring your ads reach the right audience at the right time for maximum efficiency. With access to over 2,500 targeting combinations and partnerships with leading demand-side platforms (DSPs), we deliver campaigns that combine massive scale with surgical precision."
+        },
+        "benefits": {
+          "id": "benefits",
+          "enabled": true,
+          "type": "benefits_section",
+          "title": "Core Benefits of Programmatic Advertising",
+          "benefits": [
+            {
+              "title": "Time-Saving Automation",
+              "description": "Eliminate manual ad placement processes. Programmatic automation handles buying, placement, and optimization 24/7, freeing your team for strategic initiatives."
+            },
+            {
+              "title": "Pinpoint Audience Targeting",
+              "description": "Reach specific demographics, interests, and behaviors with 2,500+ targeting combinations. Show ads only to people most likely to convert."
+            },
+            {
+              "title": "Real-Time Optimization",
+              "description": "See campaign performance instantly and adjust strategies on the fly. Real-time data enables continuous improvement without campaign delays."
+            },
+            {
+              "title": "Cost Efficiency",
+              "description": "Automated bidding ensures you pay optimal prices for premium placements. Eliminate wasted spend and maximize your advertising budget efficiency."
+            },
+            {
+              "title": "Massive Audience Reach",
+              "description": "Access 1.5 billion+ global audiences across thousands of websites and platforms. Scale your brand presence across the entire digital ecosystem."
+            },
+            {
+              "title": "Personalized Ad Experience",
+              "description": "Deliver customized creative and messaging to different audience segments. Personalization increases relevance, engagement, and conversion rates."
+            },
+            {
+              "title": "Easy Campaign Scaling",
+              "description": "Expand campaigns across platforms, regions, and audience segments instantly. Maintain consistent messaging while reaching new markets."
+            },
+            {
+              "title": "Brand Safety & Transparency",
+              "description": "Know exactly where your ads appear and who sees them. Industry-leading brand safety tools protect your reputation and ad quality."
+            }
+          ]
+        },
+        "solutions": {
+          "id": "solutions",
+          "enabled": true,
+          "type": "solutions_section",
+          "title": "Adomantra's Full-Funnel Programmatic Solutions",
+          "description": "We deliver comprehensive programmatic advertising solutions across the complete customer journey.",
+          "solutions": [
+            {
+              "title": "Advanced Audience Targeting",
+              "description": "Reach your ideal customers using 2,500+ targeting combinations including demographics, interests, behaviors, purchase intent, and contextual signals. Our advanced targeting ensures maximum relevance.",
+              "icon": "target"
+            },
+            {
+              "title": "Premium Inventory Access",
+              "description": "Secure top-tier ad placements through strategic partnerships with leading Demand Side Platforms (DSPs) and Data Management Platforms (DMPs) for guaranteed quality and visibility.",
+              "icon": "star"
+            },
+            {
+              "title": "Brand Safety Protection",
+              "description": "Implement stringent brand safety measures using industry-leading tools like DoubleVerify. Protect your brand from fraudulent activities, inappropriate content, and brand misalignment.",
+              "icon": "shield"
+            },
+            {
+              "title": "End-to-End Campaign Support",
+              "description": "From pre-campaign strategy development through execution to post-campaign analysis, our expert teams handle every detail to ensure campaign success.",
+              "icon": "chart"
+            },
+            {
+              "title": "Cross-Device Advertising",
+              "description": "Engage audiences seamlessly across display, mobile, native, in-game, CTV, and video formats. Consistent messaging across all screens ensures brand presence wherever customers are."
+            },
+            {
+              "title": "Rich Media Enhancement",
+              "description": "Boost engagement with interactive and visually compelling rich media ads. Our custom rich media solutions capture up to 15x more attention than standard display ads."
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "id": "why-choose-us",
+          "enabled": true,
+          "type": "why_choose_section",
+          "title": "Why Choose  Adomantra   for Programmatic Advertising?",
+          "reasons": [
+            {
+              "title": "Digital Advertising Expertise",
+              "description": "Years of experience managing successful campaigns across programmatic platforms with deep understanding of algorithm optimization and RTB dynamics."
+            },
+            {
+              "title": "Data-Driven Methodology",
+              "description": "Every decision is backed by data. We analyze performance metrics, audience insights, and market trends to continuously improve campaign effectiveness."
+            },
+            {
+              "title": "Comprehensive Ad Solutions",
+              "description": "Whether you need display ads, video, native, or rich media, we handle all formats with creative excellence and technical precision."
+            },
+            {
+              "title": "Real-Time Performance Tracking",
+              "description": "Complete visibility into campaign metrics with instant reporting. See impressions, clicks, conversions, and ROI as it happens."
+            },
+            {
+              "title": "Cost-Efficient Campaigns",
+              "description": "Our optimization expertise ensures efficient spend allocation and maximum return on every advertising dollar invested."
+            }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "enabled": true,
+          "type": "faq_section",
+          "title": "Frequently Asked Questions About Programmatic Advertising",
+          "faqs": [
+            {
+              "question": "What is the difference between programmatic advertising and traditional media buying?",
+              "answer": "Traditional media buying involves manual negotiations and placements on specific sites. Programmatic advertising automates this process using algorithms and real-time bidding, enabling faster purchasing, better targeting, and continuous optimization. Programmatic is more efficient, data-driven, and scalable."
+            },
+            {
+              "question": "How does real-time bidding (RTB) work in programmatic advertising?",
+              "answer": "RTB is an automated auction process. When a user visits a website, an ad impression becomes available. Multiple advertisers bid simultaneously through a demand-side platform. The highest bidder's ad is served instantly—all within milliseconds. This ensures optimal price-to-value matching for every impression."
+            },
+            {
+              "question": "What are the 2,500+ targeting combinations available?",
+              "answer": "These combinations include demographics (age, gender, income), geographic location, behavioral data (browsing history, purchase intent), interests, device type, time of day, and contextual signals. Combined, these create highly specific audience segments that improve relevance and conversion rates."
+            },
+            {
+              "question": "How does programmatic advertising ensure brand safety?",
+              "answer": "We use industry-leading tools like DoubleVerify for brand safety verification. This includes content whitelisting, blacklisting inappropriate categories, monitoring for ad fraud, checking viewability standards, and ensuring ads appear only in quality environments aligned with your brand values."
+            },
+            {
+              "question": "What's the difference between programmatic advertising and Google Ads?",
+              "answer": "Google Ads includes some programmatic elements (especially Display Network) but combines automation with manual controls. True programmatic advertising across DSPs offers broader inventory access, more advanced targeting, better brand safety controls, and greater transparency."
+            },
+            {
+              "question": "How are DSPs and DMPs different and how do they work together?",
+              "answer": "A DSP (Demand-Side Platform) is where advertisers purchase ad inventory. A DMP (Data Management Platform) collects, manages, and analyzes audience data. Together, they enable precise targeting—the DMP provides audience insights, the DSP uses those insights to buy relevant inventory efficiently."
+            },
+            {
+              "question": "What kind of budget do I need for programmatic advertising?",
+              "answer": "Programmatic campaigns are flexible. Minimum budgets typically start at $5,000-$10,000 monthly depending on audience size and geographic scope. However, campaigns can be tailored to any budget size. We recommend dedicated budgets for testing before scaling successful campaigns."
+            },
+            {
+              "question": "How quickly can we see results from programmatic campaigns?",
+              "answer": "Impressions and clicks are visible immediately. However, meaningful performance data typically emerges after 2-4 weeks as sufficient data accumulates for statistical significance. Conversion data depends on your sales cycle length. We continuously optimize based on available data."
+            }
+          ]
+        },
+        "testimonials": {
+          "id": "testimonials",
+          "enabled": true,
+          "type": "testimonials_section",
+          "title": "What Our Clients Say",
+          "displayCount": 3
+        },
+        "caseStudies": {
+          "id": "case-studies",
+          "enabled": true,
+          "type": "case_studies_section",
+          "title": "Programmatic Success Stories",
+          "displayCount": 2,
+          "link": "/case-studies"
+        },
+        "cta": {
+          "id": "cta",
+          "enabled": true,
+          "type": "cta_section",
+          "title": "Ready to Transform Your Advertising with Programmatic?",
+          "subtitle": "Let's unlock the power of data-driven, automated advertising",
+          "buttonText": "Get Your Programmatic Strategy",
+          "buttonUrl": "#contact"
+        }
+      },
+      "icon": "fa-solid fa-robot"
+    },
+    {
+      "id": "pay-per-click-advertising",
+      "category": "Media & Advertising",
+      "title": "Pay-Per-Click (PPC) Advertising",
+      "slug": "pay-per-click-advertising",
+      "order": 3,
+      "metaDescription": "Drive immediate results with PPC advertising. Adomantra's expert team manages Google Ads, Bing, and social PPC campaigns with proven strategies to maximize ROI and conversion rates.",
+      "metaKeywords": "PPC advertising, pay per click, Google Ads, Bing Ads, search advertising, SEM, paid search marketing",
+      "serviceIcon": "https://www.adomantra.com/asstes/img/solutions/2.png",
+      "sections": {
+        "hero": {
+          "id": "hero",
+          "enabled": true,
+          "type": "hero_section",
+          "title": "PPC Advertising: Immediate Results, Measurable ROI",
+          "subtitle": "Strategic Pay-Per-Click Campaigns That Convert",
+          "description": "Pay-per-click advertising delivers immediate visibility to high-intent customers actively searching for your products and services. Our expert PPC management ensures every click counts, maximizing conversion rates and minimizing customer acquisition costs.",
+          "cta": {
+            "text": "Launch Your PPC Campaign",
+            "url": "#"
+          }
+        },
+        "overview": {
+          "id": "overview",
+          "enabled": true,
+          "type": "content_section",
+          "title": "Understanding Pay-Per-Click Advertising",
+          "content": "PPC advertising allows businesses to bid on keywords and appear at the top of search engine results. You pay only when someone clicks your ad—hence 'pay-per-click'. This performance-based model ensures you're investing in actual customer engagement. Google Ads and Bing Ads dominate search PPC, while social media platforms offer their own PPC opportunities. Effective PPC requires strategic keyword selection, compelling copywriting, optimized landing pages, and continuous bid management."
+        },
+        "benefits": {
+          "id": "benefits",
+          "enabled": true,
+          "type": "benefits_section",
+          "title": "Key Benefits of PPC Advertising",
+          "benefits": [
+            {
+              "title": "Immediate Visibility",
+              "description": "Appear at the top of search results instantly. Unlike SEO which takes months, PPC puts your ads in front of potential customers immediately."
+            },
+            {
+              "title": "High-Intent Customer Targeting",
+              "description": "Reach people actively searching for your products and services. PPC targets customers at the moment of peak purchase intent."
+            },
+            {
+              "title": "Cost Control & Transparency",
+              "description": "Set daily budgets and maximum bid amounts. You only pay for clicks, making budgeting predictable and efficient."
+            },
+            {
+              "title": "Measurable Results",
+              "description": "Track every metric: impressions, clicks, conversions, cost-per-acquisition, and ROI. Complete visibility into campaign performance and spending."
+            },
+            {
+              "title": "Precise Audience Targeting",
+              "description": "Target by keywords, location, device, time of day, demographics, and interests. Reach exactly the people most likely to convert."
+            },
+            {
+              "title": "A/B Testing & Optimization",
+              "description": "Test different ad copy, landing pages, and keywords. Continuous testing improves performance and reduces cost-per-conversion."
+            },
+            {
+              "title": "Flexible Campaign Management",
+              "description": "Pause, modify, or launch campaigns instantly. Respond quickly to market changes, seasonal trends, and performance data."
+            },
+            {
+              "title": "Competitive Advantage",
+              "description": "Appear above competitors on search results. PPC ensures your brand has visibility in competitive markets where ranking organically is difficult."
+            }
+          ]
+        },
+        "solutions": {
+          "id": "solutions",
+          "enabled": true,
+          "type": "solutions_section",
+          "title": "Our Comprehensive PPC Solutions",
+          "description": "Adomantra delivers strategic PPC services across all major platforms and campaign types.",
+          "solutions": [
+            {
+              "title": "Google Ads Management",
+              "description": "Expert management of Search, Display, Shopping, and YouTube campaigns. We optimize keyword selection, bidding strategies, and ad copy for maximum ROI.",
+              "icon": "google"
+            },
+            {
+              "title": "Keyword Research & Strategy",
+              "description": "Comprehensive keyword analysis identifying high-intent terms, search volume, competition levels, and commercial intent to build high-performing campaigns."
+            },
+            {
+              "title": "Ad Copy & Creative Optimization",
+              "description": "Compelling ad copy that highlights your unique value proposition. We test multiple variations to find winning combinations that improve click-through rates."
+            },
+            {
+              "title": "Landing Page Optimization",
+              "description": "Conversion-focused landing page design aligned with your ads. We ensure consistency, clear CTAs, and user experience that converts clicks into customers."
+            },
+            {
+              "title": "Bid Management & Optimization",
+              "description": "Strategic bidding ensures you achieve target cost-per-acquisition. We use manual, enhanced, and automated bidding strategies based on your goals."
+            },
+            {
+              "title": "Detailed Performance Reporting",
+              "description": "Transparent reporting on impressions, clicks, conversions, cost-per-click, return on ad spend (ROAS), and complete ROI analysis."
+            },
+            {
+              "title": "Bing & Social PPC",
+              "description": "Beyond Google, we manage campaigns on Bing Search, Facebook Ads, Instagram Ads, LinkedIn Ads, and TikTok for comprehensive paid search coverage."
+            },
+            {
+              "title": "Conversion Tracking Setup",
+              "description": "Proper implementation of conversion tracking ensures you understand which keywords, ads, and campaigns drive actual business results."
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "id": "why-choose-us",
+          "enabled": true,
+          "type": "why_choose_section",
+          "title": "Why Choose Adomantra for PPC Management?",
+          "reasons": [
+            {
+              "title": "Google Premier Partner Status",
+              "description": "Certified expertise with exclusive access to beta features and support ensuring your campaigns stay ahead of the competition."
+            },
+            {
+              "title": "Proven Track Record",
+              "description": "Years of successful PPC management across industries with proven ability to reduce cost-per-acquisition and improve ROAS consistently."
+            },
+            {
+              "title": "Strategic Approach",
+              "description": "Beyond bid management—we develop comprehensive keyword strategies, creative testing protocols, and optimization roadmaps for sustained success."
+            },
+            {
+              "title": "Continuous Optimization",
+              "description": "Weekly monitoring and regular optimization ensure your campaigns evolve with market conditions and deliver improving performance."
+            },
+            {
+              "title": "Transparent Communication",
+              "description": "Clear, regular reporting and proactive communication keep you informed of performance, opportunities, and recommendations."
+            }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "enabled": true,
+          "type": "faq_section",
+          "title": "Frequently Asked Questions About PPC Advertising",
+          "faqs": [
+            {
+              "question": "How does pay-per-click (PPC) advertising work?",
+              "answer": "You create ads and bid on keywords relevant to your business. When someone searches those keywords, your ads appear in search results. You pay only when someone clicks your ad—hence 'pay-per-click'. The amount you pay per click depends on your bid amount and quality score."
+            },
+            {
+              "question": "What is Quality Score in Google Ads and why does it matter?",
+              "answer": "Quality Score is Google's rating of your ad quality, landing page relevance, and expected click-through rate. Higher quality scores lower your cost-per-click and improve ad positioning. We optimize Quality Score by improving ad relevance, landing page experience, and historical performance."
+            },
+            {
+              "question": "What's the difference between Google Ads and SEO?",
+              "answer": "Google Ads provides immediate visibility at the top of search results for a fee (PPC). SEO is organic ranking improvement, which takes months but is free long-term. Both are valuable—PPC for immediate results and SEO for sustainable organic growth. Many businesses use both complementarily."
+            },
+            {
+              "question": "How much should I budget for PPC advertising?",
+              "answer": "PPC budgets vary widely. Minimum campaigns can start at $500-$1,000/month, but most businesses allocate $2,000-$10,000+ monthly depending on industry competitiveness, target keywords, and business goals. We help determine optimal budgets based on your objectives and expected ROI."
+            },
+            {
+              "question": "What is a good cost-per-click (CPC) and conversion rate for PPC?",
+              "answer": "CPC varies by industry—finance and legal services have high CPCs ($10-$100+), while e-commerce might be $0.50-$5. Conversion rates typically range 1-5% depending on industry and targeting quality. We focus on cost-per-acquisition and ROAS rather than individual metrics."
+            },
+            {
+              "question": "How long does it take to see results from PPC campaigns?",
+              "answer": "Results are visible immediately—you see impressions and clicks right away. However, meaningful performance data typically emerges after 2-4 weeks of data accumulation. Optimization is ongoing as we refine campaigns based on actual performance data."
+            },
+            {
+              "question": "What's the difference between Search PPC and Display PPC?",
+              "answer": "Search PPC appears on Google/Bing search results when people search keywords. Display PPC shows image/banner ads across websites in the Google Display Network. Search targets high-intent customers actively searching. Display reaches broader audiences interested in related topics."
+            },
+            {
+              "question": "Can PPC work for local businesses?",
+              "answer": "Absolutely. Location-based PPC targeting is powerful for local businesses. We use location targeting, local keywords, and location extensions to reach customers searching for your products/services near your business location."
+            }
+          ]
+        },
+        "testimonials": {
+          "id": "testimonials",
+          "enabled": true,
+          "type": "testimonials_section",
+          "title": "What Our Clients Say",
+          "displayCount": 3
+        },
+        "caseStudies": {
+          "id": "case-studies",
+          "enabled": true,
+          "type": "case_studies_section",
+          "title": "PPC Success Stories",
+          "displayCount": 2,
+          "link": "/case-studies"
+        },
+        "cta": {
+          "id": "cta",
+          "enabled": true,
+          "type": "cta_section",
+          "title": "Ready to Maximize Your PPC ROI?",
+          "subtitle": "Let's create a data-driven PPC strategy that converts",
+          "buttonText": "Get Your PPC Audit",
+          "buttonUrl": "#contact"
+        }
+      },
+      "icon": "fa-solid fa-arrow-pointer"
+    },
+    {
+      "id": "search-engine-optimization",
+      "category": "Growth & Strategy",
+      "title": "Search Engine Optimization (SEO)",
+      "slug": "search-engine-optimization",
+      "order": 4,
+      "metaDescription": "Dominate organic search rankings with expert SEO. Adomantra's proven strategies improve visibility, drive qualified traffic, and build sustainable online growth for your business.",
+      "metaKeywords": "SEO services, search engine optimization, organic search, Google ranking, SEO agency, technical SEO, on-page SEO",
+      "serviceIcon": "https://www.adomantra.com/asstes/img/solutions/3.png",
+      "sections": {
+        "hero": {
+          "id": "hero",
+          "enabled": true,
+          "type": "hero_section",
+          "title": "SEO That Drives Real Business Results",
+          "subtitle": "Sustainable Organic Growth Through Strategic Optimization",
+          "description": "Rank higher in Google search results and attract qualified customers actively searching for your products and services. Our comprehensive SEO strategies combine technical excellence, content strategy, and link building to achieve sustainable organic growth.",
+          "cta": {
+            "text": "Start Your SEO Journey",
+            "url": "#"
+          }
+        },
+        "overview": {
+          "id": "overview",
+          "enabled": true,
+          "type": "content_section",
+          "title": "Understanding Search Engine Optimization",
+          "content": "Search Engine Optimization (SEO) is the practice of improving your website to rank higher in organic search results. Unlike paid advertising, SEO builds sustainable visibility over time. Effective SEO requires optimization across three dimensions: technical SEO (site structure, speed, mobile-friendliness), on-page SEO (content, keywords, meta tags), and off-page SEO (links, authority, brand mentions). When done correctly, SEO drives continuous qualified traffic without ongoing ad spend—making it one of the highest-ROI digital marketing channels."
+        },
+        "benefits": {
+          "id": "benefits",
+          "enabled": true,
+          "type": "benefits_section",
+          "title": "Why SEO Is Essential for Your Business",
+          "benefits": [
+            {
+              "title": "Sustainable Long-Term Growth",
+              "description": "Unlike ads that stop working when you stop paying, SEO builds cumulative value. Strong rankings continue driving traffic indefinitely with maintenance."
+            },
+            {
+              "title": "High-Quality Qualified Traffic",
+              "description": "Organic traffic consists of people actively searching for what you offer. This intent-based audience converts at higher rates than other channels."
+            },
+            {
+              "title": "Cost-Effective Customer Acquisition",
+              "description": "While requiring upfront investment, SEO's long-term return on investment significantly exceeds paid advertising once rankings stabilize."
+            },
+            {
+              "title": "Builds Brand Authority",
+              "description": "Ranking for competitive keywords positions your brand as an industry authority and builds trust with potential customers."
+            },
+            {
+              "title": "Competitive Advantage",
+              "description": "Outrank competitors in organic search. Customers often don't look past the first page of results—SEO ensures you're visible."
+            },
+            {
+              "title": "Better User Experience",
+              "description": "SEO best practices improve site speed, mobile experience, and usability—making your site better for all visitors, not just search engines."
+            },
+            {
+              "title": "Synergy with Other Channels",
+              "description": "SEO strengthens PPC, social media, and content marketing efforts. Improved site authority and relevance benefits all digital channels."
+            },
+            {
+              "title": "Measurable Performance Tracking",
+              "description": "Monitor rankings, traffic, conversions, and revenue from organic search. Complete transparency into SEO performance and ROI."
+            }
+          ]
+        },
+        "solutions": {
+          "id": "solutions",
+          "enabled": true,
+          "type": "solutions_section",
+          "title": "Our Comprehensive SEO Services",
+          "description": "Adomantra delivers full-spectrum SEO solutions addressing all ranking factors.",
+          "solutions": [
+            {
+              "title": "SEO Audit & Analysis",
+              "description": "Comprehensive website audit identifying technical issues, on-page optimization opportunities, competitive gaps, and a strategic roadmap for improvement."
+            },
+            {
+              "title": "Keyword Research & Strategy",
+              "description": "Identify high-value keywords your target audience searches for. We analyze search volume, competition, commercial intent, and seasonal trends to build a winning keyword strategy."
+            },
+            {
+              "title": "Technical SEO",
+              "description": "Fix crawlability issues, improve site structure, optimize page speed, ensure mobile-friendliness, implement schema markup, and fix indexing problems for search engine success."
+            },
+            {
+              "title": "On-Page SEO",
+              "description": "Optimize title tags, meta descriptions, header tags, content, and internal linking. Ensure every page is optimized for target keywords and user experience."
+            },
+            {
+              "title": "Content Strategy & Creation",
+              "description": "Develop content that ranks AND converts. We create keyword-optimized, high-quality content addressing user intent and supporting business goals."
+            },
+            {
+              "title": "Link Building & Authority Development",
+              "description": "Acquire high-quality backlinks from authoritative sources. Strategic link building improves domain authority and improves ranking potential for competitive keywords."
+            },
+            {
+              "title": "Local SEO",
+              "description": "Optimize for local search. For local businesses, we improve Google My Business visibility, local citations, and location-based rankings."
+            },
+            {
+              "title": "Monthly Reporting & Monitoring",
+              "description": "Regular tracking of rankings, organic traffic, conversions, and competitors. Detailed reporting with actionable insights guides ongoing optimization."
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "id": "why-choose-us",
+          "enabled": true,
+          "type": "why_choose_section",
+          "title": "Why Choose Adomantra for SEO?",
+          "reasons": [
+            {
+              "title": "Proven SEO Expertise",
+              "description": "Years of successful SEO campaigns across industries with demonstrated ability to improve rankings, traffic, and conversions."
+            },
+            {
+              "title": "White-Hat Methods",
+              "description": "We follow Google's guidelines and best practices. No shortcuts or black-hat tactics that risk penalties—just sustainable, ethical SEO growth."
+            },
+            {
+              "title": "Comprehensive Approach",
+              "description": "We address technical SEO, on-page optimization, content strategy, and link building. This holistic approach achieves better results than single-tactic solutions."
+            },
+            {
+              "title": "Data-Driven Strategy",
+              "description": "Every recommendation is backed by data analysis. We identify opportunities with highest impact and prioritize accordingly."
+            },
+            {
+              "title": "Transparent Reporting",
+              "description": "Monthly reports show rankings, traffic, conversions, and ROI. Clear communication and honest assessment of progress and challenges."
+            }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "enabled": true,
+          "type": "faq_section",
+          "title": "Frequently Asked Questions About SEO",
+          "faqs": [
+            {
+              "question": "How long does it take to see SEO results?",
+              "answer": "Realistic SEO improvements typically take 3-6 months before significant ranking improvements. Highly competitive keywords may take 6-12 months. Some changes (like technical fixes) show impact quickly, while link building and content authority building take longer."
+            },
+            {
+              "question": "What are the most important SEO ranking factors?",
+              "answer": "Google's main ranking factors include: content quality and relevance, backlink quantity and quality, technical site health, mobile-friendliness, page speed, user experience signals, and domain authority. We optimize across all these dimensions."
+            },
+            {
+              "question": "Is SEO worth the investment?",
+              "answer": "Absolutely. While SEO requires upfront investment and patience, the long-term ROI is typically 200-400% higher than paid advertising. Once rankings stabilize, you enjoy continuous traffic without ongoing ad spend."
+            },
+            {
+              "question": "What's the difference between white-hat and black-hat SEO?",
+              "answer": "White-hat SEO follows Google's guidelines and focuses on sustainable practices. Black-hat SEO uses shortcuts and manipulative tactics. We exclusively practice white-hat SEO—it builds sustainable rankings without risk of penalties."
+            },
+            {
+              "question": "Can you guarantee #1 rankings?",
+              "answer": "No legitimate SEO company guarantees rankings. Google's algorithm considers hundreds of factors and changes constantly. Anyone promising guarantees is not being truthful. We guarantee transparent effort and measurable progress, not specific rankings."
+            },
+            {
+              "question": "What is a good cost for SEO services?",
+              "answer": "SEO budgets typically range $1,000-$5,000+ monthly depending on site size, competitiveness, and goals. One-time optimization projects may cost $5,000-$20,000. Investment should be viewed as long-term—ROI improves over months and years."
+            },
+            {
+              "question": "How is SEO different from PPC?",
+              "answer": "SEO builds organic rankings over time—free traffic after upfront effort. PPC pays for immediate visibility—expensive but immediate. Both have value. SEO builds sustainable growth; PPC complements with immediate results."
+            },
+            {
+              "question": "What should I expect in an SEO audit?",
+              "answer": "A good SEO audit reviews technical health, on-page optimization, content quality, backlink profile, competitor analysis, and traffic trends. It identifies issues and opportunities with a prioritized action plan for improvement."
+            }
+          ]
+        },
+        "testimonials": {
+          "id": "testimonials",
+          "enabled": true,
+          "type": "testimonials_section",
+          "title": "What Our Clients Say",
+          "displayCount": 3
+        },
+        "caseStudies": {
+          "id": "case-studies",
+          "enabled": true,
+          "type": "case_studies_section",
+          "title": "SEO Success Stories",
+          "displayCount": 2,
+          "link": "/case-studies"
+        },
+        "cta": {
+          "id": "cta",
+          "enabled": true,
+          "type": "cta_section",
+          "title": "Ready to Dominate Organic Search?",
+          "subtitle": "Get a free SEO audit and see where your website stands",
+          "buttonText": "Get Your Free SEO Audit",
+          "buttonUrl": "#contact"
+        }
+      },
+      "icon": "fa-solid fa-magnifying-glass-chart"
+    },
+    {
+      "id": "content-marketing",
+      "category": "Growth & Strategy",
+      "title": "Content Marketing",
+      "slug": "content-marketing",
+      "order": 5,
+      "metaDescription": "Strategic content marketing that attracts, engages, and converts. Adomantra creates valuable, SEO-optimized content that builds authority and drives sustainable business growth.",
+      "metaKeywords": "content marketing, blog writing, copywriting, content strategy, SEO content, content creation",
+      "serviceIcon": "https://www.adomantra.com/asstes/img/solutions/4.png",
+      "sections": {
+        "hero": {
+          "id": "hero",
+          "enabled": true,
+          "type": "hero_section",
+          "title": "Content That Converts: Strategic Content Marketing Excellence",
+          "subtitle": "Create Valuable Content That Attracts, Engages, and Converts",
+          "description": "Content is king in digital marketing. Our strategic content marketing builds brand authority, improves SEO rankings, nurtures leads, and drives conversions. We create compelling, valuable content that resonates with your audience and achieves your business goals.",
+          "cta": {
+            "text": "Develop Your Content Strategy",
+            "url": "#"
+          }
+        },
+        "overview": {
+          "id": "overview",
+          "enabled": true,
+          "type": "content_section",
+          "title": "Understanding Content Marketing",
+          "content": "Content marketing is the strategic creation and distribution of valuable, relevant content designed to attract and retain a clearly defined audience. Rather than directly selling, content marketing builds trust and authority by providing information that solves problems, answers questions, and educates your audience. From blog posts and whitepapers to videos and infographics, strategic content marketing supports every stage of the customer journey while improving SEO visibility and establishing your brand as an industry thought leader."
+        },
+        "benefits": {
+          "id": "benefits",
+          "enabled": true,
+          "type": "benefits_section",
+          "title": "Key Benefits of Content Marketing",
+          "benefits": [
+            {
+              "title": "Builds Trust & Authority",
+              "description": "Valuable, expert content positions your brand as a trusted industry authority. Customers trust companies that demonstrate expertise and provide genuine value."
+            },
+            {
+              "title": "Improves SEO Rankings",
+              "description": "Quality content optimized for keywords improves search rankings, driving organic traffic. Content marketing and SEO are synergistic—each strengthens the other."
+            },
+            {
+              "title": "Cost-Effective Lead Generation",
+              "description": "Content attracts prospective customers through search and sharing. Once created, content continues generating leads long-term with minimal ongoing cost."
+            },
+            {
+              "title": "Supports All Stages of Customer Journey",
+              "description": "Create content for awareness, consideration, and decision stages. Guide prospects from 'I have a problem' through 'I'm ready to buy'."
+            },
+            {
+              "title": "Increases Website Traffic",
+              "description": "Quality content attracts visitors through search, social sharing, and backlinks. More traffic means more qualified leads and customers."
+            },
+            {
+              "title": "Improves Conversion Rates",
+              "description": "Educated customers convert better. Content that addresses objections and explains benefits increases conversion likelihood."
+            },
+            {
+              "title": "Builds Email Lists & Engagement",
+              "description": "Content gives value in exchange for email signups. Use content to build engaged audience lists for email marketing and nurturing."
+            },
+            {
+              "title": "Long-Term Asset Value",
+              "description": "Unlike ads that stop working when funding ends, quality content continues attracting leads and building authority for years."
+            }
+          ]
+        },
+        "solutions": {
+          "id": "solutions",
+          "enabled": true,
+          "type": "solutions_section",
+          "title": "Our Comprehensive Content Marketing Solutions",
+          "description": "Adomantra delivers content strategy and creation across all formats and stages of the customer journey.",
+          "solutions": [
+            {
+              "title": "Content Strategy Development",
+              "description": "Define audience personas, customer journey stages, content themes, and distribution channels. A solid strategy guides all content creation decisions."
+            },
+            {
+              "title": "Blog Writing & Publishing",
+              "description": "Regular, high-quality blog posts optimize for target keywords while providing genuine value. We handle research, writing, optimization, and publishing."
+            },
+            {
+              "title": "Whitepapers & Case Studies",
+              "description": "In-depth resources demonstrate expertise and build credibility with decision-makers. Effective for lead generation and sales support."
+            },
+            {
+              "title": "Video Content Creation",
+              "description": "Engaging video content improves engagement and sharing. We conceptualize, script, and produce videos optimized for different platforms."
+            },
+            {
+              "title": "Infographics & Visual Content",
+              "description": "Complex information presented visually. Infographics improve comprehension and are highly shareable across social platforms."
+            },
+            {
+              "title": "Email Newsletter Content",
+              "description": "Valuable email content nurtures relationships, educates subscribers, and drives conversions. Strategic email content builds customer lifetime value."
+            },
+            {
+              "title": "Social Media Content",
+              "description": "Platform-specific content maximizes engagement on Facebook, Instagram, LinkedIn, Twitter, and TikTok. Different platforms require different approaches."
+            },
+            {
+              "title": "Content Distribution & Promotion",
+              "description": "Create content doesn't find audiences itself. We promote content through channels where your audience spends time for maximum impact."
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "id": "why-choose-us",
+          "enabled": true,
+          "type": "why_choose_section",
+          "title": "Why Choose Adomantra for Content Marketing?",
+          "reasons": [
+            {
+              "title": "Strategic Approach",
+              "description": "We don't just create content—we develop strategic content aligned with your business goals and audience needs."
+            },
+            {
+              "title": "Expert Writers",
+              "description": "Our team includes experienced writers, researchers, and editors who produce clear, compelling, keyword-optimized content."
+            },
+            {
+              "title": "SEO Integration",
+              "description": "All content is optimized for search engines without sacrificing readability. Better rankings + better user experience."
+            },
+            {
+              "title": "Multi-Format Capability",
+              "description": "From blog posts to videos to infographics, we create content in whatever format your audience prefers."
+            },
+            {
+              "title": "Consistent Excellence",
+              "description": "Regular publishing schedules and quality consistency build audience loyalty and keep your brand visible."
+            }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "enabled": true,
+          "type": "faq_section",
+          "title": "Frequently Asked Questions About Content Marketing",
+          "faqs": [
+            {
+              "question": "How often should we publish new content?",
+              "answer": "Consistency matters more than frequency. Publishing weekly (1-2 articles) is realistic for most businesses. Better to publish high-quality content regularly than publish frequently with poor quality. We recommend a sustainable publishing schedule you can maintain long-term."
+            },
+            {
+              "question": "How long does it take for content marketing to show results?",
+              "answer": "Content marketing builds gradually. Initial traction (traffic, leads) typically appears after 3-6 months. Significant results usually emerge after 6-12 months of consistent publishing. Long-term, the cumulative effect grows exponentially."
+            },
+            {
+              "question": "What topics should we write about?",
+              "answer": "Write about topics your target audience searches for and cares about. Address their problems, answer their questions, and provide solutions. Keyword research and customer research guide topic selection."
+            },
+            {
+              "question": "Should all content be for SEO?",
+              "answer": "Not all content needs to target specific keywords, but most should consider SEO. Balance keyword targeting with pure value delivery. Some content targets specific search terms; some builds authority without specific keyword focus."
+            },
+            {
+              "question": "How do we measure content marketing success?",
+              "answer": "Track: organic traffic, rankings for target keywords, leads generated, conversion rates, email signups, social shares, and revenue influenced by content. Clear attribution shows content ROI."
+            },
+            {
+              "question": "What types of content generate the most leads?",
+              "answer": "Long-form content (whitepapers, guides), case studies, and comparison content typically generate qualified leads. Educational content builds awareness; conversion-focused content generates leads."
+            },
+            {
+              "question": "How much should we budget for content marketing?",
+              "answer": "Content budgets range from $2,000-$10,000+ monthly depending on publishing frequency and content types. High-quality content from professional writers costs more than quick blog posts, but delivers better results."
+            },
+            {
+              "question": "Can we repurpose existing content?",
+              "answer": "Absolutely. One piece of research can become a blog post, infographic, video, and social posts. Repurposing maximizes content value and extends reach across platforms."
+            }
+          ]
+        },
+        "testimonials": {
+          "id": "testimonials",
+          "enabled": true,
+          "type": "testimonials_section",
+          "title": "What Our Clients Say",
+          "displayCount": 3
+        },
+        "caseStudies": {
+          "id": "case-studies",
+          "enabled": true,
+          "type": "case_studies_section",
+          "title": "Content Marketing Success Stories",
+          "displayCount": 2,
+          "link": "/case-studies"
+        },
+        "cta": {
+          "id": "cta",
+          "enabled": true,
+          "type": "cta_section",
+          "title": "Ready to Build Authority Through Content?",
+          "subtitle": "Let's create a content strategy that attracts and converts your ideal customers",
+          "buttonText": "Get Your Content Strategy",
+          "buttonUrl": "#contact"
+        }
+      },
+      "icon": "fa-solid fa-pen-nib"
+    },
+    {
+      "id": "rich-media-innovations",
+      "category": "Tech & Development",
+      "title": "Rich Media Innovations",
+      "slug": "rich-media-innovations",
+      "order": 6,
+      "metaDescription": "Interactive, high-engagement rich media advertising. Adomantra creates custom animations, interactive ads, and innovative formats that capture attention and drive conversions.",
+      "metaKeywords": "rich media ads, interactive advertising, animated ads, custom creatives, engaging ads, interactive content",
+      "serviceIcon": "https://www.adomantra.com/asstes/img/solutions/5.png",
+      "sections": {
+        "hero": {
+          "id": "hero",
+          "enabled": true,
+          "type": "hero_section",
+          "title": "Rich Media That Captivates: Innovation in Interactive Advertising",
+          "subtitle": "Custom Interactive Ads That Capture Attention & Drive Action",
+          "description": "Stand out in crowded digital environments with custom rich media ads. Our interactive, visually compelling creative captures 15x more attention than standard display ads. From animated banners to interactive experiences, we create innovative formats that engage audiences and drive conversions.",
+          "cta": {
+            "text": "Create Custom Rich Media",
+            "url": "#"
+          }
+        },
+        "overview": {
+          "id": "overview",
+          "enabled": true,
+          "type": "content_section",
+          "title": "Understanding Rich Media Advertising",
+          "content": "Rich media refers to interactive, dynamic advertising formats that go beyond static images and text. Rich media ads include animations, videos, interactive elements, and immersive experiences that engage users directly within the ad unit. These formats dramatically improve engagement rates and brand recall. Whether it's expandable banners, interactive product showcases, or immersive branded experiences, rich media captures attention in ways standard ads cannot, making it ideal for brands wanting to stand out and drive higher engagement."
+        },
+        "benefits": {
+          "id": "benefits",
+          "enabled": true,
+          "type": "benefits_section",
+          "title": "Key Benefits of Rich Media Advertising",
+          "benefits": [
+            {
+              "title": "15X More Attention Capture",
+              "description": "Studies show rich media ads capture 15 times more attention than standard display ads. Interactive elements naturally draw viewer focus in cluttered digital environments."
+            },
+            {
+              "title": "Higher Engagement Rates",
+              "description": "Interactive experiences encourage engagement. Click-through rates and interaction rates for rich media significantly exceed static ads."
+            },
+            {
+              "title": "Better Brand Recall",
+              "description": "Interactive and animated experiences stick in memory better than static content. Users remember brands that engage them."
+            },
+            {
+              "title": "Improved Conversion Rates",
+              "description": "Engaging users directly within ads increases likelihood of conversion. Rich media ads can showcase products, gather information, and drive action."
+            },
+            {
+              "title": "Measurable Interactions",
+              "description": "Track detailed engagement metrics: hover time, expansions, video plays, form submissions. Understand exactly how users interact with your brand."
+            },
+            {
+              "title": "Brand Differentiation",
+              "description": "Custom creative stands out against competitors. Unique, high-quality rich media establishes premium brand positioning."
+            },
+            {
+              "title": "Cross-Platform Compatibility",
+              "description": "Modern rich media works across desktop, mobile, and tablet. Consistent experience across devices and browsers."
+            },
+            {
+              "title": "Extended Engagement Window",
+              "description": "Rich media ads keep users engaged longer. Expandable ads, interactive games, and experiences extend time spent with your brand."
+            }
+          ]
+        },
+        "solutions": {
+          "id": "solutions",
+          "enabled": true,
+          "type": "solutions_section",
+          "title": "Our Rich Media Innovation Solutions",
+          "description": "Adomantra creates custom interactive advertising formats that capture attention and drive engagement.",
+          "solutions": [
+            {
+              "title": "Expandable Banner Ads",
+              "description": "Ads that expand on user interaction, revealing more content and information. Expandable formats maximize engagement without taking up initial ad space."
+            },
+            {
+              "title": "Animated Product Showcases",
+              "description": "Dynamic product demonstrations with animations showing features, benefits, and functionality. Move beyond static images to show your product in action."
+            },
+            {
+              "title": "Interactive Game Experiences",
+              "description": "Branded games and interactive experiences that engage users and encourage sharing. Gaming drives engagement and viral potential."
+            },
+            {
+              "title": "Video-Enhanced Ads",
+              "description": "Video-integrated ad formats combining visual storytelling with interactive elements. Video captures attention; interactivity drives engagement."
+            },
+            {
+              "title": "Custom Interactive Experiences",
+              "description": "Bespoke interactive solutions tailored to your brand. From quizzes to calculators to immersive brand experiences, we bring ideas to life."
+            },
+            {
+              "title": "Innovative Formats Development",
+              "description": "Exploration of new ad formats and experimental approaches. Stay ahead of competitors with innovative, award-winning creative approaches."
+            },
+            {
+              "title": "Mobile-Optimized Rich Media",
+              "description": "Touch-optimized interactive ads specifically designed for mobile devices. Gestures, swipes, and mobile-specific interactions enhance engagement."
+            },
+            {
+              "title": "Performance Analytics & Optimization",
+              "description": "Detailed tracking of rich media interaction metrics. A/B testing and optimization improve engagement and conversion performance."
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "id": "why-choose-us",
+          "enabled": true,
+          "type": "why_choose_section",
+          "title": "Why Choose Adomantra for Rich Media?",
+          "reasons": [
+            {
+              "title": "Award-Winning Creative Team",
+              "description": "Our designers and developers create innovative, engaging rich media that wins awards and drives results."
+            },
+            {
+              "title": "Technical Excellence",
+              "description": "Expert development ensures rich media works flawlessly across browsers, devices, and platforms without performance issues."
+            },
+            {
+              "title": "Strategic Approach",
+              "description": "Beyond flashy creative—we develop rich media strategies aligned with business goals and audience preferences."
+            },
+            {
+              "title": "Full Production Capability",
+              "description": "From concept through design to development and deployment, we handle the complete rich media production process."
+            },
+            {
+              "title": "Performance Focus",
+              "description": "Rich media is optimized for both engagement and conversion. We track metrics and continuously improve performance."
+            }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "enabled": true,
+          "type": "faq_section",
+          "title": "Frequently Asked Questions About Rich Media Ads",
+          "faqs": [
+            {
+              "question": "What exactly is rich media advertising?",
+              "answer": "Rich media refers to interactive, dynamic ad formats that go beyond static images and text. This includes expandable banners, animated ads, interactive elements, videos, games, and immersive experiences that encourage user interaction and engagement."
+            },
+            {
+              "question": "Why are rich media ads better than standard display ads?",
+              "answer": "Rich media captures 15x more attention through interactive and animated elements. Higher engagement rates, better brand recall, and improved click-through rates make rich media more effective for driving brand awareness and conversions."
+            },
+            {
+              "question": "What format works best for rich media ads?",
+              "answer": "Best formats depend on campaign goals and audience. Video-integrated ads drive engagement; expandable ads maximize impact with limited space; interactive experiences drive deeper engagement. We recommend the format best aligned with your objectives."
+            },
+            {
+              "question": "Are rich media ads mobile-friendly?",
+              "answer": "Yes. We specifically optimize rich media for mobile devices with touch-friendly interactions, optimized file sizes for mobile, and mobile-appropriate layouts. Mobile performance is crucial for rich media success."
+            },
+            {
+              "question": "How much does custom rich media cost?",
+              "answer": "Rich media costs vary by complexity. Animated banners cost $2,000-$5,000. Custom interactive experiences range $5,000-$20,000+. We provide estimates after understanding your specific requirements and vision."
+            },
+            {
+              "question": "Can we measure rich media ad performance?",
+              "answer": "Absolutely. We track impressions, interactions, hover time, video plays, click-through rates, and conversions. Detailed analytics show exactly how users engage with your rich media ads."
+            },
+            {
+              "question": "How long does rich media development take?",
+              "answer": "Timeline depends on complexity. Simple animated ads take 2-3 weeks. Complex interactive experiences may take 4-8 weeks. We provide timelines after scoping your project."
+            },
+            {
+              "question": "Do rich media ads work on all sites?",
+              "answer": "Most premium publishers support rich media. Some sites block certain formats for performance or brand safety reasons. We ensure your rich media works on your target placements."
+            }
+          ]
+        },
+        "testimonials": {
+          "id": "testimonials",
+          "enabled": true,
+          "type": "testimonials_section",
+          "title": "What Our Clients Say",
+          "displayCount": 3
+        },
+        "caseStudies": {
+          "id": "case-studies",
+          "enabled": true,
+          "type": "case_studies_section",
+          "title": "Rich Media Success Stories",
+          "displayCount": 2,
+          "link": "/case-studies"
+        },
+        "cta": {
+          "id": "cta",
+          "enabled": true,
+          "type": "cta_section",
+          "title": "Ready to Create Captivating Rich Media?",
+          "subtitle": "Stand out with innovative, interactive advertising that drives engagement",
+          "buttonText": "Discuss Your Rich Media Ideas",
+          "buttonUrl": "#contact"
+        }
+      },
+      "icon": "fa-solid fa-film"
+    },
+    {
+      "id": "online-reputation-management",
+      "category": "Growth & Strategy",
+      "title": "Online Reputation Management",
+      "slug": "online-reputation-management",
+      "order": 7,
+      "metaDescription": "Protect and enhance your online reputation. Adomantra's reputation management services monitor, respond to, and improve your brand's digital presence across platforms.",
+      "metaKeywords": "reputation management, online reputation, review management, brand monitoring, crisis management, positive content",
+      "serviceIcon": "https://www.adomantra.com/asstes/img/solutions/6.png",
+      "sections": {
+        "hero": {
+          "id": "hero",
+          "enabled": true,
+          "type": "hero_section",
+          "title": "Protect Your Brand: Professional Reputation Management",
+          "subtitle": "Monitor, Manage, and Enhance Your Online Reputation",
+          "description": "Your online reputation impacts customer decisions. Adomantra's reputation management services monitor mentions, manage reviews, respond to feedback, and enhance your positive digital presence across all platforms.",
+          "cta": {
+            "text": "Audit Your Reputation",
+            "url": "#"
+          }
+        },
+        "overview": {
+          "id": "overview",
+          "enabled": true,
+          "type": "content_section",
+          "title": "Understanding Online Reputation Management",
+          "content": "Your online reputation—what people see when they search your brand—directly influences customer decisions. Online reputation management encompasses monitoring mentions and reviews, responding professionally to feedback, managing negative content, and building positive digital presence. In an era where 93% of customers read online reviews before making decisions, proactive reputation management is essential. We help you build, monitor, and protect your brand's digital reputation across search results, social media, review sites, and more."
+        },
+        "benefits": {
+          "id": "benefits",
+          "enabled": true,
+          "type": "benefits_section",
+          "title": "Why Online Reputation Management Matters",
+          "benefits": [
+            {
+              "title": "Influences Customer Decisions",
+              "description": "93% of consumers read reviews before purchasing. Positive reputation directly drives sales; negative reputation prevents them."
+            },
+            {
+              "title": "Protects Brand Integrity",
+              "description": "Proactive reputation management prevents negative information from defining your brand. Control your narrative."
+            },
+            {
+              "title": "Responds to Negative Feedback",
+              "description": "Professional, timely responses to criticism demonstrate care for customers. Proper responses can convert negative reviews into positive brand moments."
+            },
+            {
+              "title": "Increases Customer Confidence",
+              "description": "Positive reviews and testimonials build trust and confidence. Higher ratings improve conversion rates and customer lifetime value."
+            },
+            {
+              "title": "Improves Search Visibility",
+              "description": "Positive content ranks higher in search results. Reputation management helps your best content appear when people search your brand."
+            },
+            {
+              "title": "Crisis Prevention & Management",
+              "description": "Monitoring alerts you to emerging issues before they become crises. Proactive management prevents reputational damage."
+            },
+            {
+              "title": "Competitive Advantage",
+              "description": "Better reputation than competitors attracts customers. Reputation management directly impacts market share."
+            },
+            {
+              "title": "Employee Recruitment",
+              "description": "Strong reputation attracts top talent. Employees research employers—positive reputation improves hiring success."
+            }
+          ]
+        },
+        "solutions": {
+          "id": "solutions",
+          "enabled": true,
+          "type": "solutions_section",
+          "title": "Our Comprehensive Reputation Management Solutions",
+          "description": "Adomantra delivers complete online reputation management across all platforms and touchpoints.",
+          "solutions": [
+            {
+              "title": "Reputation Monitoring",
+              "description": "24/7 monitoring of mentions, reviews, comments, and feedback across Google, Facebook, industry review sites, and social media. Immediate alerts to emerging issues."
+            },
+            {
+              "title": "Review Management",
+              "description": "Encourage positive reviews, manage negative feedback, and respond professionally to all reviews. We help you maximize 5-star reviews and mitigate damage from poor ratings."
+            },
+            {
+              "title": "Social Media Management",
+              "description": "Professional social media presence and engagement. Prompt responses to comments and messages build community and demonstrate customer care."
+            },
+            {
+              "title": "Negative Content Mitigation",
+              "description": "When negative content appears, we develop strategies to mitigate visibility. Create positive content that pushes negative content down in search results."
+            },
+            {
+              "title": "Crisis Response Management",
+              "description": "When crises occur, professional crisis response minimizes damage. Rapid assessment, strategic messaging, and coordinated response protect your brand."
+            },
+            {
+              "title": "Positive Content Creation",
+              "description": "Proactively build positive digital presence through content creation, guest articles, press releases, and testimonials that support your reputation goals."
+            },
+            {
+              "title": "Google My Business Optimization",
+              "description": "Optimize your Google My Business profile to ensure accurate information, positive reviews visibility, and high search ranking for your business."
+            },
+            {
+              "title": "Monthly Reputation Reporting",
+              "description": "Detailed tracking of review ratings, sentiment analysis, mention volume, and reputation trends. Clear metrics show reputation improvement."
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "id": "why-choose-us",
+          "enabled": true,
+          "type": "why_choose_section",
+          "title": "Why Choose Adomantra for Reputation Management?",
+          "reasons": [
+            {
+              "title": "Proactive Approach",
+              "description": "We don't just respond to crises—we prevent them through continuous monitoring and positive reputation building."
+            },
+            {
+              "title": "Professional Response Strategy",
+              "description": "Our team is trained in professional communication that turns negative situations into brand-building opportunities."
+            },
+            {
+              "title": "Multi-Platform Expertise",
+              "description": "We manage reputation across Google, social media, review sites, forums, and beyond. Comprehensive coverage across all digital touchpoints."
+            },
+            {
+              "title": "Crisis Management Experience",
+              "description": "When issues arise, experienced team quickly assesses impact, develops strategy, and implements response before damage spreads."
+            },
+            {
+              "title": "Transparent Reporting",
+              "description": "Monthly reporting shows reputation metrics, sentiment trends, and management activities. Clear visibility into reputation health."
+            }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "enabled": true,
+          "type": "faq_section",
+          "title": "Frequently Asked Questions About Reputation Management",
+          "faqs": [
+            {
+              "question": "What is online reputation management and why does it matter?",
+              "answer": "Online reputation management is the practice of monitoring and influencing your brand's digital reputation. It matters because 93% of customers read reviews before buying, and negative content can significantly impact business. Proactive management protects and enhances your brand."
+            },
+            {
+              "question": "How do you respond to negative reviews?",
+              "answer": "We respond professionally and empathetically, acknowledging concerns, offering solutions, and demonstrating commitment to customer satisfaction. Many negative situations can be resolved through proper response, converting critics into advocates."
+            },
+            {
+              "question": "Can negative content be removed from the internet?",
+              "answer": "Removal is difficult and sometimes impossible. Instead, we develop mitigation strategies—creating positive content that ranks higher and pushes negative content down in search results. We also work with platform administrators on policy violations."
+            },
+            {
+              "question": "How can we encourage more positive reviews?",
+              "answer": "We develop review generation strategies, making it easy for happy customers to leave reviews. Professional outreach, strategic timing, and simplified processes increase positive review volume."
+            },
+            {
+              "question": "How long does reputation improvement take?",
+              "answer": "Minor improvements appear within weeks as we implement strategies. Significant reputation change typically takes 2-3 months of consistent effort. Long-term reputation building is ongoing, like maintaining a garden."
+            },
+            {
+              "question": "What platforms should we monitor?",
+              "answer": "Minimum: Google Search/Google My Business, Facebook, industry-specific review sites. Also monitor Twitter, Instagram, LinkedIn, YouTube comments, and industry forums. We tailor monitoring to where your customers are."
+            },
+            {
+              "question": "What's the cost of reputation management services?",
+              "answer": "Reputation management services typically range $1,000-$5,000+ monthly depending on monitoring scope, volume of reviews/mentions, and required response activity. We provide estimates based on your specific needs."
+            },
+            {
+              "question": "How do we handle a reputation crisis?",
+              "answer": "Rapid crisis response is essential. We immediately assess the situation, develop messaging strategy, coordinate response across platforms, monitor sentiment, and track recovery. Quick, professional action minimizes damage."
+            }
+          ]
+        },
+        "testimonials": {
+          "id": "testimonials",
+          "enabled": true,
+          "type": "testimonials_section",
+          "title": "What Our Clients Say",
+          "displayCount": 3
+        },
+        "caseStudies": {
+          "id": "case-studies",
+          "enabled": true,
+          "type": "case_studies_section",
+          "title": "Reputation Management Success Stories",
+          "displayCount": 2,
+          "link": "/case-studies"
+        },
+        "cta": {
+          "id": "cta",
+          "enabled": true,
+          "type": "cta_section",
+          "title": "Protect Your Brand Reputation Today",
+          "subtitle": "Get a comprehensive reputation audit and improvement plan",
+          "buttonText": "Get Your Free Reputation Audit",
+          "buttonUrl": "#contact"
+        }
+      },
+      "icon": "fa-solid fa-shield-halved"
+    },
+    {
+      "id": "social-media-marketing",
+      "category": "Growth & Strategy",
+      "title": "Social Media Marketing",
+      "slug": "social-media-marketing",
+      "order": 8,
+      "metaDescription": "Strategic social media marketing that builds engaged communities and drives conversions. Adomantra manages your brand across Facebook, Instagram, LinkedIn, TikTok, and more.",
+      "metaKeywords": "social media marketing, social media management, Facebook marketing, Instagram marketing, LinkedIn marketing, social media strategy",
+      "serviceIcon": "https://www.adomantra.com/asstes/img/solutions/7.png",
+      "sections": {
+        "hero": {
+          "id": "hero",
+          "enabled": true,
+          "type": "hero_section",
+          "title": "Social Media That Drives Results: Engagement & Growth",
+          "subtitle": "Build Communities, Engage Audiences, Drive Conversions",
+          "description": "Social media is where your customers spend their time. Adomantra manages your social presence across platforms, creating engaging content, building communities, and driving measurable business results through strategic social media marketing.",
+          "cta": {
+            "text": "Start Your Social Strategy",
+            "url": "#"
+          }
+        },
+        "overview": {
+          "id": "overview",
+          "enabled": true,
+          "type": "content_section",
+          "title": "Understanding Social Media Marketing",
+          "content": "Social media marketing encompasses strategic use of platforms like Facebook, Instagram, LinkedIn, TikTok, and Twitter to build brand awareness, engage communities, and drive conversions. Modern social media marketing combines organic content strategy with paid advertising, influencer partnerships, and community management. When done right, social media builds loyal customer communities while providing direct channels for communication, feedback, and sales."
+        },
+        "benefits": {
+          "id": "benefits",
+          "enabled": true,
+          "type": "benefits_section",
+          "title": "Key Benefits of Social Media Marketing",
+          "benefits": [
+            {
+              "title": "Massive Audience Reach",
+              "description": "Connect with billions of users across platforms. Social media reaches customers wherever they are throughout their day."
+            },
+            {
+              "title": "Direct Customer Communication",
+              "description": "Two-way communication with customers builds relationships. Social media enables dialogue, not just broadcasting."
+            },
+            {
+              "title": "Cost-Effective Advertising",
+              "description": "Social advertising offers granular targeting at lower cost than traditional media. Flexible budgets accommodate all business sizes."
+            },
+            {
+              "title": "Community Building",
+              "description": "Engaged social communities create brand advocates. Community members promote your brand and recruit others."
+            },
+            {
+              "title": "Brand Awareness & Recognition",
+              "description": "Consistent social presence builds brand familiarity. Repeated exposure increases brand recall and preference."
+            },
+            {
+              "title": "Lead Generation & Sales",
+              "description": "Social platforms drive leads and sales through conversion-optimized content and advertising."
+            },
+            {
+              "title": "Real-Time Marketing Opportunities",
+              "description": "Respond to trends, events, and customer interests in real-time. Social media enables agile, responsive marketing."
+            },
+            {
+              "title": "Valuable Customer Insights",
+              "description": "Learn directly from customers about preferences, behaviors, and needs. Use feedback for product and service improvements."
+            }
+          ]
+        },
+        "solutions": {
+          "id": "solutions",
+          "enabled": true,
+          "type": "solutions_section",
+          "title": "Our Comprehensive Social Media Solutions",
+          "description": "Adomantra manages all aspects of social media marketing from strategy through execution and analysis.",
+          "solutions": [
+            {
+              "title": "Social Media Strategy Development",
+              "description": "Develop platform-specific strategies aligned with business goals. Identify audience, content themes, posting schedules, and success metrics."
+            },
+            {
+              "title": "Content Creation & Posting",
+              "description": "Professional content creation across all platforms. Platform-specific optimization for Facebook, Instagram, LinkedIn, TikTok, Twitter, and YouTube."
+            },
+            {
+              "title": "Community Management",
+              "description": "Engage followers through comments, messages, and interactions. Build thriving communities of brand advocates."
+            },
+            {
+              "title": "Social Media Advertising",
+              "description": "Strategic paid advertising across platforms. Targeted campaigns drive awareness, leads, and conversions with optimized spending."
+            },
+            {
+              "title": "Influencer Marketing",
+              "description": "Partner with relevant influencers to extend reach and credibility. Authentic influencer partnerships drive engagement and conversions."
+            },
+            {
+              "title": "Hashtag Strategy & Research",
+              "description": "Strategic hashtag use increases content discoverability. We research trending, relevant hashtags that improve reach."
+            },
+            {
+              "title": "Social Media Analytics",
+              "description": "Track engagement, reach, impressions, follower growth, and conversion metrics. Data guides optimization and strategy refinement."
+            },
+            {
+              "title": "Crisis Management & Reputation",
+              "description": "Monitor social conversations for issues. Rapid response to negative feedback prevents reputation damage."
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "id": "why-choose-us",
+          "enabled": true,
+          "type": "why_choose_section",
+          "title": "Why Choose Adomantra for Social Media?",
+          "reasons": [
+            {
+              "title": "Multi-Platform Expertise",
+              "description": "Expert management across Facebook, Instagram, LinkedIn, TikTok, Twitter, YouTube. Platform-specific strategies maximize effectiveness."
+            },
+            {
+              "title": "Creative Excellence",
+              "description": "Professional content creation from experienced creators. Visually compelling content that stands out in crowded feeds."
+            },
+            {
+              "title": "Community Building Focus",
+              "description": "Beyond follower counts, we build engaged communities. True social media success comes from meaningful engagement, not vanity metrics."
+            },
+            {
+              "title": "Performance Tracking",
+              "description": "Clear metrics show engagement, reach, leads, and revenue impact. Data-driven optimization improves results continuously."
+            },
+            {
+              "title": "Agile & Responsive",
+              "description": "We respond quickly to opportunities, trends, and customer interactions. Flexibility keeps your brand relevant and responsive."
+            }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "enabled": true,
+          "type": "faq_section",
+          "title": "Frequently Asked Questions About Social Media Marketing",
+          "faqs": [
+            {
+              "question": "Which social media platforms should we focus on?",
+              "answer": "Depends on your audience and business type. B2B companies succeed on LinkedIn; retail/consumer brands on Instagram/Facebook/TikTok. We recommend starting with platforms where your target audience spends time, then expanding."
+            },
+            {
+              "question": "How often should we post on social media?",
+              "answer": "Consistency matters more than frequency. Realistic posting schedules: Facebook/Instagram 3-5x weekly; LinkedIn 2-3x weekly; TikTok daily for growth. Better consistent quality posting than sporadic high-volume posting."
+            },
+            {
+              "question": "How do we measure social media ROI?",
+              "answer": "Track: reach, engagement, follower growth, click-through rates, conversion rates, and revenue influenced by social media. Some conversions are direct; others provide value through awareness and community building."
+            },
+            {
+              "question": "Should we focus on organic or paid social media?",
+              "answer": "Both complement each other. Organic content builds community and brand awareness. Paid amplifies best-performing content and targets high-intent audiences. Integrated approach maximizes results."
+            },
+            {
+              "question": "How long before we see social media results?",
+              "answer": "Quick wins appear in weeks (engagement, reach). Follower growth takes months of consistent effort. Significant traffic and conversion impact emerge after 3-6 months of strategic execution."
+            },
+            {
+              "question": "What content works best on social media?",
+              "answer": "Varies by platform. Video performs best across most platforms. Behind-the-scenes content builds connection. User-generated content builds authenticity. Educational content provides value. Test different formats to find what resonates with your audience."
+            },
+            {
+              "question": "How do we handle negative comments on social media?",
+              "answer": "Respond professionally and empathetically. Address concerns publicly if they're legitimate; ask for private conversation if needed. Transparency and willingness to improve builds trust even from critics."
+            },
+            {
+              "question": "How much should we spend on social media advertising?",
+              "answer": "Social advertising budgets range $500-$5,000+ monthly depending on goals and target audience. Start with testing budget ($500-$1,000) to identify effective approaches before scaling."
+            }
+          ]
+        },
+        "testimonials": {
+          "id": "testimonials",
+          "enabled": true,
+          "type": "testimonials_section",
+          "title": "What Our Clients Say",
+          "displayCount": 3
+        },
+        "caseStudies": {
+          "id": "case-studies",
+          "enabled": true,
+          "type": "case_studies_section",
+          "title": "Social Media Success Stories",
+          "displayCount": 2,
+          "link": "/case-studies"
+        },
+        "cta": {
+          "id": "cta",
+          "enabled": true,
+          "type": "cta_section",
+          "title": "Ready to Build Your Social Media Presence?",
+          "subtitle": "Let's create a social strategy that engages your audience and drives growth",
+          "buttonText": "Get Your Social Strategy",
+          "buttonUrl": "#contact"
+        }
+      },
+      "icon": "fa-solid fa-share-nodes"
+    },
+    {
+      "id": "website-app-development",
+      "category": "Tech & Development",
+      "title": "Website & App Development",
+      "slug": "website-app-development",
+      "order": 9,
+      "metaDescription": "Custom website and mobile app development. Adomantra creates high-performance, user-friendly digital products that convert visitors into customers.",
+      "metaKeywords": "web development, app development, website design, mobile app development, custom web development, responsive design",
+      "serviceIcon": "https://www.adomantra.com/asstes/img/solutions/8.png",
+      "sections": {
+        "hero": {
+          "id": "hero",
+          "enabled": true,
+          "type": "hero_section",
+          "title": "Custom Digital Products That Convert",
+          "subtitle": "High-Performance Websites & Apps Built for Growth",
+          "description": "Your website or app is your digital storefront. Adomantra develops custom websites and mobile applications designed for user experience, performance, and conversion optimization. From concept through launch and beyond, we build digital products that work for your business.",
+          "cta": {
+            "text": "Discuss Your Project",
+            "url": "#"
+          }
+        },
+        "overview": {
+          "id": "overview",
+          "enabled": true,
+          "type": "content_section",
+          "title": "Understanding Website & App Development",
+          "content": "Modern websites and apps are complex digital products requiring strategic planning, excellent design, solid technical architecture, and continuous optimization. Whether building an e-commerce platform, corporate website, SaaS application, or mobile app, successful digital products balance user experience, technical performance, business requirements, and scalability. Adomantra's full-stack development team handles everything from user experience design through front-end and back-end development to deployment and maintenance."
+        },
+        "benefits": {
+          "id": "benefits",
+          "enabled": true,
+          "type": "benefits_section",
+          "title": "Key Benefits of Custom Development",
+          "benefits": [
+            {
+              "title": "Tailored to Your Business",
+              "description": "Custom solutions address your specific business needs. Off-the-shelf software forces compromises; custom development aligns perfectly with your goals."
+            },
+            {
+              "title": "Superior User Experience",
+              "description": "User-centered design creates intuitive interfaces that keep visitors engaged. Better UX improves conversions and customer satisfaction."
+            },
+            {
+              "title": "Performance Optimization",
+              "description": "Fast-loading, responsive websites improve user experience and SEO rankings. Performance is critical for conversion and retention."
+            },
+            {
+              "title": "Scalability",
+              "description": "Built to grow with your business. Custom architecture scales from startup to enterprise without technical limitations."
+            },
+            {
+              "title": "Security & Compliance",
+              "description": "Enterprise-grade security protects user data and your business. Compliance with regulations like GDPR, CCPA built in."
+            },
+            {
+              "title": "Integration Capabilities",
+              "description": "Seamlessly integrate with third-party services, payment processors, CRMs, and business systems."
+            },
+            {
+              "title": "Conversion Optimization",
+              "description": "Designs optimized for conversion. Strategic layouts, clear CTAs, and simplified processes improve conversion rates."
+            },
+            {
+              "title": "Competitive Advantage",
+              "description": "Unique digital products differentiate you from competitors. Custom functionality provides capabilities competitors lack."
+            }
+          ]
+        },
+        "solutions": {
+          "id": "solutions",
+          "enabled": true,
+          "type": "solutions_section",
+          "title": "Our Website & App Development Solutions",
+          "description": "Adomantra provides complete development services across all project types and technologies.",
+          "solutions": [
+            {
+              "title": "Website Design & Development",
+              "description": "Corporate websites, landing pages, and marketing sites. Responsive design, SEO optimization, and conversion focus built in."
+            },
+            {
+              "title": "E-Commerce Platforms",
+              "description": "Full e-commerce solutions with shopping carts, payment processing, inventory management, and order fulfillment integration."
+            },
+            {
+              "title": "SaaS Applications",
+              "description": "Sophisticated web applications with user accounts, subscriptions, APIs, and enterprise features. Built for scalability and reliability."
+            },
+            {
+              "title": "Mobile App Development",
+              "description": "iOS and Android native applications or cross-platform solutions. App store optimization and user acquisition strategy included."
+            },
+            {
+              "title": "Progressive Web Apps (PWAs)",
+              "description": "Web apps with native app-like experience. Offline functionality, push notifications, and installation capability."
+            },
+            {
+              "title": "API Development",
+              "description": "RESTful and GraphQL APIs enabling integration between systems. Well-documented, secure APIs for third-party access."
+            },
+            {
+              "title": "CMS Integration",
+              "description": "Headless CMS integration, WordPress custom development, Shopify customization. Flexible content management for your team."
+            },
+            {
+              "title": "Maintenance & Support",
+              "description": "Ongoing maintenance, security updates, performance optimization, and feature additions keep your digital product current and secure."
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "id": "why-choose-us",
+          "enabled": true,
+          "type": "why_choose_section",
+          "title": "Why Choose Adomantra for Development?",
+          "reasons": [
+            {
+              "title": "Full-Stack Expertise",
+              "description": "Expert team across design, front-end development, back-end development, DevOps, and QA. Complete capability across all layers."
+            },
+            {
+              "title": "User-Centered Approach",
+              "description": "Design and development decisions prioritize user experience. Usability testing and iteration ensure products users love."
+            },
+            {
+              "title": "Technology Leadership",
+              "description": "Expertise with modern technologies, frameworks, and practices. Your product is built with current best practices, not legacy approaches."
+            },
+            {
+              "title": "Performance Focus",
+              "description": "Every project optimized for performance. Fast loading, responsive design, and efficient code matter for user experience and business results."
+            },
+            {
+              "title": "Long-Term Partnership",
+              "description": "Beyond launch—we provide ongoing support, maintenance, and enhancements. Your success is our long-term partnership."
+            }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "enabled": true,
+          "type": "faq_section",
+          "title": "Frequently Asked Questions About Web & App Development",
+          "faqs": [
+            {
+              "question": "How much does website or app development cost?",
+              "answer": "Cost varies dramatically based on scope and complexity. Simple websites start at $5,000-$15,000. Complex applications range $30,000-$200,000+. We provide detailed estimates after understanding your requirements."
+            },
+            {
+              "question": "How long does development take?",
+              "answer": "Simple projects take 4-8 weeks. Medium complexity 2-4 months. Complex applications 4-12+ months. Timeline depends on scope, features, and complexity. We provide detailed timelines during project planning."
+            },
+            {
+              "question": "Should we choose WordPress or custom development?",
+              "answer": "WordPress is cost-effective for standard sites; custom development provides unlimited customization and scalability. We recommend custom development for complex requirements or competitive differentiation."
+            },
+            {
+              "question": "What about SEO for new websites?",
+              "answer": "SEO is built in from the start. Technical SEO, responsive design, fast performance, and clean code architecture provide strong foundation. Content strategy and link building happen post-launch."
+            },
+            {
+              "question": "How do we handle ongoing maintenance?",
+              "answer": "We provide maintenance packages covering updates, security patches, backups, and monitoring. Ongoing maintenance ensures your product stays current and secure."
+            },
+            {
+              "question": "Can we build an MVP first and add features later?",
+              "answer": "Absolutely. MVP approach gets your product to market quickly with core features, then evolves based on user feedback. Lean approach minimizes risk and cost."
+            },
+            {
+              "question": "What about mobile apps—iOS, Android, or both?",
+              "answer": "Start with your target audience location. iOS dominant in US/EU; Android in India/SE Asia. Cross-platform development (React Native, Flutter) efficiently covers both."
+            },
+            {
+              "question": "How do we ensure the website/app is secure?",
+              "answer": "Security is built in throughout development. HTTPS encryption, secure data handling, penetration testing, and regular updates protect against threats. Compliance with data protection regulations included."
+            }
+          ]
+        },
+        "testimonials": {
+          "id": "testimonials",
+          "enabled": true,
+          "type": "testimonials_section",
+          "title": "What Our Clients Say",
+          "displayCount": 3
+        },
+        "caseStudies": {
+          "id": "case-studies",
+          "enabled": true,
+          "type": "case_studies_section",
+          "title": "Development Success Stories",
+          "displayCount": 2,
+          "link": "/case-studies"
+        },
+        "cta": {
+          "id": "cta",
+          "enabled": true,
+          "type": "cta_section",
+          "title": "Ready to Build Your Digital Product?",
+          "subtitle": "Let's discuss your project requirements and create something amazing",
+          "buttonText": "Schedule a Discovery Call",
+          "buttonUrl": "#contact"
+        }
+      },
+      "icon": "fa-solid fa-code"
+    },
+    {
+      "id": "media-planning-buying",
+      "category": "Media & Advertising",
+      "title": "Media Planning & Buying",
+      "slug": "media-planning-buying",
+      "order": 10,
+      "metaDescription": "Strategic media planning and buying across all channels. Adomantra maximizes your media budget for optimal reach, frequency, and efficiency.",
+      "metaKeywords": "media planning, media buying, programmatic buying, media strategy, advertising placement, media optimization",
+      "serviceIcon": "https://www.adomantra.com/asstes/img/solutions/9.png",
+      "sections": {
+        "hero": {
+          "id": "hero",
+          "enabled": true,
+          "type": "hero_section",
+          "title": "Strategic Media Planning & Buying: Maximize Your Reach",
+          "subtitle": "Intelligent Media Placement That Reaches Your Audience Efficiently",
+          "description": "Effective media planning ensures your message reaches the right audience through the right channels at optimal frequency. Adomantra's media planning and buying expertise ensures your advertising budget delivers maximum impact and ROI.",
+          "cta": {
+            "text": "Develop Your Media Strategy",
+            "url": "#"
+          }
+        },
+        "overview": {
+          "id": "overview",
+          "enabled": true,
+          "type": "content_section",
+          "title": "Understanding Media Planning & Buying",
+          "content": "Media planning is the strategic process of determining where and when to place advertisements to reach your target audience most effectively. Media buying is the execution—negotiating placements and rates with media outlets. Together, they form the foundation of advertising success. Effective media planning considers audience insights, channel performance, budget optimization, and synergy across channels. Modern media planners balance programmatic efficiency with traditional media when appropriate, ensuring omnichannel presence."
+        },
+        "benefits": {
+          "id": "benefits",
+          "enabled": true,
+          "type": "benefits_section",
+          "title": "Key Benefits of Professional Media Planning & Buying",
+          "benefits": [
+            {
+              "title": "Optimized Budget Allocation",
+              "description": "Strategic planning ensures budget goes to highest-performing channels. Eliminate wasted spend on underperforming placements."
+            },
+            {
+              "title": "Better Negotiating Rates",
+              "description": "Media buyer expertise and volume buying power achieve better rates than individual advertisers could negotiate alone."
+            },
+            {
+              "title": "Audience Targeting",
+              "description": "Deep audience analysis ensures placements reach your target demographic at the right time with proper frequency."
+            },
+            {
+              "title": "Omnichannel Integration",
+              "description": "Coordinated placement across TV, digital, radio, print, and OOH creates unified message and maximizes reach."
+            },
+            {
+              "title": "Performance Optimization",
+              "description": "Continuous monitoring and adjustment ensure media placement adapts to performance. Shift budget to winners; pause underperformers."
+            },
+            {
+              "title": "Frequency Management",
+              "description": "Optimal frequency—enough to be seen without excessive repetition that creates ad fatigue. Right frequency improves conversion."
+            },
+            {
+              "title": "Competitive Intelligence",
+              "description": "Monitor competitor media spending. Identify opportunities where you can dominate or competitive gaps to exploit."
+            },
+            {
+              "title": "Strategic Insights",
+              "description": "Media planning reveals insights about audience consumption habits, channel effectiveness, and market opportunities."
+            }
+          ]
+        },
+        "solutions": {
+          "id": "solutions",
+          "enabled": true,
+          "type": "solutions_section",
+          "title": "Our Media Planning & Buying Solutions",
+          "description": "Adomantra provides comprehensive media services across all channels and media types.",
+          "solutions": [
+            {
+              "title": "Media Strategy Development",
+              "description": "Develop comprehensive media strategy aligned with business objectives. Define target audience, key messages, channel mix, and budget allocation."
+            },
+            {
+              "title": "Audience Analysis & Insights",
+              "description": "Deep understanding of your target audience—demographics, psychographics, media consumption, and behaviors. Insights drive media decisions."
+            },
+            {
+              "title": "Digital Media Buying",
+              "description": "Programmatic and direct media buying across display networks, social platforms, search engines, and video platforms."
+            },
+            {
+              "title": "Traditional Media Buying",
+              "description": "TV, radio, print, and outdoor advertising placement. Leverage relationships for premium placements at negotiated rates."
+            },
+            {
+              "title": "Programmatic Buying Optimization",
+              "description": "DSP and RTB optimization. Real-time bidding strategies that achieve target CPM while maintaining quality standards."
+            },
+            {
+              "title": "Performance Tracking & Analytics",
+              "description": "Monitor impressions, reach, frequency, and conversion. Attribution modeling shows which media channels drive actual business results."
+            },
+            {
+              "title": "Budget Optimization",
+              "description": "Ongoing analysis of channel performance. Shift budgets toward high-performers and away from underperforming channels."
+            },
+            {
+              "title": "Seasonal & Cyclical Planning",
+              "description": "Account for seasonal demand, cyclical business patterns, and special events in media planning for optimal timing."
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "id": "why-choose-us",
+          "enabled": true,
+          "type": "why_choose_section",
+          "title": "Why Choose Adomantra for Media Planning & Buying?",
+          "reasons": [
+            {
+              "title": "Cross-Channel Expertise",
+              "description": "Expert capability across digital, traditional, programmatic, and emerging media channels. True omnichannel specialists."
+            },
+            {
+              "title": "Agency Relationships",
+              "description": "Long-term relationships with media outlets, networks, and platforms provide access to premium inventory and negotiated rates."
+            },
+            {
+              "title": "Data-Driven Approach",
+              "description": "Media decisions backed by audience data, performance analytics, and market intelligence—not guesswork."
+            },
+            {
+              "title": "Continuous Optimization",
+              "description": "Weekly monitoring and optimization ensure media placement adapts to performance and market conditions."
+            },
+            {
+              "title": "Transparent Reporting",
+              "description": "Clear reporting shows impressions, reach, frequency, spend, and ROI by channel. Full visibility into media performance."
+            }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "enabled": true,
+          "type": "faq_section",
+          "title": "Frequently Asked Questions About Media Planning & Buying",
+          "faqs": [
+            {
+              "question": "What's the difference between media planning and media buying?",
+              "answer": "Media planning is strategic—determining what audience to reach, through which channels, at what time. Media buying is tactical—executing those plans by purchasing inventory. Both are essential; planning without buying is ineffective; buying without planning wastes money."
+            },
+            {
+              "question": "How is media planning different from just buying ads?",
+              "answer": "Ad buying focuses on transactional placement. Media planning is strategic—analyzing audience, competitive landscape, and budget optimization to achieve business goals efficiently. Planning elevates results beyond transactional buying."
+            },
+            {
+              "question": "What is media mix and why does it matter?",
+              "answer": "Media mix is the combination of channels used (TV, digital, radio, print, OOH, etc.). Optimal mix reaches your audience through channels they use while balancing budget across channels for synergistic impact."
+            },
+            {
+              "question": "How do we determine the right media budget?",
+              "answer": "Budget depends on business objectives, competitive spending, audience reach goals, and channel costs. We develop budgets based on reach targets and ROI objectives, recommending allocation that achieves your goals within constraints."
+            },
+            {
+              "question": "What's the right advertising frequency?",
+              "answer": "Typical frequency is 3-7 exposures to drive awareness without ad fatigue. Varies by product, urgency, and audience. Too low—message missed; too high—waste. We optimize frequency based on performance."
+            },
+            {
+              "question": "How do media planners negotiate better rates?",
+              "answer": "Volume buying power, long-term relationships, market timing knowledge, and understanding of inventory supply/demand dynamics enable negotiation of better rates than individual advertisers achieve."
+            },
+            {
+              "question": "Can we measure which media channels drove sales?",
+              "answer": "Yes, through proper attribution modeling. Single-touch attribution is simplistic; multi-touch attribution shows contribution of each channel across customer journey. We implement tracking that connects media to actual business results."
+            },
+            {
+              "question": "Should we stick with one media channel or diversify?",
+              "answer": "Diversification usually works better—reaches broader audience and provides resilience if one channel underperforms. However, focus spending on highest-performing channels. Balance concentration for efficiency with diversification for reach."
+            }
+          ]
+        },
+        "testimonials": {
+          "id": "testimonials",
+          "enabled": true,
+          "type": "testimonials_section",
+          "title": "What Our Clients Say",
+          "displayCount": 3
+        },
+        "caseStudies": {
+          "id": "case-studies",
+          "enabled": true,
+          "type": "case_studies_section",
+          "title": "Media Planning Success Stories",
+          "displayCount": 2,
+          "link": "/case-studies"
+        },
+        "cta": {
+          "id": "cta",
+          "enabled": true,
+          "type": "cta_section",
+          "title": "Ready to Optimize Your Media Strategy?",
+          "subtitle": "Let's develop a media plan that maximizes your reach and efficiency",
+          "buttonText": "Get Your Media Strategy",
+          "buttonUrl": "#contact"
+        }
+      },
+      "icon": "fa-solid fa-chart-pie"
+    },
+    {
+      "id": "email-marketing",
+      "category": "Growth & Strategy",
+      "title": "Email Marketing",
+      "slug": "email-marketing-solutions",
+      "order": 11,
+      "metaDescription": "Strategic email marketing that nurtures leads and drives conversions. Adomantra creates targeted email campaigns with high open rates and ROI.",
+      "metaKeywords": "email marketing, email campaigns, marketing automation, email newsletter, email strategy, lead nurturing",
+      "serviceIcon": "https://www.adomantra.com/asstes/img/solutions/10.png",
+      "sections": {
+        "hero": {
+          "id": "hero",
+          "enabled": true,
+          "type": "hero_section",
+          "title": "Email Marketing That Converts: Strategic Campaigns",
+          "subtitle": "Direct Communication That Builds Relationships and Drives Sales",
+          "description": "Email remains one of the highest-ROI marketing channels. Adomantra's strategic email marketing builds subscriber relationships, nurtures leads, and drives conversions through targeted, personalized campaigns.",
+          "cta": {
+            "text": "Start Your Email Strategy",
+            "url": "#"
+          }
+        },
+        "overview": {
+          "id": "overview",
+          "enabled": true,
+          "type": "content_section",
+          "title": "Understanding Email Marketing",
+          "content": "Email marketing is direct communication with subscribers who have opted into your list. Modern email goes beyond newsletters—it's a sophisticated channel for nurturing leads, building relationships, and driving conversions. Effective email marketing combines strategic segmentation, compelling copywriting, visual design, automation, and analytics. When done right, email delivers exceptional ROI—studies show every $1 spent on email marketing returns $42 in revenue on average."
+        },
+        "benefits": {
+          "id": "benefits",
+          "enabled": true,
+          "type": "benefits_section",
+          "title": "Key Benefits of Email Marketing",
+          "benefits": [
+            {
+              "title": "Exceptional ROI",
+              "description": "Email marketing delivers $42 return for every $1 spent. No other channel matches email's profitability when executed well."
+            },
+            {
+              "title": "Direct Customer Communication",
+              "description": "Email reaches subscribers directly. No algorithm changes, no paid promotion needed. Direct line to engaged customers."
+            },
+            {
+              "title": "Highly Targeted Messaging",
+              "description": "Segment subscribers by behavior, interests, purchase history. Targeted messages drive higher engagement and conversion than generic broadcasts."
+            },
+            {
+              "title": "Lead Nurturing",
+              "description": "Guide prospects through buyer journey with automated, personalized email sequences. Nurture until they're ready to buy."
+            },
+            {
+              "title": "Customer Relationship Building",
+              "description": "Regular email communication keeps your brand top-of-mind. Builds loyalty and encourages repeat purchases."
+            },
+            {
+              "title": "Measurable Performance",
+              "description": "Track open rates, click rates, conversions, and revenue. Every metric shows what's working. Data guides optimization."
+            },
+            {
+              "title": "Cost-Effective at Scale",
+              "description": "Email cost-per-contact is minimal. Reaches thousands economically. Perfect for budget-conscious businesses."
+            },
+            {
+              "title": "Automation & Efficiency",
+              "description": "Marketing automation sends right messages at right time automatically. Nurture workflows operate while you sleep."
+            }
+          ]
+        },
+        "solutions": {
+          "id": "solutions",
+          "enabled": true,
+          "type": "solutions_section",
+          "title": "Our Email Marketing Solutions",
+          "description": "Adomantra provides complete email marketing services from strategy through optimization.",
+          "solutions": [
+            {
+              "title": "Email List Building",
+              "description": "Develop subscriber acquisition strategy. Create compelling lead magnets and landing pages that build engaged email lists."
+            },
+            {
+              "title": "Email Strategy Development",
+              "description": "Define email goals, audience segments, content themes, send frequency, and automation sequences. Strategic foundation for email success."
+            },
+            {
+              "title": "Email Design & Copywriting",
+              "description": "Compelling email design that renders perfectly on all devices. Persuasive copy that drives opens, clicks, and conversions."
+            },
+            {
+              "title": "Marketing Automation",
+              "description": "Automated email sequences triggered by user behavior. Welcome sequences, abandoned cart reminders, lead nurturing workflows."
+            },
+            {
+              "title": "Email Segmentation",
+              "description": "Divide subscribers into segments based on behavior, interests, purchase history. Targeted messaging increases relevance and performance."
+            },
+            {
+              "title": "A/B Testing",
+              "description": "Test subject lines, send times, content, CTAs. Data-driven testing identifies what resonates with subscribers and improves performance."
+            },
+            {
+              "title": "Performance Analytics & Reporting",
+              "description": "Track opens, clicks, conversions, unsubscribes, and revenue. Monthly reporting shows performance and optimization recommendations."
+            },
+            {
+              "title": "Email Compliance & Deliverability",
+              "description": "Ensure emails land in inboxes, not spam. GDPR, CAN-SPAM, and anti-spam compliance. Technical optimization for inbox placement."
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "id": "why-choose-us",
+          "enabled": true,
+          "type": "why_choose_section",
+          "title": "Why Choose Adomantra for Email Marketing?",
+          "reasons": [
+            {
+              "title": "Strategic & Tactical Expertise",
+              "description": "We develop solid strategy AND execute excellent tactics. Vision combined with execution skills."
+            },
+            {
+              "title": "Copy & Design Excellence",
+              "description": "Professional copywriters and designers create email that stands out and drives action."
+            },
+            {
+              "title": "Automation Mastery",
+              "description": "Expert use of marketing automation platforms. Complex workflows that nurture leads automatically."
+            },
+            {
+              "title": "Data-Driven Optimization",
+              "description": "Testing and optimization are continuous. We identify what works and double down on successful approaches."
+            },
+            {
+              "title": "Platform Expertise",
+              "description": "Expert with all major platforms—Mailchimp, HubSpot, Active Campaign, ConvertKit, and more."
+            }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "enabled": true,
+          "type": "faq_section",
+          "title": "Frequently Asked Questions About Email Marketing",
+          "faqs": [
+            {
+              "question": "How often should we send marketing emails?",
+              "answer": "Depends on audience and business type. B2B typically 1-2x weekly; e-commerce 3-5x weekly; news/content 1-3x weekly. Test frequency—find balance between staying top-of-mind and avoiding unsubscribes."
+            },
+            {
+              "question": "What's a good email open rate?",
+              "answer": "Average open rates are 15-25% depending on industry. Higher performers achieve 30-50%+. Factors: subject line quality, sender reputation, list quality, send time, audience relevance."
+            },
+            {
+              "question": "What should our email signup rate be?",
+              "answer": "Average website signup rates are 2-3%. High-performing sites achieve 5%+. Depends on value proposition, placement, design, offer. We optimize signup rates through testing."
+            },
+            {
+              "question": "Should we use a bought email list?",
+              "answer": "Not recommended. Bought lists have low engagement, high unsubscribe rates, and damage sender reputation. Build organic lists of engaged subscribers who opted in—lower volume but higher quality and ROI."
+            },
+            {
+              "question": "What are transactional vs marketing emails?",
+              "answer": "Transactional (order confirmations, shipping updates) are triggered by user action. Marketing (newsletters, promotions) are sent on schedule. Different rules apply; both are valuable."
+            },
+            {
+              "question": "How do we avoid spam folder?",
+              "answer": "Use reputable email service providers, maintain list hygiene (remove bounces/unengaged), use clear from addresses, avoid spam trigger words, include unsubscribe link, maintain sending reputation."
+            },
+            {
+              "question": "What's marketing automation and how does it help?",
+              "answer": "Automation sends targeted emails triggered by user behavior—welcome sequences, abandoned carts, lead nurturing. Delivers right message at right time automatically, improving efficiency and results."
+            },
+            {
+              "question": "How do we build our email list quickly?",
+              "answer": "Create compelling lead magnets (ebook, discount, template), optimize signup forms, leverage paid traffic, partner with complementary brands, and add signup options throughout your site. Quality matters more than speed."
+            }
+          ]
+        },
+        "testimonials": {
+          "id": "testimonials",
+          "enabled": true,
+          "type": "testimonials_section",
+          "title": "What Our Clients Say",
+          "displayCount": 3
+        },
+        "caseStudies": {
+          "id": "case-studies",
+          "enabled": true,
+          "type": "case_studies_section",
+          "title": "Email Marketing Success Stories",
+          "displayCount": 2,
+          "link": "/case-studies"
+        },
+        "cta": {
+          "id": "cta",
+          "enabled": true,
+          "type": "cta_section",
+          "title": "Ready to Unlock Email Marketing Potential?",
+          "subtitle": "Let's build an email strategy that nurtures leads and drives revenue",
+          "buttonText": "Get Your Email Strategy",
+          "buttonUrl": "#contact"
+        }
+      },
+      "icon": "fa-solid fa-envelope-open-text"
+    },
+    {
+      "id": "influencer-marketing",
+      "category": "Growth & Strategy",
+      "title": "Influencer Marketing",
+      "slug": "influencer-marketing",
+      "order": 12,
+      "metaDescription": "Strategic influencer partnerships that build brand awareness and drive conversions. Adomantra connects brands with the right influencers for authentic campaigns.",
+      "metaKeywords": "influencer marketing, influencer partnerships, social media influencers, influencer campaigns, brand ambassadors",
+      "serviceIcon": "https://www.adomantra.com/asstes/img/solutions/11.png",
+      "sections": {
+        "hero": {
+          "id": "hero",
+          "enabled": true,
+          "type": "hero_section",
+          "title": "Influencer Marketing: Authentic Growth Through Partnership",
+          "subtitle": "Connect with Influencers Who Amplify Your Brand",
+          "description": "Leverage trusted influencer voices to reach engaged audiences authentically. Adomantra's influencer marketing connects brands with the right partners for campaigns that build awareness, credibility, and conversions.",
+          "cta": {
+            "text": "Explore Influencer Partnerships",
+            "url": "#"
+          }
+        },
+        "overview": {
+          "id": "overview",
+          "enabled": true,
+          "type": "content_section",
+          "title": "Understanding Influencer Marketing",
+          "content": "Influencer marketing leverages trusted personalities to promote your brand to their engaged audiences. Success depends on authentic partnerships with influencers whose audience aligns with your target market. From mega-influencers (1M+ followers) to micro-influencers (10K-100K followers), effective influencer marketing builds credibility through trusted voices. Modern influencer marketing includes content creation, audience engagement, performance tracking, and relationship management."
+        },
+        "benefits": {
+          "id": "benefits",
+          "enabled": true,
+          "type": "benefits_section",
+          "title": "Key Benefits of Influencer Marketing",
+          "benefits": [
+            {
+              "title": "Authentic Brand Advocacy",
+              "description": "Influencer recommendations feel authentic because influencers genuinely engage with their audience. Trust transfers to your brand."
+            },
+            {
+              "title": "Targeted Audience Reach",
+              "description": "Influencers have specific audience demographics and interests. Partner with influencers whose audience matches your target customer."
+            },
+            {
+              "title": "Cost-Effective Awareness",
+              "description": "Reach large engaged audiences without massive paid media budgets. Influencer partnerships deliver awareness cost-effectively."
+            },
+            {
+              "title": "High Engagement Rates",
+              "description": "Influencer audiences are engaged and responsive. Content performs better than brand-created content to cold audiences."
+            },
+            {
+              "title": "Credibility & Authority",
+              "description": "Association with respected influencers builds brand credibility. Third-party endorsement is more believable than self-promotion."
+            },
+            {
+              "title": "Content Generation",
+              "description": "Influencers create high-quality content featuring your brand. Repurpose content across your channels for maximum value."
+            },
+            {
+              "title": "SEO Benefits",
+              "description": "Influencer mentions, backlinks, and social signals improve SEO. Influencer partnerships support search visibility."
+            },
+            {
+              "title": "Direct Sales Impact",
+              "description": "Influencer promotions drive measurable conversions and sales. Use codes, links, and tracking to measure ROI precisely."
+            }
+          ]
+        },
+        "solutions": {
+          "id": "solutions",
+          "enabled": true,
+          "type": "solutions_section",
+          "title": "Our Influencer Marketing Solutions",
+          "description": "Adomantra provides complete influencer marketing services from strategy through performance tracking.",
+          "solutions": [
+            {
+              "title": "Influencer Strategy Development",
+              "description": "Define campaign objectives, target audience, influencer tier (mega, macro, micro), content themes, and success metrics."
+            },
+            {
+              "title": "Influencer Discovery & Vetting",
+              "description": "Identify relevant influencers with engaged audiences aligned with your brand. Vet for authenticity, audience quality, and brand fit."
+            },
+            {
+              "title": "Influencer Relationship Management",
+              "description": "Manage outreach, negotiation, contracts, and ongoing relationships. Ensure smooth collaboration and mutual success."
+            },
+            {
+              "title": "Campaign Development & Brief",
+              "description": "Create detailed campaign briefs outlining deliverables, messaging guidelines, and performance expectations while allowing creative freedom."
+            },
+            {
+              "title": "Content Collaboration",
+              "description": "Work with influencers to create authentic content featuring your product/service. Balance brand requirements with influencer's authentic voice."
+            },
+            {
+              "title": "Campaign Amplification",
+              "description": "Amplify influencer content through your channels. Repurpose influencer content across social, email, and website."
+            },
+            {
+              "title": "Performance Tracking",
+              "description": "Track impressions, engagement, reach, conversions, and revenue from influencer campaigns. Measure ROI with unique codes and affiliate links."
+            },
+            {
+              "title": "Long-Term Partnerships",
+              "description": "Build ongoing brand ambassador relationships with influencers for consistent presence and authenticity."
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "id": "why-choose-us",
+          "enabled": true,
+          "type": "why_choose_section",
+          "title": "Why Choose Adomantra for Influencer Marketing?",
+          "reasons": [
+            {
+              "title": "Extensive Influencer Network",
+              "description": "Relationships with thousands of influencers across niches. Access to top-performing partners competitors may not know."
+            },
+            {
+              "title": "Strategic Matching",
+              "description": "We match brands with right influencers based on audience alignment, authenticity, and campaign goals—not just follower counts."
+            },
+            {
+              "title": "Campaign Management",
+              "description": "Handle all aspects from negotiation through execution. You focus on strategy; we handle coordination and logistics."
+            },
+            {
+              "title": "Performance Focus",
+              "description": "Obsessed with measurable results. Every campaign tracked for impressions, engagement, conversions, and ROI."
+            },
+            {
+              "title": "Authentic Partnerships",
+              "description": "We value authentic influencer voice over controlling every word. Authenticity drives better results than scripted promotions."
+            }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "enabled": true,
+          "type": "faq_section",
+          "title": "Frequently Asked Questions About Influencer Marketing",
+          "faqs": [
+            {
+              "question": "What's the difference between mega, macro, and micro-influencers?",
+              "answer": "Mega-influencers (1M+ followers) offer massive reach but lower engagement rates. Macro-influencers (100K-1M) balance reach and engagement. Micro-influencers (10K-100K) have small but highly engaged audiences. Micro-influencers often deliver better ROI per dollar."
+            },
+            {
+              "question": "How much should we budget for influencer marketing?",
+              "answer": "Influencer fees vary dramatically: mega-influencers $5K-$100K+ per post; macro-influencers $1K-$10K; micro-influencers $500-$2K. Campaign budgets typically $5K-$50K+ depending on influencer tier and campaign scope."
+            },
+            {
+              "question": "Should we use one big influencer or multiple smaller ones?",
+              "answer": "Multiple micro-influencers typically deliver better ROI and less risk. One mega-influencer creates dependency; if campaign underperforms, impact is large. Diversify to manage risk and reach multiple audience segments."
+            },
+            {
+              "question": "How do we find the right influencers?",
+              "answer": "Identify influencers your target audience follows. Use tools like HubSpot, Sprout Social, AspireIQ to search by niche. Examine engagement rates, audience quality, and brand fit. We handle this discovery process."
+            },
+            {
+              "question": "How do we know if an influencer has fake followers?",
+              "answer": "Check engagement rates (quality influencers 3-8%), look for suspicious follower patterns, analyze comment authenticity. Tools like Social Blade and HypeAuditor help identify fake followers. Vet thoroughly before partnership."
+            },
+            {
+              "question": "What's the typical ROI from influencer marketing?",
+              "answer": "ROI varies widely but well-executed campaigns achieve 2:1 to 5:1+ returns. Micro-influencer campaigns often deliver higher ROI than mega-influencer campaigns. Track with unique codes and affiliate links for precise measurement."
+            },
+            {
+              "question": "Can we negotiate influencer fees?",
+              "answer": "Yes, especially for ongoing partnerships. Influencers may offer discounts for multiple posts, longer contracts, or exclusive partnerships. Be respectful—they're providing value."
+            },
+            {
+              "question": "How long should influencer partnerships last?",
+              "answer": "Single posts work for awareness; ongoing partnerships (3-12 months) build authenticity and recurring impact. Longer relationships allow genuine integration of your brand into influencer's content."
+            }
+          ]
+        },
+        "testimonials": {
+          "id": "testimonials",
+          "enabled": true,
+          "type": "testimonials_section",
+          "title": "What Our Clients Say",
+          "displayCount": 3
+        },
+        "caseStudies": {
+          "id": "case-studies",
+          "enabled": true,
+          "type": "case_studies_section",
+          "title": "Influencer Marketing Success Stories",
+          "displayCount": 2,
+          "link": "/case-studies"
+        },
+        "cta": {
+          "id": "cta",
+          "enabled": true,
+          "type": "cta_section",
+          "title": "Ready to Amplify Your Brand Through Influencers?",
+          "subtitle": "Let's find the right influencer partners for your brand",
+          "buttonText": "Discuss Influencer Partnerships",
+          "buttonUrl": "#contact"
+        }
+      },
+      "icon": "fa-solid fa-star"
+    },
+    {
+      "id": "whatsapp-marketing",
+      "category": "Growth & Strategy",
+      "title": "WhatsApp Marketing",
+      "slug": "whatsapp-marketing",
+      "order": 12,
+      "metaDescription": "Unlock the power of instant communication with our WhatsApp marketing solutions. Reach over 2 billion users with personalized messaging that boosts customer engagement and drives sales.",
+      "metaKeywords": "WhatsApp marketing, WhatsApp business marketing, instant messaging, customer engagement, personalized messages, WhatsApp campaigns, SMS alternative",
+      "serviceIcon": "https://www.adomantra.com/asstes/img/solutions/12.png",
+      "sections": {
+        "hero": {
+          "id": "hero",
+          "enabled": true,
+          "type": "hero_section",
+          "title": "Unlock the Power of Instant Communication with Our WhatsApp Marketing Solutions",
+          "subtitle": "Connect with Customers Where They Already Are",
+          "description": "In today's digital age, connecting with customers quickly and effectively is essential for business success. Our WhatsApp Marketing Solutions offer a powerful way to engage with your audience through personalized, instant messaging that builds strong relationships, increases engagement, and drives sales with ease.",
+          "cta": {
+            "text": "Start Your Free WhatsApp Audit",
+            "url": "/contact-us"
+          }
+        },
+        "overview": {
+          "id": "overview",
+          "enabled": true,
+          "type": "content_section",
+          "title": "Why WhatsApp Marketing Matters in 2026",
+          "content": "With over 2 billion active users globally, WhatsApp has become the primary communication channel for millions of businesses and consumers. Unlike traditional SMS or email, WhatsApp enables rich messaging with images, videos, and interactive elements. Our WhatsApp marketing solutions leverage this massive reach to help you connect with customers in real-time, on their preferred platform. From order confirmations and delivery updates to personalized product recommendations and exclusive offers, WhatsApp marketing delivers 98% message open rates within 3 minutes—far superior to email's 20-30% rates. The platform is perfect for businesses seeking cost-effective customer engagement with measurable results."
+        },
+        "benefits": {
+          "id": "benefits",
+          "enabled": true,
+          "type": "benefits_section",
+          "title": "Key Benefits of WhatsApp Marketing",
+          "benefits": [
+            {
+              "title": "Enhanced Customer Engagement",
+              "description": "Send personalized messages directly to customers, boosting engagement and building strong relationships. Real-time conversations create loyalty and repeat business unlike passive email or SMS."
+            },
+            {
+              "title": "Wider Audience Reach",
+              "description": "Reach your audience among 2+ billion WhatsApp users globally. Connect with diverse audiences effortlessly across all demographics and geographies where WhatsApp dominates."
+            },
+            {
+              "title": "Instant Communication",
+              "description": "Messages are delivered and read within minutes. Enable real-time customer support, handle time-sensitive offers, and respond instantly to inquiries keeping your business agile."
+            },
+            {
+              "title": "Personalized Messaging",
+              "description": "Use advanced tools to create highly personalized messages tailored to individual preferences and purchase behavior. Increase effectiveness and conversion rates significantly."
+            },
+            {
+              "title": "Cost-Effective Solution",
+              "description": "WhatsApp marketing costs 70% less than traditional advertising. Target the right audience with precision, ensuring every message counts and every rupee generates measurable results."
+            },
+            {
+              "title": "Higher Conversion Rates",
+              "description": "Experience 3-5x higher conversion rates compared to email marketing. WhatsApp's direct nature and high engagement make it ideal for driving immediate action from customers."
+            },
+            {
+              "title": "Rich Media Support",
+              "description": "Send images, videos, documents, location data, and interactive buttons. Create engaging experiences that text-only channels cannot match, improving customer satisfaction."
+            },
+            {
+              "title": "Measurable ROI",
+              "description": "Track every metric: delivery rates, open rates, click-through rates, conversions, and revenue. Measure campaign performance precisely with real-time analytics and dashboards."
+            }
+          ]
+        },
+        "solutions": {
+          "id": "solutions",
+          "enabled": true,
+          "type": "solutions_section",
+          "title": "Our WhatsApp Marketing Solutions",
+          "description": "Adomantra provides comprehensive WhatsApp marketing services from strategy through performance optimization.",
+          "solutions": [
+            {
+              "title": "Audience Segmentation & Analysis",
+              "description": "Analyze your customer database and segment it based on behavior, demographics, purchase history, and interests for highly targeted campaigns that resonate with each group."
+            },
+            {
+              "title": "WhatsApp Business Setup",
+              "description": "Configure WhatsApp Business Account with API integration, business profile optimization, and automation tools. Ensure full compliance with WhatsApp's messaging policies."
+            },
+            {
+              "title": "Message Strategy Development",
+              "description": "Develop compelling copy and messaging strategy that resonates with each segment while maintaining authentic brand voice and customer preferences."
+            },
+            {
+              "title": "Automation & Workflows",
+              "description": "Set up automated messaging for order confirmations, delivery updates, appointment reminders, and triggered campaigns based on customer behavior and lifecycle stages."
+            },
+            {
+              "title": "Campaign Creation & Execution",
+              "description": "Create, launch, and monitor WhatsApp campaigns with A/B testing to optimize engagement, click-through rates, and conversion rates continuously."
+            },
+            {
+              "title": "Customer Support Integration",
+              "description": "Enable two-way conversations for real-time customer support, handling inquiries, resolving issues, and building relationships through responsive communication."
+            },
+            {
+              "title": "Performance Analytics & Reporting",
+              "description": "Monitor impressions, engagement, reach, conversions, and revenue. Provide detailed dashboards showing campaign performance and ROI metrics in real-time."
+            },
+            {
+              "title": "Compliance & Legal Management",
+              "description": "Ensure full compliance with WhatsApp policies, GDPR regulations, and local data protection laws. Manage opt-in/opt-out consent and customer privacy strictly."
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "id": "why-choose-us",
+          "enabled": true,
+          "type": "why_choose_section",
+          "title": "Why Choose Adomantra for WhatsApp Marketing?",
+          "reasons": [
+            {
+              "title": "WhatsApp Business Certified Partner",
+              "description": "We are certified WhatsApp Business partners with deep expertise in API integration, compliance, and best practices. Access to latest features and priority support."
+            },
+            {
+              "title": "Proven Multi-Industry Experience",
+              "description": "Successfully managed WhatsApp campaigns for e-commerce, healthcare, real estate, hospitality, fintech, and education sectors. Industry-specific strategies that work."
+            },
+            {
+              "title": "Advanced Segmentation & Personalization",
+              "description": "Use AI-powered tools to segment audiences and personalize messages at scale. Every customer receives relevant, timely messages that drive action."
+            },
+            {
+              "title": "End-to-End Campaign Management",
+              "description": "Handle everything from setup through execution and optimization. You focus on business; we manage all technical and operational aspects."
+            },
+            {
+              "title": "Measurable Results Focus",
+              "description": "Obsessed with ROI. Every campaign tracked for engagement, conversions, and revenue. Transparent reporting shows exactly what's working."
+            }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "enabled": true,
+          "type": "faq_section",
+          "title": "Frequently Asked Questions About WhatsApp Marketing",
+          "faqs": [
+            {
+              "question": "How is WhatsApp marketing different from SMS marketing?",
+              "answer": "WhatsApp offers richer messaging with images, videos, and interactive elements versus SMS's text-only format. WhatsApp has 98% open rates within 3 minutes versus SMS's 35-50%. WhatsApp enables two-way conversations for customer support and engagement. Costs are significantly lower, and the platform feels more personal and modern than SMS."
+            },
+            {
+              "question": "Is WhatsApp marketing compliant with regulations?",
+              "answer": "Yes, when executed properly. WhatsApp requires businesses to obtain explicit consent before sending marketing messages. We ensure full compliance with WhatsApp's business policies, GDPR regulations, and local Indian data protection laws. All campaigns are opt-in and users can opt-out anytime. We maintain strict privacy and compliance standards."
+            },
+            {
+              "question": "What types of messages can we send?",
+              "answer": "You can send text messages, images, videos, documents, location information, and interactive buttons. Automated messages include order confirmations, delivery updates, appointment reminders, and promotional offers. You can also send educational content, product updates, and customer service responses. Our team helps determine optimal formats for your goals."
+            },
+            {
+              "question": "How many customers can we reach on WhatsApp?",
+              "answer": "There's no limit to customer reach on WhatsApp. With 2+ billion active users, the platform offers unlimited scalability. We help you build and segment customer lists strategically to ensure you're reaching the right people at the right time with relevant messages."
+            },
+            {
+              "question": "What metrics should we track?",
+              "answer": "Key metrics include message delivery rate, open rate (read receipts), click-through rate, conversion rate, customer response rate, and ROI. We provide real-time analytics dashboards tracking all KPIs, helping you understand campaign performance and identify optimization opportunities quickly."
+            },
+            {
+              "question": "How much does WhatsApp marketing cost?",
+              "answer": "WhatsApp marketing is significantly more cost-effective than traditional advertising—typically 70% cheaper than comparable channels. Costs depend on message volume and features used. We work flexibly with your budget to create scalable campaigns delivering maximum ROI. Most businesses see 3-5x better returns versus email marketing at a fraction of the cost."
+            }
+          ]
+        },
+        "testimonials": {
+          "id": "testimonials",
+          "enabled": true,
+          "type": "testimonials_section",
+          "title": "What Our Clients Say About WhatsApp Marketing",
+          "displayCount": 3
+        },
+        "caseStudies": {
+          "id": "case-studies",
+          "enabled": true,
+          "type": "case_studies_section",
+          "title": "WhatsApp Marketing Success Stories",
+          "displayCount": 2,
+          "link": "/case-studies"
+        },
+        "cta": {
+          "id": "cta",
+          "enabled": true,
+          "type": "cta_section",
+          "title": "Ready to Transform Your Customer Communication?",
+          "subtitle": "Let's discuss how WhatsApp marketing can boost your engagement and sales",
+          "buttonText": "Start Your WhatsApp Campaign",
+          "buttonUrl": "/contact-us"
+        }
+      },
+      "icon": "fa-brands fa-whatsapp"
+    },
+    {
+      "id": "video-advertising",
+      "category": "Media & Advertising",
+      "title": "Video Advertising",
+      "slug": "video-advertising",
+      "order": 13,
+      "metaDescription": "Professional video advertising services in Delhi NCR. Create engaging video ads for YouTube, Instagram, Facebook, and more. Strategic video marketing that drives conversions and builds brand awareness.",
+      "metaKeywords": "video advertising, video marketing, YouTube ads, social media video, video production, explainer videos, product launch videos, digital video advertising",
+      "serviceIcon": "https://www.adomantra.com/asstes/img/solutions/13.png",
+      "sections": {
+        "hero": {
+          "id": "hero",
+          "enabled": true,
+          "type": "hero_section",
+          "title": "Searching for the Best Video Advertising Company in India? Here We Are!",
+          "subtitle": "Professional Video Ads That People Actually Want to Watch",
+          "description": "The world runs on content, but nothing works like video. It talks faster than words, feels deeper than a picture, and stays in your head for longer. Adomantra is a leading video advertising company that makes video ads people actually want to watch and remember. Since 2012, we've been helping brands turn ideas into stories that move people to act.",
+          "cta": {
+            "text": "Explore Video Marketing Strategies",
+            "url": "/contact-us"
+          }
+        },
+        "overview": {
+          "id": "overview",
+          "enabled": true,
+          "type": "content_section",
+          "title": "Why Video Advertising Wins in 2026",
+          "content": "89% of businesses use video in their marketing, and 98% include it in their overall plans. Video is the most powerful medium for capturing attention, building trust, and driving action. Digital video advertising should do more than look good—it should make people stop, watch, and remember your brand. Every business has a story. The trick is telling it in a way that feels real and stays with your audience. We make that happen with visuals that catch the eye and campaigns built around the people you want to reach. This isn't just about making videos. It's about creating work that performs on YouTube, Instagram, Facebook, LinkedIn, and Google—work that builds recall and drives measurable results."
+        },
+        "benefits": {
+          "id": "benefits",
+          "enabled": true,
+          "type": "benefits_section",
+          "title": "Key Benefits of Video Advertising",
+          "benefits": [
+            {
+              "title": "Higher Engagement Rates",
+              "description": "Video content generates 12 times more shares than other content types. Audiences engage longer with video, resulting in better brand recall and awareness."
+            },
+            {
+              "title": "Increased Conversions",
+              "description": "Video on landing pages boosts conversions by up to 80%. Viewers remember 95% of a message when delivered via video versus 10% from text."
+            },
+            {
+              "title": "Multi-Platform Performance",
+              "description": "Optimize content for YouTube, Instagram Reels, Facebook, LinkedIn, and TikTok. Reach audiences where they spend time with platform-specific formats."
+            },
+            {
+              "title": "Cost-Effective Awareness",
+              "description": "Video advertising delivers awareness cost-effectively. Reach large audiences without massive paid media budgets through strategic video campaigns."
+            },
+            {
+              "title": "Brand Authority Building",
+              "description": "High-quality video content establishes your brand as an authority. Storytelling builds emotional connections and trust with your target audience."
+            },
+            {
+              "title": "SEO Benefits",
+              "description": "Video content improves SEO through increased time-on-page, social signals, and backlinks. Video-rich pages rank higher in search results."
+            },
+            {
+              "title": "Complete Content Ownership",
+              "description": "In-house production means you own all content. Repurpose videos across channels, update content easily, and maintain full creative control."
+            },
+            {
+              "title": "Measurable Performance Metrics",
+              "description": "Track views, engagement, click-through rates, conversions, and ROI precisely. Optimize future campaigns based on real performance data."
+            }
+          ]
+        },
+        "solutions": {
+          "id": "solutions",
+          "enabled": true,
+          "type": "solutions_section",
+          "title": "Our Video Advertising Solutions",
+          "description": "Adomantra provides complete video advertising services from strategy through performance tracking and optimization.",
+          "solutions": [
+            {
+              "title": "Explainer Videos",
+              "description": "Make products or services simple to understand in 60-90 seconds. Perfect for startups, SaaS platforms, and complex offerings needing clear explanation."
+            },
+            {
+              "title": "Product Launch Videos",
+              "description": "Build buzz and excitement around new products. Perfect for e-commerce, D2C, and tech brands looking to make maximum impact from day one."
+            },
+            {
+              "title": "Performance Marketing Videos",
+              "description": "Quick, powerful creatives optimized to drive clicks, leads, and sales in paid campaigns. Clear CTAs with compelling hooks for immediate action."
+            },
+            {
+              "title": "Instagram Reels & Stories",
+              "description": "Eye-catching vertical videos for Instagram and Facebook that people love to share. Build viral moments and increase organic reach exponentially."
+            },
+            {
+              "title": "Corporate Culture Videos",
+              "description": "Show the world what working with you is like. Attract top talent by highlighting your company culture, values, and employee experiences emotionally."
+            },
+            {
+              "title": "Seasonal & Occasion-Based Ads",
+              "description": "Create emotional campaigns that connect with audiences during festivals, events, or trending moments. Capitalize on cultural occasions for maximum impact."
+            },
+            {
+              "title": "YouTube Campaign Management",
+              "description": "Manage complete YouTube campaigns from strategy through execution. Handle pre-roll ads, bumper ads, and YouTube-specific optimization."
+            },
+            {
+              "title": "Video Analytics & Optimization",
+              "description": "Monitor performance across platforms with detailed analytics. Optimize campaigns continuously based on viewer behavior and engagement patterns."
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "id": "why-choose-us",
+          "enabled": true,
+          "type": "why_choose_section",
+          "title": "Why Choose Adomantra for Video Advertising?",
+          "reasons": [
+            {
+              "title": "Creative & Production In-House",
+              "description": "Complete control from scripting and casting through animation, filming, editing, and motion graphics. Every video maintains consistent brand identity."
+            },
+            {
+              "title": "Data-Driven Strategy",
+              "description": "Every video designed around real audience research and campaign goals. Success metrics defined upfront; strategy optimized for measurable results."
+            },
+            {
+              "title": "Multi-Platform Expertise",
+              "description": "Create content optimized for each platform's unique format. Instagram Reels, YouTube ads, Facebook stories—each shaped for platform-specific success."
+            },
+            {
+              "title": "Local Insight, Global Quality",
+              "description": "Delhi NCR-based team with local market insights combined with world-class production quality. Strategies that work locally and compete globally."
+            },
+            {
+              "title": "200+ Clients, 1000+ Videos",
+              "description": "Extensive portfolio of successful campaigns across industries. Proven ability to deliver results repeatedly for businesses of all sizes."
+            }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "enabled": true,
+          "type": "faq_section",
+          "title": "Frequently Asked Questions About Video Advertising",
+          "faqs": [
+            {
+              "question": "What are digital video ads?",
+              "answer": "Digital video ads are videos made to promote products, services, or brands on online platforms like YouTube, Instagram, Facebook, TikTok, and within apps. Formats range from 6-second bumper ads to full 60-second or longer spots. Different formats work for different platforms and campaign objectives. Digital video ads can be skippable, non-skippable, or interactive depending on platform and goal."
+            },
+            {
+              "question": "What's the best length for a video ad?",
+              "answer": "Optimal length depends on platform and goal: YouTube pre-roll: 6-15 seconds (short enough to avoid skips). Instagram/Facebook: 15-30 seconds (mobile-optimized). Landing pages: 60-90 seconds (enough to tell complete story). Educational content: 2-5 minutes (longer-form storytelling). We test different lengths to find what works best for your audience."
+            },
+            {
+              "question": "How much does professional video production cost?",
+              "answer": "Costs vary by complexity and quality: Simple explainer videos ₹50,000-₹1,50,000. Product launch videos ₹1,50,000-₹5,00,000. Cinematic campaigns ₹5,00,000-₹20,00,000+. We work with all budgets and create effective videos at any investment level. Discuss your goals upfront; we deliver maximum ROI for your budget."
+            },
+            {
+              "question": "How do we measure video advertising ROI?",
+              "answer": "Track key metrics: Views and engagement rates, Click-through rates (CTR), Conversion rates, Revenue generated, Cost per conversion. We provide detailed dashboards showing all metrics. Use unique tracking codes and UTM parameters to attribute revenue directly to video campaigns."
+            },
+            {
+              "question": "Can we repurpose videos across platforms?",
+              "answer": "Yes, repurposing is smart. Create one video then adapt for different platforms. Landscape format for YouTube, vertical for Instagram Reels, square for Facebook. Long-form content for landing pages, short snippets for social. We maximize value by repurposing content across all channels."
+            },
+            {
+              "question": "What makes a video ad effective?",
+              "answer": "Effective video ads: Hook viewers in first 3 seconds. Tell clear, relatable story. Show authentic emotion and connection. Include clear call-to-action. Feature product/service naturally. Have strong ending. Optimize for platform-specific viewing habits. We build all these elements into every video."
+            },
+            {
+              "question": "How long is the video production timeline?",
+              "answer": "Timeline depends on complexity. Simple explainer: 2-3 weeks. Standard product video: 3-4 weeks. Complex production: 4-8 weeks. Cinematic campaigns: 8-12+ weeks. Rush productions possible at premium costs. We discuss timelines upfront and meet deadlines reliably."
+            }
+          ]
+        },
+        "testimonials": {
+          "id": "testimonials",
+          "enabled": true,
+          "type": "testimonials_section",
+          "title": "What Our Video Clients Say",
+          "displayCount": 3
+        },
+        "caseStudies": {
+          "id": "case-studies",
+          "enabled": true,
+          "type": "case_studies_section",
+          "title": "Video Advertising Success Stories",
+          "displayCount": 2,
+          "link": "/case-studies"
+        },
+        "cta": {
+          "id": "cta",
+          "enabled": true,
+          "type": "cta_section",
+          "title": "Ready to Create Video That Captivates Your Audience?",
+          "subtitle": "Let's build your next winning video campaign",
+          "buttonText": "Discuss Video Strategy",
+          "buttonUrl": "/contact-us"
+        }
+      },
+      "icon": "fa-solid fa-clapperboard"
+    },
+    {
+      "id": "geo-agency",
+      "category": "Growth & Strategy",
+      "title": "Generative Engine Optimization (GEO)",
+      "slug": "geo-agency",
+      "order": 14,
+      "metaDescription": "Generative Engine Optimization (GEO) services for AI-powered search visibility. Get featured in ChatGPT, Google SGE, Perplexity, and Gemini with Adomantra's expert GEO strategy.",
+      "metaKeywords": "generative engine optimization, GEO, AI search optimization, ChatGPT visibility, Google SGE optimization, AI visibility, answer engine optimization, LLM content strategy",
+      "serviceIcon": "https://www.adomantra.com/asstes/img/solutions/14.png",
+      "sections": {
+        "hero": {
+          "id": "hero",
+          "enabled": true,
+          "type": "hero_section",
+          "title": "Generative Engine Optimization Service That Powers the Future of Search",
+          "subtitle": "Stay Visible in AI-Powered Search Results",
+          "description": "Search is evolving and the old style of SEO is no longer enough. The future belongs to brands that can adapt to AI-powered user journeys. Adomantra's Generative Engine Optimization Service keeps your brand visible where answers now come straight from AI-driven search experiences.",
+          "cta": {
+            "text": "Book Your GEO Strategy Consultation",
+            "url": "/contact-us"
+          }
+        },
+        "overview": {
+          "id": "overview",
+          "enabled": true,
+          "type": "content_section",
+          "title": "Why Generative Engine Optimization Matters Now",
+          "content": "GEO is the link between your brand and the new way people search, interact, and decide. From Google's Search Generative Experience to ChatGPT, Perplexity, Gemini, and beyond, the goal is to place your brand inside the answers rather than hidden among links. The way people search online has completely changed. More than 80% of Gen Z now prefer AI-powered answers instead of clicking through web results. 60% of mobile searches end without a single click. If your brand isn't showing up in AI-generated answers, it simply isn't being seen. Generative Engine Optimization ensures your brand is part of those answers, visible to where customers are actually looking."
+        },
+        "benefits": {
+          "id": "benefits",
+          "enabled": true,
+          "type": "benefits_section",
+          "title": "Key Benefits of Generative Engine Optimization",
+          "benefits": [
+            {
+              "title": "Show Up in AI-Generated Answers",
+              "description": "Get featured in ChatGPT, Google SGE, Perplexity, and other AI answer engine responses. Be mentioned in the answers your customers read."
+            },
+            {
+              "title": "Boost Visibility Without Clicks",
+              "description": "Increase brand mentions and authority in zero-click answers where users get information directly without visiting your website."
+            },
+            {
+              "title": "Provide Accurate Data to LLMs",
+              "description": "Structure content so large language models understand, cite, and feature your information in responses. Become a preferred source."
+            },
+            {
+              "title": "Dominate Conversational Searches",
+              "description": "Get found in voice-first and conversational search queries growing rapidly among mobile users. Answer questions naturally."
+            },
+            {
+              "title": "Build Long-Term Authority",
+              "description": "Establish authority in AI-powered search before competition catches up. First-mover advantage in the next generation of search."
+            },
+            {
+              "title": "Improve Traditional SEO",
+              "description": "GEO strategies improve traditional SEO simultaneously. Better-structured content benefits both AI systems and Google rankings."
+            },
+            {
+              "title": "Increase Brand Mentions",
+              "description": "Get cited and mentioned by AI systems when answering customer questions. Build authority through machine-recommended visibility."
+            },
+            {
+              "title": "Future-Proof Your Visibility",
+              "description": "As search evolves toward AI-first interfaces, GEO ensures your brand remains visible and competitive in emerging search landscape."
+            }
+          ]
+        },
+        "solutions": {
+          "id": "solutions",
+          "enabled": true,
+          "type": "solutions_section",
+          "title": "Our GEO Services",
+          "description": "Adomantra provides complete Generative Engine Optimization services ensuring your brand stays visible in AI-driven search results.",
+          "solutions": [
+            {
+              "title": "Structured Content Architecture",
+              "description": "Organize website content with right schema, metadata, and citations so AI tools easily understand and quote it. Make content machine-readable."
+            },
+            {
+              "title": "Prompt-Led SEO Strategy",
+              "description": "Find questions your audience asks most and create content answering them. Increase likelihood your brand appears in AI responses and summaries."
+            },
+            {
+              "title": "LLM Content Mapping",
+              "description": "Check and improve presence on ChatGPT, Perplexity, Gemini, Google SGE, and other platforms. Show up where your audience gets answers."
+            },
+            {
+              "title": "AI Snippet Engineering",
+              "description": "Make content short, clear, and valuable so AI tools feature it in summaries and answer boxes. Optimize for being cited by language models."
+            },
+            {
+              "title": "Technical Search Validation",
+              "description": "Ensure website is fast, crawlable, and meets latest AI search requirements. Fix technical issues preventing AI system indexing."
+            },
+            {
+              "title": "Schema Implementation & Optimization",
+              "description": "Implement and optimize schema markup so AI systems understand content structure. Use FAQ, article, product schema effectively."
+            },
+            {
+              "title": "AI Citation Tracking",
+              "description": "Monitor where your brand appears in AI-generated results. Track mentions across ChatGPT, SGE, Perplexity, and other platforms."
+            },
+            {
+              "title": "Performance Insights & Reporting",
+              "description": "Real-time dashboards tracking brand mentions in AI results. Regular reports showing impact and optimization opportunities."
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "id": "why-choose-us",
+          "enabled": true,
+          "type": "why_choose_section",
+          "title": "Why Choose Adomantra as Your GEO Agency?",
+          "reasons": [
+            {
+              "title": "True GEO Expertise & Experience",
+              "description": "Already deployed GEO strategies for 200+ brands across fintech, healthcare, education, and ecommerce. Real results, proven methodologies."
+            },
+            {
+              "title": "Real-Time LLM Testing",
+              "description": "Continuous prompt testing and feedback loops. Optimize visibility across ChatGPT, Google SGE, Perplexity, and emerging AI platforms."
+            },
+            {
+              "title": "Multi-Platform Coverage",
+              "description": "Strong presence strategy across Google SGE, ChatGPT, Perplexity, Claude, and Gemini. Don't put all eggs in one platform basket."
+            },
+            {
+              "title": "AI Algorithm Understanding",
+              "description": "Deep knowledge of how LLMs process, rank, and feature content. Strategies built on AI behavior understanding, not guesswork."
+            },
+            {
+              "title": "Integrated Strategy Approach",
+              "description": "Seamless GEO integration with your PPC and content marketing. Unified visibility strategy across all channels and platforms."
+            }
+          ]
+        },
+        "faq": {
+          "id": "faq",
+          "enabled": true,
+          "type": "faq_section",
+          "title": "Frequently Asked Questions About GEO Services",
+          "faqs": [
+            {
+              "question": "How is Generative Engine Optimization different from traditional SEO?",
+              "answer": "Traditional SEO helps your website rank on Google or Bing search results. GEO helps your brand appear directly in answers from AI tools like ChatGPT and Google SGE. The goal is being part of the answer people read, not just a link on the page. GEO focuses on being cited by AI systems rather than ranking in traditional search results."
+            },
+            {
+              "question": "What platforms do GEO strategies work for?",
+              "answer": "GEO covers ChatGPT, Google's Search Generative Experience, Perplexity, Claude, and Gemini. It also improves how your brand appears in voice assistants like Google Assistant and Alexa, and AI-powered browsers. Our strategies maximize visibility across all major AI search and answer platforms."
+            },
+            {
+              "question": "How long before I see results from GEO Services?",
+              "answer": "Timeline varies by industry and current presence. Many brands see mentions in AI answers within 2-3 months. Some see initial improvements in 4-6 weeks; others take 3-4 months for significant impact. We provide regular performance reports tracking progress against your goals."
+            },
+            {
+              "question": "What kind of content works best for GEO?",
+              "answer": "AI prefers clear, well-organized, fact-based content. Long-form guides, Q&A formats, expert articles, original research, and structured data perform best. Lists, definitions, statistics, and case studies are particularly favored. Content should directly answer user questions comprehensively."
+            },
+            {
+              "question": "Can we do GEO alongside traditional SEO?",
+              "answer": "Absolutely! GEO and traditional SEO work perfectly together. Traditional SEO gets you ranking in Google; GEO gets you featured in AI answers. Many strategies support both. We integrate GEO with existing SEO efforts for maximum visibility across traditional and AI-powered search."
+            },
+            {
+              "question": "How much does GEO strategy cost?",
+              "answer": "GEO strategy costs depend on scope, industry, and current presence. We offer flexible pricing starting with strategy consultation through full implementation. Typically businesses invest ₹1,50,000-₹10,00,000+ monthly depending on scope. We discuss budget and create custom plans delivering ROI."
+            },
+            {
+              "question": "Is GEO sustainable long-term?",
+              "answer": "Yes, GEO is highly sustainable. Unlike paid advertising that stops working when you stop paying, GEO builds authority and content with lasting visibility. As search increasingly becomes AI-first, GEO importance only grows. Early adopters gain significant competitive advantage."
+            }
+          ]
+        },
+        "testimonials": {
+          "id": "testimonials",
+          "enabled": true,
+          "type": "testimonials_section",
+          "title": "What Our GEO Clients Say",
+          "displayCount": 3
+        },
+        "caseStudies": {
+          "id": "case-studies",
+          "enabled": true,
+          "type": "case_studies_section",
+          "title": "GEO Success Stories",
+          "displayCount": 2,
+          "link": "/case-studies"
+        },
+        "cta": {
+          "id": "cta",
+          "enabled": true,
+          "type": "cta_section",
+          "title": "Be the Brand AI Chooses to Mention",
+          "subtitle": "Let's position your brand in the next generation of search",
+          "buttonText": "Schedule Your GEO Consultation",
+          "buttonUrl": "/contact-us"
+        }
+      },
+      "icon": "fa-solid fa-brain"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Arjun Sharma",
+      "position": "Marketing Director, Technova",
+      "feedback": "Adomantra has completely transformed our presence in the CTV space. Their AI-driven approach for targeting is unmatched in the Indian market.",
+      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "name": "Priya Patel",
+      "position": "Founder, EcoStyle India",
+      "feedback": "The ROI we've seen since switching to Adomantra's performance marketing solutions has been incredible. Highly recommend their professional team.",
+      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "name": "Vikram Singh",
+      "position": "CEO, Singh Logistics",
+      "feedback": "Their expertise in GEO and programmatic advertising helped us scale across multiple states within months. Truly a growth partner.",
+      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "rating": 5
+    },
+    {
+      "id": 4,
+      "name": "Ananya Iyer",
+      "position": "CMO, BrightFuture EdTech",
+      "feedback": "The creativity and data-driven strategy Adomantra brings to the table is refreshing. They understand the Indian digital landscape perfectly.",
+      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "name": "Rohan Gupta",
+      "position": "Operations Head, Gupta Retail",
+      "feedback": "Working with Adomantra was the best decision for our digital transformation. Their transparency and results are what set them apart.",
+      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "rating": 4
+    },
+    {
+      "id": 6,
+      "name": "Sneha Reddy",
+      "position": "Digital Lead, PharmaPulse",
+      "feedback": "Exceptional service and deep technical knowledge. Their team handled our complex requirements with ease.",
+      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "rating": 5
+    },
+    {
+      "id": 7,
+      "name": "Rahul Verma",
+      "position": "Founder, Verma Tech",
+      "feedback": "Adomantra's ability to reach the right audience at the right time has significantly lowered our customer acquisition costs.",
+      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "rating": 5
+    },
+    {
+      "id": 8,
+      "name": "Kavita Rao",
+      "position": "Marketing Head, Rao Enterprises",
+      "feedback": "From SEO to CTV, they are a one-stop-shop for all things digital. Professional, punctual, and highly skilled.",
+      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "rating": 4
+    },
+    {
+      "id": 9,
+      "name": "Sameer Khan",
+      "position": "Manager, Global Ventures",
+      "feedback": "The custom dashboards and reporting Adomantra provides give us total clarity on where our ad spend is going.",
+      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "rating": 5
+    },
+    {
+      "id": 10,
+      "name": "Ishani Das",
+      "position": "Creative Director, Studio Das",
+      "feedback": "Creativity meets technology at Adomantra. Their team helped us build a brand identity that truly resonates with our audience.",
+      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "rating": 5
+    }
+  ]
+}

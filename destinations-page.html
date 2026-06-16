@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Places - Explore the World</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://www.adotrip.com/public/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/adotrip/style.css">
+    <script src="assets/adotrip/adotrip.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+
+        <!-- Top Header -->
+        <section class="top-header-ttt">
+            <div class="container-fluid">
+                <div class="top-bar">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                        <div class="d-flex align-items-center gap-3">
+                            <!-- Logo / Branding -->
+                        </div>
+
+                        <div class="header-menu-ttt">
+
+                            <!-- Account Dropdown -->
+                            <div class="menu-item-ttt dropdown-toggle-item" id="accountDropdown">
+                                <a href="javascript:void(0)" class="menu-link-ttt">
+                                    <i class="fa-solid fa-user-circle me-1"></i>
+                                    My Account
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+
+                                <ul class="submenu-ttt">
+                                    <li><a href="https://www.adotrip.com/customer/login">Login</a></li>
+                                    <li><a href="https://www.adotrip.com/customer/register">Register</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- More Dropdown -->
+                            <div class="menu-item-ttt dropdown-toggle-item" id="moreDropdown">
+                                <a href="javascript:void(0)" class="menu-link-ttt">
+                                    More <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+
+                                <ul class="submenu-ttt">
+                                    <li><a href="https://www.adotrip.com/events-festivals">Events & Festivals</a></li>
+                                    <li><a href="https://www.adotrip.com/medical-tourism">Medical Tourism</a></li>
+                                    <li><a href="https://www.adotrip.com/news">Travel News</a></li>
+                                    <li><a href="https://www.adotrip.com/blog">Blogs</a></li>
+                                    <li><a href="https://www.adotrip.com/trip-talkies">Trip Talkies</a></li>
+                                    <li><a href="https://www.adotrip.com/advertise-with-us">Advertise With Us</a></li>
+                                    <li><a href="https://www.adotrip.com/partner-with-us">Partner With Us</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Google Translate -->
+                            <div class="menu-item-ttt" id="translateDropdown">
+                                <div id="google_translate_element">
+                                    <div class="skiptranslate goog-te-gadget" dir="ltr">
+                                        <div id=":0.targetLanguage">
+                                            <select class="goog-te-combo" aria-label="Language Translate Widget">
+                                                <option value="">Language</option>
+                                                <option value="ar">Arabic</option>
+                                                <option value="fr">French</option>
+                                                <option value="de">German</option>
+                                                <option value="hi">Hindi</option>
+                                                <option value="id">Indonesian</option>
+                                                <option value="it">Italian</option>
+                                                <option value="ja">Japanese</option>
+                                                <option value="kn">Kannada</option>
+                                                <option value="ml">Malayalam</option>
+                                                <option value="mr">Marathi</option>
+                                                <option value="pt">Portuguese (Brazil)</option>
+                                                <option value="ru">Russian</option>
+                                                <option value="es">Spanish</option>
+                                                <option value="ta">Tamil</option>
+                                                <option value="te">Telugu</option>
+                                                <option value="th">Thai</option>
+                                                <option value="tr">Turkish</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Header -->
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="/">
+                    <img src="https://www.adotrip.com/public/logo.webp" alt="logo">
+                </a>
+
+                <!-- Mobile Search Toggle -->
+                <button class="btn d-lg-none ms-auto search-toggle px-3" style="border: none; background: none;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <!-- Mobile Search -->
+                <div class="mobile-search-bar d-lg-none px-3 py-2" style="display: none;">
+                    <div class="d-flex align-items-center">
+                        <input type="text" class="form-control me-2" placeholder="Search..." autocomplete="off">
+                        <button type="button" class="btn btn-primary mobile-search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="destinationDropdown"
+                                data-bs-toggle="dropdown">
+                                Destinations <i class="fa-solid fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="https://www.adotrip.com/destinations">India</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.adotrip.com/destinations/international">International</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="https://www.adotrip.com/holidays">Holidays</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.adotrip.com/hptdc">Himachal
+                                Tourism</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.adotrip.com/circuit-planner">Circuit
+                                Planner</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.adotrip.com/contact-us">Contact
+                                Us</a></li>
+                    </ul>
+
+                    <!-- Search -->
+                    <div class="search-box d-flex align-items-center">
+                        <form id="search-from" action="https://www.adotrip.com/search" method="get">
+                            <input type="text" placeholder="Search..." name="search" autocomplete="off">
+                        </form>
+                        <button onclick="document.getElementById('search-from').submit();">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    </header>
+    <section class="breadcrumbs_abt">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="page-breadcrumb_abt">
+                        <li>
+                            <a href="/"><i class="fa fa-home"></i> Home </a> <i class="fas fa-chevron-right"></i>
+                        </li>
+                        <li class="active">
+                            <a> Destinations</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Main -->
+    <main>
+        <!-- Hero -->
+        <div class="hero">
+            <h1 class="hero-title">Discover <span>Places </span>That Move You</h1>
+            <p class="hero-subtitle">Explore the world's most beautiful destinations and create unforgettable memories
+            </p>
+        </div>
+        <div class="container-1400">
+            <!-- Search Intro Section -->
+            <div class="search-intro">
+                <h2 class="search-intro-title">Where do you want to go?</h2>
+                <p class="search-intro-text">Discover tailored experiences across breathtaking landscapes. Use the
+                    search
+                    and filters to narrow down your perfect destination.</p>
+            </div>
+
+            <!-- Minimal Search Bar -->
+            <div class="search-container-minimal">
+                <div class="mobile-filter-search-wrapper">
+                    <button class="mobile-filter-toggle" onclick="toggleMobileFilters()">
+                        <i class="fas fa-sliders-h"></i>
+                        <span>Filters</span>
+                    </button>
+                    <div class="search-wrapper-minimal">
+                        <i class="fas fa-search search-icon-minimal"></i>
+                        <input type="text" id="destinationSearch" placeholder="Search by name, city, or state..."
+                            oninput="applyFilters()">
+                    </div>
+                </div>
+                <span class="results-count-minimal">Found <strong id="resultsCount">0</strong> locations</span>
+            </div>
+
+            <div class="filters-overlay" id="filtersOverlay" onclick="toggleMobileFilters()"></div>
+            <div class="grid container-fluid" style="max-width: 1400px; margin: 0 auto">
+                <div class="filters active grid-3" id="filtersSection">
+                    <button class="close-filters-mobile" onclick="toggleMobileFilters()">&times;</button>
+                    <div class="filter-header-main">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fas fa-sliders-h text-accent"></i>
+                            <span>Filters</span>
+                        </div>
+                        <button class="reset-filters" onclick="resetFilters()">Reset All</button>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Categories</label>
+                        <div class="filter-options-chips">
+                            <div class="filter-chip">
+                                <input type="radio" id="cat-all" name="category" value="All" checked
+                                    onchange="applyFilters()">
+                                <label for="cat-all">All</label>
+                            </div>
+                            <div class="filter-chip">
+                                <input type="radio" id="cat-beach" name="category" value="Beach"
+                                    onchange="applyFilters()">
+                                <label for="cat-beach">Beaches</label>
+                            </div>
+                            <div class="filter-chip">
+                                <input type="radio" id="cat-mountain" name="category" value="Mountain"
+                                    onchange="applyFilters()">
+                                <label for="cat-mountain">Mountains</label>
+                            </div>
+                            <div class="filter-chip">
+                                <input type="radio" id="cat-spiritual" name="category" value="Spiritual"
+                                    onchange="applyFilters()">
+                                <label for="cat-spiritual">Spiritual</label>
+                            </div>
+                            <div class="filter-chip">
+                                <input type="radio" id="cat-adventure" name="category" value="Adventure"
+                                    onchange="applyFilters()">
+                                <label for="cat-adventure">Adventure</label>
+                            </div>
+                            <div class="filter-chip">
+                                <input type="radio" id="cat-nature" name="category" value="Nature"
+                                    onchange="applyFilters()">
+                                <label for="cat-nature">Nature</label>
+                            </div>
+                            <div class="filter-chip">
+                                <input type="radio" id="cat-culture" name="category" value="Culture"
+                                    onchange="applyFilters()">
+                                <label for="cat-culture">Culture</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Region</label>
+                        <div class="custom-select-wrapper">
+                            <select id="stateFilter" onchange="applyFilters()">
+                                <option value="All">All Regions</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="West Bengal">West Bengal</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Best Season</label>
+                        <div class="filter-options-chips">
+                            <div class="filter-chip">
+                                <input type="checkbox" id="time-spring" value="Spring" onchange="applyFilters()">
+                                <label for="time-spring">Spring</label>
+                            </div>
+                            <div class="filter-chip">
+                                <input type="checkbox" id="time-summer" value="Summer" onchange="applyFilters()">
+                                <label for="time-summer">Summer</label>
+                            </div>
+                            <div class="filter-chip">
+                                <input type="checkbox" id="time-monsoon" value="Monsoon" onchange="applyFilters()">
+                                <label for="time-monsoon">Monsoon</label>
+                            </div>
+                            <div class="filter-chip">
+                                <input type="checkbox" id="time-autumn" value="Autumn" onchange="applyFilters()">
+                                <label for="time-autumn">Autumn</label>
+                            </div>
+                            <div class="filter-chip">
+                                <input type="checkbox" id="time-winter" value="Winter" onchange="applyFilters()">
+                                <label for="time-winter">Winter</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-block">
+                    <div class="locations-swiper-wrap" id="locationsSwiperWrap">
+                        <div class="locations-grid grid-4" id="locationsGrid"></div>
+                    </div>
+                    <div class="pagination mt-5" id="pagination"></div>
+                </div>
+
+                <!-- Pagination -->
+            </div>
+            <!-- Promo Banner Section -->
+            <div class="container-fluid mt-6">
+                <div class="promo-grid">
+                    <div class="promo-content">
+                        <span class="promo-badge">Limited Time Offer</span>
+                        <h2 class="promo-heading">Adventure Awaits! <br>Get <span class="promo-highlight"><span
+                                    class="large-text">25</span><span class="medium-text">%</span></span> Off
+                            Your Next Trip</h2>
+                        <p class="promo-text">Book your dream destination before the end of the month and unlock
+                            exclusive
+                            member discounts and early access to our most popular curated tours.</p>
+                        <button class="cta-button" style="width: fit-content;">Claim Offer Now</button>
+                    </div>
+                    <div class="promo-visual">
+                        <div class="main-banner-img">
+                            <img src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Travel Banner">
+                        </div>
+                        <div class="floating-img">
+                            <img src="https://images.pexels.com/photos/2108845/pexels-photo-2108845.jpeg?auto=compress&cs=tinysrgb&w=400"
+                                alt="Floating Offer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Rated -->
+            <div class="container-fluid">
+                <div class="section-header flex-column mt-6">
+                    <div class="d-flex flex-column align-items-start gap-2">
+                        <h2 class="section-title">Top Rated Destinations</h2>
+                        <p class="section-desc">Handpicked by our travelers, these are the highest-rated spots you
+                            shouldn't
+                            miss on your next journey.</p>
+                    </div>
+                </div>
+                <div class="locations-grid grid-2" id="mostLovedGrid"></div>
+            </div>
+            <div class="px-3"></div>
+
+            <!-- Premium CTA Section -->
+            <div class="container-fluid section-header mt-6 justify-content-center row g-4 mx-auto">
+                <!-- Dynamic Promo Column -->
+                <div class="col-lg-4 promo-col-premium">
+                    <div class="promo-col-premium-glow"></div>
+                    <div class="promo-dynamic-card h-100" id="dynamicPromo" data-delay="5000"
+                        data-api-key="y6WP5reQNH7abdL2uzdLTyV8pq0kMmF3CHf7ZNkiHo98DXIvORUOBSfi">
+                        <div class="promo-timer-bar promo-timer-animate" id="promoTimer"></div>
+                        <div class="promo-image-container">
+                            <img src="" alt="Promo" id="promoImg">
+                        </div>
+                        <div class="promo-content-dynamic">
+                            <div>
+                                <h3 id="promoTitle">Flash Deal</h3>
+                                <div class="promo-special-label" id="promoBadge">Special Offer</div>
+                                <div class="promo-discount-tag" id="promoDiscount">20% OFF</div>
+                                <p id="promoDesc">Loading amazing offers...</p>
+                                <div class="promo-price-tag">
+                                    <span class="old-price" id="promoOldPrice"></span>
+                                    <span class="new-price" id="promoNewPrice"></span>
+                                </div>
+                            </div>
+                            <button class="cta-button w-100">Claim Deal</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Existing Premium CTA -->
+                <div class="col-lg-8 px-0">
+                    <div class="premium-cta h-100 ms-3">
+                        <div class="cta-overlay-bg"></div>
+                        <div class="cta-content d-flex align-items-center flex-column">
+                            <h2 class="cta-heading-v2">Your Journey Begins <span>Here...</span></h2>
+                            <p class="cta-text-v2" style="max-width: 700px;">Discover seamless travel with our
+                                end-to-end
+                                services. From luxury custom
+                                itineraries and visa assistance to expert local guides, we handle the details so you can
+                                enjoy
+                                the adventure.</p>
+                            <div class="cta-features">
+                                <div class="feature-item"><i class="fas fa-check-circle"></i> 24/7 Concierge Support
+                                </div>
+                                <div class="feature-item"><i class="fas fa-check-circle"></i> Handpicked Accommodations
+                                </div>
+                                <div class="feature-item"><i class="fas fa-check-circle"></i> Tailored Local Experiences
+                                </div>
+                            </div>
+                            <div class="cta-actions flex-column flex-lg-row">
+                                <button class="cta-button">Start Planning Now</button>
+                                <button class="cta-outline">Explore All Services</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Recommended -->
+            <div class="container-fluid">
+                <div class="section-header mt-6">
+                    <div class="d-flex flex-column gap-2">
+                        <h2 class="section-title">Recommended For You</h2>
+                        <p class="section-desc">Based on your current search and preferences, here are some similar
+                            locations you might find captivating.</p>
+                    </div>
+                    <div class="section-controls">
+                        <button class="scroll-btn" onclick="scrollSwiper('similar', 'left')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="scroll-btn" onclick="scrollSwiper('similar', 'right')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="swiper-container" id="similarContainer">
+                    <div class="swiper-wrapper" id="similarWrapper"></div>
+                </div>
+            </div>
+
+            <!-- Curated Collections -->
+            <div class="container-fluid">
+                <div class="section-header mt-6">
+                    <div class="d-flex flex-column gap-2">
+                        <h2 class="section-title">Curated Collections</h2>
+                        <p class="section-desc">Dive into our expertly crafted collections, from misty mountain retreats
+                            to
+                            sun-soaked coastal escapes.</p>
+                    </div>
+                    <div class="section-controls">
+                        <button class="scroll-btn" onclick="scrollSwiper('collections', 'left')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="scroll-btn" onclick="scrollSwiper('collections', 'right')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="swiper-container" id="collectionsContainer">
+                    <div class="swiper-wrapper" id="collectionsWrapper"></div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+
+            <!-- FAQ & Business Section -->
+            <div class="container-fluid section-header mt-6">
+                <div class="faq-row">
+                    <!-- FAQ Left (col-8) -->
+                    <div class="faq-col-8">
+                        <div class="section-header">
+                            <div class="d-flex flex-column gap-2">
+                                <h2 class="section-title">Questions & Answers</h2>
+                                <p class="section-desc">Find answers to common questions about destinations, bookings,
+                                    and travel essentials.</p>
+                            </div>
+                        </div>
+                        <div class="faq-container" id="faqContainer"></div>
+                    </div>
+
+                    <!-- B2B Form Right (col-4) -->
+                    <div class="faq-col-4">
+                        <div class="b2b-card">
+                            <div class="b2b-header">
+                                <h3 class="b2b-title"><i class="fas fa-briefcase"></i> B2B Inquiries</h3>
+                                <p class="b2b-desc">Planning a corporate retreat or bulk travel? Get exclusive rates and
+                                    dedicated support.</p>
+                            </div>
+                            <form class="b2b-form"
+                                onsubmit="event.preventDefault(); alert('Inquiry sent! Our team will reach out shortly.');">
+                                <div class="input-group">
+                                    <label>Full Name</label>
+                                    <input type="text" placeholder="e.g. John Doe" required>
+                                </div>
+                                <div class="input-group">
+                                    <label>Company Email</label>
+                                    <input type="email" placeholder="john@company.com" required>
+                                </div>
+                                <div class="input-group">
+                                    <label>Inquiry Type</label>
+                                    <select>
+                                        <option>Corporate Tour</option>
+                                        <option>Bulk Booking</option>
+                                        <option>MICE Event</option>
+                                        <option>Partnership</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Message</label>
+                                    <textarea rows="3" placeholder="How can we help your business?" required></textarea>
+                                </div>
+                                <button type="submit" class="cta-button w-100 mt-2"
+                                    style="font-size: 0.9rem; padding: 12px;">Send Inquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sales Notification Toast -->
+            <div id="salesToast" class="sales-toast">
+                <div class="toast-img-wrapper">
+                    <img id="toastImg" src="" alt="Package">
+                </div>
+                <div class="toast-content">
+                    <p class="toast-text"><span id="toastName" class="bold-name"></span> just booked <span
+                            id="toastPackage" class="bold-package"></span></p>
+                    <span class="toast-time" id="toastTime"></span>
+                </div>
+                <button class="toast-close" onclick="closeToast()">&times;</button>
+            </div>
+        </div>
+    </main>
+    <div class="container py-5 border-top border-bottom mt-5">
+        <div class="swiper brand-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide brand-item">
+                    <img src="https://www.adotrip.com/img/footer/nid.png">
+                </div>
+                <div class="swiper-slide brand-item">
+                    <img src="https://hptdc.in/wp-content/uploads/2016/11/himachal-logo-2.png">
+                </div>
+                <div class="swiper-slide brand-item">
+                    <img src="https://www.adotrip.com/img/footer/dt.png">
+                </div>
+                <div class="swiper-slide brand-item">
+                    <img src="https://www.adotrip.com/img/footer/mot.png">
+                </div>
+                <div class="swiper-slide brand-item">
+                    <img src="https://www.adotrip.com/img/footer/ic-india.png">
+                </div>
+                <div class="swiper-slide brand-item">
+                    <img src="https://www.adotrip.com/img/footer/nid.png">
+                </div>
+                <div class="swiper-slide brand-item">
+                    <img src="https://hptdc.in/wp-content/uploads/2016/11/himachal-logo-2.png">
+                </div>
+                <div class="swiper-slide brand-item">
+                    <img src="https://www.adotrip.com/img/footer/dt.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-6">
+                    <h5>Products Offering</h5>
+                    <ul>
+                        <li><a href="https://www.adotrip.com/#flights">Flights</a></li>
+                        <li><a href="https://www.adotrip.com/#flights">International Flights</a></li>
+                        <li><a href="https://www.adotrip.com/#hotels">Hotels</a></li>
+                        <li><a href="https://www.adotrip.com/#hotels">International Hotels</a></li>
+                        <li><a href="https://www.adotrip.com/holidays">Holidays</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                    <h5>Tourist Attractions</h5>
+                    <ul>
+                        <li><a href="https://www.adotrip.com/city-detail">City Details</a></li>
+                        <li><a href="https://www.adotrip.com/state-detail">State Details</a></li>
+                        <li><a href="https://www.adotrip.com/destinations">Travel Destinations</a></li>
+                        <li><a href="https://www.adotrip.com/events-festivals">Festivals of India</a></li>
+                        <li><a href="https://www.adotrip.com/events-festivals">Events of India</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6 mt-4 mt-md-0">
+                    <h5>Events &amp; Festivals</h5>
+                    <ul>
+                        <li><a href="https://www.adotrip.com/event-detail/kambala-festival">Kambala Festival</a></li>
+                        <li><a href="https://www.adotrip.com/event-detail/surajkund-crafts-mela">Surajkund Crafts Mela
+                                2026</a></li>
+                        <li><a href="https://www.adotrip.com/event-detail/magh-mela">Magh Mela 2026</a></li>
+                        <li><a href="https://www.adotrip.com/event-detail/india-art-festival">India Art Festival
+                                2026</a>
+                        </li>
+                        <li><a href="https://www.adotrip.com/festival-detail/dubai-food-festival">Dubai Food
+                                Festival</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6 mt-4 mt-md-0">
+                    <h5>Editor’s Pick</h5>
+                    <ul>
+                        <li><a
+                                href="https://www.adotrip.com/blog/the-top-11-largest-zoos-when-you-are-travelling-to-india">Largest
+                                Zoos In India</a></li>
+                        <li><a href="https://www.adotrip.com/blog/largest-lakes-in-india">Largest Lakes In India</a>
+                        </li>
+                        <li><a href="https://www.adotrip.com/blog/best-places-to-visit-in-august-in-india">Best Places
+                                To
+                                Visit In August</a></li>
+                        <li><a href="https://www.adotrip.com/blog/workation-destinations-in-india">Workation
+                                Destinations</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6 mt-4 mt-md-0">
+                    <h5>Useful Links</h5>
+                    <ul>
+                        <li><a href="https://www.adotrip.com/about-us">About Us</a></li>
+                        <li><a href="https://www.adotrip.com/contact-us">Contact Us</a></li>
+                        <li><a href="https://www.adotrip.com/blog">Blogs</a></li>
+                        <li><a href="https://www.adotrip.com/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://www.adotrip.com/disclaimer">Disclaimer</a></li>
+                        <li><a href="https://www.adotrip.com/sitemap">Sitemap</a></li>
+                        <li><a href="https://www.adotrip.com/terms-and-conditions">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-6 col-6">
+                    <div class="footer_heading_area">
+                        <h5>Blogs Categories</h5>
+                    </div>
+
+                    <div class="footer_link_area">
+                        <ul>
+                            <li><a href="https://www.adotrip.com/blog/category/trending-destinations">Trending
+                                    Destinations</a></li>
+                            <li><a href="https://www.adotrip.com/blog/category/sun-n-sand">Sun 'n' Sand</a></li>
+                            <li><a href="https://www.adotrip.com/blog/category/romantic-places">Romantic Places</a></li>
+                            <li><a href="https://www.adotrip.com/blog/category/international-travels">International
+                                    Travels</a></li>
+                            <li><a href="https://www.adotrip.com/blog/category/waterfalls">Waterfalls</a></li>
+                            <li><a href="https://www.adotrip.com/blog/category/places-to-visit">Places To Visit</a></li>
+                            <li><a href="https://www.adotrip.com/blog/category/things-to-do">Things To Do</a></li>
+                            <li><a href="https://www.adotrip.com/blog/category/shopping">Shopping</a></li>
+                            <li><a href="https://www.adotrip.com/blog/category/travel-and-food">Travel And Food</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Section -->
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="col-md-3 social-icons mb-3 mb-md-0">
+                    <img src="https://www.adotrip.com/img/footer/footer-logo1.png" class="img-fluid"
+                        style="width: 120px;">
+                </div>
+                <div class="col-md-5 social-icons mb-3 mb-md-0 text-center">
+                    <a href="https://www.facebook.com/adotripofficial" style="background: #4267b2;"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/adotripofficial" style="border: 2px solid #424242;"><i
+                            class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/adotripofficial/"
+                        style="background: linear-gradient(45deg,#f09433 0,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/adotripofficial/" style="background: #0a66c2;"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="http://wa.me/919311669651?text=Hi" style="background: #25d366;"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.youtube.com/c/AdotripOfficial" style="background: red;"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+                <div class="col-md-4 payment-icons text-end">
+                    <img src="https://www.adotrip.com/img/footer/cards.png" alt="Visa">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

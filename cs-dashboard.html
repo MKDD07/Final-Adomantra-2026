@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adomantra - Case Studies Admin Dashboard</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #1257a2;
+      --primary-dark: #0d4483;
+      --ocean: #0096c7;
+      --neutral-50: #f8f9fa;
+      --neutral-100: #e9ecef;
+      --neutral-200: #dee2e6;
+      --neutral-800: #343a40;
+      --neutral-900: #212529;
+      --bg-dark: #0f172a;
+      --card-dark: #1e293b;
+      --text-muted-dark: #94a3b8;
+    }
+    
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #0b0f19;
+      color: #f1f5f9;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    
+    .dashboard-header {
+      background: radial-gradient(100% 100% at 50% 0%, rgba(18, 87, 162, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 2.5rem 0;
+    }
+    
+    .panel-card {
+      background-color: var(--card-dark);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 1.75rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      margin-bottom: 2rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .panel-card:hover {
+      border-color: rgba(18, 87, 162, 0.3);
+    }
+    
+    .ai-btn {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--ocean) 100%);
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.6rem 1.5rem;
+      border-radius: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .ai-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(0, 150, 199, 0.3);
+      color: #fff;
+    }
+
+    .ai-btn:active {
+      transform: translateY(1px);
+    }
+
+    .form-control, .form-select {
+      background-color: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f1f5f9;
+      border-radius: 8px;
+      padding: 0.6rem 0.8rem;
+    }
+
+    .form-control:focus, .form-select:focus {
+      background-color: #0f172a;
+      border-color: var(--ocean);
+      color: #f1f5f9;
+      box-shadow: 0 0 0 3px rgba(0, 150, 199, 0.15);
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted-dark);
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .case-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .case-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .case-card.active {
+      background: rgba(18, 87, 162, 0.15);
+      border-color: var(--primary);
+      box-shadow: inset 0 0 10px rgba(18, 87, 162, 0.2);
+    }
+
+    .badge-custom {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .section-tab-nav {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-tab-link {
+      color: var(--text-muted-dark);
+      padding: 0.75rem 1rem;
+      border: none;
+      background: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .section-tab-link:hover {
+      color: #fff;
+    }
+
+    .section-tab-link.active {
+      color: var(--ocean);
+      border-bottom-color: var(--ocean);
+    }
+
+    .toc-preview {
+      list-style: none;
+      padding: 0;
+    }
+
+    .toc-preview li {
+      padding: 0.4rem 0;
+      font-size: 0.85rem;
+      color: var(--text-muted-dark);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3 border-bottom border-secondary border-opacity-10">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/images/logo/logo-white.svg" alt="Adomantra" style="height: 28px;">
+        <span class="ms-2 text-white opacity-75 fs-6 font-semibold">| Admin Dashboard</span>
+      </a>
+      <div class="d-flex gap-2">
+        <a href="case-studies.html" class="btn btn-outline-light btn-sm px-3" target="_blank">
+          <i class="fa-solid fa-arrow-up-right-from-square me-2"></i>View Case Studies
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="dashboard-header text-center">
+    <div class="container">
+      <h1 class="display-5 text-white mb-2">Case Studies Orchestration Studio</h1>
+      <p class="text-secondary fs-6">Manage layouts, optimize campaign narratives, and deploy Groq AI to build dynamic case studies in real-time.</p>
+    </div>
+  </header>
+
+  <!-- Dashboard Main Grid -->
+  <main class="container my-5">
+    <div class="row">
+      
+      <!-- LEFT COLUMN: AI & Case Studies List -->
+      <div class="col-lg-4">
+        
+        <!-- GROQ AI COMPOSER PANEL -->
+        <div class="panel-card">
+          <h4 class="text-white mb-3 d-flex align-items-center gap-2">
+            <i class="fa-solid fa-wand-magic-sparkles text-info"></i> Groq AI Composer
+          </h4>
+          <p class="small text-secondary mb-4">Dynamically generate a complete case study JSON payload using Groq API.</p>
+          
+          <div class="mb-3">
+            <label for="groqApiKey">Groq API Key</label>
+            <div class="input-group input-group-sm">
+              <span class="input-group-text bg-dark border-secondary border-opacity-25 text-secondary"><i class="fa-solid fa-key"></i></span>
+              <input type="password" class="form-control" id="groqApiKey" placeholder="gsk_...">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="groqModel">AI Model</label>
+            <select class="form-select form-select-sm" id="groqModel" disabled>
+              <option value="openai/gpt-oss-120b" selected>openai/gpt-oss-120b (8192 Max Tokens)</option>
+            </select>
+          </div>
+          <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" id="enableWebSearch" checked>
+            <label class="form-check-label text-secondary small" style="text-transform: none; letter-spacing: normal;" for="enableWebSearch">Enable Web Search (GPT-OSS Browser Search)</label>
+          </div>
+
+          <div class="mb-4">
+            <label for="groqPrompt">Generation Prompt</label>
+            <textarea class="form-control form-control-sm" id="groqPrompt" rows="4" placeholder="Generate a marketplace optimization case study for a premium organic cosmetic brand named 'FloraVibe' that grew revenue from 5 lakhs to 32 lakhs in 8 weeks on Blinkit..."></textarea>
+          </div>
+
+          <button class="ai-btn btn-sm w-100 d-flex align-items-center justify-content-center gap-2" id="btnComposeCase" onclick="composeCaseStudyWithAI()">
+            <span class="spinner-border spinner-border-sm d-none" id="aiLoader" role="status"></span>
+            <i class="fa-solid fa-bolt" id="aiIcon"></i> Generate Case Study
+          </button>
+        </div>
+
+        <!-- ACTIVE CASE STUDIES LIST -->
+        <div class="panel-card">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="text-white mb-0">Case Studies</h4>
+            <span class="badge bg-secondary" id="totalCount">0</span>
+          </div>
+          
+          <div id="casesList" style="max-height: 400px; overflow-y: auto;">
+            <!-- Rendered dynamic lists -->
+          </div>
+          
+          <div class="d-flex gap-2 mt-4">
+            <button class="btn btn-outline-primary btn-sm flex-grow-1" onclick="addNewCase()">
+              <i class="fa-solid fa-plus me-1"></i> Add Manual
+            </button>
+            <button class="btn btn-outline-danger btn-sm" onclick="resetData()" title="Reset to default JSON">
+              <i class="fa-solid fa-arrows-rotate"></i> Reset
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Case Study Editor Form -->
+      <div class="col-lg-8">
+        <div class="panel-card" id="editorPanel">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+              <div class="d-flex align-items-center gap-3">
+                <h3 class="text-white mb-1" id="editingCaseTitle">Select a Case Study</h3>
+                <a id="btnOpenLive" href="#" target="_blank" class="btn btn-outline-info btn-sm py-1 px-2 d-none" style="font-size: 0.75rem;">
+                  <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Open Live
+                </a>
+              </div>
+              <p class="small text-secondary mb-0" id="editingCaseId">Modify form values and save to local storage</p>
+            </div>
+            <div>
+              <button class="btn btn-primary px-3 btn-sm me-2" onclick="saveActiveCase()">
+                <i class="fa-solid fa-floppy-disk me-1"></i> Save Changes
+              </button>
+              <button class="btn btn-success btn-sm" onclick="downloadAllJSON()" title="Download case-studies-contents.json">
+                <i class="fa-solid fa-download me-1"></i> Export JSON
+              </button>
+            </div>
+          </div>
+
+          <!-- Tabs Panel Navigation -->
+          <div class="section-tab-nav d-flex">
+            <button class="section-tab-link active" onclick="switchTab('tab-general', this)">Meta & Copy</button>
+            <button class="section-tab-link" onclick="switchTab('tab-objectives', this)">Project Objective</button>
+            <button class="section-tab-link" onclick="switchTab('tab-kpi', this)">KPIs & Audit</button>
+            <button class="section-tab-link" onclick="switchTab('tab-weekly', this)">Timeline & Plan</button>
+            <button class="section-tab-link" onclick="switchTab('tab-results', this)">Results & Takeaways</button>
+          </div>
+
+          <form id="caseEditorForm" onsubmit="event.preventDefault();">
+            
+            <!-- TAB 1: Meta, General Info & 3 Paragraphs -->
+            <div class="tab-pane-custom" id="tab-general">
+              <div class="d-flex align-items-center justify-content-between p-3 mb-3 bg-black bg-opacity-25 border border-info border-opacity-10 rounded">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-wand-magic-sparkles text-info"></i>
+                  <div>
+                    <h6 class="text-white mb-0">AI Copywriter (Meta & Copy)</h6>
+                    <small class="text-secondary">Rewrite metadata, title, summary, and detailed paragraphs.</small>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <input type="text" class="form-control form-control-sm" style="width: 250px;" id="ai-instruction-general" placeholder="Custom instructions (optional)...">
+                  <button class="ai-btn btn-sm py-1 px-3 d-flex align-items-center gap-1" id="btnRewrite-general" onclick="rewriteTabWithAI('general')">
+                    <span class="spinner-border spinner-border-sm d-none" id="loader-general" role="status"></span>
+                    <i class="fa-solid fa-bolt" id="icon-general"></i> Rewrite/Gen
+                  </button>
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="c_id">Case ID (Unique Key)</label>
+                  <input type="text" class="form-control" id="c_id" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="c_slug">URL Slug</label>
+                  <input type="text" class="form-control" id="c_slug" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="c_brand">Brand Name</label>
+                  <input type="text" class="form-control" id="c_brand" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="c_badge">Badge Tagline</label>
+                  <input type="text" class="form-control" id="c_badge" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="c_duration">Campaign Duration</label>
+                  <input type="text" class="form-control" id="c_duration" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="c_hero">Hero Subtext (e.g. FMCG Brand)</label>
+                  <input type="text" class="form-control" id="c_hero" required>
+                </div>
+                <div class="col-12">
+                  <label for="c_title">Main Heading Title</label>
+                  <input type="text" class="form-control" id="c_title" required>
+                </div>
+                <div class="col-12">
+                  <label for="c_summary">Summary Description (Shown in SEO / Cards)</label>
+                  <textarea class="form-control" id="c_summary" rows="3" required></textarea>
+                </div>
+                
+                <h5 class="text-white mt-4 border-bottom border-secondary border-opacity-10 pb-2">The Three Detailed Narrative Paragraphs</h5>
+                <div class="col-12">
+                  <label for="c_para1">Paragraph 1: The Initial Problem Baseline</label>
+                  <textarea class="form-control" id="c_para1" rows="3" placeholder="Explain the problem baseline/invisibility..."></textarea>
+                </div>
+                <div class="col-12">
+                  <label for="c_para2">Paragraph 2: Strategic Intervention</label>
+                  <textarea class="form-control" id="c_para2" rows="3" placeholder="Explain listing curation, optimizations, pricing tests..."></textarea>
+                </div>
+                <div class="col-12">
+                  <label for="c_para3">Paragraph 3: supply Chain sync & Compounding Growth</label>
+                  <textarea class="form-control" id="c_para3" rows="3" placeholder="Explain dark store coordination, stock alerts, final retention outcomes..."></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 2: Project Objectives -->
+            <div class="tab-pane-custom d-none" id="tab-objectives">
+              <div class="d-flex align-items-center justify-content-between p-3 mb-3 bg-black bg-opacity-25 border border-info border-opacity-10 rounded">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-wand-magic-sparkles text-info"></i>
+                  <div>
+                    <h6 class="text-white mb-0">AI Copywriter (Project Objective)</h6>
+                    <small class="text-secondary">Generate project objectives, core challenges, and client baseline data.</small>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <input type="text" class="form-control form-control-sm" style="width: 250px;" id="ai-instruction-objectives" placeholder="Custom instructions (optional)...">
+                  <button class="ai-btn btn-sm py-1 px-3 d-flex align-items-center gap-1" id="btnRewrite-objectives" onclick="rewriteTabWithAI('objectives')">
+                    <span class="spinner-border spinner-border-sm d-none" id="loader-objectives" role="status"></span>
+                    <i class="fa-solid fa-bolt" id="icon-objectives"></i> Rewrite/Gen
+                  </button>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="c_objectives">Project & Objectives (HTML Supported)</label>
+                <textarea class="form-control" id="c_objectives" rows="12" placeholder="<h2>The Project</h2><p>...</p><h2>The Objective</h2><p>...</p>"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="c_lead_paragraph">Core Challenge Intro (HTML Supported)</label>
+                <textarea class="form-control" id="c_lead_paragraph" rows="8" placeholder="<h2>THE CORE CHALLENGE: ...</h2><p>...</p>"></textarea>
+              </div>
+
+              <h5 class="text-white mt-4 border-bottom border-secondary border-opacity-10 pb-2">Client Overview & Baseline Benchmarks</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="c_overview_title">Overview Section Title</label>
+                  <input type="text" class="form-control" id="c_overview_title" placeholder="Kaya Baseline (Pre-Adomantra)">
+                </div>
+                <div class="col-md-6">
+                  <label for="c_overview_desc">Overview Section Description</label>
+                  <input type="text" class="form-control" id="c_overview_desc" placeholder="Details about the baseline profile of the client.">
+                </div>
+                <div class="col-12">
+                  <label for="c_overview_items">Overview Components list (Format: &lt;strong&gt;Title:&lt;/strong&gt; Description - One per line)</label>
+                  <textarea class="form-control" id="c_overview_items" rows="3" placeholder="&lt;strong&gt;Visibility:&lt;/strong&gt; 38 SKUs buried..."></textarea>
+                </div>
+                
+                <h6 class="text-white mt-3 mb-0">Baseline Benchmarks (Up to 4 progress bars)</h6>
+                <!-- Bench 1 -->
+                <div class="col-md-6 p-2 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="mb-2"><label>Benchmark 1 Label</label><input type="text" class="form-control form-control-sm" id="c_bench_l1"></div>
+                  <div class="mb-2"><label>Benchmark 1 Value Text</label><input type="text" class="form-control form-control-sm" id="c_bench_v1"></div>
+                  <div><label>Benchmark 1 Progress (0-100)</label><input type="number" class="form-control form-control-sm" id="c_bench_p1" min="0" max="100"></div>
+                </div>
+                <!-- Bench 2 -->
+                <div class="col-md-6 p-2 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="mb-2"><label>Benchmark 2 Label</label><input type="text" class="form-control form-control-sm" id="c_bench_l2"></div>
+                  <div class="mb-2"><label>Benchmark 2 Value Text</label><input type="text" class="form-control form-control-sm" id="c_bench_v2"></div>
+                  <div><label>Benchmark 2 Progress (0-100)</label><input type="number" class="form-control form-control-sm" id="c_bench_p2" min="0" max="100"></div>
+                </div>
+                <!-- Bench 3 -->
+                <div class="col-md-6 p-2 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="mb-2"><label>Benchmark 3 Label</label><input type="text" class="form-control form-control-sm" id="c_bench_l3"></div>
+                  <div class="mb-2"><label>Benchmark 3 Value Text</label><input type="text" class="form-control form-control-sm" id="c_bench_v3"></div>
+                  <div><label>Benchmark 3 Progress (0-100)</label><input type="number" class="form-control form-control-sm" id="c_bench_p3" min="0" max="100"></div>
+                </div>
+                <!-- Bench 4 -->
+                <div class="col-md-6 p-2 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="mb-2"><label>Benchmark 4 Label</label><input type="text" class="form-control form-control-sm" id="c_bench_l4"></div>
+                  <div class="mb-2"><label>Benchmark 4 Value Text</label><input type="text" class="form-control form-control-sm" id="c_bench_v4"></div>
+                  <div><label>Benchmark 4 Progress (0-100)</label><input type="number" class="form-control form-control-sm" id="c_bench_p4" min="0" max="100"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 3: KPIs & Campaign Audit -->
+            <div class="tab-pane-custom d-none" id="tab-kpi">
+              <div class="d-flex align-items-center justify-content-between p-3 mb-3 bg-black bg-opacity-25 border border-info border-opacity-10 rounded">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-wand-magic-sparkles text-info"></i>
+                  <div>
+                    <h6 class="text-white mb-0">AI Copywriter (KPIs & Audit)</h6>
+                    <small class="text-secondary">Optimize performance metrics and diagnostic audit failure points.</small>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <input type="text" class="form-control form-control-sm" style="width: 250px;" id="ai-instruction-kpi" placeholder="Custom instructions (optional)...">
+                  <button class="ai-btn btn-sm py-1 px-3 d-flex align-items-center gap-1" id="btnRewrite-kpi" onclick="rewriteTabWithAI('kpi')">
+                    <span class="spinner-border spinner-border-sm d-none" id="loader-kpi" role="status"></span>
+                    <i class="fa-solid fa-bolt" id="icon-kpi"></i> Rewrite/Gen
+                  </button>
+                </div>
+              </div>
+              <h5 class="text-white mb-3">Key Performance Indicator Cards (3 Cards)</h5>
+              <div class="row g-3">
+                <!-- KPI 1 -->
+                <div class="col-md-4 p-3 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="mb-2"><label>Card 1 Metric</label><input type="text" class="form-control form-control-sm" id="c_kpi_m1"></div>
+                  <div class="mb-2"><label>Card 1 Label</label><input type="text" class="form-control form-control-sm" id="c_kpi_l1"></div>
+                  <div><label>Card 1 Subtext</label><input type="text" class="form-control form-control-sm" id="c_kpi_s1"></div>
+                </div>
+                <!-- KPI 2 -->
+                <div class="col-md-4 p-3 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="mb-2"><label>Card 2 Metric</label><input type="text" class="form-control form-control-sm" id="c_kpi_m2"></div>
+                  <div class="mb-2"><label>Card 2 Label</label><input type="text" class="form-control form-control-sm" id="c_kpi_l2"></div>
+                  <div><label>Card 2 Subtext</label><input type="text" class="form-control form-control-sm" id="c_kpi_s2"></div>
+                </div>
+                <!-- KPI 3 -->
+                <div class="col-md-4 p-3 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="mb-2"><label>Card 3 Metric</label><input type="text" class="form-control form-control-sm" id="c_kpi_m3"></div>
+                  <div class="mb-2"><label>Card 3 Label</label><input type="text" class="form-control form-control-sm" id="c_kpi_l3"></div>
+                  <div><label>Card 3 Subtext</label><input type="text" class="form-control form-control-sm" id="c_kpi_s3"></div>
+                </div>
+              </div>
+
+              <h5 class="text-white mt-4 mb-3">Campaign Audit (Failed Points vs Solutions)</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="c_audit_title">Audit Section Title</label>
+                  <input type="text" class="form-control" id="c_audit_title" placeholder="Quick <r>commerce</r> audit">
+                </div>
+                <div class="col-md-6">
+                  <label for="c_audit_sub">Audit Section Subtitle</label>
+                  <input type="text" class="form-control" id="c_audit_sub" placeholder="Failure points & Adomantra's Solutions">
+                </div>
+                
+                <!-- Category 1 -->
+                <div class="col-12 p-3 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="mb-2"><label>Category 1 Name</label><input type="text" class="form-control form-control-sm" id="c_aud_cat1"></div>
+                  <div class="mb-2"><label>Category 1 Failure point</label><input type="text" class="form-control form-control-sm" id="c_aud_fail1"></div>
+                  <div><label>Category 1 Adomantra solution</label><input type="text" class="form-control form-control-sm" id="c_aud_sol1"></div>
+                </div>
+                <!-- Category 2 -->
+                <div class="col-12 p-3 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="mb-2"><label>Category 2 Name</label><input type="text" class="form-control form-control-sm" id="c_aud_cat2"></div>
+                  <div class="mb-2"><label>Category 2 Failure point</label><input type="text" class="form-control form-control-sm" id="c_aud_fail2"></div>
+                  <div><label>Category 2 Adomantra solution</label><input type="text" class="form-control form-control-sm" id="c_aud_sol2"></div>
+                </div>
+                <!-- Category 3 -->
+                <div class="col-12 p-3 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="mb-2"><label>Category 3 Name</label><input type="text" class="form-control form-control-sm" id="c_aud_cat3"></div>
+                  <div class="mb-2"><label>Category 3 Failure point</label><input type="text" class="form-control form-control-sm" id="c_aud_fail3"></div>
+                  <div><label>Category 3 Adomantra solution</label><input type="text" class="form-control form-control-sm" id="c_aud_sol3"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 4: Growth Journey & Execution Plan -->
+            <div class="tab-pane-custom d-none" id="tab-weekly">
+              <div class="d-flex align-items-center justify-content-between p-3 mb-3 bg-black bg-opacity-25 border border-info border-opacity-10 rounded">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-wand-magic-sparkles text-info"></i>
+                  <div>
+                    <h6 class="text-white mb-0">AI Copywriter (Timeline & Plan)</h6>
+                    <small class="text-secondary">Generate structural frameworks and a 12-week checklist plan.</small>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <input type="text" class="form-control form-control-sm" style="width: 250px;" id="ai-instruction-weekly" placeholder="Custom instructions (optional)...">
+                  <button class="ai-btn btn-sm py-1 px-3 d-flex align-items-center gap-1" id="btnRewrite-weekly" onclick="rewriteTabWithAI('weekly')">
+                    <span class="spinner-border spinner-border-sm d-none" id="loader-weekly" role="status"></span>
+                    <i class="fa-solid fa-bolt" id="icon-weekly"></i> Rewrite/Gen
+                  </button>
+                </div>
+              </div>
+              <h5 class="text-white mb-3">Our Approach (3-Phase Framework Circles)</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="c_app_title">Framework Section Title</label>
+                  <input type="text" class="form-control" id="c_app_title">
+                </div>
+                <div class="col-md-6">
+                  <label for="c_app_sub">Framework Section Subtitle</label>
+                  <input type="text" class="form-control" id="c_app_sub">
+                </div>
+                <!-- Circles -->
+                <div class="col-md-4 p-3 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="mb-2"><label>Circle 1 Title</label><input type="text" class="form-control form-control-sm" id="c_app_t1"></div>
+                  <div class="mb-2"><label>Circle 1 Value %</label><input type="number" class="form-control form-control-sm" id="c_app_v1" min="0" max="100"></div>
+                  <div><label>Circle 1 Description</label><textarea class="form-control form-control-sm" id="c_app_d1" rows="2"></textarea></div>
+                </div>
+                <div class="col-md-4 p-3 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="mb-2"><label>Circle 2 Title</label><input type="text" class="form-control form-control-sm" id="c_app_t2"></div>
+                  <div class="mb-2"><label>Circle 2 Value %</label><input type="number" class="form-control form-control-sm" id="c_app_v2" min="0" max="100"></div>
+                  <div><label>Circle 2 Description</label><textarea class="form-control form-control-sm" id="c_app_d2" rows="2"></textarea></div>
+                </div>
+                <div class="col-md-4 p-3 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="mb-2"><label>Circle 3 Title</label><input type="text" class="form-control form-control-sm" id="c_app_t3"></div>
+                  <div class="mb-2"><label>Circle 3 Value %</label><input type="number" class="form-control form-control-sm" id="c_app_v3" min="0" max="100"></div>
+                  <div><label>Circle 3 Description</label><textarea class="form-control form-control-sm" id="c_app_d3" rows="2"></textarea></div>
+                </div>
+              </div>
+
+              <h5 class="text-white mt-4 mb-3">Timeline & Execution Checklist (3 Phases)</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="c_week_title">Timeline Section Title</label>
+                  <input type="text" class="form-control" id="c_week_title">
+                </div>
+                <div class="col-md-6">
+                  <label for="c_week_sub">Timeline Section Subtitle</label>
+                  <input type="text" class="form-control" id="c_week_sub">
+                </div>
+                
+                <!-- Phase 1 -->
+                <div class="col-12 p-3 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="row g-2">
+                    <div class="col-md-4"><label>Phase 1 Period</label><input type="text" class="form-control form-control-sm" id="c_wk_p1" placeholder="Weeks 1-2"></div>
+                    <div class="col-md-8"><label>Phase 1 Theme</label><input type="text" class="form-control form-control-sm" id="c_wk_t1"></div>
+                    <div class="col-12"><label>Tasks (One per line)</label><textarea class="form-control form-control-sm" id="c_wk_tasks1" rows="3"></textarea></div>
+                  </div>
+                </div>
+                <!-- Phase 2 -->
+                <div class="col-12 p-3 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="row g-2">
+                    <div class="col-md-4"><label>Phase 2 Period</label><input type="text" class="form-control form-control-sm" id="c_wk_p2" placeholder="Weeks 3-6"></div>
+                    <div class="col-md-8"><label>Phase 2 Theme</label><input type="text" class="form-control form-control-sm" id="c_wk_t2"></div>
+                    <div class="col-12"><label>Tasks (One per line)</label><textarea class="form-control form-control-sm" id="c_wk_tasks2" rows="3"></textarea></div>
+                  </div>
+                </div>
+                <!-- Phase 3 -->
+                <div class="col-12 p-3 bg-black bg-opacity-25 border border-secondary border-opacity-10 rounded">
+                  <div class="row g-2">
+                    <div class="col-md-4"><label>Phase 3 Period</label><input type="text" class="form-control form-control-sm" id="c_wk_p3" placeholder="Weeks 7-12"></div>
+                    <div class="col-md-8"><label>Phase 3 Theme</label><input type="text" class="form-control form-control-sm" id="c_wk_t3"></div>
+                    <div class="col-12"><label>Tasks (One per line)</label><textarea class="form-control form-control-sm" id="c_wk_tasks3" rows="3"></textarea></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 5: Campaign Results & Takeaways -->
+            <div class="tab-pane-custom d-none" id="tab-results">
+              <div class="d-flex align-items-center justify-content-between p-3 mb-3 bg-black bg-opacity-25 border border-info border-opacity-10 rounded">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-wand-magic-sparkles text-info"></i>
+                  <div>
+                    <h6 class="text-white mb-0">AI Copywriter (Results & Takeaways)</h6>
+                    <small class="text-secondary">Formulate metrics results table, client quote, and summary footer takeaways.</small>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <input type="text" class="form-control form-control-sm" style="width: 250px;" id="ai-instruction-results" placeholder="Custom instructions (optional)...">
+                  <button class="ai-btn btn-sm py-1 px-3 d-flex align-items-center gap-1" id="btnRewrite-results" onclick="rewriteTabWithAI('results')">
+                    <span class="spinner-border spinner-border-sm d-none" id="loader-results" role="status"></span>
+                    <i class="fa-solid fa-bolt" id="icon-results"></i> Rewrite/Gen
+                  </button>
+                </div>
+              </div>
+              <h5 class="text-white mb-3">Campaign Results Table</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="c_res_title">Results Title</label>
+                  <input type="text" class="form-control" id="c_res_title">
+                </div>
+                <div class="col-md-6">
+                  <label for="c_res_sub">Results Description</label>
+                  <input type="text" class="form-control" id="c_res_sub">
+                </div>
+                <div class="col-12">
+                  <label for="c_res_table">Metrics Rows (Format: Metric | Before | After | Change - One per line)</label>
+                  <textarea class="form-control" id="c_res_table" rows="5" placeholder="Monthly QC Revenue | ₹12 lakhs | ₹58 lakhs | +383%"></textarea>
+                </div>
+                
+                <h5 class="text-white mt-4 border-bottom border-secondary border-opacity-10 pb-2">Client Quote</h5>
+                <div class="col-12">
+                  <label for="c_q_body">Quote Body text</label>
+                  <textarea class="form-control" id="c_q_body" rows="2"></textarea>
+                </div>
+                <div class="col-md-6">
+                  <label for="c_q_auth">Quote Author (Client Name)</label>
+                  <input type="text" class="form-control" id="c_q_auth">
+                </div>
+                <div class="col-md-6">
+                  <label for="c_q_title">Author Designation</label>
+                  <input type="text" class="form-control" id="c_q_title">
+                </div>
+
+                <h5 class="text-white mt-4 border-bottom border-secondary border-opacity-10 pb-2">Footer Takeaways</h5>
+                <div class="col-12">
+                  <label for="c_takeaways_title">Takeaways Section Title</label>
+                  <input type="text" class="form-control" id="c_takeaways_title">
+                </div>
+                <div class="col-12">
+                  <label for="c_takeaways_items">Takeaway Cards (Format: <strong>Title:</strong> Description - One per line)</label>
+                  <textarea class="form-control" id="c_takeaways_items" rows="4" placeholder="<strong>Less Is More:</strong> Focus on velocity over volume."></textarea>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- Bootstrap & JQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    const JSON_PATH = "assets/js/json/case-studies-contents.json";
+    const STORAGE_KEY = "adomantra_case_studies";
+    
+    let caseStudiesData = [];
+    let activeCaseIndex = 0;
+
+    // Load case study data
+    async function loadData() {
+      const cached = localStorage.getItem(STORAGE_KEY);
+      if (cached) {
+        try {
+          caseStudiesData = JSON.parse(cached);
+        } catch (e) {
+          console.error("Error loading cached case studies:", e);
+        }
+      }
+
+      if (!caseStudiesData || caseStudiesData.length === 0) {
+        try {
+          const res = await fetch(JSON_PATH);
+          caseStudiesData = await res.json();
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(caseStudiesData));
+        } catch (e) {
+          console.error("Error fetching defaults:", e);
+        }
+      }
+
+      renderList();
+      if (caseStudiesData.length > 0) {
+        selectCaseStudy(0);
+      }
+    }
+
+    // Render left case studies list
+    function renderList() {
+      const $list = $("#casesList");
+      $list.empty();
+      
+      $("#totalCount").text(caseStudiesData.length);
+
+      caseStudiesData.forEach((cs, idx) => {
+        const isActive = idx === activeCaseIndex ? 'active' : '';
+        $list.append(`
+          <div class="case-card ${isActive}" onclick="selectCaseStudy(${idx})">
+            <div class="d-flex justify-content-between align-items-start">
+              <h6 class="text-white mb-1">${cs.brand}</h6>
+              <span class="badge bg-primary badge-custom">${cs.duration}</span>
+            </div>
+            <p class="small text-secondary mb-0 text-truncate">${cs.title}</p>
+            <div class="card-actions">
+              <a href="case-studies.html?slug=${cs.slug || cs.id}" target="_blank" class="btn btn-outline-info btn-sm py-0 px-2" style="font-size:0.75rem;" onclick="event.stopPropagation();">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live
+              </a>
+              <button class="btn btn-outline-danger btn-sm py-0 px-2" style="font-size:0.75rem;" onclick="deleteCaseStudy(${idx}, event)">
+                <i class="fa-solid fa-trash-can"></i> Delete
+              </button>
+            </div>
+          </div>
+        `);
+      });
+    }
+
+    // Switch case study in form
+    function selectCaseStudy(index) {
+      activeCaseIndex = index;
+      renderList();
+
+      const cs = caseStudiesData[index];
+      if (!cs) {
+        $("#btnOpenLive").addClass("d-none");
+        return;
+      }
+
+      $("#editingCaseTitle").text(cs.brand || "Unnamed Brand");
+      $("#editingCaseId").text(`Key ID: ${cs.id || 'N/A'}`);
+      
+      if (cs.slug) {
+        $("#btnOpenLive").attr("href", `case-studies.html?slug=${cs.slug}`).removeClass("d-none");
+      } else if (cs.id) {
+        $("#btnOpenLive").attr("href", `case-studies.html?slug=${cs.id}`).removeClass("d-none");
+      } else {
+        $("#btnOpenLive").addClass("d-none");
+      }
+
+      // General Meta Fields
+      $("#c_id").val(cs.id || "");
+      $("#c_slug").val(cs.slug || "");
+      $("#c_brand").val(cs.brand || "");
+      $("#c_badge").val(cs.badge || "");
+      $("#c_duration").val(cs.duration || "");
+      $("#c_hero").val(cs.hero || "");
+      $("#c_title").val(cs.title || "");
+      $("#c_summary").val(cs.summary || "");
+
+      // Paragraphs
+      $("#c_para1").val(cs["detaiedParagraph-1"] || cs["detailedParagraph-1"] || "");
+      $("#c_para2").val(cs["detaiedParagraph-2"] || cs["detailedParagraph-2"] || "");
+      $("#c_para3").val(cs["detaiedParagraph-3"] || cs["detailedParagraph-3"] || "");
+
+      // Objectives
+      $("#c_objectives").val(cs.projectobjective || "");
+      $("#c_lead_paragraph").val(cs.leadParagraph || "");
+
+      // Client Overview & Baseline Benchmarks
+      const overview = cs.clientOverview || { dataBox1: { items: [] }, dataBox2: { items: [] } };
+      $("#c_overview_title").val(overview.title || "");
+      $("#c_overview_desc").val(overview.description || "");
+      $("#c_overview_items").val(overview.dataBox1 && overview.dataBox1.items ? overview.dataBox1.items.join("\n") : "");
+
+      const benches = overview.dataBox2 && overview.dataBox2.items ? overview.dataBox2.items : [];
+      $("#c_bench_l1").val(benches[0] ? benches[0].label : "");
+      $("#c_bench_v1").val(benches[0] ? benches[0].value : "");
+      $("#c_bench_p1").val(benches[0] && typeof benches[0].progress !== "undefined" ? benches[0].progress : 20);
+
+      $("#c_bench_l2").val(benches[1] ? benches[1].label : "");
+      $("#c_bench_v2").val(benches[1] ? benches[1].value : "");
+      $("#c_bench_p2").val(benches[1] && typeof benches[1].progress !== "undefined" ? benches[1].progress : 20);
+
+      $("#c_bench_l3").val(benches[2] ? benches[2].label : "");
+      $("#c_bench_v3").val(benches[2] ? benches[2].value : "");
+      $("#c_bench_p3").val(benches[2] && typeof benches[2].progress !== "undefined" ? benches[2].progress : 20);
+
+      $("#c_bench_l4").val(benches[3] ? benches[3].label : "");
+      $("#c_bench_v4").val(benches[3] ? benches[3].value : "");
+      $("#c_bench_p4").val(benches[3] && typeof benches[3].progress !== "undefined" ? benches[3].progress : 20);
+
+      // KPIs
+      const kpis = cs.kpis || [];
+      $("#c_kpi_m1").val(kpis[0] ? kpis[0].metric : "");
+      $("#c_kpi_l1").val(kpis[0] ? kpis[0].label : "");
+      $("#c_kpi_s1").val(kpis[0] ? kpis[0].subtext : "");
+      
+      $("#c_kpi_m2").val(kpis[1] ? kpis[1].metric : "");
+      $("#c_kpi_l2").val(kpis[1] ? kpis[1].label : "");
+      $("#c_kpi_s2").val(kpis[1] ? kpis[1].subtext : "");
+      
+      $("#c_kpi_m3").val(kpis[2] ? kpis[2].metric : "");
+      $("#c_kpi_l3").val(kpis[2] ? kpis[2].label : "");
+      $("#c_kpi_s3").val(kpis[2] ? kpis[2].subtext : "");
+
+      // Campaign Audit
+      const audit = cs.campaignAudit || { categories: [] };
+      $("#c_audit_title").val(audit.title || "");
+      $("#c_audit_sub").val(audit.subtitle || "");
+      
+      const cats = audit.categories || [];
+      $("#c_aud_cat1").val(cats[0] ? cats[0].name : "");
+      $("#c_aud_fail1").val(cats[0] ? cats[0].crossed : "");
+      $("#c_aud_sol1").val(cats[0] ? cats[0].checked : "");
+
+      $("#c_aud_cat2").val(cats[1] ? cats[1].name : "");
+      $("#c_aud_fail2").val(cats[1] ? cats[1].crossed : "");
+      $("#c_aud_sol2").val(cats[1] ? cats[1].checked : "");
+
+      $("#c_aud_cat3").val(cats[2] ? cats[2].name : "");
+      $("#c_aud_fail3").val(cats[2] ? cats[2].crossed : "");
+      $("#c_aud_sol3").val(cats[2] ? cats[2].checked : "");
+
+      // Our Approach Circles
+      const app = cs.ourApproachCircles || { blocks: [] };
+      $("#c_app_title").val(app.title || "");
+      $("#c_app_sub").val(app.subtitle || "");
+      
+      const blocks = app.blocks || [];
+      $("#c_app_t1").val(blocks[0] ? blocks[0].title : "");
+      $("#c_app_v1").val(blocks[0] ? blocks[0].value : 100);
+      $("#c_app_d1").val(blocks[0] ? blocks[0].desc : "");
+
+      $("#c_app_t2").val(blocks[1] ? blocks[1].title : "");
+      $("#c_app_v2").val(blocks[1] ? blocks[1].value : 100);
+      $("#c_app_d2").val(blocks[1] ? blocks[1].desc : "");
+
+      $("#c_app_t3").val(blocks[2] ? blocks[2].title : "");
+      $("#c_app_v3").val(blocks[2] ? blocks[2].value : 100);
+      $("#c_app_d3").val(blocks[2] ? blocks[2].desc : "");
+
+      // Weekly Plan
+      const weekPlan = cs.weeklyPlan || { weeks: [] };
+      $("#c_week_title").val(weekPlan.title || "");
+      $("#c_week_sub").val(weekPlan.subtitle || "");
+      
+      const weeks = weekPlan.weeks || [];
+      $("#c_wk_p1").val(weeks[0] ? weeks[0].week : "Weeks 1–2");
+      $("#c_wk_t1").val(weeks[0] ? weeks[0].theme : "");
+      $("#c_wk_tasks1").val(weeks[0] && weeks[0].tasks ? weeks[0].tasks.map(t => t.task).join("\n") : "");
+
+      $("#c_wk_p2").val(weeks[1] ? weeks[1].week : "Weeks 3–6");
+      $("#c_wk_t2").val(weeks[1] ? weeks[1].theme : "");
+      $("#c_wk_tasks2").val(weeks[1] && weeks[1].tasks ? weeks[1].tasks.map(t => t.task).join("\n") : "");
+
+      $("#c_wk_p3").val(weeks[2] ? weeks[2].week : "Weeks 7–12");
+      $("#c_wk_t3").val(weeks[2] ? weeks[2].theme : "");
+      $("#c_wk_tasks3").val(weeks[2] && weeks[2].tasks ? weeks[2].tasks.map(t => t.task).join("\n") : "");
+
+      // Results Table
+      const results = cs.results || { table: { rows: [] }, quote: {} };
+      $("#c_res_title").val(results.title || "");
+      $("#c_res_sub").val(results.description || "");
+      
+      const tRows = results.table && results.table.rows ? results.table.rows : [];
+      $("#c_res_table").val(tRows.map(r => r.join(" | ")).join("\n"));
+      
+      const quote = results.quote || {};
+      $("#c_q_body").val(quote.body || "");
+      $("#c_q_auth").val(quote.author || "");
+      $("#c_q_title").val(quote.authorTitle || "");
+
+      // Takeaways Summary Footer
+      const footer = cs.summaryFooter || { items: [] };
+      $("#c_takeaways_title").val(footer.title || "");
+      $("#c_takeaways_items").val(footer.items ? footer.items.join("\n") : "");
+    }
+
+    // Save changes to active case study
+    function saveActiveCase() {
+      if (caseStudiesData.length === 0) return alert("No case study to save.");
+      
+      const cs = caseStudiesData[activeCaseIndex];
+      if (!cs) return;
+
+      cs.id = $("#c_id").val().trim();
+      cs.slug = $("#c_slug").val().trim();
+      cs.brand = $("#c_brand").val().trim();
+      cs.badge = $("#c_badge").val().trim();
+      cs.duration = $("#c_duration").val().trim();
+      cs.hero = $("#c_hero").val().trim();
+      cs.title = $("#c_title").val().trim();
+      cs.summary = $("#c_summary").val().trim();
+
+      // Paragraphs
+      cs["detaiedParagraph-1"] = $("#c_para1").val().trim();
+      cs["detaiedParagraph-2"] = $("#c_para2").val().trim();
+      cs["detaiedParagraph-3"] = $("#c_para3").val().trim();
+
+      // Objectives
+      cs.projectobjective = $("#c_objectives").val().trim();
+      cs.leadParagraph = $("#c_lead_paragraph").val().trim();
+
+      // Client Overview & Baseline Benchmarks
+      const buildBench = (labelId, valId, progId) => {
+        const label = $(labelId).val().trim();
+        const value = $(valId).val().trim();
+        const progress = parseInt($(progId).val());
+        if (!label) return null;
+        return { label, value, progress: isNaN(progress) ? 20 : progress };
+      };
+
+      const benchesSaved = [
+        buildBench("#c_bench_l1", "#c_bench_v1", "#c_bench_p1"),
+        buildBench("#c_bench_l2", "#c_bench_v2", "#c_bench_p2"),
+        buildBench("#c_bench_l3", "#c_bench_v3", "#c_bench_p3"),
+        buildBench("#c_bench_l4", "#c_bench_v4", "#c_bench_p4")
+      ].filter(Boolean);
+
+      cs.clientOverview = {
+        title: $("#c_overview_title").val().trim(),
+        description: $("#c_overview_desc").val().trim(),
+        dataBox1: {
+          title: "Quick Commerce Components",
+          items: $("#c_overview_items").val().split("\n").map(l => l.trim()).filter(Boolean)
+        },
+        dataBox2: {
+          title: "Baseline Benchmarks",
+          items: benchesSaved
+        }
+      };
+
+      // KPIs
+      cs.kpis = [
+        { metric: $("#c_kpi_m1").val().trim(), label: $("#c_kpi_l1").val().trim(), subtext: $("#c_kpi_s1").val().trim() },
+        { metric: $("#c_kpi_m2").val().trim(), label: $("#c_kpi_l2").val().trim(), subtext: $("#c_kpi_s2").val().trim() },
+        { metric: $("#c_kpi_m3").val().trim(), label: $("#c_kpi_l3").val().trim(), subtext: $("#c_kpi_s3").val().trim() }
+      ];
+
+      // Campaign Audit
+      cs.campaignAudit = {
+        title: $("#c_audit_title").val().trim(),
+        subtitle: $("#c_audit_sub").val().trim(),
+        categories: [
+          { name: $("#c_aud_cat1").val().trim(), crossed: $("#c_aud_fail1").val().trim(), checked: $("#c_aud_sol1").val().trim() },
+          { name: $("#c_aud_cat2").val().trim(), crossed: $("#c_aud_fail2").val().trim(), checked: $("#c_aud_sol2").val().trim() },
+          { name: $("#c_aud_cat3").val().trim(), crossed: $("#c_aud_fail3").val().trim(), checked: $("#c_aud_sol3").val().trim() }
+        ]
+      };
+
+      // Framework Circles
+      cs.ourApproachCircles = {
+        title: $("#c_app_title").val().trim(),
+        subtitle: $("#c_app_sub").val().trim(),
+        blocks: [
+          { title: $("#c_app_t1").val().trim(), value: parseInt($("#c_app_v1").val()) || 100, color: "#2563eb", desc: $("#c_app_d1").val().trim() },
+          { title: $("#c_app_t2").val().trim(), value: parseInt($("#c_app_v2").val()) || 100, color: "#16a34a", desc: $("#c_app_d2").val().trim() },
+          { title: $("#c_app_t3").val().trim(), value: parseInt($("#c_app_v3").val()) || 100, color: "#eab308", desc: $("#c_app_d3").val().trim() }
+        ]
+      };
+
+      // Weekly Plan
+      const parseTasks = (text) => text.split("\n").map(line => line.trim()).filter(Boolean).map(task => ({ task, status: "completed" }));
+      cs.weeklyPlan = {
+        title: $("#c_week_title").val().trim(),
+        subtitle: $("#c_week_sub").val().trim(),
+        weeks: [
+          { week: $("#c_wk_p1").val().trim(), theme: $("#c_wk_t1").val().trim(), tasks: parseTasks($("#c_wk_tasks1").val()) },
+          { week: $("#c_wk_p2").val().trim(), theme: $("#c_wk_t2").val().trim(), tasks: parseTasks($("#c_wk_tasks2").val()) },
+          { week: $("#c_wk_p3").val().trim(), theme: $("#c_wk_t3").val().trim(), tasks: parseTasks($("#c_wk_tasks3").val()) }
+        ]
+      };
+
+      // Results Table & Quote
+      const rawRows = $("#c_res_table").val().split("\n").map(l => l.trim()).filter(Boolean);
+      const rowsParsed = rawRows.map(row => row.split("|").map(col => col.trim()));
+      
+      cs.results = {
+        title: $("#c_res_title").val().trim(),
+        description: $("#c_res_sub").val().trim(),
+        table: {
+          headers: ["Metric", "Before Adomantra", "After Campaign", "Change"],
+          rows: rowsParsed
+        },
+        quote: {
+          body: $("#c_q_body").val().trim(),
+          author: $("#c_q_auth").val().trim(),
+          authorTitle: $("#c_q_title").val().trim()
+        }
+      };
+
+      // Takeaways
+      cs.summaryFooter = {
+        title: $("#c_takeaways_title").val().trim(),
+        items: $("#c_takeaways_items").val().split("\n").map(l => l.trim()).filter(Boolean)
+      };
+
+      // Save to localStorage
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(caseStudiesData));
+      alert("Case Study details saved and persisted successfully!");
+      selectCaseStudy(activeCaseIndex);
+    }
+
+    // Add empty manually
+    function addNewCase() {
+      const idStr = "cs-new-" + Date.now();
+      const newCaseObj = {
+        id: idStr,
+        slug: "new-case-study-" + Date.now(),
+        brand: "New Brand Campaign",
+        badge: "Marketplace Optimization",
+        duration: "12-Week Campaign",
+        hero: "FMCG / Skincare",
+        title: "How Adomantra Transformed the Marketplace Presence for New Brand",
+        summary: "Summary text for the newly created case study campaign.",
+        "detaiedParagraph-1": "Paragraph 1 baseline detailing...",
+        "detaiedParagraph-2": "Paragraph 2 strategic optimization...",
+        "detaiedParagraph-3": "Paragraph 3 outcomes and key metrics details...",
+        kpis: [
+          { "metric": "₹0 Lakhs", "label": "Metric 1", "subtext": "details..." },
+          { "metric": "0%", "label": "Metric 2", "subtext": "details..." },
+          { "metric": "0x", "label": "Metric 3", "subtext": "details..." }
+        ],
+        campaignAudit: {
+          title: "Quick commerce audit",
+          subtitle: "Critical Failure Points & Adomantra's Solutions",
+          categories: [
+            { name: "Search Visibility", crossed: "Failure detail", checked: "Solution detail" },
+            { name: "Listing Content Quality", crossed: "Failure detail", checked: "Solution detail" },
+            { name: "Inventory Coordination", crossed: "Failure detail", checked: "Solution detail" }
+          ]
+        },
+        ourApproachCircles: {
+          title: "Marketplace Optimization Framework",
+          subtitle: "A three-phase approach",
+          blocks: [
+            { title: "Curation & Audit", value: 100, color: "#2563eb", desc: "description" },
+            { title: "Optimization", value: 100, color: "#16a34a", desc: "description" },
+            { title: "Inventory", value: 100, color: "#eab308", desc: "description" }
+          ]
+        },
+        weeklyPlan: {
+          title: "Execution Plan",
+          subtitle: "Weekly Plan",
+          weeks: [
+            { week: "Weeks 1–2", theme: "Audit & SKU Selection", tasks: [{ task: "Task 1", status: "completed" }] },
+            { week: "Weeks 3–6", theme: "Listing Optimization", tasks: [{ task: "Task 2", status: "completed" }] },
+            { week: "Weeks 7–12", theme: "Inventory Coordination", tasks: [{ task: "Task 3", status: "completed" }] }
+          ]
+        },
+        clientOverview: {
+          title: "Client Overview",
+          description: "Details about the baseline profile of the client.",
+          dataBox1: {
+            title: "Quick Commerce Components",
+            items: [
+              "<strong>Visibility:</strong> Description here",
+              "<strong>Listing:</strong> Description here",
+              "<strong>Inventory:</strong> Description here"
+            ]
+          },
+          dataBox2: {
+            title: "Baseline Benchmarks",
+            items: [
+              { label: "Brand Visibility Position:", value: "Page 6", progress: 15 },
+              { label: "Out of Stock Incidents:", value: "22%", progress: 22 },
+              { label: "Repeat Purchase Rate:", value: "11%", progress: 11 }
+            ]
+
+          }
+        },
+        challenges: {
+          title: "Key Challenges",
+          description: "Details of the critical challenges faced.",
+          cards: [
+            { num: "01", title: "Challenge 1", body: "Description of Challenge 1" },
+            { num: "02", title: "Challenge 2", body: "Description of Challenge 2" },
+            { num: "03", title: "Challenge 3", body: "Description of Challenge 3" }
+          ]
+        },
+        strategy: {
+          title: "Campaign Strategy",
+          description: "Growth strategy timeline phases.",
+          timeline: [
+            { title: "Phase 1: Setup", p: "Details here", tags: ["Tag 1", "Tag 2"] },
+            { title: "Phase 2: Launch", p: "Details here", tags: ["Tag 3", "Tag 4"] },
+            { title: "Phase 3: Scale", p: "Details here", tags: ["Tag 5", "Tag 6"] }
+          ]
+        },
+        results: {
+          title: "Campaign Results",
+          description: "Post-campaign metrics and success outcomes.",
+          table: {
+            headers: ["Metric", "Before Adomantra", "After Campaign", "Change"],
+            rows: [
+              ["Monthly QC Revenue", "₹12 Lakhs", "₹58 Lakhs", "+383%"]
+            ]
+          },
+          quote: {
+            body: "Quote details...",
+            author: "Author Name",
+            authorTitle: "Title"
+          }
+        },
+        summaryFooter: {
+          title: "Key Learnings & Takeaways",
+          items: [
+            "<strong>Learning 1:</strong> Detail here",
+            "<strong>Learning 2:</strong> Detail here"
+          ]
+        }
+      };
+
+      caseStudiesData.push(newCaseObj);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(caseStudiesData));
+      selectCaseStudy(caseStudiesData.length - 1);
+    }
+
+    // Delete case study
+    function deleteCaseStudy(idx, event) {
+      event.stopPropagation();
+      if (!confirm("Are you sure you want to delete this case study?")) return;
+      
+      caseStudiesData.splice(idx, 1);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(caseStudiesData));
+      
+      if (activeCaseIndex >= caseStudiesData.length) {
+        activeCaseIndex = Math.max(0, caseStudiesData.length - 1);
+      }
+      
+      renderList();
+      if (caseStudiesData.length > 0) {
+        selectCaseStudy(activeCaseIndex);
+      } else {
+        $("#caseEditorForm")[0].reset();
+        $("#editingCaseTitle").text("No Case Study Selected");
+      }
+    }
+
+    // Reset local data cache
+    function resetData() {
+      if (!confirm("Reset all local storage values back to project JSON defaults?")) return;
+      localStorage.removeItem(STORAGE_KEY);
+      caseStudiesData = [];
+      loadData();
+    }
+
+    // Download updated JSON file
+    function downloadAllJSON() {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(caseStudiesData, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", "case-studies-contents.json");
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+    }
+
+    // Tab switcher
+    function switchTab(tabId, btn) {
+      $(".tab-pane-custom").addClass("d-none");
+      $("#" + tabId).removeClass("d-none");
+      
+      $(".section-tab-link").removeClass("active");
+      $(btn).addClass("active");
+    }
+
+    // Helper for cooldown sleep
+    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+    // Call Groq AI API sequentially for each of the 5 sections
+    async function composeCaseStudyWithAI() {
+      const key = $("#groqApiKey").val().trim();
+      const promptText = $("#groqPrompt").val().trim();
+
+      if (!key) {
+        alert("Please enter a valid Groq API Key first!");
+        return;
+      }
+      if (!promptText) {
+        alert("Please write a generation prompt specifying the brand and scope!");
+        return;
+      }
+
+      $("#aiLoader").removeClass("d-none");
+      $("#aiIcon").addClass("d-none");
+      $("#btnComposeCase").prop("disabled", true);
+
+      // Create a temporary case study object with default values
+      const idStr = "cs-new-" + Date.now();
+      const newCaseObj = {
+        id: idStr,
+        slug: "new-case-study-" + Date.now(),
+        brand: "Generating...",
+        badge: "Marketplace Optimization",
+        duration: "12-Week Campaign",
+        hero: "FMCG / Skincare",
+        title: "Generating Narrative...",
+        summary: "Generating Summary..."
+      };
+
+      // Append to local database first so it shows up in real-time
+      caseStudiesData.push(newCaseObj);
+      const newCaseIndex = caseStudiesData.length - 1;
+      activeCaseIndex = newCaseIndex;
+      renderList();
+      selectCaseStudy(newCaseIndex);
+
+      const updateProgress = (text) => {
+        $("#btnComposeCase").html(`<span class="spinner-border spinner-border-sm me-2" role="status"></span> ${text}`);
+      };
+
+      const tabsToGenerate = ['general', 'objectives', 'kpi', 'weekly', 'results'];
+      const sectionNames = {
+        'general': 'Meta & Copy (1/5)',
+        'objectives': 'Project Objective (2/5)',
+        'kpi': 'KPIs & Audit (3/5)',
+        'weekly': 'Timeline & Plan (4/5)',
+        'results': 'Results & Takeaways (5/5)'
+      };
+
+      try {
+        for (let i = 0; i < tabsToGenerate.length; i++) {
+          const tabName = tabsToGenerate[i];
+          updateProgress(`Generating ${sectionNames[tabName]}...`);
+
+          let systemPrompt = "";
+          let userPrompt = "";
+
+          if (tabName === 'general') {
+            systemPrompt = `You are a professional copywriter. Generate the Meta & Copy section of the case study. 
+Output ONLY a raw, valid JSON string matching the following sub-schema. 
+Do NOT wrap the output in markdown code blocks or triple backticks (e.g. do NOT use \`\`\` or \`\`\`json). Do NOT call any tools unless you are searching the web.
+Sub-schema:
+{
+  "brand": "Brand name",
+  "badge": "Badge text",
+  "duration": "Duration (e.g. 12-Week Campaign)",
+  "hero": "Hero subtext",
+  "title": "Main Heading Title",
+  "summary": "SEO Summary Description",
+  "detaiedParagraph-1": "Paragraph 1 detailing initial problem baseline",
+  "detaiedParagraph-2": "Paragraph 2 detailing strategic intervention",
+  "detaiedParagraph-3": "Paragraph 3 detailing supply chain sync & growth"
+}`;
+            userPrompt = `User Prompt Context: ${promptText}`;
+          } else if (tabName === 'objectives') {
+            systemPrompt = `You are a professional case study writer. Generate the Project Objectives section.
+Ensure HTML tags (like <h2>, <p>) are correctly used in projectobjective and leadParagraph.
+Output ONLY a raw, valid JSON string matching the following sub-schema.
+Do NOT wrap the output in markdown code blocks or triple backticks (e.g. do NOT use \`\`\` or \`\`\`json). Do NOT call any tools unless you are searching the web.
+Sub-schema:
+{
+  "projectobjective": "<h2>The Project</h2>\\n<p>...</p>\\n\\n<h2>The Objective</h2>\\n<p>...</p>",
+  "leadParagraph": "<h2>THE CORE CHALLENGE: ...</h2>\\n<p>...</p>",
+  "clientOverview": {
+    "title": "Client Overview Title",
+    "description": "Short description of baseline profile",
+    "dataBox1": {
+      "title": "Quick Commerce Components",
+      "items": [
+        "<strong>Visibility:</strong> Description here",
+        "<strong>Listing:</strong> Description here"
+      ]
+    },
+    "dataBox2": {
+      "title": "Baseline Benchmarks",
+      "items": [
+        {"label": "Metric Label:", "value": "Metric value", "progress": 25}
+      ]
+    }
+  }
+}`;
+            userPrompt = `Brand context: ${newCaseObj.brand}
+User Prompt Context: ${promptText}`;
+          } else if (tabName === 'kpi') {
+            systemPrompt = `You are a growth marketer. Generate the KPIs & Audit section of the case study.
+Output ONLY a raw, valid JSON string matching the following sub-schema.
+Do NOT wrap the output in markdown code blocks or triple backticks (e.g. do NOT use \`\`\` or \`\`\`json). Do NOT call any tools unless you are searching the web.
+Make sure there are exactly 3 KPIs and up to 3 audit categories.
+Sub-schema:
+{
+  "kpis": [
+    {"metric": "Metric text (e.g. ₹58 Lakhs or +383%)", "label": "Label text", "subtext": "Subtext description"},
+    {"metric": "...", "label": "...", "subtext": "..."},
+    {"metric": "...", "label": "...", "subtext": "..."}
+  ],
+  "campaignAudit": {
+    "title": "Audit Title",
+    "subtitle": "Audit Subtitle",
+    "categories": [
+      {"name": "Category Name", "crossed": "Failure / crossed point", "checked": "Solution / checked point"},
+      {"name": "Category Name", "crossed": "Failure / crossed point", "checked": "Solution / checked point"},
+      {"name": "Category Name", "crossed": "Failure / crossed point", "checked": "Solution / checked point"}
+    ]
+  }
+}`;
+            userPrompt = `Brand context: ${newCaseObj.brand}
+User Prompt Context: ${promptText}`;
+          } else if (tabName === 'weekly') {
+            systemPrompt = `You are a project manager. Generate the Timeline & Plan section of the case study.
+Output ONLY a raw, valid JSON string matching the following sub-schema.
+Do NOT wrap the output in markdown code blocks or triple backticks (e.g. do NOT use \`\`\` or \`\`\`json). Do NOT call any tools unless you are searching the web.
+Sub-schema:
+{
+  "ourApproachCircles": {
+    "title": "Framework Title",
+    "subtitle": "Framework Subtitle",
+    "blocks": [
+      {"title": "Phase 1 Circle Title", "value": 100, "color": "#2563eb", "desc": "Phase 1 circle description"},
+      {"title": "Phase 2 Circle Title", "value": 100, "color": "#16a34a", "desc": "Phase 2 circle description"},
+      {"title": "Phase 3 Circle Title", "value": 100, "color": "#eab308", "desc": "Phase 3 circle description"}
+    ]
+  },
+  "weeklyPlan": {
+    "title": "Weekly Plan Title",
+    "subtitle": "Weekly Plan Subtitle",
+    "weeks": [
+      {
+        "week": "Weeks 1–2",
+        "theme": "Theme title",
+        "tasks": [
+          {"task": "Task detail", "status": "completed"}
+        ]
+      },
+      {
+        "week": "Weeks 3–6",
+        "theme": "Theme title",
+        "tasks": [
+          {"task": "Task detail", "status": "completed"}
+        ]
+      },
+      {
+        "week": "Weeks 7–12",
+        "theme": "Theme title",
+        "tasks": [
+          {"task": "Task detail", "status": "completed"}
+        ]
+      }
+    ]
+  }
+}`;
+            userPrompt = `Brand context: ${newCaseObj.brand}
+User Prompt Context: ${promptText}`;
+          } else if (tabName === 'results') {
+            systemPrompt = `You are a data analyst. Generate the Results & Takeaways section of the case study.
+Output ONLY a raw, valid JSON string matching the following sub-schema.
+Do NOT wrap the output in markdown code blocks or triple backticks (e.g. do NOT use \`\`\` or \`\`\`json). Do NOT call any tools unless you are searching the web.
+Ensure the summaryFooter takeaways items has a maximum of 3 items. Format items like "<strong>Title:</strong> Description".
+Sub-schema:
+{
+  "results": {
+    "title": "Results section title",
+    "description": "Results section description",
+    "table": {
+      "headers": ["Metric", "Before Adomantra", "After Campaign", "Change"],
+      "rows": [
+        ["Metric Name", "Value Before", "Value After", "Growth percentage"]
+      ]
+    },
+    "quote": {
+      "body": "Quote body detailing positive feedback",
+      "author": "Client spokesperson name",
+      "authorTitle": "Spokesperson title"
+    }
+  },
+  "summaryFooter": {
+    "title": "Takeaways Title",
+    "items": [
+      "<strong>Title:</strong> Description text (Max 3 items total)"
+    ]
+  }
+}`;
+            userPrompt = `Brand context: ${newCaseObj.brand}
+User Prompt Context: ${promptText}`;
+          }
+
+          const requestBody = {
+            model: "openai/gpt-oss-120b",
+            messages: [
+              { role: "system", content: systemPrompt },
+              { role: "user", content: userPrompt }
+            ],
+            temperature: 0.2,
+            max_tokens: 6000
+          };
+
+          if ($("#enableWebSearch").is(":checked")) {
+            requestBody.tools = [{ type: "browser_search" }];
+          }
+
+          const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${key}`
+            },
+            body: JSON.stringify(requestBody)
+          });
+
+          const jsonRes = await response.json();
+          if (!response.ok) {
+            throw new Error(jsonRes.error ? jsonRes.error.message : `API Call failed for ${tabName}`);
+          }
+
+          let aiText = jsonRes.choices[0].message.content.trim();
+          aiText = aiText.replace(/^```json\s*/i, "").replace(/```\s*$/g, "");
+          
+          const parsedData = JSON.parse(aiText);
+
+          if (tabName === 'general') {
+            if (parsedData.brand) {
+              newCaseObj.brand = parsedData.brand;
+              newCaseObj.slug = parsedData.brand.toLowerCase().replace(/[^a-z0-9]+/g, "-") + "-" + Date.now();
+            }
+            if (parsedData.badge) newCaseObj.badge = parsedData.badge;
+            if (parsedData.duration) newCaseObj.duration = newCaseObj.duration;
+            if (parsedData.hero) newCaseObj.hero = parsedData.hero;
+            if (parsedData.title) newCaseObj.title = parsedData.title;
+            if (parsedData.summary) newCaseObj.summary = parsedData.summary;
+            if (parsedData["detaiedParagraph-1"]) {
+              newCaseObj["detaiedParagraph-1"] = parsedData["detaiedParagraph-1"];
+            }
+            if (parsedData["detaiedParagraph-2"]) {
+              newCaseObj["detaiedParagraph-2"] = parsedData["detaiedParagraph-2"];
+            }
+            if (parsedData["detaiedParagraph-3"]) {
+              newCaseObj["detaiedParagraph-3"] = parsedData["detaiedParagraph-3"];
+            }
+          } else {
+            Object.assign(newCaseObj, parsedData);
+          }
+
+          // Persist data incrementally and refresh form fields so the user sees real-time updates!
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(caseStudiesData));
+          selectCaseStudy(newCaseIndex);
+
+          // Cooldown sleep of 10 seconds between requests
+          if (i < tabsToGenerate.length - 1) {
+            for (let countdown = 10; countdown > 0; countdown--) {
+              updateProgress(`Rate Limit Cooldown: ${countdown}s...`);
+              await sleep(1000);
+            }
+          }
+        }
+
+        alert(`Successfully generated case study for ${newCaseObj.brand}!`);
+
+      } catch (err) {
+        console.error("AI Generation Error:", err);
+        alert("Error generating case study: " + err.message);
+      } finally {
+        $("#aiLoader").addClass("d-none");
+        $("#aiIcon").removeClass("d-none");
+        $("#btnComposeCase").html('<i class="fa-solid fa-bolt" id="aiIcon"></i> Generate Case Study').prop("disabled", false);
+      }
+    }
+
+    // Rewrite or generate content for a specific tab pane using Groq AI
+    async function rewriteTabWithAI(tabName) {
+      const key = $("#groqApiKey").val().trim();
+      const model = $("#groqModel").val();
+      const customInstruction = $(`#ai-instruction-${tabName}`).val().trim();
+
+      if (!key) {
+        alert("Please enter a valid Groq API Key first in the Groq AI Composer panel on the left!");
+        return;
+      }
+
+      if (caseStudiesData.length === 0) {
+        alert("No active case study found. Please select or add one first.");
+        return;
+      }
+
+      const cs = caseStudiesData[activeCaseIndex];
+      if (!cs) return;
+
+      const $loader = $(`#loader-${tabName}`);
+      const $icon = $(`#icon-${tabName}`);
+      const $btn = $(`#btnRewrite-${tabName}`);
+
+      $loader.removeClass("d-none");
+      $icon.addClass("d-none");
+      $btn.prop("disabled", true);
+
+      let systemPrompt = "";
+      let userPrompt = "";
+
+      if (tabName === 'general') {
+        systemPrompt = `You are a professional copywriter. Rewrite or generate the Meta & Copy section of the case study. 
+Output ONLY a valid JSON object matching the following sub-schema. Do NOT include conversational text or markdown blocks like \`\`\`json. 
+Sub-schema:
+{
+  "brand": "Brand name",
+  "badge": "Badge text",
+  "duration": "Duration (e.g. 12-Week Campaign)",
+  "hero": "Hero subtext",
+  "title": "Main Heading Title",
+  "summary": "SEO Summary Description",
+  "detaiedParagraph-1": "Paragraph 1 detailing initial problem baseline",
+  "detaiedParagraph-2": "Paragraph 2 detailing strategic intervention",
+  "detaiedParagraph-3": "Paragraph 3 detailing supply chain sync & growth"
+}`;
+        userPrompt = `Brand context: ${cs.brand || "New Brand"}
+Current details:
+${JSON.stringify({
+  brand: cs.brand,
+  badge: cs.badge,
+  duration: cs.duration,
+  hero: cs.hero,
+  title: cs.title,
+  summary: cs.summary,
+  "detaiedParagraph-1": cs["detaiedParagraph-1"] || cs["detailedParagraph-1"],
+  "detaiedParagraph-2": cs["detaiedParagraph-2"] || cs["detailedParagraph-2"],
+  "detaiedParagraph-3": cs["detaiedParagraph-3"] || cs["detailedParagraph-3"]
+}, null, 2)}
+
+Instructions / User direction: ${customInstruction || "Optimize the content to make it professional, engaging, and result-oriented."}`;
+      } else if (tabName === 'objectives') {
+        systemPrompt = `You are a professional case study writer. Rewrite or generate the Project Objectives section.
+Ensure HTML tags (like <h2>, <p>) are correctly used in projectobjective and leadParagraph.
+Output ONLY a valid JSON object matching the following sub-schema. Do NOT include conversational text or markdown blocks like \`\`\`json.
+Sub-schema:
+{
+  "projectobjective": "<h2>The Project</h2>\\n<p>...</p>\\n\\n<h2>The Objective</h2>\\n<p>...</p>",
+  "leadParagraph": "<h2>THE CORE CHALLENGE: ...</h2>\\n<p>...</p>",
+  "clientOverview": {
+    "title": "Client Overview Title",
+    "description": "Short description of baseline profile",
+    "dataBox1": {
+      "title": "Quick Commerce Components",
+      "items": [
+        "<strong>Visibility:</strong> Description here",
+        "<strong>Listing:</strong> Description here"
+      ]
+    },
+    "dataBox2": {
+      "title": "Baseline Benchmarks",
+      "items": [
+        {"label": "Metric Label:", "value": "Metric value", "progress": 25}
+      ]
+    }
+  }
+}`;
+        userPrompt = `Brand context: ${cs.brand || "New Brand"}
+Current details:
+${JSON.stringify({
+  projectobjective: cs.projectobjective,
+  leadParagraph: cs.leadParagraph,
+  clientOverview: cs.clientOverview
+}, null, 2)}
+
+Instructions / User direction: ${customInstruction || "Make it detailed and keep HTML tags intact. Suggest realistic progress bars between 0 and 100."}`;
+      } else if (tabName === 'kpi') {
+        systemPrompt = `You are a growth marketer. Rewrite or generate the KPIs & Audit section of the case study.
+Output ONLY a valid JSON object matching the following sub-schema. Do NOT include conversational text or markdown blocks like \`\`\`json.
+Make sure there are exactly 3 KPIs and up to 3 audit categories.
+Sub-schema:
+{
+  "kpis": [
+    {"metric": "Metric text (e.g. ₹58 Lakhs or +383%)", "label": "Label text", "subtext": "Subtext description"},
+    {"metric": "...", "label": "...", "subtext": "..."},
+    {"metric": "...", "label": "...", "subtext": "..."}
+  ],
+  "campaignAudit": {
+    "title": "Audit Title",
+    "subtitle": "Audit Subtitle",
+    "categories": [
+      {"name": "Category Name", "crossed": "Failure / crossed point", "checked": "Solution / checked point"},
+      {"name": "Category Name", "crossed": "Failure / crossed point", "checked": "Solution / checked point"},
+      {"name": "Category Name", "crossed": "Failure / crossed point", "checked": "Solution / checked point"}
+    ]
+  }
+}`;
+        userPrompt = `Brand context: ${cs.brand || "New Brand"}
+Current details:
+${JSON.stringify({
+  kpis: cs.kpis,
+  campaignAudit: cs.campaignAudit
+}, null, 2)}
+
+Instructions / User direction: ${customInstruction || "Formulate concrete KPIs and distinct operational/marketing failure points with corresponding Adomantra solutions."}`;
+      } else if (tabName === 'weekly') {
+        systemPrompt = `You are a project manager. Rewrite or generate the Timeline & Plan section of the case study.
+Output ONLY a valid JSON object matching the following sub-schema. Do NOT include conversational text or markdown blocks like \`\`\`json.
+Sub-schema:
+{
+  "ourApproachCircles": {
+    "title": "Framework Title",
+    "subtitle": "Framework Subtitle",
+    "blocks": [
+      {"title": "Phase 1 Circle Title", "value": 100, "color": "#2563eb", "desc": "Phase 1 circle description"},
+      {"title": "Phase 2 Circle Title", "value": 100, "color": "#16a34a", "desc": "Phase 2 circle description"},
+      {"title": "Phase 3 Circle Title", "value": 100, "color": "#eab308", "desc": "Phase 3 circle description"}
+    ]
+  },
+  "weeklyPlan": {
+    "title": "Weekly Plan Title",
+    "subtitle": "Weekly Plan Subtitle",
+    "weeks": [
+      {
+        "week": "Weeks 1–2",
+        "theme": "Theme title",
+        "tasks": [
+          {"task": "Task detail", "status": "completed"}
+        ]
+      },
+      {
+        "week": "Weeks 3–6",
+        "theme": "Theme title",
+        "tasks": [
+          {"task": "Task detail", "status": "completed"}
+        ]
+      },
+      {
+        "week": "Weeks 7–12",
+        "theme": "Theme title",
+        "tasks": [
+          {"task": "Task detail", "status": "completed"}
+        ]
+      }
+    ]
+  }
+}`;
+        userPrompt = `Brand context: ${cs.brand || "New Brand"}
+Current details:
+${JSON.stringify({
+  ourApproachCircles: cs.ourApproachCircles,
+  weeklyPlan: cs.weeklyPlan
+}, null, 2)}
+
+Instructions / User direction: ${customInstruction || "Ensure a chronological plan spanning 12 weeks with specific marketplace tasks."}`;
+      } else if (tabName === 'results') {
+        systemPrompt = `You are a data analyst. Rewrite or generate the Results & Takeaways section of the case study.
+Output ONLY a valid JSON object matching the following sub-schema. Do NOT include conversational text or markdown blocks like \`\`\`json.
+Ensure the summaryFooter takeaways items has a maximum of 3 items. Format items like "<strong>Title:</strong> Description".
+Sub-schema:
+{
+  "results": {
+    "title": "Results section title",
+    "description": "Results section description",
+    "table": {
+      "headers": ["Metric", "Before Adomantra", "After Campaign", "Change"],
+      "rows": [
+        ["Metric Name", "Value Before", "Value After", "Growth percentage"]
+      ]
+    },
+    "quote": {
+      "body": "Quote body detailing positive feedback",
+      "author": "Client spokesperson name",
+      "authorTitle": "Spokesperson title"
+    }
+  },
+  "summaryFooter": {
+    "title": "Takeaways Title",
+    "items": [
+      "<strong>Title:</strong> Description text (Max 3 items total)"
+    ]
+  }
+}`;
+        userPrompt = `Brand context: ${cs.brand || "New Brand"}
+Current details:
+${JSON.stringify({
+  results: cs.results,
+  summaryFooter: cs.summaryFooter
+}, null, 2)}
+
+Instructions / User direction: ${customInstruction || "Make sure results are outstanding and aligned with marketing growth. Limit takeaways to max 3 items."}`;
+      }
+
+      try {
+        const requestBody = {
+          model: "openai/gpt-oss-120b",
+          messages: [
+            { role: "system", content: systemPrompt },
+            { role: "user", content: userPrompt }
+          ],
+          temperature: 0.2,
+          max_tokens: 8192
+        };
+
+        if ($("#enableWebSearch").is(":checked")) {
+          requestBody.tools = [{ type: "browser_search" }];
+        }
+
+        const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${key}`
+          },
+          body: JSON.stringify(requestBody)
+        });
+
+        const jsonRes = await response.json();
+        
+        if (!response.ok) {
+          throw new Error(jsonRes.error ? jsonRes.error.message : "API Call failed");
+        }
+
+        let aiText = jsonRes.choices[0].message.content.trim();
+        aiText = aiText.replace(/^```json\s*/i, "").replace(/```\s*$/g, "");
+        
+        const parsedData = JSON.parse(aiText);
+        
+        if (tabName === 'general') {
+          if (parsedData.brand) cs.brand = parsedData.brand;
+          if (parsedData.badge) cs.badge = parsedData.badge;
+          if (parsedData.duration) cs.duration = parsedData.duration;
+          if (parsedData.hero) cs.hero = parsedData.hero;
+          if (parsedData.title) cs.title = parsedData.title;
+          if (parsedData.summary) cs.summary = parsedData.summary;
+          if (parsedData["detaiedParagraph-1"]) {
+            cs["detaiedParagraph-1"] = parsedData["detaiedParagraph-1"];
+          }
+          if (parsedData["detaiedParagraph-2"]) {
+            cs["detaiedParagraph-2"] = parsedData["detaiedParagraph-2"];
+          }
+          if (parsedData["detaiedParagraph-3"]) {
+            cs["detaiedParagraph-3"] = parsedData["detaiedParagraph-3"];
+          }
+        } else {
+          Object.assign(cs, parsedData);
+        }
+
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(caseStudiesData));
+        selectCaseStudy(activeCaseIndex);
+        alert(`Successfully updated and saved ${tabName} section!`);
+      } catch (err) {
+        console.error("AI Section Generation Error:", err);
+        alert("Error updating section with AI: " + err.message);
+      } finally {
+        $loader.addClass("d-none");
+        $icon.removeClass("d-none");
+        $btn.prop("disabled", false);
+      }
+    }
+
+    // Auto-save silently on input
+    function autoSaveActiveCase() {
+      if (caseStudiesData.length === 0) return;
+      
+      const cs = caseStudiesData[activeCaseIndex];
+      if (!cs) return;
+
+      cs.id = $("#c_id").val().trim();
+      cs.slug = $("#c_slug").val().trim();
+      cs.brand = $("#c_brand").val().trim();
+      cs.badge = $("#c_badge").val().trim();
+      cs.duration = $("#c_duration").val().trim();
+      cs.hero = $("#c_hero").val().trim();
+      cs.title = $("#c_title").val().trim();
+      cs.summary = $("#c_summary").val().trim();
+
+      // Paragraphs
+      cs["detaiedParagraph-1"] = $("#c_para1").val().trim();
+      cs["detaiedParagraph-2"] = $("#c_para2").val().trim();
+      cs["detaiedParagraph-3"] = $("#c_para3").val().trim();
+
+      // Objectives
+      cs.projectobjective = $("#c_objectives").val().trim();
+      cs.leadParagraph = $("#c_lead_paragraph").val().trim();
+
+      // Client Overview & Baseline Benchmarks
+      const buildBench = (labelId, valId, progId) => {
+        const label = $(labelId).val().trim();
+        const value = $(valId).val().trim();
+        const progress = parseInt($(progId).val());
+        if (!label) return null;
+        return { label, value, progress: isNaN(progress) ? 20 : progress };
+      };
+
+      const benchesSaved = [
+        buildBench("#c_bench_l1", "#c_bench_v1", "#c_bench_p1"),
+        buildBench("#c_bench_l2", "#c_bench_v2", "#c_bench_p2"),
+        buildBench("#c_bench_l3", "#c_bench_v3", "#c_bench_p3"),
+        buildBench("#c_bench_l4", "#c_bench_v4", "#c_bench_p4")
+      ].filter(Boolean);
+
+      cs.clientOverview = {
+        title: $("#c_overview_title").val().trim(),
+        description: $("#c_overview_desc").val().trim(),
+        dataBox1: {
+          title: "Quick Commerce Components",
+          items: $("#c_overview_items").val().split("\n").map(l => l.trim()).filter(Boolean)
+        },
+        dataBox2: {
+          title: "Baseline Benchmarks",
+          items: benchesSaved
+        }
+      };
+
+      // KPIs
+      cs.kpis = [
+        { metric: $("#c_kpi_m1").val().trim(), label: $("#c_kpi_l1").val().trim(), subtext: $("#c_kpi_s1").val().trim() },
+        { metric: $("#c_kpi_m2").val().trim(), label: $("#c_kpi_l2").val().trim(), subtext: $("#c_kpi_s2").val().trim() },
+        { metric: $("#c_kpi_m3").val().trim(), label: $("#c_kpi_l3").val().trim(), subtext: $("#c_kpi_s3").val().trim() }
+      ];
+
+      // Campaign Audit
+      cs.campaignAudit = {
+        title: $("#c_audit_title").val().trim(),
+        subtitle: $("#c_audit_sub").val().trim(),
+        categories: [
+          { name: $("#c_aud_cat1").val().trim(), crossed: $("#c_aud_fail1").val().trim(), checked: $("#c_aud_sol1").val().trim() },
+          { name: $("#c_aud_cat2").val().trim(), crossed: $("#c_aud_fail2").val().trim(), checked: $("#c_aud_sol2").val().trim() },
+          { name: $("#c_aud_cat3").val().trim(), crossed: $("#c_aud_fail3").val().trim(), checked: $("#c_aud_sol3").val().trim() }
+        ]
+      };
+
+      // Framework Circles
+      cs.ourApproachCircles = {
+        title: $("#c_app_title").val().trim(),
+        subtitle: $("#c_app_sub").val().trim(),
+        blocks: [
+          { title: $("#c_app_t1").val().trim(), value: parseInt($("#c_app_v1").val()) || 100, color: "#2563eb", desc: $("#c_app_d1").val().trim() },
+          { title: $("#c_app_t2").val().trim(), value: parseInt($("#c_app_v2").val()) || 100, color: "#16a34a", desc: $("#c_app_d2").val().trim() },
+          { title: $("#c_app_t3").val().trim(), value: parseInt($("#c_app_v3").val()) || 100, color: "#eab308", desc: $("#c_app_d3").val().trim() }
+        ]
+      };
+
+      // Weekly Plan
+      const parseTasks = (text) => text.split("\n").map(line => line.trim()).filter(Boolean).map(task => ({ task, status: "completed" }));
+      cs.weeklyPlan = {
+        title: $("#c_week_title").val().trim(),
+        subtitle: $("#c_week_sub").val().trim(),
+        weeks: [
+          { week: $("#c_wk_p1").val().trim(), theme: $("#c_wk_t1").val().trim(), tasks: parseTasks($("#c_wk_tasks1").val()) },
+          { week: $("#c_wk_p2").val().trim(), theme: $("#c_wk_t2").val().trim(), tasks: parseTasks($("#c_wk_tasks2").val()) },
+          { week: $("#c_wk_p3").val().trim(), theme: $("#c_wk_t3").val().trim(), tasks: parseTasks($("#c_wk_tasks3").val()) }
+        ]
+      };
+
+      // Results Table & Quote
+      const rawRows = $("#c_res_table").val().split("\n").map(l => l.trim()).filter(Boolean);
+      const rowsParsed = rawRows.map(row => row.split("|").map(col => col.trim()));
+      
+      cs.results = {
+        title: $("#c_res_title").val().trim(),
+        description: $("#c_res_sub").val().trim(),
+        table: {
+          headers: ["Metric", "Before Adomantra", "After Campaign", "Change"],
+          rows: rowsParsed
+        },
+        quote: {
+          body: $("#c_q_body").val().trim(),
+          author: $("#c_q_auth").val().trim(),
+          authorTitle: $("#c_q_title").val().trim()
+        }
+      };
+
+      // Takeaways
+      cs.summaryFooter = {
+        title: $("#c_takeaways_title").val().trim(),
+        items: $("#c_takeaways_items").val().split("\n").map(l => l.trim()).filter(Boolean)
+      };
+
+      // Save silently to localStorage
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(caseStudiesData));
+      
+      // Update UI preview links and labels without full alert disruption
+      $("#editingCaseTitle").text(cs.brand || "Unnamed Brand");
+      $("#editingCaseId").text(`Key ID: ${cs.id || 'N/A'}`);
+      if (cs.slug) {
+        $("#btnOpenLive").attr("href", `case-studies.html?slug=${cs.slug}`).removeClass("d-none");
+      } else if (cs.id) {
+        $("#btnOpenLive").attr("href", `case-studies.html?slug=${cs.id}`).removeClass("d-none");
+      }
+      
+      // Update the active sidebar card's content to keep list in sync as you type
+      const activeCard = $(".case-card.active");
+      if (activeCard.length) {
+        activeCard.find("h6").text(cs.brand || "Unnamed Brand");
+        activeCard.find("p").text(cs.title || "");
+        activeCard.find(".badge-custom").text(cs.duration || "");
+      }
+    }
+
+    // Initialize Page
+    $(document).ready(() => {
+      loadData();
+      
+      // Bind input events on form fields to trigger silent auto-save in real-time
+      $(document).on("input change", "#caseEditorForm input, #caseEditorForm textarea, #caseEditorForm select", () => {
+        autoSaveActiveCase();
+      });
+    });
+  </script>
+</body>
+</html>

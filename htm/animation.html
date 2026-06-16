@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GSAP SplitText — Complete Animation Showcase</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+
+<!-- GSAP CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<!-- SplitText is Club GSAP — loaded from their CDN trial build -->
+<script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+
+<style>
+/* ─── RESET & VARS ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:      #0a0a0f;
+  --paper:    #f4f0e8;
+  --cream:    #ede8dc;
+  --accent:   #e8340a;
+  --gold:     #d4a843;
+  --steel:    #2c3e50;
+  --mist:     #8a8a9a;
+  --ff-head:  'Bebas Neue', sans-serif;
+  --ff-serif: 'DM Serif Display', serif;
+  --ff-body:  'Syne', sans-serif;
+  --ff-mono:  'DM Mono', monospace;
+  --section-pad: clamp(80px, 12vw, 160px);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--ff-body);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ─── CUSTOM CURSOR ─────────────────────────────────────────── */
+.cursor {
+  position: fixed;
+  width: 12px; height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: exclusion;
+  transition: width .2s, height .2s;
+}
+.cursor-ring {
+  position: fixed;
+  width: 38px; height: 38px;
+  border: 1px solid rgba(244,240,232,.35);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+}
+
+/* ─── NOISE OVERLAY ─────────────────────────────────────────── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.045'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9990;
+  opacity: .6;
+}
+
+/* ─── NAV ───────────────────────────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: rgba(10,10,15,.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(244,240,232,.07);
+}
+
+.nav-logo {
+  font-family: var(--ff-head);
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--mist);
+  text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--paper); }
+
+/* ─── SECTION BASE ──────────────────────────────────────────── */
+section {
+  min-height: 100vh;
+  padding: var(--section-pad) clamp(24px, 7vw, 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-label {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 32px; height: 1px;
+  background: var(--accent);
+}
+
+.section-title {
+  font-family: var(--ff-head);
+  font-size: clamp(56px, 9vw, 160px);
+  line-height: .92;
+  letter-spacing: 1px;
+  color: var(--paper);
+  margin-bottom: 24px;
+}
+
+.section-desc {
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: var(--mist);
+  max-width: 520px;
+  line-height: 1.8;
+  margin-bottom: 48px;
+}
+
+.replay-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--accent);
+  border: none;
+  padding: 14px 28px;
+  cursor: none;
+  transition: background .2s, transform .15s;
+  margin-top: 32px;
+  align-self: flex-start;
+}
+.replay-btn:hover { background: var(--gold); transform: translateY(-2px); }
+.replay-btn svg { width: 14px; height: 14px; fill: currentColor; }
+
+/* ─── DIVIDER ───────────────────────────────────────────────── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(244,240,232,.12), transparent);
+}
+
+/* ─── SECTION 0 — HERO ──────────────────────────────────────── */
+#hero {
+  background: var(--ink);
+  min-height: 100vh;
+  justify-content: flex-end;
+  padding-bottom: 80px;
+}
+
+.hero-eyebrow {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  letter-spacing: 5px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-family: var(--ff-head);
+  font-size: clamp(80px, 16vw, 260px);
+  line-height: .85;
+  color: var(--paper);
+  overflow: hidden;
+}
+
+.hero-sub {
+  font-family: var(--ff-serif);
+  font-style: italic;
+  font-size: clamp(18px, 2.5vw, 32px);
+  color: var(--gold);
+  margin-top: 24px;
+  overflow: hidden;
+}
+
+.hero-tagline {
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--mist);
+  margin-top: 16px;
+  max-width: 480px;
+  line-height: 1.9;
+  overflow: hidden;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  right: clamp(24px, 7vw, 120px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--mist);
+  writing-mode: vertical-rl;
+}
+
+.hero-scroll::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--mist), transparent);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0%, 100% { transform: scaleY(1); opacity: 1; }
+  50% { transform: scaleY(.4); opacity: .4; }
+}
+
+/* ─── SECTION 1 — CHARS REVEAL ──────────────────────────────── */
+#chars-reveal {
+  background: var(--ink);
+}
+
+.chars-demo-text {
+  font-family: var(--ff-head);
+  font-size: clamp(48px, 8vw, 130px);
+  line-height: 1;
+  color: var(--paper);
+}
+
+.chars-demo-text .st-char {
+  display: inline-block;
+}
+
+/* ─── SECTION 2 — WORDS FADE ─────────────────────────────────── */
+#words-fade {
+  background: #0e0c1a;
+}
+
+.words-demo {
+  font-family: var(--ff-serif);
+  font-size: clamp(28px, 4.5vw, 72px);
+  line-height: 1.25;
+  color: var(--paper);
+  max-width: 820px;
+}
+
+/* ─── SECTION 3 — LINE MASK REVEAL ─────────────────────────── */
+#line-reveal {
+  background: var(--ink);
+}
+
+.line-demo {
+  font-family: var(--ff-head);
+  font-size: clamp(44px, 7vw, 110px);
+  line-height: .95;
+  max-width: 900px;
+}
+
+.line-demo .st-line {
+  overflow: hidden;
+  display: block;
+}
+
+/* ─── SECTION 4 — TYPEWRITER ─────────────────────────────────── */
+#typewriter {
+  background: #060810;
+}
+
+.type-demo {
+  font-family: var(--ff-mono);
+  font-size: clamp(18px, 2.8vw, 42px);
+  line-height: 1.6;
+  color: #4eff91;
+  max-width: 700px;
+}
+
+.type-demo .st-char {
+  display: inline;
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: #4eff91;
+  vertical-align: text-bottom;
+  margin-left: 2px;
+  animation: blink .7s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+.type-prefix {
+  font-family: var(--ff-mono);
+  font-size: clamp(11px, 1.5vw, 16px);
+  color: var(--mist);
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* ─── SECTION 5 — WAVE ───────────────────────────────────────── */
+#wave-anim {
+  background: var(--ink);
+  text-align: center;
+}
+
+.wave-demo {
+  font-family: var(--ff-head);
+  font-size: clamp(60px, 10vw, 150px);
+  letter-spacing: 8px;
+  color: var(--paper);
+  display: inline-block;
+}
+
+.wave-demo span {
+  display: inline-block;
+}
+
+/* ─── SECTION 6 — 3D ROTATE ──────────────────────────────────── */
+#rotate3d {
+  background: #080d14;
+}
+
+.rotate-demo {
+  font-family: var(--ff-serif);
+  font-size: clamp(36px, 5.5vw, 90px);
+  line-height: 1.2;
+  max-width: 800px;
+  perspective: 800px;
+}
+
+/* ─── SECTION 7 — BLUR FADE ──────────────────────────────────── */
+#blur-fade {
+  background: var(--ink);
+}
+
+.blur-demo {
+  font-family: var(--ff-head);
+  font-size: clamp(50px, 8vw, 120px);
+  line-height: .95;
+  max-width: 1000px;
+}
+
+/* ─── SECTION 8 — STAGGER FROM RANDOM ───────────────────────── */
+#stagger-random {
+  background: #0b0b15;
+}
+
+.random-demo {
+  font-family: var(--ff-head);
+  font-size: clamp(52px, 8.5vw, 130px);
+  line-height: .92;
+}
+
+.random-demo .st-char {
+  display: inline-block;
+}
+
+/* ─── SECTION 9 — HIGHLIGHT ──────────────────────────────────── */
+#highlight-anim {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+#highlight-anim .section-label { color: var(--steel); }
+#highlight-anim .section-label::before { background: var(--steel); }
+#highlight-anim .section-desc { color: #666; }
+
+.highlight-demo {
+  font-family: var(--ff-serif);
+  font-size: clamp(30px, 4.5vw, 68px);
+  line-height: 1.3;
+  max-width: 800px;
+  color: #b0a898;
+}
+
+.highlight-demo .st-word {
+  display: inline-block;
+  transition: color .01s;
+}
+
+#highlight-anim .replay-btn {
+  background: var(--steel);
+  color: var(--paper);
+}
+#highlight-anim .replay-btn:hover { background: var(--ink); }
+
+/* ─── SECTION 10 — SCROLL REVEAL ────────────────────────────── */
+#scroll-reveal {
+  background: var(--ink);
+  min-height: 200vh;
+}
+
+.scroll-items {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-top: 60px;
+}
+
+.scroll-item-text {
+  font-family: var(--ff-head);
+  font-size: clamp(44px, 7vw, 100px);
+  line-height: .95;
+  overflow: hidden;
+}
+
+.scroll-item-text .st-line {
+  overflow: hidden;
+  display: block;
+}
+
+/* ─── SECTION 11 — PROP INDEX / CSS VAR ────────────────────── */
+#prop-index {
+  background: #040406;
+}
+
+.prop-demo {
+  font-family: var(--ff-head);
+  font-size: clamp(36px, 6vw, 90px);
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+.prop-demo .st-char {
+  display: inline-block;
+  /* CSS var --char used for color cycling */
+  color: hsl(calc(var(--char, 0) * 18), 80%, 65%);
+}
+
+/* ─── SECTION 12 — CHARS ELASTIC ────────────────────────────── */
+#elastic {
+  background: var(--ink);
+  text-align: center;
+}
+
+.elastic-demo {
+  font-family: var(--ff-head);
+  font-size: clamp(60px, 10vw, 160px);
+  letter-spacing: 4px;
+}
+.elastic-demo .st-char { display: inline-block; }
+
+/* ─── SECTION 13 — SPLIT REVERT ──────────────────────────────── */
+#revert-demo {
+  background: #0e0c1a;
+}
+
+.revert-text {
+  font-family: var(--ff-serif);
+  font-size: clamp(28px, 4vw, 64px);
+  line-height: 1.3;
+  max-width: 700px;
+  color: var(--paper);
+}
+
+.revert-status {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--mist);
+  margin-top: 16px;
+}
+
+/* ─── SECTION 14 — COMBINED TIMELINE ────────────────────────── */
+#combined {
+  background: var(--ink);
+  text-align: center;
+}
+
+.combined-line1 {
+  font-family: var(--ff-mono);
+  font-size: clamp(13px, 1.8vw, 22px);
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.combined-line2 {
+  font-family: var(--ff-head);
+  font-size: clamp(64px, 12vw, 200px);
+  line-height: .85;
+  color: var(--paper);
+}
+
+.combined-line3 {
+  font-family: var(--ff-serif);
+  font-style: italic;
+  font-size: clamp(22px, 3.5vw, 52px);
+  color: var(--gold);
+  margin-top: 8px;
+}
+
+/* ─── SECTION 15 — OUTRO ─────────────────────────────────────── */
+#outro {
+  background: var(--ink);
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid rgba(244,240,232,.06);
+}
+
+.outro-title {
+  font-family: var(--ff-head);
+  font-size: clamp(50px, 9vw, 140px);
+  color: var(--paper);
+  line-height: .9;
+}
+
+.outro-sub {
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--mist);
+  margin-top: 24px;
+}
+
+/* ─── UTILITY ────────────────────────────────────────────────── */
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(244,240,232,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244,240,232,.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.accent-line {
+  display: block;
+  color: var(--accent);
+}
+
+.gold-line {
+  display: block;
+  color: var(--gold);
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: rgba(232, 52, 10, .12);
+  color: var(--accent);
+  border: 1px solid rgba(232, 52, 10, .25);
+  padding: 4px 10px;
+  margin-bottom: 20px;
+}
+
+/* ─── PROGRESS BAR ───────────────────────────────────────────── */
+.progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: var(--accent);
+  z-index: 200;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+/* ─── SIDE INDEX ─────────────────────────────────────────────── */
+.side-index {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 90;
+}
+
+.side-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: rgba(244,240,232,.2);
+  cursor: none;
+  transition: background .2s, transform .2s;
+}
+.side-dot.active {
+  background: var(--accent);
+  transform: scale(1.8);
+}
+
+@media (max-width: 768px) {
+  nav { padding: 16px 20px; }
+  .nav-links { display: none; }
+  .side-index { display: none; }
+  section { padding: var(--section-pad) 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">SPLIT·TEXT</div>
+  <ul class="nav-links">
+    <li><a href="#chars-reveal">Chars</a></li>
+    <li><a href="#words-fade">Words</a></li>
+    <li><a href="#line-reveal">Lines</a></li>
+    <li><a href="#typewriter">Type</a></li>
+    <li><a href="#wave-anim">Wave</a></li>
+    <li><a href="#rotate3d">3D</a></li>
+    <li><a href="#scroll-reveal">Scroll</a></li>
+    <li><a href="#combined">Timeline</a></li>
+  </ul>
+</nav>
+
+<!-- SIDE INDEX DOTS -->
+<div class="side-index" id="sideIndex"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SECTION 0 — HERO                                          -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="grid-bg"></div>
+  <div class="hero-eyebrow" id="heroEyebrow">GSAP SplitText — Complete Showcase</div>
+  <h1 class="hero-title" id="heroTitle">EVERY<br>ANIMATION</h1>
+  <p class="hero-sub" id="heroSub">All features. All patterns. One page.</p>
+  <p class="hero-tagline" id="heroTagline">
+    Characters · Words · Lines · Masks · ScrollTrigger · 3D · Typewriter · Wave · Highlight
+  </p>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SECTION 1 — CHARS STAGGER REVEAL                          -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="chars-reveal">
+  <div class="section-label">01 — type: "chars"</div>
+  <div class="tag">SplitText.chars</div>
+  <h2 class="chars-demo-text" id="charsText">
+    CHAR<br>BY<br>CHAR
+  </h2>
+  <p class="section-desc">
+    Split by <code>type:"chars,words"</code>. Each character gets its own &lt;div&gt; and animates with y + autoAlpha stagger.
+  </p>
+  <button class="replay-btn" id="charsBtn">
+    <svg viewBox="0 0 16 16"><path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/></svg>
+    Replay
+  </button>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SECTION 2 — WORDS FADE SCALE                              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="words-fade">
+  <div class="section-label">02 — type: "words"</div>
+  <div class="tag">SplitText.words</div>
+  <p class="words-demo" id="wordsText">
+    Every word emerges from silence, scaled and faded into being, one after another.
+  </p>
+  <p class="section-desc">
+    Split by <code>type:"words"</code>. Words animate from <code>scale:0 autoAlpha:0</code> with <code>back.out</code> easing.
+  </p>
+  <button class="replay-btn" id="wordsBtn">
+    <svg viewBox="0 0 16 16"><path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/></svg>
+    Replay
+  </button>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SECTION 3 — LINE MASK REVEAL                              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="line-reveal">
+  <div class="section-label">03 — mask: "lines"</div>
+  <div class="tag">SplitText.lines + mask</div>
+  <h2 class="line-demo" id="lineText">
+    LINES SLIDE<br>OUT FROM<br>THE MASK
+  </h2>
+  <p class="section-desc">
+    <code>mask:"lines"</code> wraps each line in a clip container. Words slide up from behind the clip — the classic reveal.
+  </p>
+  <button class="replay-btn" id="lineBtn">
+    <svg viewBox="0 0 16 16"><path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/></svg>
+    Replay
+  </button>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SECTION 4 — TYPEWRITER                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="typewriter">
+  <div class="section-label">04 — type: "chars" · sequential</div>
+  <div class="tag">Typewriter Effect</div>
+  <span class="type-prefix">&gt; initializing animation sequence...</span>
+  <p class="type-demo" id="typeText">
+    SplitText reveals characters one by one, creating a terminal typewriter effect with perfect timing control.
+  </p>
+  <span class="cursor-blink"></span>
+  <p class="section-desc" style="margin-top:32px">
+    Each char is hidden then revealed sequentially using <code>stagger</code> with duration per char.
+  </p>
+  <button class="replay-btn" id="typeBtn" style="background:#4eff91;color:#060810">
+    <svg viewBox="0 0 16 16"><path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/></svg>
+    Replay
+  </button>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SECTION 5 — WAVE                                          -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="wave-anim">
+  <div class="section-label">05 — sine wave stagger</div>
+  <div class="tag">Wave Animation</div>
+  <h2 class="wave-demo" id="waveText">GSAP WAVE</h2>
+  <p class="section-desc" style="margin: 24px auto 0; text-align:center">
+    Each character's <code>y</code> is driven by <code>Math.sin(i * factor)</code> for a ripple effect. Set <code>repeat:-1 yoyo:true</code>.
+  </p>
+  <button class="replay-btn" id="waveBtn" style="align-self:center; margin-top:32px">
+    <svg viewBox="0 0 16 16"><path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/></svg>
+    Restart
+  </button>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SECTION 6 — 3D ROTATE                                     -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="rotate3d">
+  <div class="section-label">06 — rotationY · perspective</div>
+  <div class="tag">3D Flip In</div>
+  <p class="rotate-demo" id="rotateText">
+    Words flip into view on the Y-axis like pages turning through three-dimensional space.
+  </p>
+  <p class="section-desc">
+    Apply <code>perspective</code> to parent. Animate <code>rotationY:90</code> on each word with <code>transformOrigin:"0% 50%"</code>.
+  </p>
+  <button class="replay-btn" id="rotateBtn">
+    <svg viewBox="0 0 16 16"><path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/></svg>
+    Replay
+  </button>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SECTION 7 — BLUR FADE                                     -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="blur-fade">
+  <div class="section-label">07 — CSS filter blur</div>
+  <div class="tag">Blur Reveal</div>
+  <h2 class="blur-demo" id="blurText">FOCUS<br>INTO<br>CLARITY</h2>
+  <p class="section-desc">
+    Animate <code>filter: blur(20px)</code> to <code>blur(0px)</code> on each word. Pairs with <code>autoAlpha:0</code> for a dreamy entrance.
+  </p>
+  <button class="replay-btn" id="blurBtn">
+    <svg viewBox="0 0 16 16"><path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/></svg>
+    Replay
+  </button>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SECTION 8 — RANDOM STAGGER                                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="stagger-random">
+  <div class="section-label">08 — stagger: {from:"random"}</div>
+  <div class="tag">Random Stagger</div>
+  <h2 class="random-demo" id="randomText">
+    CHAOS<br>ORDER
+  </h2>
+  <p class="section-desc">
+    Using <code>stagger: {amount:1, from:"random"}</code> — chars explode in from random positions and settle into place.
+  </p>
+  <button class="replay-btn" id="randomBtn">
+    <svg viewBox="0 0 16 16"><path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/></svg>
+    Replay
+  </button>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SECTION 9 — WORD HIGHLIGHT                                 -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="highlight-anim">
+  <div class="section-label">09 — color timeline per word</div>
+  <div class="tag">Word Highlight</div>
+  <p class="highlight-demo" id="highlightText">
+    Read every word as it lights up in sequence, guiding your eye through the sentence naturally.
+  </p>
+  <p class="section-desc">
+    A GSAP timeline loops through each word, toggling its color. Perfect for karaoke, subtitles, or reading guides.
+  </p>
+  <button class="replay-btn" id="highlightBtn">
+    <svg viewBox="0 0 16 16"><path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/></svg>
+    Replay
+  </button>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SECTION 10 — SCROLL TRIGGER REVEAL                        -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="scroll-reveal">
+  <div class="section-label">10 — ScrollTrigger + mask</div>
+  <div class="tag">Scroll Reveal</div>
+  <p class="section-desc">
+    Each block triggers as it enters the viewport. <code>mask:"lines"</code> + <code>autoSplit:true</code> handles responsive re-splitting.
+  </p>
+  <div class="scroll-items">
+    <h2 class="scroll-item-text" id="scrollText1">SCROLL<br>TRIGGERS</h2>
+    <h2 class="scroll-item-text" id="scrollText2" style="color:var(--gold)">EACH LINE<br>INDIVIDUALLY</h2>
+    <h2 class="scroll-item-text" id="scrollText3" style="color:var(--accent)">AS YOU<br>MOVE DOWN</h2>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SECTION 11 — PROP INDEX + CSS VARS                        -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="prop-index">
+  <div class="section-label">11 — propIndex CSS variables</div>
+  <div class="tag">propIndex: true</div>
+  <h2 class="prop-demo" id="propText">RAINBOW</h2>
+  <p class="section-desc">
+    <code>propIndex:true</code> adds <code>--char: N</code> CSS variable to each element. Used here to drive per-character <code>hsl()</code> color cycling.
+  </p>
+  <button class="replay-btn" id="propBtn">
+    <svg viewBox="0 0 16 16"><path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/></svg>
+    Replay
+  </button>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SECTION 12 — ELASTIC CHARS                                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="elastic">
+  <div class="section-label">12 — elastic.out easing</div>
+  <div class="tag">Elastic Bounce</div>
+  <h2 class="elastic-demo" id="elasticText">BOUNCE!</h2>
+  <p class="section-desc" style="text-align:center;margin:24px auto 0">
+    <code>ease:"elastic.out(1,0.3)"</code> on chars with <code>y:-120</code> start. Each char drops and bounces into position.
+  </p>
+  <button class="replay-btn" id="elasticBtn" style="align-self:center;margin-top:32px">
+    <svg viewBox="0 0 16 16"><path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/></svg>
+    Replay
+  </button>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SECTION 13 — REVERT DEMO                                  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="revert-demo">
+  <div class="section-label">13 — .revert() · .split()</div>
+  <div class="tag">Split ↔ Revert</div>
+  <p class="revert-text" id="revertText">
+    This text can be split apart and restored to its original state on demand.
+  </p>
+  <p class="revert-status" id="revertStatus">STATUS: Original</p>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:32px">
+    <button class="replay-btn" id="splitBtn">Split It</button>
+    <button class="replay-btn" id="revertBtn" style="background:var(--steel)">Revert It</button>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SECTION 14 — COMBINED TIMELINE                            -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="combined">
+  <div class="section-label">14 — gsap.timeline() orchestration</div>
+  <div class="tag">Full Timeline</div>
+  <p class="combined-line1" id="combinedLine1">The art of motion</p>
+  <h2 class="combined-line2" id="combinedLine2">MASTER</h2>
+  <p class="combined-line3" id="combinedLine3">every animation at once</p>
+  <p class="section-desc" style="text-align:center;margin:32px auto 0;max-width:560px">
+    Three separate SplitText instances orchestrated in a single GSAP timeline — chars, words, and lines all moving in concert.
+  </p>
+  <button class="replay-btn" id="combinedBtn" style="align-self:center;margin-top:32px">
+    <svg viewBox="0 0 16 16"><path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/></svg>
+    Replay All
+  </button>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  OUTRO                                                      -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="outro">
+  <h2 class="outro-title" id="outroTitle">THAT'S<br>ALL SPLITS</h2>
+  <p class="outro-sub" id="outroSub">GSAP SplitText · Complete Feature Showcase</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  JAVASCRIPT                                                 -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+/* ─── SETUP ─────────────────────────────────────────────────── */
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
+/* ─── CUSTOM CURSOR ─────────────────────────────────────────── */
+const cursor = document.getElementById('cursor');
+const cursorRing = document.getElementById('cursorRing');
+let mx = 0, my = 0, rx = 0, ry = 0;
+
+document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+
+gsap.ticker.add(() => {
+  rx = gsap.utils.interpolate(rx, mx, 0.18);
+  ry = gsap.utils.interpolate(ry, my, 0.18);
+  gsap.set(cursor, { x: mx, y: my });
+  gsap.set(cursorRing, { x: rx, y: ry });
+});
+
+/* ─── PROGRESS BAR ───────────────────────────────────────────── */
+gsap.to('#progressBar', {
+  scaleX: 1,
+  ease: 'none',
+  scrollTrigger: { scrub: true, start: 'top top', end: 'bottom bottom' }
+});
+
+/* ─── SIDE DOTS ──────────────────────────────────────────────── */
+const sections = document.querySelectorAll('section');
+const sideIndex = document.getElementById('sideIndex');
+sections.forEach((sec, i) => {
+  const dot = document.createElement('div');
+  dot.className = 'side-dot';
+  dot.title = sec.id;
+  dot.addEventListener('click', () => sec.scrollIntoView({ behavior: 'smooth' }));
+  sideIndex.appendChild(dot);
+  ScrollTrigger.create({
+    trigger: sec,
+    start: 'top 60%',
+    end: 'bottom 40%',
+    onToggle: self => dot.classList.toggle('active', self.isActive),
+  });
+});
+
+/* ════════════════════════════════════════════════════════════════
+   HERO — chars from below with stagger
+═══════════════════════════════════════════════════════════════ */
+(function initHero() {
+  const eyeSplit = SplitText.create('#heroEyebrow', { type: 'chars,words', charsClass: 'st-char' });
+  const titleSplit = SplitText.create('#heroTitle', { type: 'chars,words', charsClass: 'st-char' });
+  const subSplit   = SplitText.create('#heroSub',   { type: 'words' });
+  const tagSplit   = SplitText.create('#heroTagline', { type: 'words' });
+
+  const tl = gsap.timeline({ delay: 0.3 });
+
+  tl.from(eyeSplit.chars, {
+    y: 30, autoAlpha: 0, duration: 0.5,
+    stagger: 0.025, ease: 'power2.out'
+  })
+  .from(titleSplit.chars, {
+    y: 120, autoAlpha: 0, duration: 0.9,
+    stagger: 0.04, ease: 'power4.out'
+  }, '-=0.2')
+  .from(subSplit.words, {
+    y: 20, autoAlpha: 0, duration: 0.6,
+    stagger: 0.08, ease: 'power2.out'
+  }, '-=0.3')
+  .from(tagSplit.words, {
+    y: 15, autoAlpha: 0, duration: 0.5,
+    stagger: 0.05, ease: 'power2.out'
+  }, '-=0.3');
+})();
+
+/* ════════════════════════════════════════════════════════════════
+   SEC 1 — CHARS STAGGER REVEAL
+═══════════════════════════════════════════════════════════════ */
+let charsSplit, charsTl;
+function initChars() {
+  if (charsSplit) charsSplit.revert();
+  charsSplit = SplitText.create('#charsText', {
+    type: 'chars,words',
+    charsClass: 'st-char',
+    wordsClass: 'st-word'
+  });
+  charsTl = gsap.from(charsSplit.chars, {
+    y: 80,
+    autoAlpha: 0,
+    rotationZ: () => gsap.utils.random(-15, 15),
+    duration: 0.7,
+    stagger: { amount: 1, from: 'start' },
+    ease: 'power3.out',
+    scrollTrigger: { trigger: '#chars-reveal', start: 'top 75%', once: true }
+  });
+}
+initChars();
+document.getElementById('charsBtn').addEventListener('click', () => {
+  charsTl?.scrollTrigger?.kill();
+  charsSplit.revert();
+  charsSplit = SplitText.create('#charsText', { type: 'chars,words', charsClass: 'st-char' });
+  charsTl = gsap.from(charsSplit.chars, {
+    y: 80, autoAlpha: 0,
+    rotationZ: () => gsap.utils.random(-15, 15),
+    duration: 0.7, stagger: { amount: 1, from: 'start' }, ease: 'power3.out'
+  });
+});
+
+/* ════════════════════════════════════════════════════════════════
+   SEC 2 — WORDS FADE SCALE
+═══════════════════════════════════════════════════════════════ */
+let wordsSplit, wordsTl;
+function initWords() {
+  if (wordsSplit) wordsSplit.revert();
+  wordsSplit = SplitText.create('#wordsText', { type: 'words', wordsClass: 'st-word++' });
+  wordsTl = gsap.from(wordsSplit.words, {
+    autoAlpha: 0, scale: 0.3, y: 20,
+    duration: 0.6, stagger: 0.06, ease: 'back.out(1.7)',
+    scrollTrigger: { trigger: '#words-fade', start: 'top 75%', once: true }
+  });
+}
+initWords();
+document.getElementById('wordsBtn').addEventListener('click', () => {
+  wordsTl?.scrollTrigger?.kill();
+  wordsSplit.revert();
+  wordsSplit = SplitText.create('#wordsText', { type: 'words', wordsClass: 'st-word++' });
+  wordsTl = gsap.from(wordsSplit.words, {
+    autoAlpha: 0, scale: 0.3, y: 20,
+    duration: 0.6, stagger: 0.06, ease: 'back.out(1.7)'
+  });
+});
+
+/* ════════════════════════════════════════════════════════════════
+   SEC 3 — LINE MASK REVEAL
+═══════════════════════════════════════════════════════════════ */
+let lineSplit;
+function initLineReveal() {
+  if (lineSplit) lineSplit.revert();
+  lineSplit = SplitText.create('#lineText', {
+    type: 'words,lines',
+    mask: 'lines',
+    linesClass: 'st-line++',
+    autoSplit: true,
+    onSplit(self) {
+      return gsap.from(self.lines, {
+        y: '110%', duration: 1, stagger: 0.12, ease: 'power4.out',
+        scrollTrigger: { trigger: '#line-reveal', start: 'top 75%', once: true }
+      });
+    }
+  });
+}
+initLineReveal();
+document.getElementById('lineBtn').addEventListener('click', () => {
+  lineSplit.revert();
+  lineSplit = SplitText.create('#lineText', {
+    type: 'words,lines', mask: 'lines', linesClass: 'st-line++',
+    onSplit(self) {
+      return gsap.from(self.lines, { y: '110%', duration: 1, stagger: 0.12, ease: 'power4.out' });
+    }
+  });
+});
+
+/* ════════════════════════════════════════════════════════════════
+   SEC 4 — TYPEWRITER
+═══════════════════════════════════════════════════════════════ */
+let typeSplit, typeTl;
+function initTypewriter() {
+  if (typeSplit) typeSplit.revert();
+  typeSplit = SplitText.create('#typeText', {
+    type: 'chars,words', tag: 'span', smartWrap: true, charsClass: 'st-char'
+  });
+  gsap.set(typeSplit.chars, { autoAlpha: 0 });
+  typeTl = gsap.to(typeSplit.chars, {
+    autoAlpha: 1, duration: 0.001,
+    stagger: { each: 0.035, ease: 'none' },
+    ease: 'none',
+    scrollTrigger: { trigger: '#typewriter', start: 'top 75%', once: true }
+  });
+}
+initTypewriter();
+document.getElementById('typeBtn').addEventListener('click', () => {
+  typeTl?.scrollTrigger?.kill();
+  typeSplit.revert();
+  typeSplit = SplitText.create('#typeText', { type: 'chars,words', tag: 'span', smartWrap: true, charsClass: 'st-char' });
+  gsap.set(typeSplit.chars, { autoAlpha: 0 });
+  typeTl = gsap.to(typeSplit.chars, {
+    autoAlpha: 1, duration: 0.001,
+    stagger: { each: 0.035, ease: 'none' }, ease: 'none'
+  });
+});
+
+/* ════════════════════════════════════════════════════════════════
+   SEC 5 — WAVE
+═══════════════════════════════════════════════════════════════ */
+let waveSplit, waveTl;
+function initWave() {
+  if (waveSplit) { waveTl?.kill(); waveSplit.revert(); }
+  waveSplit = SplitText.create('#waveText', { type: 'chars,words', tag: 'span', charsClass: 'st-char' });
+  gsap.set(waveSplit.chars, { display: 'inline-block' });
+
+  // intro: rise from below
+  const introTl = gsap.from(waveSplit.chars, {
+    y: 60, autoAlpha: 0, duration: 0.5, stagger: 0.04, ease: 'power2.out',
+    scrollTrigger: { trigger: '#wave-anim', start: 'top 75%', once: true }
+  });
+
+  // continuous wave
+  waveTl = gsap.to(waveSplit.chars, {
+    y: i => Math.sin(i * 0.7) * 28,
+    duration: 0.8, stagger: 0.06, ease: 'sine.inOut',
+    repeat: -1, yoyo: true,
+  });
+}
+initWave();
+document.getElementById('waveBtn').addEventListener('click', () => {
+  waveTl?.kill();
+  waveSplit.revert();
+  waveSplit = SplitText.create('#waveText', { type: 'chars,words', tag: 'span', charsClass: 'st-char' });
+  gsap.set(waveSplit.chars, { display: 'inline-block' });
+  waveTl = gsap.to(waveSplit.chars, {
+    y: i => Math.sin(i * 0.7) * 28,
+    duration: 0.8, stagger: 0.06, ease: 'sine.inOut', repeat: -1, yoyo: true
+  });
+});
+
+/* ════════════════════════════════════════════════════════════════
+   SEC 6 — 3D ROTATE
+═══════════════════════════════════════════════════════════════ */
+let rotateSplit, rotateTl;
+function initRotate() {
+  if (rotateSplit) rotateSplit.revert();
+  const el = document.querySelector('.rotate-demo');
+  gsap.set(el, { perspective: 800 });
+  rotateSplit = SplitText.create('#rotateText', { type: 'words', wordsClass: 'st-word' });
+  rotateTl = gsap.from(rotateSplit.words, {
+    autoAlpha: 0, rotationY: 90, transformOrigin: '0% 50%',
+    duration: 0.9, stagger: 0.08, ease: 'power3.out',
+    scrollTrigger: { trigger: '#rotate3d', start: 'top 75%', once: true }
+  });
+}
+initRotate();
+document.getElementById('rotateBtn').addEventListener('click', () => {
+  rotateTl?.scrollTrigger?.kill();
+  rotateSplit.revert();
+  const el = document.querySelector('.rotate-demo');
+  gsap.set(el, { perspective: 800 });
+  rotateSplit = SplitText.create('#rotateText', { type: 'words', wordsClass: 'st-word' });
+  rotateTl = gsap.from(rotateSplit.words, {
+    autoAlpha: 0, rotationY: 90, transformOrigin: '0% 50%',
+    duration: 0.9, stagger: 0.08, ease: 'power3.out'
+  });
+});
+
+/* ════════════════════════════════════════════════════════════════
+   SEC 7 — BLUR FADE
+═══════════════════════════════════════════════════════════════ */
+let blurSplit, blurTl;
+function initBlur() {
+  if (blurSplit) blurSplit.revert();
+  blurSplit = SplitText.create('#blurText', { type: 'words', wordsClass: 'st-word++' });
+  blurTl = gsap.from(blurSplit.words, {
+    autoAlpha: 0, filter: 'blur(24px)', y: 16,
+    duration: 1, stagger: 0.08, ease: 'power2.out',
+    scrollTrigger: { trigger: '#blur-fade', start: 'top 75%', once: true }
+  });
+}
+initBlur();
+document.getElementById('blurBtn').addEventListener('click', () => {
+  blurTl?.scrollTrigger?.kill();
+  blurSplit.revert();
+  blurSplit = SplitText.create('#blurText', { type: 'words', wordsClass: 'st-word++' });
+  blurTl = gsap.from(blurSplit.words, {
+    autoAlpha: 0, filter: 'blur(24px)', y: 16,
+    duration: 1, stagger: 0.08, ease: 'power2.out'
+  });
+});
+
+/* ════════════════════════════════════════════════════════════════
+   SEC 8 — RANDOM STAGGER
+═══════════════════════════════════════════════════════════════ */
+let randomSplit, randomTl;
+function initRandom() {
+  if (randomSplit) randomSplit.revert();
+  randomSplit = SplitText.create('#randomText', { type: 'chars,words', charsClass: 'st-char' });
+  randomTl = gsap.from(randomSplit.chars, {
+    x: () => gsap.utils.random(-200, 200),
+    y: () => gsap.utils.random(-200, 200),
+    rotation: () => gsap.utils.random(-180, 180),
+    scale: () => gsap.utils.random(0, 2),
+    autoAlpha: 0,
+    duration: 1.2,
+    stagger: { amount: 1.2, from: 'random' },
+    ease: 'power3.out',
+    scrollTrigger: { trigger: '#stagger-random', start: 'top 75%', once: true }
+  });
+}
+initRandom();
+document.getElementById('randomBtn').addEventListener('click', () => {
+  randomTl?.scrollTrigger?.kill();
+  randomSplit.revert();
+  randomSplit = SplitText.create('#randomText', { type: 'chars,words', charsClass: 'st-char' });
+  randomTl = gsap.from(randomSplit.chars, {
+    x: () => gsap.utils.random(-200, 200),
+    y: () => gsap.utils.random(-200, 200),
+    rotation: () => gsap.utils.random(-180, 180),
+    scale: () => gsap.utils.random(0, 2),
+    autoAlpha: 0,
+    duration: 1.2,
+    stagger: { amount: 1.2, from: 'random' },
+    ease: 'power3.out'
+  });
+});
+
+/* ════════════════════════════════════════════════════════════════
+   SEC 9 — WORD HIGHLIGHT
+═══════════════════════════════════════════════════════════════ */
+let highlightSplit, highlightTl;
+function initHighlight() {
+  if (highlightSplit) highlightSplit.revert();
+  highlightSplit = SplitText.create('#highlightText', { type: 'words', wordsClass: 'st-word' });
+
+  highlightTl = gsap.timeline({
+    scrollTrigger: { trigger: '#highlight-anim', start: 'top 75%', once: true }
+  });
+
+  highlightSplit.words.forEach((word, i) => {
+    highlightTl
+      .to(word, { color: '#0a0a0f', duration: 0.25, ease: 'power1.in' }, i * 0.22)
+      .to(word, { color: '#b0a898', duration: 0.25, ease: 'power1.out', delay: 0.2 }, i * 0.22);
+  });
+}
+initHighlight();
+document.getElementById('highlightBtn').addEventListener('click', () => {
+  highlightTl?.scrollTrigger?.kill();
+  highlightSplit.revert();
+  highlightSplit = SplitText.create('#highlightText', { type: 'words', wordsClass: 'st-word' });
+  highlightTl = gsap.timeline();
+  highlightSplit.words.forEach((word, i) => {
+    highlightTl
+      .to(word, { color: '#0a0a0f', duration: 0.25, ease: 'power1.in' }, i * 0.22)
+      .to(word, { color: '#b0a898', duration: 0.25, ease: 'power1.out', delay: 0.2 }, i * 0.22);
+  });
+});
+
+/* ════════════════════════════════════════════════════════════════
+   SEC 10 — SCROLL TRIGGER (3 items)
+═══════════════════════════════════════════════════════════════ */
+['#scrollText1','#scrollText2','#scrollText3'].forEach((sel, idx) => {
+  SplitText.create(sel, {
+    type: 'words,lines',
+    mask: 'lines',
+    linesClass: 'st-line++',
+    autoSplit: true,
+    onSplit(self) {
+      return gsap.from(self.lines, {
+        y: '105%', duration: 1, stagger: 0.1, ease: 'power4.out',
+        scrollTrigger: { trigger: sel, start: 'top 82%', once: true }
+      });
+    }
+  });
+});
+
+/* ════════════════════════════════════════════════════════════════
+   SEC 11 — PROP INDEX + CSS VARS
+═══════════════════════════════════════════════════════════════ */
+let propSplit, propTl;
+function initProp() {
+  if (propSplit) propSplit.revert();
+  propSplit = SplitText.create('#propText', {
+    type: 'chars,words',
+    propIndex: true,
+    charsClass: 'st-char'
+  });
+  // Set CSS vars then animate
+  propSplit.chars.forEach((ch, i) => {
+    ch.style.setProperty('--char', i);
+    ch.style.color = `hsl(${i * 22}, 80%, 65%)`;
+  });
+  propTl = gsap.from(propSplit.chars, {
+    autoAlpha: 0, scale: 0, rotationZ: () => gsap.utils.random(-90, 90),
+    duration: 0.6, stagger: { amount: 0.8, from: 'center' }, ease: 'back.out(2)',
+    scrollTrigger: { trigger: '#prop-index', start: 'top 75%', once: true }
+  });
+  // Color cycle animation
+  gsap.to(propSplit.chars, {
+    color: (i) => `hsl(${i * 22 + 180}, 80%, 65%)`,
+    duration: 1.5, stagger: 0.08, ease: 'sine.inOut',
+    repeat: -1, yoyo: true,
+    delay: 0.8
+  });
+}
+initProp();
+document.getElementById('propBtn').addEventListener('click', () => {
+  propTl?.scrollTrigger?.kill();
+  propSplit.revert();
+  propSplit = SplitText.create('#propText', { type: 'chars,words', propIndex: true, charsClass: 'st-char' });
+  propSplit.chars.forEach((ch, i) => { ch.style.setProperty('--char', i); ch.style.color = `hsl(${i * 22}, 80%, 65%)`; });
+  propTl = gsap.from(propSplit.chars, {
+    autoAlpha: 0, scale: 0, rotationZ: () => gsap.utils.random(-90, 90),
+    duration: 0.6, stagger: { amount: 0.8, from: 'center' }, ease: 'back.out(2)'
+  });
+  gsap.to(propSplit.chars, {
+    color: (i) => `hsl(${i * 22 + 180}, 80%, 65%)`,
+    duration: 1.5, stagger: 0.08, ease: 'sine.inOut', repeat: -1, yoyo: true, delay: 0.8
+  });
+});
+
+/* ════════════════════════════════════════════════════════════════
+   SEC 12 — ELASTIC CHARS
+═══════════════════════════════════════════════════════════════ */
+let elasticSplit, elasticTl;
+function initElastic() {
+  if (elasticSplit) elasticSplit.revert();
+  elasticSplit = SplitText.create('#elasticText', { type: 'chars,words', charsClass: 'st-char' });
+  elasticTl = gsap.from(elasticSplit.chars, {
+    y: -150, autoAlpha: 0, scale: 0.2,
+    duration: 1.4,
+    stagger: { amount: 0.6, from: 'start' },
+    ease: 'elastic.out(1, 0.4)',
+    scrollTrigger: { trigger: '#elastic', start: 'top 75%', once: true }
+  });
+}
+initElastic();
+document.getElementById('elasticBtn').addEventListener('click', () => {
+  elasticTl?.scrollTrigger?.kill();
+  elasticSplit.revert();
+  elasticSplit = SplitText.create('#elasticText', { type: 'chars,words', charsClass: 'st-char' });
+  elasticTl = gsap.from(elasticSplit.chars, {
+    y: -150, autoAlpha: 0, scale: 0.2,
+    duration: 1.4,
+    stagger: { amount: 0.6, from: 'start' },
+    ease: 'elastic.out(1, 0.4)'
+  });
+});
+
+/* ════════════════════════════════════════════════════════════════
+   SEC 13 — REVERT DEMO
+═══════════════════════════════════════════════════════════════ */
+let revertInstance = null;
+const revertStatus = document.getElementById('revertStatus');
+
+document.getElementById('splitBtn').addEventListener('click', () => {
+  if (revertInstance) revertInstance.revert();
+  revertInstance = SplitText.create('#revertText', {
+    type: 'chars,words', charsClass: 'st-char', wordsClass: 'st-word'
+  });
+  gsap.from(revertInstance.chars, {
+    y: 40, autoAlpha: 0, scale: 0.5,
+    duration: 0.5, stagger: 0.02, ease: 'back.out(2)'
+  });
+  revertStatus.textContent = 'STATUS: Split into ' + revertInstance.chars.length + ' chars';
+  revertStatus.style.color = '#4eff91';
+});
+
+document.getElementById('revertBtn').addEventListener('click', () => {
+  if (revertInstance) {
+    revertInstance.revert();
+    revertInstance = null;
+    revertStatus.textContent = 'STATUS: Reverted to original';
+    revertStatus.style.color = 'var(--mist)';
+  }
+});
+
+/* ════════════════════════════════════════════════════════════════
+   SEC 14 — COMBINED TIMELINE
+═══════════════════════════════════════════════════════════════ */
+let combinedSplits = [];
+let combinedTl;
+
+function initCombined() {
+  combinedSplits.forEach(s => s.revert());
+  combinedSplits = [];
+
+  const s1 = SplitText.create('#combinedLine1', { type: 'chars,words', charsClass: 'st-char' });
+  const s2 = SplitText.create('#combinedLine2', { type: 'chars,words', charsClass: 'st-char' });
+  const s3 = SplitText.create('#combinedLine3', { type: 'words', wordsClass: 'st-word' });
+  combinedSplits = [s1, s2, s3];
+
+  combinedTl = gsap.timeline({
+    scrollTrigger: { trigger: '#combined', start: 'top 75%', once: true }
+  });
+
+  combinedTl
+    .from(s1.chars, {
+      y: 20, autoAlpha: 0, duration: 0.4,
+      stagger: 0.03, ease: 'power2.out'
+    })
+    .from(s2.chars, {
+      y: 120, autoAlpha: 0, scale: 0.5,
+      duration: 1, stagger: 0.07, ease: 'power4.out'
+    }, '-=0.1')
+    .from(s3.words, {
+      x: -30, autoAlpha: 0, duration: 0.6,
+      stagger: 0.1, ease: 'power3.out'
+    }, '-=0.4');
+}
+initCombined();
+
+document.getElementById('combinedBtn').addEventListener('click', () => {
+  combinedTl?.scrollTrigger?.kill();
+  initCombined();
+  combinedTl.play(0);
+});
+
+/* ════════════════════════════════════════════════════════════════
+   OUTRO
+═══════════════════════════════════════════════════════════════ */
+(function initOutro() {
+  const s1 = SplitText.create('#outroTitle', { type: 'chars,words', charsClass: 'st-char' });
+  const s2 = SplitText.create('#outroSub', { type: 'words' });
+
+  gsap.from(s1.chars, {
+    y: 60, autoAlpha: 0, duration: 0.8,
+    stagger: { amount: 0.7, from: 'center' }, ease: 'power3.out',
+    scrollTrigger: { trigger: '#outro', start: 'top 80%', once: true }
+  });
+  gsap.from(s2.words, {
+    y: 20, autoAlpha: 0, duration: 0.5,
+    stagger: 0.07, ease: 'power2.out', delay: 0.6,
+    scrollTrigger: { trigger: '#outro', start: 'top 80%', once: true }
+  });
+})();
+
+/* ─── CURSOR HOVER EFFECTS ───────────────────────────────────── */
+document.querySelectorAll('.replay-btn').forEach(btn => {
+  btn.addEventListener('mouseenter', () => gsap.to(cursor, { scale: 2.5, duration: 0.2 }));
+  btn.addEventListener('mouseleave', () => gsap.to(cursor, { scale: 1, duration: 0.2 }));
+});
+
+</script>
+</body>
+</html>

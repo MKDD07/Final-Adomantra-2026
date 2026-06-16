@@ -1,0 +1,56 @@
+{
+  "categories": [
+    {
+      "id": "general",
+      "name": "General"
+    },
+    {
+      "id": "services",
+      "name": "Services"
+    },
+    {
+      "id": "advertising",
+      "name": "Advertising"
+    },
+    {
+      "id": "billing-roi",
+      "name": "Billing & ROI"
+    },
+    {
+      "id": "technical",
+      "name": "Technical"
+    }
+  ],
+  "faqs": [
+    {
+      "category": "general",
+      "question": "What is Adomantra and what digital marketing services does it offer?",
+      "answer": "Adomantra is an ISO 9001:2015 certified digital advertising agency founded in 2012. It offers end-to-end services including programmatic advertising, PPC, SEO, social media marketing, content marketing, CTV advertising, video advertising, WhatsApp marketing, influencer marketing, rich media, online reputation management, and website & app development."
+    },
+    {
+      "category": "general",
+      "question": "Which industries does Adomantra serve in India and globally?",
+      "answer": "Adomantra works across healthcare, automobile, real estate, travel & hospitality, FMCG & FMCD, education, e-commerce, banking & financial services, IT, and security services. Its client roster includes global brands such as Microsoft, Honda, Hilton, Emirates, Garnier, and Punjab National Bank."
+    },
+    {
+      "category": "general",
+      "question": "Is Adomantra an award-winning or certified digital agency?",
+      "answer": "Yes. Adomantra holds ISO 9001:2015 certification and has received multiple industry recognitions. The agency has also been empanelled by the National e-Governance Division (NeGD) of the Government of India as an official digital media agency."
+    },
+    {
+      "category": "general",
+      "question": "What makes Adomantra different from other digital marketing agencies in India?",
+      "answer": "Adomantra combines data-driven strategy with creative brand building, supported by official partnerships with Google Ads, Google DV360, Facebook, Amazon Ads, Hotstar, JIO, Zee5, Truecaller, Swiggy, and Uber. Its full-funnel approach spans awareness to conversion across all digital channels."
+    },
+    {
+      "category": "general",
+      "question": "How do I get started with Adomantra for my business?",
+      "answer": "You can request a free digital audit directly on the Adomantra website. The team evaluates your current online presence, campaign performance, and goals before recommending a tailored strategy. You can also reach out via the Contact Us page or by submitting a requirement form with your monthly budget."
+    },
+    {
+      "category": "advertising",
+      "question": "What is programmatic advertising in India and how does Adomantra use it?",
+      "answer": "Programmatic advertising is the automated buying and selling of online ad space using algorithms and real-time bidding (RTB). Adomantra leverages DSPs and DMPs to reach over 1.5 billion audiences across 2,500+ targeting combinations, ensuring ads are served to the right person at the right time across display, mobile, native, CTV, and video formats."
+    }
+  ]
+}

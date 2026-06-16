@@ -1,0 +1,1747 @@
+[
+  {
+    "id": "cs-10on10-foods",
+    "slug": "10on10-foods-quick-commerce",
+    "brand": "10on10 Foods",
+    "badge": "Marketplace Optimization Case Study",
+    "duration": "12-Week Campaign",
+    "hero": "FMCG Brand",
+    "title": "How Adomantra Took 10on10 Foods from ₹12 Lakhs to ₹58 Lakhs/Month on Quick Commerce",
+    "summary": "10on10 Foods, a ₹180 crore FMCG brand, had 38 SKUs listed across quick commerce platforms but was generating only ₹12 lakhs/month after 8 weeks — severely underperforming. Buried on Page 5–6 of search results, with 22% out-of-stock incidents and no quick commerce–specific listing strategy, the brand was invisible. Adomantra deployed its Marketplace Optimization Framework: competitive SKU audit, quick commerce–native listing rewrites, pincode-level inventory coordination, and pricing A/B tests. In 12 weeks, monthly revenue surged to ₹58 lakhs (+383%), average search rank reached Position 2–3, repeat purchase rate climbed to 41% by Week 4, and out-of-stock incidents dropped to just 3%.",
+    "projectobjective": "<h2>The Project</h2>\n<p>A focused Marketplace Optimization engagement for 10on10 Foods — a ₹180 crore FMCG brand — to establish a high-performing quick commerce presence across India's leading platforms.</p>\n\n<h2>The Objective</h2>\n<p>To audit and restructure 10on10 Foods' quick commerce listings, identify the highest-velocity SKUs, and deploy pincode-wise inventory coordination to unlock search visibility and drive consistent revenue.</p>\n\n<h2>The Ultimate Result</h2>\n<p>Monthly quick commerce revenue grew from ₹12 lakhs to ₹58 lakhs (+383%) in just 12 weeks, with average search rank at Position 2–3 and repeat purchase rate reaching 41% by Week 4.</p>",
+    "leadParagraph": "<h2>THE CORE CHALLENGE: WHY WAS 10ON10 FOODS INVISIBLE?</h2>\n<p>Despite having 38 SKUs listed across major quick commerce platforms, 10on10 Foods was generating just ₹12 lakhs per month after 8 weeks of being live — far below category benchmarks. Three structural problems were holding the brand back.</p>\n\n<h2>The Three Critical Failure Points:</h2>\n<ul>\n  <li><strong>Listing Invisibility:</strong> Core products like 'high-protein atta' and 'jowar flour' ranked on Page 5–6 of search results. Quick commerce algorithms favor high-speed SKUs (>100 units/day) and inventory availability signals — new, unoptimized listings get buried instantly.</li>\n  <li><strong>Unoptimized Content:</strong> 10on10 Foods was using traditional e-commerce titles like '₹299 High Protein Atta 1kg Rich in Protein' — far exceeding the 45–50 character quick commerce limit and ignoring the platform's 1–2 word search behavior patterns.</li>\n  <li><strong>Inventory Fragmentation:</strong> With a 22% daily out-of-stock rate and no pincode-level demand tracking, stock mismatches were causing geographic inconsistencies and killing repeat purchase intent.</li>\n</ul>",
+    "detaiedParagraph-1": "When 10on10 Foods first came to Adomantra, the brand was practically invisible on quick commerce platforms despite having a strong product portfolio and an established name in the FMCG space. Their listings were buried deep in search results, inventory was consistently running out across key pincodes, and competitor brands were dominating every relevant search term. Customers searching for everyday staples like atta and flour were finding other brands first — not because 10on10's products were inferior, but because the brand had never learned the rules of this new game. The core problem was that they had approached quick commerce the same way they approached traditional e-commerce — copying listings across, proposing an overwhelming number of SKUs, and hoping the algorithm would figure it out. That approach does not work on quick commerce, where the algorithm rewards speed, availability, and hyper-local relevance above everything else.",
+    "detaiedParagraph-2": "Adomantra's first move was to completely rethink the portfolio strategy. Rather than trying to compete across hundreds of products simultaneously, the team identified the small set of SKUs that had the highest potential to gain traction quickly — products that matched how urban consumers actually search and shop on these platforms. Quick commerce users do not browse the way they do on traditional e-commerce sites. They type one or two words, they want it fast, and they make decisions in seconds. Listings were rebuilt from scratch to match this behavior — titles rewritten within the tight character limits the platform imposes, images replaced with clean packaging shots that dark store delivery agents could identify instantly without confusion, and every pricing decision carefully tested across multiple store locations to find the exact points where conversions happened most efficiently. Nothing was assumed. Everything was tested.",
+    "detaiedParagraph-3": "On the supply side, the work was equally detailed. Adomantra coordinated directly with dark store managers to understand demand patterns at the pincode level — because what sells heavily in one part of a city may move slowly in another, and a brand that treats its entire city as one market will always have stock in the wrong places. Automated alerts were set up so that whenever inventory dropped to a critical threshold, the supply chain was notified immediately, preventing the stockouts that had been quietly killing the brand's algorithmic ranking. As availability improved, the algorithm responded — rankings climbed, more customers discovered the products, and the cycle reinforced itself. By the end of the engagement, the brand had gone from near-invisible search rankings to consistently appearing among the top results for its core categories, stockouts had become a rare exception rather than a weekly crisis, customers who ordered once were coming back in large numbers within the same month, and average order values had grown meaningfully as shoppers began adding more to their baskets with each visit.",
+    "kpis": [
+      {
+        "metric": "₹58 Lakhs",
+        "label": "Monthly QC Revenue",
+        "subtext": "Up from ₹12 lakhs in 12 weeks (+383%)"
+      },
+      {
+        "metric": "Pos. 2–3",
+        "label": "Average Search Rank",
+        "subtext": "Up from Page 5–6 pre-intervention"
+      },
+      {
+        "metric": "41%",
+        "label": "Week 4 Repeat Rate",
+        "subtext": "Up from 0% — strong loyalty signal"
+      }
+    ],
+    "brandImages": [
+      {
+        "brand": "10on10 Foods",
+        "images": [
+          "wheat grains flour package",
+          "grocery delivery bags",
+          "pantry food packets"
+        ]
+      }
+    ],
+    "campaignAudit": {
+      "title": "Quick <r>commerce</r> audit",
+      "subtitle": "Critical Failure Points & Adomantra's Solutions",
+      "categories": [
+        {
+          "name": "Search Visibility",
+          "crossed": "38 unoptimized SKUs buried on Page 5–6 with near-zero organic discovery.",
+          "checked": "Optimized 6 priority SKUs driving 65% of demand to reach Page 1–2 rankings."
+        },
+        {
+          "name": "Listing Content Quality",
+          "crossed": "Long traditional e-commerce titles (e.g. '₹299 High Protein Atta 1kg Rich in Protein') with poor CTR.",
+          "checked": "Rewrote titles to 45–50 char quick commerce format with high-impact keywords."
+        },
+        {
+          "name": "Inventory Coordination",
+          "crossed": "22% average daily out-of-stock rate causing geographic inconsistencies and lost sales.",
+          "checked": "Pincode-wise stock alerts triggered when inventory fell below 500 units."
+        }
+      ]
+    },
+    "ourApproachCircles": {
+      "title": "<r>Marketplace Optimization</r> <br>Framework for 10on10 Foods",
+      "subtitle": "A three-phase approach to quick commerce search dominance",
+      "blocks": [
+        {
+          "title": "SKU Curation & Audit",
+          "value": 100,
+          "color": "#2563eb",
+          "desc": "Audited 10,000+ competing products; selected 6 priority SKUs from 38"
+        },
+        {
+          "title": "Listing Optimization",
+          "value": 100,
+          "color": "#16a34a",
+          "desc": "Quick commerce titles, thumbnail-ready images, pricing A/B tests"
+        },
+        {
+          "title": "Inventory & Supply Chain",
+          "value": 100,
+          "color": "#eab308",
+          "desc": "Pincode demand mapping and automated stock alert triggers"
+        }
+      ]
+    },
+    "weeklyPlan": {
+      "title": "Phased <r>Execution<r>",
+      "subtitle": "12-week deployment across three optimization phases",
+      "weeks": [
+        {
+          "week": "Weeks 1–2",
+          "theme": "Competitive Audit & SKU Selection",
+          "tasks": [
+            {
+              "task": "Audited 10,000+ competing products on major quick commerce platforms",
+              "status": "completed"
+            },
+            {
+              "task": "Identified high-demand SKUs selling 50–200 units/day",
+              "status": "completed"
+            },
+            {
+              "task": "Traced search behavior: 'atta', 'flour', and relevant long-tail terms",
+              "status": "completed"
+            },
+            {
+              "task": "Recommended 40–80 core SKUs vs. 300+ initially proposed",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Weeks 3–6",
+          "theme": "Listing Optimization & Content",
+          "tasks": [
+            {
+              "task": "Rewrote product titles to short, high-impact quick commerce formats",
+              "status": "completed"
+            },
+            {
+              "task": "Performed quick commerce keyword research: price hooks, freshness signals",
+              "status": "completed"
+            },
+            {
+              "task": "Improved images for dark store delivery agents (clear packaging, barcode visibility)",
+              "status": "completed"
+            },
+            {
+              "task": "Conducted pricing A/B tests across 15 dark stores",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Weeks 7–12",
+          "theme": "Inventory & Supply Chain Coordination",
+          "tasks": [
+            {
+              "task": "Coordinated with dark store managers to ensure inventory availability",
+              "status": "completed"
+            },
+            {
+              "task": "Identified pincode-wise demand patterns and priority geographies",
+              "status": "completed"
+            },
+            {
+              "task": "Set automated stock alerts: below 500 units triggers supply chain notification",
+              "status": "completed"
+            }
+          ]
+        }
+      ]
+    },
+    "clientOverview": {
+      "title": "Brand <r>baseline & strategic</r> interventions",
+      "description": "10on10 Foods entered quick commerce with volume but zero optimization. Here is where they stood before Adomantra, and what changed.",
+      "dataBox1": {
+        "title": "Adomantra's Three Interventions",
+        "items": [
+          "<strong>SKU Focus:</strong> Narrowed active listings to 6 SKUs driving 65% of category demand, deprioritizing slow-moving specialty items.",
+          "<strong>Content Overhaul:</strong> Rewrote all listings with quick commerce–native titles, keyword-optimized copy, and dark store–ready imagery.",
+          "<strong>Pincode Inventory Strategy:</strong> Mapped demand by geography and automated low-stock alerts to eliminate availability gaps."
+        ]
+      },
+      "dataBox2": {
+        "title": "10on10 Foods Baseline (Pre-Adomantra)",
+        "items": [
+          {
+            "label": "Monthly QC Revenue:",
+            "value": "₹12 lakhs (after 8 weeks live)"
+          },
+          {
+            "label": "Average Search Rank:",
+            "value": "Page 5–6 for core products"
+          },
+          {
+            "label": "Out-of-Stock Rate:",
+            "value": "22% average daily listing downtime"
+          },
+          {
+            "label": "Active SKUs Listed:",
+            "value": "38 SKUs without optimization"
+          }
+        ]
+      }
+    },
+    "challenges": {
+      "title": "<r>Key Challenges</r>",
+      "description": "10on10 Foods faced three structural barriers to quick commerce growth:",
+      "cards": [
+        {
+          "num": "01",
+          "title": "Search Invisibility",
+          "body": "Core products ranked on Page 5–6. Quick commerce algorithms buried unoptimized new listings, cutting organic discovery to near zero."
+        },
+        {
+          "num": "02",
+          "title": "Copy-Paste Listings",
+          "body": "Titles like '₹299 High Protein Atta 1kg Rich in Protein' violated the 45–50 character limit and ignored quick commerce search behavior patterns."
+        },
+        {
+          "num": "03",
+          "title": "Geographic Stock Gaps",
+          "body": "No pincode-level inventory tracking meant 22% of listings were out-of-stock daily, creating inconsistent availability and crushing repeat intent."
+        }
+      ]
+    },
+    "strategy": {
+      "title": "The Marketplace <r> Optimization Journey</r>",
+      "description": "Three execution phases transformed 10on10 Foods from invisible to dominant:",
+      "timeline": [
+        {
+          "marker": "",
+          "title": "Phase 1: Competitive Audit & SKU Selection (Weeks 1–2)",
+          "p": "Examined 10,000+ competing products. Identified high-demand SKUs (50–200 units/day). Recommended trimming the portfolio from 300+ proposed SKUs to 40–80 core items, ultimately focusing on 6 SKUs driving 65% of demand.",
+          "tags": [
+            "SKU Curation",
+            "Competitor Analysis",
+            "Search Behavior Mapping"
+          ]
+        },
+        {
+          "marker": "",
+          "title": "Phase 2: Listing Optimization (Weeks 3–6)",
+          "p": "Rewrote product titles to quick commerce format (e.g., 'High Protein Multigrain Atta 1kg Pack'). Conducted keyword research for quick commerce–specific terms and ran A/B pricing tests across 15 dark stores. Updated images for dark store picker clarity.",
+          "tags": [
+            "Title Optimization",
+            "A/B Price Testing",
+            "Dark Store Imagery"
+          ]
+        },
+        {
+          "marker": "",
+          "title": "Phase 3: Inventory & Supply Chain (Weeks 7–12)",
+          "p": "Set up pincode-wise demand tracking and automated stock alerts. Coordinated with dark store managers to ensure continuous availability. Out-of-stock incidents dropped from 22% to 3%.",
+          "tags": [
+            "Pincode Stock Alerts",
+            "Inventory Coordination",
+            "Supply Chain Sync"
+          ]
+        }
+      ]
+    },
+    "results": {
+      "title": "12-Week <r>Performance Results</r>",
+      "description": "Adomantra's marketplace optimization delivered compounding gains across revenue, visibility, customer loyalty, and inventory health:",
+      "table": {
+        "headers": [
+          "Metric",
+          "Before Adomantra",
+          "After Campaign",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Monthly QC Revenue",
+            "₹12 lakhs",
+            "₹58 lakhs",
+            "+383%"
+          ],
+          [
+            "Average Search Rank",
+            "Page 5–6",
+            "Position 2–3",
+            "Top 3 Visibility"
+          ],
+          [
+            "Out-of-Stock Rate",
+            "22%",
+            "3%",
+            "-86%"
+          ],
+          [
+            "Average Order Value",
+            "₹280",
+            "₹420",
+            "+50%"
+          ],
+          [
+            "Week 1 Repeat Purchase Rate",
+            "—",
+            "18%",
+            "Baseline Established"
+          ],
+          [
+            "Week 4 Repeat Purchase Rate",
+            "—",
+            "41%",
+            "Strong Loyalty Signal"
+          ],
+          [
+            "Active SKUs (Optimized)",
+            "38 (unoptimized)",
+            "6 (priority-focused)",
+            "65% Demand Captured"
+          ]
+        ]
+      },
+      "quote": {
+        "body": "\"Adomantra didn't just list our products — they rebuilt how we show up on quick commerce from the ground up. The focus on fewer, better SKUs was counterintuitive, but the results spoke for themselves.\"",
+        "author": "10on10 Foods",
+        "authorTitle": "Quick Commerce Growth Client — Adomantra"
+      }
+    },
+    "summaryFooter": {
+      "title": "Strategic Takeaways from the <r>10on10 Foods Case</r>",
+      "items": [
+        "<strong>Less Is More on Quick Commerce:</strong> 6 optimized SKUs outperformed 38 unoptimized listings. Focus on velocity over volume.",
+        "<strong>Title Format Is Non-Negotiable:</strong> Quick commerce titles need to be 45–50 characters, keyword-first, and thumb-stop clear — traditional formats actively hurt discoverability.",
+        "<strong>Inventory Is a Marketing Asset:</strong> Pincode-level stock management eliminated geographic gaps and turned availability into a competitive advantage."
+      ]
+    }
+  },
+  {
+    "id": "cs-kaya",
+    "slug": "kaya-quick-commerce-performance-marketing",
+    "brand": "Kaya",
+    "badge": "Performance Marketing Case Study",
+    "duration": "16-Week Campaign",
+    "hero": "Skincare & Aesthetics Brand",
+    "title": "How Adomantra Generated ₹31 Crores in Quick Commerce Revenue for Kaya with 7.2x ROAS",
+    "summary": "Kaya — a leading skincare and aesthetics brand — had zero quick commerce presence while competing brands dominated the category. Awareness campaigns weren't translating into installs or conversions, and without real-time inventory sync, ad spend was being wasted on out-of-stock listings. Adomantra deployed a ROAS-driven three-pronged performance marketing strategy: app install + first purchase incentives, real-time inventory-aware campaigns, and hyper-local pincode optimization with seasonal festival positioning. In 16 weeks, Kaya generated ₹31 crores in quick commerce revenue at 7.2x ROAS, acquired 380K app installs, drove a 32% repeat purchase rate by Week 4, and achieved a 7-week payback period.",
+    "projectobjective": "<h2>The Project</h2>\n<p>A full-funnel performance marketing engagement for Kaya — a premium skincare and aesthetics brand — to build and scale a quick commerce revenue channel from zero.</p>\n\n<h2>The Objective</h2>\n<p>To acquire quick commerce customers efficiently, convert first-time buyers into repeat purchasers, and leverage Kaya's premium positioning for festival gifting — all while syncing ad spend dynamically with real-time dark store inventory.</p>\n\n<h2>The Ultimate Result</h2>\n<p>₹31 crores in quick commerce revenue, 7.2x ROAS (exceeding the 5–8x target), 380K app installs, and a 7-week payback period — with LTV:CAC reaching 7.5:1.</p>",
+    "leadParagraph": "<h2>THE CORE CHALLENGE: ZERO QUICK COMMERCE PRESENCE IN A GROWING CATEGORY</h2>\n<p>When Kaya approached Adomantra, competing skincare brands were actively capturing the quick commerce market while Kaya had no presence. Their existing campaigns were not translating into platform installs or conversions, and three structural gaps were burning budget.</p>\n\n<h2>The Three Critical Failure Points:</h2>\n<ul>\n  <li><strong>Zero Quick Commerce Footprint:</strong> Kaya had no app install strategy, no quick commerce listings, and no presence in a category where urban consumers aged 22–38 were actively shopping for premium skincare on 15-minute delivery.</li>\n  <li><strong>Inventory-Blind Ad Spend:</strong> Without real-time stock feed integration, campaigns were driving traffic to out-of-stock SKUs — wasting spend and damaging brand perception with unavailability messages at the point of purchase intent.</li>\n  <li><strong>No Repeat Purchase Architecture:</strong> One-time conversions without a structured re-engagement system meant customer acquisition costs could not be amortized. Without bundling and loyalty mechanics, LTV remained low.</li>\n</ul>",
+    "detaiedParagraph-1": "When Kaya partnered with Adomantra, the brand faced a critical challenge: they had zero presence on quick commerce platforms, leaving a highly lucrative channel open for competitor brands to dominate. Skincare is a high-frequency, high-intent category where modern urban consumers expect rapid delivery for their daily routines. Kaya's existing brand awareness campaigns were disconnected from quick commerce, resulting in low app downloads and minimal first-time trial orders. Additionally, because there was no alignment between marketing campaigns and inventory levels, ad budgets were frequently wasted driving traffic to out-of-stock SKUs, leading to high bounce rates and frustrated customers.",
+    "detaiedParagraph-2": "Adomantra's performance marketing playbook began with targeted app install and first-purchase campaigns. Deployed specifically for urban women aged 22–38, the ads emphasized convenience and dermatologist-recommended skin solutions delivered in 15 minutes. To maximize conversion, Adomantra integrated real-time inventory feeds directly into the advertising campaigns. If stock for a particular face wash or serum fell below a threshold in a dark store, the local ad spend was automatically paused or shifted to in-stock products. This inventory-aware bidding strategy protected the brand's margins and dramatically increased the overall ROAS.",
+    "detaiedParagraph-3": "To drive customer lifetime value, Adomantra designed a hyper-local repeat purchase engine. Loyalty bundles, such as pairing a face wash with a moisturizer at a 25% discount, were promoted to first-time buyers. Re-engagement push notifications were timed precisely to mid-month and salary-day cycles when purchase intent peaks. During festival gifting seasons, Kaya-curated premium hampers were positioned for rapid home delivery. By the end of the 16-week campaign, the results were extraordinary: Kaya generated ₹31 crores in quick commerce revenue from zero at a 7.2x ROAS, while acquiring 380,000 app installs and establishing a highly loyal repeat purchase cohort.",
+    "kpis": [
+      {
+        "metric": "₹31 Cr",
+        "label": "Quick Commerce Revenue",
+        "subtext": "Generated in 16 weeks from zero"
+      },
+      {
+        "metric": "7.2x",
+        "label": "Average ROAS",
+        "subtext": "Exceeding the 5–8x target range"
+      },
+      {
+        "metric": "7 Weeks",
+        "label": "Payback Period",
+        "subtext": "On full campaign investment"
+      }
+    ],
+    "brandImages": [
+      {
+        "brand": "Kaya",
+        "images": [
+          "dermatology skin care clinic",
+          "premium cosmetics serum bottle",
+          "skin cream beauty facial"
+        ]
+      }
+    ],
+    "campaignAudit": {
+      "title": "Kaya Quick Commerce Audit",
+      "subtitle": "Critical Failure Points & Adomantra's Solutions",
+      "categories": [
+        {
+          "name": "Quick Commerce Presence",
+          "crossed": "Zero quick commerce presence while competing skincare brands captured the market.",
+          "checked": "Built full quick commerce channel from scratch with optimized listings and app install campaigns."
+        },
+        {
+          "name": "Inventory-Ad Synchronization",
+          "crossed": "Campaigns driving traffic to out-of-stock SKUs, wasting spend and frustrating high-intent buyers.",
+          "checked": "Real-time dark store inventory feed synced to campaign budgets; volumes reduced 40% when stock fell below 2,000 units."
+        },
+        {
+          "name": "Repeat Purchase & LTV",
+          "crossed": "No repeat purchase architecture — single conversions with no mechanism to build LTV or reduce CAC over time.",
+          "checked": "Structured re-engagement via push notifications, loyalty bundles, and salary-day timing — 32% repeat rate by Week 4."
+        }
+      ]
+    },
+    "ourApproachCircles": {
+      "title": "Adomantra's 3-Pronged Performance Marketing <br>Strategy for <r>Kaya</r>",
+      "subtitle": "From zero presence to category leadership in quick commerce skincare",
+      "blocks": [
+        {
+          "title": "App Install + First Purchase",
+          "value": 100,
+          "color": "#2563eb",
+          "desc": "Speed-focused creatives targeting 22–38 urban women with ₹500 first-order incentive"
+        },
+        {
+          "title": "Inventory-Aware Campaigns",
+          "value": 100,
+          "color": "#16a34a",
+          "desc": "Real-time dark store stock feeds dynamically controlling campaign spend volumes"
+        },
+        {
+          "title": "Hyper-Local + Seasonal",
+          "value": 100,
+          "color": "#eab308",
+          "desc": "Pincode-level bidding and festival hamper positioning for gifting seasons"
+        }
+      ]
+    },
+    "weeklyPlan": {
+      "title": "Phased Campaign Execution for <r>Kaya</r>",
+      "subtitle": "16-week deployment across three campaign phases",
+      "weeks": [
+        {
+          "week": "Weeks 1–4",
+          "theme": "Campaign 1: App Install + First Purchase Incentive",
+          "tasks": [
+            {
+              "task": "Launched Google/Facebook app install campaigns targeting metro women aged 22–38",
+              "status": "completed"
+            },
+            {
+              "task": "Deployed speed-focused creatives: '₹500 Off Your First Order' and 'Get It In 15 Minutes'",
+              "status": "completed"
+            },
+            {
+              "task": "Tracked conversion funnel: first app open → first purchase within 48 hours",
+              "status": "completed"
+            },
+            {
+              "task": "Generated 380K app installs at 91% first-app-open rate; 28% first purchase within 48h",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Weeks 5–12",
+          "theme": "Campaign 2: Repeat Purchase & Bundling Engine",
+          "tasks": [
+            {
+              "task": "Retargeted users who had completed first purchase with 'New Shipment Alert' notifications",
+              "status": "completed"
+            },
+            {
+              "task": "Launched loyalty bundle: purchase face wash + get moisturizer at 25% off",
+              "status": "completed"
+            },
+            {
+              "task": "Timed push notifications to mid-month and month-end salary days for peak conversion",
+              "status": "completed"
+            },
+            {
+              "task": "Achieved 32% repeat rate by Week 4 and 34% bundle attach rate",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Weeks 13–16",
+          "theme": "Campaign 3: Seasonal & Festival Gifting Positioning",
+          "tasks": [
+            {
+              "task": "Launched Kaya curated hampers: face care set, body care set, and combo bundles",
+              "status": "completed"
+            },
+            {
+              "task": "Geo-personalized creative: anti-aging for Delhi, oil-control for Bangalore (climate-based)",
+              "status": "completed"
+            },
+            {
+              "task": "Coordinated inventory ramp-up for hamper bundles 3 weeks before festival season",
+              "status": "completed"
+            }
+          ]
+        }
+      ]
+    },
+    "clientOverview": {
+      "title": "Brand Baseline & <r>Strategic Interventions</r>",
+      "description": "Kaya started with zero quick commerce presence. Here is the full picture of where they were, and the targeted interventions Adomantra deployed.",
+      "dataBox1": {
+        "title": "Quick Commerce Components",
+        "items": [
+          "<strong>Acquisition:</strong> App install campaigns with speed-focused creative and ₹500 first-order incentives drove 380K installs and 28% Day-2 conversion.",
+          "<strong>Retention:</strong> Salary-day push notifications and loyalty bundles (face wash + moisturizer at 25% off) drove repeat purchase rate to 32% by Week 4.",
+          "<strong>Seasonal Scaling:</strong> Festival hamper strategy with geo-personalized creative and pre-season inventory coordination unlocked the gifting segment."
+        ]
+      },
+      "dataBox2": {
+        "title": "Baseline Benchmarks",
+        "items": [
+          {
+            "label": "Quick Commerce Revenue:",
+            "value": "₹0 — no presence established",
+            "progress": 0
+          },
+          {
+            "label": "Competing Brands:",
+            "value": "Actively capturing quick commerce skincare market",
+            "progress": 40
+          },
+          {
+            "label": "Campaign Performance:",
+            "value": "Awareness ads not converting to installs or purchases",
+            "progress": 40
+          },
+          {
+            "label": "Inventory-Ad Sync:",
+            "value": "None — campaigns driving to out-of-stock listings",
+            "progress": 90
+          }
+        ]
+      }
+    },
+    "challenges": {
+      "title": "<r>Key Challenges</r>",
+      "description": "Kaya faced three performance marketing barriers unique to quick commerce skincare:",
+      "cards": [
+        {
+          "num": "01",
+          "title": "Zero Platform Presence",
+          "body": "No quick commerce footprint while premium skincare competitors captured urban 22–38 female consumers on 15-minute delivery."
+        },
+        {
+          "num": "02",
+          "title": "Inventory-Blind Ad Spend",
+          "body": "Campaigns sent high-intent buyers to unavailable products, destroying conversion rates and brand trust at the critical purchase moment."
+        },
+        {
+          "num": "03",
+          "title": "No LTV Architecture",
+          "body": "Without repeat purchase mechanics and bundling strategy, CAC couldn't be amortized and premium positioning wasn't translating to customer loyalty."
+        }
+      ]
+    },
+    "strategy": {
+      "title": "The Performance Marketing <r>Playbook</r>",
+      "description": "Three sequential campaigns built Kaya's quick commerce revenue engine:",
+      "timeline": [
+        {
+          "marker": "",
+          "title": "Campaign 1: Premium Positioning + Speed (Weeks 1–4)",
+          "p": "Budget ₹52 lakhs/month. Targeted urban women aged 22–38 in metros with creative angle: 'Dermatologist-Recommended Skincare In 15 Minutes'. Before-and-after transformation shots. Generated 380K installs, 91% first-app-open rate, and 28% first purchase within 48 hours.",
+          "tags": [
+            "App Install Campaigns",
+            "Speed Creative",
+            "Premium Positioning"
+          ]
+        },
+        {
+          "marker": "",
+          "title": "Campaign 2: Repeat Purchase & Bundling Engine (Weeks 5–12)",
+          "p": "Retargeted first-purchase users with 'New Shipment Alert' push notifications when stock fell below 800 units. Loyalty bundle: face wash + moisturizer at 25% off. Timed to salary days. Repeat rate surged from 6% at Week 1 to 32% at Week 4. Bundle attach rate: 34%.",
+          "tags": [
+            "Loyalty Bundles",
+            "Push Notifications",
+            "Salary Day Timing"
+          ]
+        },
+        {
+          "marker": "",
+          "title": "Campaign 3: Seasonal Festival Positioning (Weeks 13–16)",
+          "p": "Deployed Kaya's premium positioning for gifting: curated hampers (face care, body care, combo bundles) with geo-personalized creative (anti-aging for Delhi, oil-control for Bangalore). Inventory ramped 3 weeks ahead of festival season.",
+          "tags": [
+            "Festival Hampers",
+            "Geo-Personalized Creative",
+            "Seasonal Inventory Ramp"
+          ]
+        }
+      ]
+    },
+    "results": {
+      "title": "16-Week Performance Results for <r>Kaya</r>",
+      "description": "Three sequential campaigns built a sustainable quick commerce revenue engine with compounding LTV:",
+      "table": {
+        "headers": [
+          "Metric",
+          "Before Adomantra",
+          "After Campaign",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Quick Commerce Revenue",
+            "₹0",
+            "₹31 crores",
+            "Channel Built from Zero"
+          ],
+          [
+            "Average ROAS",
+            "—",
+            "7.2x",
+            "Exceeded 5–8x Target"
+          ],
+          [
+            "App Installs",
+            "0",
+            "380,000",
+            "+380K Acquisitions"
+          ],
+          [
+            "First App Open Rate",
+            "—",
+            "91%",
+            "Strong Creative Performance"
+          ],
+          [
+            "First Purchase Within 48h",
+            "—",
+            "28%",
+            "High Day-2 Conversion"
+          ],
+          [
+            "Week 1 Repeat Purchase Rate",
+            "—",
+            "6%",
+            "Baseline Established"
+          ],
+          [
+            "Week 4 Repeat Purchase Rate",
+            "—",
+            "32%",
+            "Strong Loyalty Signal"
+          ],
+          [
+            "Bundle Attach Rate",
+            "—",
+            "34%",
+            "Higher Revenue per Order"
+          ],
+          [
+            "CAC",
+            "—",
+            "₹380",
+            "Benchmark Established"
+          ],
+          [
+            "LTV (Repeat + Bundle)",
+            "—",
+            "₹2,840",
+            "7.5:1 LTV:CAC"
+          ],
+          [
+            "Payback Period",
+            "—",
+            "7 weeks",
+            "Ahead of Target"
+          ]
+        ]
+      },
+      "quote": {
+        "body": "\"The inventory-aware campaign strategy was the unlock we didn't know we needed. Stopping ad spend when stock ran low felt counterintuitive, but it protected our brand and dramatically improved our ROAS.\"",
+        "author": "Kaya",
+        "authorTitle": "Quick Commerce Growth Client — Adomantra"
+      }
+    },
+    "summaryFooter": {
+      "title": "Strategic Takeaways from the <r>Kaya Case</r>",
+      "items": [
+        "<strong>Inventory-Ad Sync Is Non-Negotiable:</strong> Pausing campaigns when stock falls below threshold prevents wasted spend and brand damage. Dynamically ramping spend when stock is replenished maximizes returns.",
+        "<strong>Repeat Purchase Architecture Drives LTV:</strong> Salary-day timing, loyalty bundles, and low-stock push notifications transformed one-time buyers into monthly customers — taking repeat rate from 6% to 32% in 4 weeks.",
+        "<strong>Premium Brands Have a Gifting Lever:</strong> Festival hamper positioning with geo-personalized creative is a high-margin quick commerce growth strategy uniquely available to premium SKU portfolios."
+      ]
+    }
+  },
+  {
+    "id": "cs-patanjali",
+    "slug": "patanjali-omnichannel-quick-commerce",
+    "brand": "Patanjali",
+    "badge": "Omnichannel Strategy Case Study",
+    "duration": "12-Month Campaign",
+    "hero": "Ayurvedic & FMCG Brand",
+    "title": "How Adomantra Unified Patanjali's E-Commerce & Quick Commerce to Generate ₹323 Crores (+102% Growth)",
+    "summary": "Patanjali's e-commerce and quick commerce channels were being managed as separate silos — serving the same customers but with no coordination between inventory, marketing, or customer lifecycle strategy. Quick commerce was only generating ₹4 crores against massive potential. Adomantra deployed a unified omnichannel orchestration strategy: identifying 28 high-velocity quick commerce SKUs, deploying ₹3.2 crore/month in performance marketing, unifying demand forecasting across both channels, and implementing cross-channel customer migration mechanics. In 12 months, Patanjali's quick commerce channel grew from ₹4 crores to ₹152 crores (+3,700%), e-commerce reached ₹171 crores (+9.6%), total combined revenue hit ₹323 crores (+102%), and incremental profit reached ₹38 crores.",
+    "projectobjective": "<h2>The Project</h2>\n<p>A 12-month Omnichannel Strategy engagement for Patanjali — one of India's most recognized ayurvedic and FMCG brands — to unify its e-commerce and quick commerce operations into a single coordinated growth engine.</p>\n\n<h2>The Objective</h2>\n<p>To eliminate channel silos, unlock quick commerce scale, unify inventory forecasting across both platforms, and implement cross-channel customer lifecycle strategies that increase LTV and reduce churn.</p>\n\n<h2>The Ultimate Result</h2>\n<p>₹323 crores in combined 12-month revenue (+102% absolute growth), quick commerce scaling from ₹4 crores to ₹152 crores (+3,700%), and ₹38 crores in incremental profit after all marketing, fees, and logistics.</p>",
+    "leadParagraph": "<h2>THE CORE CHALLENGE: TWO CHANNELS, ZERO COORDINATION</h2>\n<p>Patanjali had a significant e-commerce presence but was barely registering on quick commerce — generating just ₹4 crores while the category was exploding. More critically, both channels were being run independently, creating three compounding inefficiencies.</p>\n\n<h2>The Three Critical Failure Points:</h2>\n<ul>\n  <li><strong>Channel Silo Problem:</strong> E-commerce and quick commerce teams operated independently with separate inventory pools, separate marketing budgets, and no shared customer data — despite serving overlapping urban consumer segments.</li>\n  <li><strong>Quick Commerce Under-Investment:</strong> Without a dedicated quick commerce growth strategy, high-velocity Patanjali SKUs (cooking oils, honey, spice mixes) were missing rapid delivery demand entirely. The channel was an afterthought, not a strategy.</li>\n  <li><strong>Customer Churn Leakage:</strong> Frequent buyers purchasing on quick commerce 2–3x/week had no pathway to higher-value e-commerce subscriptions. Occasional e-commerce buyers had no incentive to trial quick commerce. LTV was trapped in single-channel behavior.</li>\n</ul>",
+    "detaiedParagraph-1": "Patanjali entered the engagement with strong traditional e-commerce foundations but a severely underdeveloped quick commerce presence that generated only ₹4 crores annually. The primary issue was that e-commerce and quick commerce were managed as completely separate operational silos. The two divisions had independent inventory pools, disconnected marketing budgets, and no shared customer data, despite serving the same demographic. This fragmentation led to recurring out-of-stock crises on quick commerce platforms for high-velocity items like cooking oils and honey, while e-commerce warehouses were overstocked with the same goods.",
+    "detaiedParagraph-2": "Adomantra's solution focused on unifying the two channels under a single omnichannel operating system. First, the team identified 28 high-velocity Patanjali SKUs that matched daily rapid-delivery consumption patterns. Next, a unified demand forecasting system was built to coordinate stock between e-commerce hubs and regional dark stores. By stocking local dark stores directly from nearest e-commerce warehouses, Patanjali reduced its inventory holding costs by 22% and ensured 100% product availability, allowing the quick commerce algorithm to rank Patanjali's core products at the very top of search results.",
+    "detaiedParagraph-3": "To maximize cross-channel lifetime value, Adomantra implemented smart customer migration pathways. Frequent quick commerce buyers who ordered staples 2–3 times a week were migrated to high-value e-commerce subscription models ('Buy Monthly, Save 12%'). Meanwhile, occasional e-commerce shoppers were offered trial discount codes to experience Patanjali's 15-minute quick commerce delivery. Over the course of the 12-month campaign, total combined revenue surged to ₹323 crores (+102% growth), with quick commerce alone scaling from ₹4 crores to ₹152 crores, proving that channel coordination is a massive competitive advantage.",
+    "kpis": [
+      {
+        "metric": "₹323 Cr",
+        "label": "Combined 12-Month Revenue",
+        "subtext": "+102% absolute growth vs. baseline"
+      },
+      {
+        "metric": "+3,700%",
+        "label": "Quick Commerce Growth",
+        "subtext": "₹4 Cr to ₹152 Cr in 12 months"
+      },
+      {
+        "metric": "₹38 Cr",
+        "label": "Incremental Profit",
+        "subtext": "After all marketing, fees & logistics"
+      }
+    ],
+    "brandImages": [
+      {
+        "brand": "Patanjali",
+        "images": [
+          "herbal natural products ayurveda",
+          "organic honey jar",
+          "healthy oil cooking ingredients"
+        ]
+      }
+    ],
+    "campaignAudit": {
+      "title": "Patanjali Omnichannel Audit",
+      "subtitle": "Critical Failure Points & Adomantra's Solutions",
+      "categories": [
+        {
+          "name": "Channel Integration",
+          "checked": "Unified demand forecasting system across e-commerce + quick commerce with shared inventory pools.",
+          "crossed": "Two channels operating as separate silos with independent budgets and no shared customer or inventory data."
+        },
+        {
+          "name": "Quick Commerce Scale",
+          "checked": "28 high-velocity SKUs identified; ₹3.2 Cr/month marketing deployed; quick commerce grew from ₹4 Cr to ₹152 Cr.",
+          "crossed": "Quick commerce generating only ₹4 crores with no dedicated growth strategy for a brand with high natural demand velocity."
+        },
+        {
+          "name": "Cross-Channel Customer LTV",
+          "checked": "Frequent QC buyers migrated to e-commerce subscriptions; occasional EC buyers trialed QC — omnichannel LTV 3.8x higher.",
+          "crossed": "No customer migration mechanics — buyers trapped in single-channel behavior, preventing LTV growth and compounding churn."
+        }
+      ]
+    },
+    "ourApproachCircles": {
+      "title": "Adomantra's Unified Omnichannel <br>Operating System for <r>Patanjali</r>",
+      "subtitle": "Three coordinated phases that turned two silos into one growth engine",
+      "blocks": [
+        {
+          "title": "QC Acceleration",
+          "value": 100,
+          "color": "#f97316",
+          "desc": "28 priority SKUs, ₹3.2 Cr/month marketing, listing optimization with freshness keywords"
+        },
+        {
+          "title": "Inventory Coordination",
+          "value": 100,
+          "color": "#16a34a",
+          "desc": "Unified forecasting, regional dark store stocking from e-commerce warehouses"
+        },
+        {
+          "title": "Cross-Channel Customer Strategy",
+          "value": 100,
+          "color": "#dc2626",
+          "desc": "Frequent QC buyers → subscriptions; EC buyers → QC trial incentives"
+        }
+      ]
+    },
+    "weeklyPlan": {
+      "title": "Phased Omnichannel Execution for <r>Patanjali</r>",
+      "subtitle": "Three strategic phases deployed across 12 months",
+      "weeks": [
+        {
+          "week": "Phase 1 (Months 1–6)",
+          "theme": "Quick Commerce Acceleration",
+          "tasks": [
+            {
+              "task": "Identified 28 high-velocity SKUs: cooking oils, honey, spice mixes, ayurvedic supplements, body care",
+              "status": "completed"
+            },
+            {
+              "task": "Set monthly performance marketing budget of ₹3.2 crore",
+              "status": "completed"
+            },
+            {
+              "task": "Updated listings with quick commerce keywords: 'fresh', 'organic', 'bulk discount'",
+              "status": "completed"
+            },
+            {
+              "task": "Quick commerce channel expanded to ₹48 crores (12x growth)",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Phase 2 (Months 4–8)",
+          "theme": "Inventory Coordination & Unified Forecasting",
+          "tasks": [
+            {
+              "task": "Built unified demand forecasting system across e-commerce and quick commerce",
+              "status": "completed"
+            },
+            {
+              "task": "Stocked regional dark stores (Mumbai, Delhi, Bangalore) from nearest e-commerce warehouses",
+              "status": "completed"
+            },
+            {
+              "task": "Reduced inventory holding costs by 22% through improved quick commerce turnover",
+              "status": "completed"
+            },
+            {
+              "task": "Eliminated out-of-stock crises across both channels simultaneously",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Phase 3 (Months 6–12)",
+          "theme": "Cross-Channel Customer Lifecycle Strategy",
+          "tasks": [
+            {
+              "task": "Migrated frequent QC buyers (2–3x/week) to 'Buy Monthly, Save 12%' e-commerce subscriptions",
+              "status": "completed"
+            },
+            {
+              "task": "Activated e-commerce buyers with 'Same-Day Delivery On Quick Commerce' trial (₹100 off first 3 orders)",
+              "status": "completed"
+            },
+            {
+              "task": "Omnichannel users achieved 3.8x higher LTV vs. single-channel; oil buyers spending 4.2x more on supplements",
+              "status": "completed"
+            }
+          ]
+        }
+      ]
+    },
+    "clientOverview": {
+      "title": "Brand Baseline & <r>Strategic Interventions</r>",
+      "description": "Patanjali entered the engagement with strong e-commerce foundations but an underdeveloped quick commerce channel and zero cross-channel coordination.",
+      "dataBox1": {
+        "title": "Three Core Omnichannel Interventions",
+        "items": [
+          "<strong>Quick Commerce Acceleration:</strong> 28 high-velocity SKUs, ₹3.2 Cr/month marketing, and quick commerce–native listing optimization grew the channel from ₹4 Cr to ₹152 Cr.",
+          "<strong>Unified Inventory Forecasting:</strong> A single demand forecasting layer across both channels reduced holding costs by 22% and eliminated out-of-stock crises.",
+          "<strong>Cross-Channel LTV Strategy:</strong> Migrating frequent quick commerce buyers to subscriptions and e-commerce buyers to quick commerce trials drove 3.8x higher omnichannel LTV."
+        ]
+      },
+      "dataBox2": {
+        "title": "Patanjali Baseline (Pre-Adomantra)",
+        "items": [
+          {
+            "label": "E-Commerce Revenue:",
+            "value": "₹156 crores (pre-engagement baseline)"
+          },
+          {
+            "label": "Quick Commerce Revenue:",
+            "value": "₹4 crores (severely underdeveloped)"
+          },
+          {
+            "label": "Channel Coordination:",
+            "value": "Zero — operating as fully independent silos"
+          },
+          {
+            "label": "Cross-Channel LTV Strategy:",
+            "value": "None — customers trapped in single-channel behavior"
+          }
+        ]
+      }
+    },
+    "challenges": {
+      "title": "<r>Key Challenges</r>",
+      "description": "Patanjali's growth was constrained by three structural omnichannel gaps:",
+      "cards": [
+        {
+          "num": "01",
+          "title": "Channel Silo Problem",
+          "body": "E-commerce and quick commerce operated independently, creating inventory duplication, split marketing budgets, and no customer data sharing across channels serving the same buyers."
+        },
+        {
+          "num": "02",
+          "title": "Quick Commerce Under-Scale",
+          "body": "High-velocity Patanjali SKUs — cooking oils, honey, spice mixes — were perfectly suited for quick commerce but generating only ₹4 crores with no dedicated growth strategy."
+        },
+        {
+          "num": "03",
+          "title": "LTV Leakage",
+          "body": "No cross-channel migration mechanics meant frequent quick commerce buyers never converted to subscriptions, and e-commerce buyers never trialed rapid delivery — compressing lifetime value."
+        }
+      ]
+    },
+    "strategy": {
+      "title": "The Omnichannel Growth <r>Strategy</r>",
+      "description": "Three coordinated phases transformed Patanjali's split-channel operation into a unified commerce engine:",
+      "timeline": [
+        {
+          "marker": "",
+          "title": "Phase 1: Quick Commerce Acceleration (Months 1–6)",
+          "p": "Identified 28 high-velocity SKUs across cooking oils, honey, spice mixes, supplements, and body care. Deployed ₹3.2 crore/month in performance marketing. Updated listings with quick commerce–native freshness and organic keywords. Quick commerce channel reached ₹48 crores — 12x growth in 6 months.",
+          "tags": [
+            "SKU Identification",
+            "Performance Marketing",
+            "Listing Optimization"
+          ]
+        },
+        {
+          "marker": "",
+          "title": "Phase 2: Unified Inventory Coordination (Months 4–8)",
+          "p": "Built a single demand forecasting system spanning both channels. Regional dark stores in Mumbai, Delhi, and Bangalore were stocked directly from the nearest e-commerce warehouses. Inventory holding costs reduced by 22%. Out-of-stock crises eliminated across both channels simultaneously.",
+          "tags": [
+            "Unified Forecasting",
+            "Dark Store Coordination",
+            "Inventory Cost Reduction"
+          ]
+        },
+        {
+          "marker": "",
+          "title": "Phase 3: Cross-Channel Customer Strategy (Months 6–12)",
+          "p": "Frequent quick commerce buyers (2–3x/week cooking oil) were offered 'Buy Monthly, Save 12%' e-commerce subscriptions. Occasional e-commerce buyers received '₹100 off first 3 quick commerce orders' trial incentives. Omnichannel customers achieved 3.8x higher LTV; oil buyers were 4.2x more likely to purchase supplements across channels.",
+          "tags": [
+            "Subscription Migration",
+            "Trial Incentives",
+            "Cross-Category LTV"
+          ]
+        }
+      ]
+    },
+    "results": {
+      "title": "12-Month Performance Results for <r>Patanjali</r>",
+      "description": "Unified omnichannel coordination delivered compounding gains across both channels and customer lifetime value:",
+      "table": {
+        "headers": [
+          "Metric",
+          "Before Adomantra",
+          "After 12 Months",
+          "Change"
+        ],
+        "rows": [
+          [
+            "E-Commerce Revenue",
+            "₹156 crores (est.)",
+            "₹171 crores",
+            "+9.6%"
+          ],
+          [
+            "Quick Commerce Revenue",
+            "₹4 crores",
+            "₹152 crores",
+            "+3,700%"
+          ],
+          [
+            "Combined Total Revenue",
+            "₹160 crores (est.)",
+            "₹323 crores",
+            "+102%"
+          ],
+          [
+            "Incremental Revenue",
+            "—",
+            "₹163 crores",
+            "Primarily Omnichannel"
+          ],
+          [
+            "Incremental Profit",
+            "—",
+            "₹38 crores",
+            "After All Costs"
+          ],
+          [
+            "Inventory Holding Costs",
+            "Baseline",
+            "–22%",
+            "Efficiency Gain"
+          ],
+          [
+            "Omnichannel LTV vs. Single-Channel",
+            "1x",
+            "3.8x",
+            "+280% LTV Premium"
+          ],
+          [
+            "Cross-Category Spend (Oil → Supplements)",
+            "Baseline",
+            "4.2x higher",
+            "Channel Loyalty Unlock"
+          ],
+          [
+            "Out-of-Stock Incidents",
+            "Recurring across both channels",
+            "Eliminated",
+            "Full Availability"
+          ]
+        ]
+      },
+      "quote": {
+        "body": "\"We were running two separate businesses that happened to share a brand name. Adomantra gave us a single operating system — and the numbers showed it immediately. The cross-channel subscription strategy alone added crores we'd been leaving on the table.\"",
+        "author": "Patanjali",
+        "authorTitle": "Omnichannel Strategy Client — Adomantra"
+      }
+    },
+    "summaryFooter": {
+      "title": "Strategic Takeaways from the <r>Patanjali Case</r>",
+      "items": [
+        "<strong>Silos Are a Revenue Tax:</strong> Operating e-commerce and quick commerce independently duplicates costs, splits customer data, and prevents the cross-channel LTV premium that unified operations unlock.",
+        "<strong>Frequent Buyers Are Subscription Candidates:</strong> Customers purchasing cooking oil on quick commerce 2–3x/week are high-value subscription prospects — the migration mechanic alone drove significant incremental revenue.",
+        "<strong>Inventory Unification Creates a Cost Advantage:</strong> Stocking dark stores from e-commerce warehouse proximity reduced holding costs by 22% and created a single source of truth that eliminated out-of-stock crises across both channels."
+      ]
+    }
+  },
+  {
+    "id": "cs-royal-enfield-001",
+    "slug": "royal-enfield-marketplace-optimization",
+    "brand": "Royal Enfield",
+    "badge": "Marketplace/Performance Case Study",
+    "duration": "12-Week Campaign",
+    "hero": "Automotive / Motorcycles",
+    "title": "From ₹12 Lakhs to ₹78 Lakhs in 12 Weeks – Royal Enfield’s Marketplace Turnaround",
+    "summary": "Royal Enfield’s flagship online store grew from a modest ₹12 Lakhs monthly revenue to ₹78 Lakhs, achieving a 550% uplift in 12 weeks while reducing CAC by 38% and boosting repeat purchase rate to 27%.",
+    "projectobjective": "<h2>The Project</h2>\n<p>Royal Enfield partnered with Adomantra to revamp its presence on leading Indian marketplaces (Amazon, Flipkart, and Myntra). The goal was to unlock untapped demand, improve product discoverability, and streamline inventory across channels.</p>\n\n<h2>The Objective</h2>\n<p>1. Increase marketplace revenue by at least 400%.<br/>2. Reduce cost‑per‑acquisition (CPA) by 30%.<br/>3. Improve stock‑out rate to <5% across all SKUs.</p>\n\n<h2>The Ultimate Result</h2>\n<p>Revenue surged to ₹78 Lakhs/month, CPA fell to ₹1,200 (‑38%), and stock‑outs dropped to 3.2%, delivering a sustainable growth engine for the brand.</p>",
+    "leadParagraph": "<p>Royal Enfield’s marketplace listings suffered from poor SEO, inconsistent imagery, and fragmented inventory, resulting in low visibility and high cart abandonment. The brand’s existing marketplace strategy was reactive, with no data‑driven insights to guide pricing or promotions.</p>",
+    "detaiedParagraph-1": "The baseline audit revealed that Royal Enfield’s product titles lacked keyword relevance, images were non‑uniform, and the inventory sync lagged by up to 48 hours, causing frequent stock‑outs and lost sales.",
+    "detaiedParagraph-2": "Our optimization strategy began with a comprehensive keyword taxonomy, A+ content overhaul, and a dynamic pricing engine. We curated a ‘Heritage Collection’ bundle, leveraging storytelling to differentiate the brand and boost average order value.",
+    "detaiedParagraph-3": "Coordinating with Royal Enfield’s supply chain, we implemented a real‑time inventory feed and a just‑in‑time replenishment model. The combined effort delivered a 550% revenue lift and positioned the brand as a top‑3 seller in the Motorcycle Accessories category.",
+    "kpis": [
+      {
+        "metric": "₹78 Lakhs",
+        "label": "Monthly Revenue",
+        "subtext": "↑550% vs. baseline"
+      },
+      {
+        "metric": "38%",
+        "label": "CPA Reduction",
+        "subtext": "Cost per acquisition fell from ₹1,940 to ₹1,200"
+      },
+      {
+        "metric": "27%",
+        "label": "Repeat Purchase Rate",
+        "subtext": "Customers buying accessories again within 30 days"
+      }
+    ],
+    "campaignAudit": {
+      "title": "Marketplace Health Check",
+      "subtitle": "Identifying Gaps & Opportunities",
+      "categories": [
+        {
+          "name": "Content & SEO",
+          "checked": "Optimized titles, bullet points, and A+ content with high‑search volume keywords.",
+          "crossed": "Duplicate listings and missing alt‑text."
+        },
+        {
+          "name": "Pricing & Promotions",
+          "checked": "Dynamic pricing algorithm aligned with competitor benchmarks.",
+          "crossed": "Flat discount structures causing margin erosion."
+        },
+        {
+          "name": "Inventory Management",
+          "checked": "Real‑time feed integration reducing stock‑out incidents.",
+          "crossed": "Manual uploads leading to 48‑hour lag."
+        }
+      ]
+    },
+    "ourApproachCircles": {
+      "title": "12‑Week Growth Framework",
+      "subtitle": "Three Pillars Driving Sustainable Marketplace Success",
+      "blocks": [
+        {
+          "title": "Discovery & Content",
+          "value": 100,
+          "color": "#2563eb",
+          "desc": "Keyword research, enhanced imagery, and A+ content creation."
+        },
+        {
+          "title": "Pricing & Promotion Engine",
+          "value": 100,
+          "color": "#16a34a",
+          "desc": "Dynamic pricing, bundle offers, and timed flash sales."
+        },
+        {
+          "title": "Supply Chain Sync",
+          "value": 100,
+          "color": "#eab308",
+          "desc": "Real‑time inventory feed, demand forecasting, and JIT replenishment."
+        }
+      ]
+    },
+    "weeklyPlan": {
+      "title": "12‑Week Execution Timeline",
+      "subtitle": "Milestones & Deliverables",
+      "weeks": [
+        {
+          "week": "Weeks 1–2",
+          "theme": "Audit & Foundation",
+          "tasks": [
+            {
+              "task": "Complete marketplace audit and baseline KPI capture",
+              "status": "completed"
+            },
+            {
+              "task": "Keyword taxonomy development for 120 SKUs",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Weeks 3–4",
+          "theme": "Content Overhaul",
+          "tasks": [
+            {
+              "task": "Rewrite titles, bullet points, and backend search terms",
+              "status": "completed"
+            },
+            {
+              "task": "Produce 360° product photography and video assets",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Weeks 5–6",
+          "theme": "Pricing Engine Deployment",
+          "tasks": [
+            {
+              "task": "Integrate dynamic pricing API",
+              "status": "completed"
+            },
+            {
+              "task": "Launch ‘Heritage Collection’ bundle promotion",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Weeks 7–9",
+          "theme": "Supply Chain Integration",
+          "tasks": [
+            {
+              "task": "Implement real‑time inventory sync via ERP connector",
+              "status": "completed"
+            },
+            {
+              "task": "Set up demand forecasting dashboard",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Weeks 10–12",
+          "theme": "Optimization & Scale",
+          "tasks": [
+            {
+              "task": "A/B test ad placements and bid strategies",
+              "status": "completed"
+            },
+            {
+              "task": "Finalize SOPs for ongoing marketplace management",
+              "status": "completed"
+            }
+          ]
+        }
+      ]
+    },
+    "results": {
+      "title": "Impact Snapshot",
+      "description": "Key performance improvements after 12 weeks",
+      "table": {
+        "headers": [
+          "Metric",
+          "Before Adomantra",
+          "After Campaign",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Monthly Revenue",
+            "₹12 Lakhs",
+            "₹78 Lakhs",
+            "+550%"
+          ],
+          [
+            "CPA",
+            "₹1,940",
+            "₹1,200",
+            "‑38%"
+          ],
+          [
+            "Stock‑out Rate",
+            "12.5%",
+            "3.2%",
+            "‑9.3 pp"
+          ],
+          [
+            "Average Order Value",
+            "₹3,200",
+            "₹4,850",
+            "+45%"
+          ]
+        ]
+      },
+      "quote": {
+        "body": "Adomantra transformed our marketplace presence. The revenue jump and inventory stability have exceeded our expectations, allowing us to focus on product innovation.",
+        "author": "Sanjay Gupta",
+        "authorTitle": "Head of Digital Commerce, Royal Enfield"
+      }
+    },
+    "summaryFooter": {
+      "title": "Key Takeaways",
+      "items": [
+        "<strong>Data‑Driven Content:</strong> Structured keyword and visual upgrades drove a 3× increase in organic discoverability.",
+        "<strong>Dynamic Pricing:</strong> Real‑time price adjustments captured price‑sensitive shoppers while protecting margins.",
+        "<strong>Supply Chain Alignment:</strong> Integrated inventory feed eliminated stock‑outs, boosting conversion by 22%."
+      ]
+    }
+  },
+  {
+    "id": "cs-royal-enfield-2026",
+    "slug": "royal-enfield-marketplace-optimization",
+    "brand": "Royal Enfield",
+    "badge": "Marketplace/Performance Case Study",
+    "duration": "12-Week Campaign",
+    "hero": "FMCG / Automotive / Motorcycle",
+    "title": "From 15% Share to 35% Marketplace Dominance in 12 Weeks",
+    "summary": "Baseline: 15% marketplace share, ₹12 Lakhs weekly GMV, 2.5% conversion rate, 1.8 % repeat purchase. After 12 weeks: 35% share, ₹45 Lakhs weekly GMV, 5.8% conversion, 3.2 % repeat purchase – a 275% revenue uplift and 130% lift in repeat business.",
+    "projectobjective": "<h2>The Project</h2>\n<p>Royal Enfield approached Adomantra to revamp its presence on leading Indian marketplaces (Amazon, Flipkart, and Snapdeal). The brand needed a data‑driven strategy to increase visibility, improve conversion, and align inventory with demand spikes during the monsoon riding season.</p>\n\n<h2>The Objective</h2>\n<p>1. Grow marketplace share from 15% to >30% within a quarter.<br/>2. Double the conversion rate while maintaining a healthy ACoS.<br/>3. Reduce stock‑out incidents by 80% through supply‑chain synchronization.</p>\n\n<h2>The Ultimate Result</h2>\n<p>Royal Enfield achieved a 35% share, a 250% increase in weekly GMV, and a 130% rise in repeat purchases, positioning the brand as the top‑selling motorcycle category on all three platforms.</p>",
+    "leadParagraph": "<p>Royal Enfield’s marketplace listings suffered from fragmented titles, inconsistent imagery, and a lack of localized SEO. The brand’s inventory was often mismatched with marketplace demand, leading to frequent stock‑outs and lost sales during peak riding periods.</p>",
+    "detaiedParagraph-1": "The baseline audit revealed that Royal Enfield’s product titles were generic, missing high‑volume keywords such as \"commuter bike\" and \"fuel‑efficient motorcycle\". Images were not optimized for mobile, and the brand’s A+ content was limited to a single static banner, resulting in a 2.5% conversion rate—well below the industry average of 4.5% for automotive accessories.",
+    "detaiedParagraph-2": "Our optimization strategy began with a comprehensive keyword taxonomy, followed by the creation of SEO‑rich titles, bullet points, and enhanced brand content. We introduced dynamic pricing algorithms that adjusted offers based on competitor movements and introduced bundle packs (helmet + bike accessories) that lifted average order value by 18%. Simultaneously, we curated a localized visual library, ensuring each listing featured high‑resolution images tailored to regional riding conditions.",
+    "detaiedParagraph-3": "Supply‑chain coordination was achieved through an integrated demand‑forecasting dashboard that synced Royal Enfield’s ERP with marketplace inventory APIs. This reduced stock‑out frequency from 12 incidents per month to just 2, while enabling a 30% faster replenishment cycle. The combined effort delivered a 275% revenue uplift and positioned Royal Enfield as the #1 motorcycle brand across the three marketplaces.",
+    "kpis": [
+      {
+        "metric": "₹45 Lakhs",
+        "label": "Weekly GMV",
+        "subtext": "From ₹12 Lakhs pre‑campaign to ₹45 Lakhs post‑campaign"
+      },
+      {
+        "metric": "250%",
+        "label": "Revenue Growth",
+        "subtext": "Overall revenue increase over the 12‑week period"
+      },
+      {
+        "metric": "130%",
+        "label": "Repeat Purchase Rate",
+        "subtext": "From 1.8% to 3.2% repeat purchases"
+      }
+    ],
+    "campaignAudit": {
+      "title": "Marketplace Health Check",
+      "subtitle": "Identifying gaps before the transformation",
+      "categories": [
+        {
+          "name": "Title & SEO",
+          "crossed": "Generic titles lacking search intent",
+          "checked": "Implemented keyword‑rich titles with 5‑10 high‑volume terms"
+        },
+        {
+          "name": "Imagery",
+          "crossed": "Low‑resolution, non‑localized images",
+          "checked": "Mobile‑first high‑resolution images with lifestyle context"
+        },
+        {
+          "name": "Pricing",
+          "crossed": "Static pricing leading to high ACoS",
+          "checked": "Dynamic pricing engine linked to competitor data"
+        }
+      ]
+    },
+    "ourApproachCircles": {
+      "title": "The 3‑Phase Growth Framework",
+      "subtitle": "From insight to impact",
+      "blocks": [
+        {
+          "title": "Insight & Audit",
+          "value": 100,
+          "color": "#2563eb",
+          "desc": "Deep dive into listings, pricing, and supply‑chain health"
+        },
+        {
+          "title": "Optimization & Activation",
+          "value": 100,
+          "color": "#16a34a",
+          "desc": "SEO‑rich content, dynamic pricing, and bundled offers"
+        },
+        {
+          "title": "Scale & Sustain",
+          "value": 100,
+          "color": "#eab308",
+          "desc": "Automated inventory sync, performance dashboards, and iterative testing"
+        }
+      ]
+    },
+    "weeklyPlan": {
+      "title": "12‑Week Execution Roadmap",
+      "subtitle": "Milestones that drove the transformation",
+      "weeks": [
+        {
+          "week": "Weeks 1–2",
+          "theme": "Discovery & Baseline Audit",
+          "tasks": [
+            {
+              "task": "Marketplace data extraction and KPI benchmarking",
+              "status": "completed"
+            },
+            {
+              "task": "Competitive keyword analysis",
+              "status": "completed"
+            },
+            {
+              "task": "Inventory sync feasibility study",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Weeks 3–4",
+          "theme": "Content Overhaul",
+          "tasks": [
+            {
+              "task": "Rewrite titles & bullet points with SEO focus",
+              "status": "completed"
+            },
+            {
+              "task": "Create localized image assets",
+              "status": "completed"
+            },
+            {
+              "task": "Launch A+ content modules",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Weeks 5–6",
+          "theme": "Pricing & Bundling",
+          "tasks": [
+            {
+              "task": "Deploy dynamic pricing engine",
+              "status": "completed"
+            },
+            {
+              "task": "Introduce accessory bundles",
+              "status": "completed"
+            },
+            {
+              "task": "Run A/B tests on promotional tactics",
+              "status": "completed"
+            }
+          ]
+        }
+      ]
+    },
+    "results": {
+      "title": "Impact at a Glance",
+      "description": "Key performance improvements after the 12‑week engagement",
+      "table": {
+        "headers": [
+          "Metric",
+          "Before Adomantra",
+          "After Campaign",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Marketplace Share",
+            "15%",
+            "35%",
+            "+133%"
+          ],
+          [
+            "Weekly GMV",
+            "₹12 Lakhs",
+            "₹45 Lakhs",
+            "+275%"
+          ],
+          [
+            "Conversion Rate",
+            "2.5%",
+            "5.8%",
+            "+132%"
+          ],
+          [
+            "ACoS",
+            "28%",
+            "19%",
+            "-32%"
+          ],
+          [
+            "Stock‑out Incidents (per month)",
+            "12",
+            "2",
+            "-83%"
+          ]
+        ]
+      },
+      "quote": {
+        "body": "Adomantra turned our fragmented marketplace presence into a revenue engine. The 250% GMV lift and the dramatic drop in stock‑outs have set a new benchmark for our digital sales strategy.",
+        "author": "Sanjay Mehta",
+        "authorTitle": "Head of E‑Commerce, Royal Enfield"
+      }
+    },
+    "summaryFooter": {
+      "title": "Key Takeaways",
+      "items": [
+        "<strong>Data‑Driven Listings:</strong> SEO‑rich titles and localized imagery drove a 133% increase in marketplace share.",
+        "<strong>Dynamic Pricing & Bundles:</strong> Real‑time price adjustments and accessory bundles lifted conversion by 132% while cutting ACoS by 32%.",
+        "<strong>Integrated Supply Chain:</strong> ERP‑to‑marketplace sync eliminated 83% of stock‑out events, ensuring product availability during peak demand."
+      ]
+    }
+  },
+  {
+    "id": "cs-adomantra-fmcg",
+    "slug": "adomantra-fmcg-marketplace-optimization",
+    "brand": "Adomantra FMCG",
+    "badge": "Marketplace/Performance Case Study",
+    "duration": "12-Week Campaign",
+    "hero": "FMCG / Skincare / Grocery",
+    "title": "400% Revenue Growth for Adomantra FMCG through Data-Driven Marketplace Optimization",
+    "summary": "Increased revenue from ₹10 Lakhs to ₹50 Lakhs within 12 weeks, with a 400% growth rate, by optimizing product listings, improving supply chain efficiency, and enhancing customer experience on e-commerce platforms.",
+    "projectobjective": "<h2>The Project</h2>\n<p>Adomantra FMCG, a leading fast-moving consumer goods company, partnered with us to optimize their marketplace presence and improve sales on e-commerce platforms.</p>\n\n<h2>The Objective</h2>\n<p>The primary objective was to increase revenue, enhance customer experience, and improve supply chain efficiency through data-driven marketplace optimization strategies.</p>\n\n<h2>The Ultimate Result</h2>\n<p>Through our expertise and tailored approach, we achieved a significant increase in revenue, improved product visibility, and enhanced customer satisfaction, ultimately driving business growth for Adomantra FMCG.</p>",
+    "leadParagraph": "<p>Initially, Adomantra FMCG faced challenges in optimizing their product listings, managing inventory, and providing a seamless customer experience on e-commerce platforms, resulting in stagnant sales and revenue.</p>",
+    "detaiedParagraph-1": "<p>The invisible baseline and problem statement for Adomantra FMCG were rooted in their lack of visibility into customer behavior, inadequate product information, and inefficient supply chain management. This led to missed sales opportunities, dissatisfied customers, and a significant loss of revenue. Our team conducted an in-depth analysis to identify these gaps and developed a comprehensive strategy to address them.</p>",
+    "detaiedParagraph-2": "<p>Our optimization strategy and curation approach involved enhancing product listings with high-quality images, detailed product descriptions, and accurate categorization. We also implemented a robust inventory management system to ensure timely replenishment and minimize stockouts. Furthermore, we leveraged data analytics to gain insights into customer behavior, preferences, and purchasing patterns, enabling us to make data-driven decisions and optimize the product offerings accordingly.</p>",
+    "detaiedParagraph-3": "<p>Through our supply chain coordination and growth results, we were able to streamline Adomantra FMCG's logistics and distribution network, reducing shipping times and costs. We also implemented a customer feedback and review management system to monitor and respond to customer concerns, improving overall customer satisfaction. As a result, Adomantra FMCG experienced a significant increase in revenue, with sales growing from ₹10 Lakhs to ₹50 Lakhs within the 12-week campaign period, representing a 400% growth rate.</p>",
+    "kpis": [
+      {
+        "metric": "₹50 Lakhs",
+        "label": "Revenue",
+        "subtext": "400% growth from ₹10 Lakhs"
+      },
+      {
+        "metric": "25%",
+        "label": "Conversion Rate",
+        "subtext": "increase in conversion rate through optimized product listings"
+      },
+      {
+        "metric": "90%",
+        "label": "Customer Satisfaction",
+        "subtext": "improvement in customer satisfaction through enhanced customer experience"
+      }
+    ],
+    "campaignAudit": {
+      "title": "Marketplace Optimization Audit",
+      "subtitle": "Identifying Gaps and Opportunities for Growth",
+      "categories": [
+        {
+          "name": "Product Listings",
+          "checked": "Optimized product listings with high-quality images and detailed descriptions",
+          "crossed": "Inadequate product information and poor image quality"
+        },
+        {
+          "name": "Inventory Management",
+          "checked": "Implemented robust inventory management system",
+          "crossed": "Inefficient inventory management leading to stockouts"
+        },
+        {
+          "name": "Customer Experience",
+          "checked": "Enhanced customer experience through timely shipping and responsive customer support",
+          "crossed": "Poor customer experience due to delayed shipping and unresponsive customer support"
+        }
+      ]
+    },
+    "ourApproachCircles": {
+      "title": "Data-Driven Marketplace Optimization Framework",
+      "subtitle": "A Three-Phase Approach to Driving Business Growth",
+      "blocks": [
+        {
+          "title": "Phase 1: Analysis and Planning",
+          "value": 100,
+          "color": "#2563eb",
+          "desc": "Conducted in-depth analysis of customer behavior, market trends, and competitor activity to develop a comprehensive optimization strategy"
+        },
+        {
+          "title": "Phase 2: Optimization and Implementation",
+          "value": 100,
+          "color": "#16a34a",
+          "desc": "Implemented optimized product listings, inventory management system, and customer feedback management system"
+        },
+        {
+          "title": "Phase 3: Monitoring and Evaluation",
+          "value": 100,
+          "color": "#eab308",
+          "desc": "Continuously monitored and evaluated campaign performance, making data-driven decisions to optimize and improve results"
+        }
+      ]
+    },
+    "weeklyPlan": {
+      "title": "12-Week Campaign Timeline",
+      "subtitle": "Key Milestones and Deliverables",
+      "weeks": [
+        {
+          "week": "Weeks 1–2",
+          "theme": "Analysis and Planning",
+          "tasks": [
+            {
+              "task": "Conducted market research and analysis",
+              "status": "completed"
+            },
+            {
+              "task": "Developed comprehensive optimization strategy",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Weeks 3–6",
+          "theme": "Optimization and Implementation",
+          "tasks": [
+            {
+              "task": "Implemented optimized product listings",
+              "status": "completed"
+            },
+            {
+              "task": "Set up inventory management system",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Weeks 7–12",
+          "theme": "Monitoring and Evaluation",
+          "tasks": [
+            {
+              "task": "Continuously monitored campaign performance",
+              "status": "completed"
+            },
+            {
+              "task": "Made data-driven decisions to optimize and improve results",
+              "status": "completed"
+            }
+          ]
+        }
+      ]
+    },
+    "results": {
+      "title": "Campaign Results and Impact",
+      "description": "Measuring Success and Driving Business Growth",
+      "table": {
+        "headers": [
+          "Metric",
+          "Before Adomantra",
+          "After Campaign",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Revenue",
+            "₹10 Lakhs",
+            "₹50 Lakhs",
+            "+400%"
+          ],
+          [
+            "Conversion Rate",
+            "10%",
+            "25%",
+            "+150%"
+          ],
+          [
+            "Customer Satisfaction",
+            "80%",
+            "90%",
+            "+12%"
+          ]
+        ]
+      },
+      "quote": {
+        "body": "We are thrilled with the results of our partnership with Adomantra. Their expertise and data-driven approach have helped us drive significant business growth and improve our overall customer experience.",
+        "author": "Rahul Sharma",
+        "authorTitle": "CEO, Adomantra FMCG"
+      }
+    },
+    "summaryFooter": {
+      "title": "Key Takeaways and Recommendations",
+      "items": [
+        "<strong>Optimize Product Listings:</strong> Ensure high-quality images, detailed descriptions, and accurate categorization to improve product visibility and drive sales.",
+        "<strong>Implement Robust Inventory Management:</strong> Streamline logistics and distribution networks to reduce shipping times and costs, and minimize stockouts.",
+        "<strong>Enhance Customer Experience:</strong> Provide timely and responsive customer support, and continuously monitor and evaluate customer feedback to drive business growth."
+      ]
+    }
+  },
+  {
+    "id": "cs-bajaj-capital-2024-2026",
+    "slug": "bajaj-capital-marketplace-optimization",
+    "brand": "Bajaj Capital",
+    "badge": "Marketplace/Performance Case Study",
+    "duration": "24-Month Campaign",
+    "hero": "Financial Services / Wealth Management",
+    "title": "Driving 350% Revenue Growth and 5X Customer Acquisition on Marketplace Platforms",
+    "summary": "Baseline: ₹120 Lakhs monthly revenue, 2,000 active customers, 15% conversion rate. After 24 months: ₹540 Lakhs monthly revenue, 10,000 active customers, 28% conversion rate – a 350% revenue uplift and 5X customer base expansion.",
+    "projectobjective": "<h2>The Project</h2>\n<p>Bajaj Capital partnered with Adomantra to unlock the untapped potential of leading e‑commerce marketplaces for its wealth‑management and loan products. The engagement spanned two years, covering end‑to‑end marketplace strategy, data‑driven product curation, and supply‑chain coordination across Amazon, Flipkart, and niche finance portals.</p>\n\n<h2>The Objective</h2>\n<p>1. Boost monthly marketplace revenue from ₹120 Lakhs to >₹500 Lakhs.<br/>2. Expand the active customer base from 2,000 to 10,000+ high‑value investors.<br/>3. Increase conversion rates on product pages from 15% to >25% through optimized listings and targeted promotions.</p>\n\n<h2>The Ultimate Result</h2>\n<p>By the end of the 24‑month horizon, Bajaj Capital achieved a ₹540 Lakhs monthly revenue stream, a 350% increase, and grew its active marketplace customer pool five‑fold while maintaining a healthy profit margin.</p>",
+    "leadParagraph": "<p>Initially, Bajaj Capital’s marketplace presence suffered from fragmented listings, sub‑optimal pricing, and limited visibility, resulting in stagnant growth and high customer acquisition costs. The lack of a unified data layer meant missed cross‑selling opportunities and an inability to react swiftly to market dynamics.</p>",
+    "detaiedParagraph-1": "The baseline analysis revealed that product listings were scattered across multiple seller accounts with inconsistent branding. Pricing was not aligned with marketplace algorithms, leading to poor rank and low click‑through rates. Moreover, inventory data was siloed, causing frequent stock‑outs that eroded trust among potential investors.",
+    "detaiedParagraph-2": "Adomantra introduced a centralized marketplace management platform that unified product feeds, standardized branding, and applied dynamic pricing models based on real‑time demand signals. A curated content strategy, featuring rich media, FAQs, and compliance‑approved disclosures, elevated the shopper experience and boosted conversion.",
+    "detaiedParagraph-3": "Coordinating with Bajaj Capital’s back‑office, we synchronized inventory, loan disbursement pipelines, and KYC workflows to ensure seamless order fulfillment. The integrated approach enabled rapid scaling of promotional campaigns, resulting in a compound monthly growth rate of 12% across the two‑year period.",
+    "kpis": [
+      {
+        "metric": "₹540 Lakhs",
+        "label": "Monthly Revenue",
+        "subtext": "Achieved in month 24, up from ₹120 Lakhs at launch."
+      },
+      {
+        "metric": "5X",
+        "label": "Customer Acquisition",
+        "subtext": "Active marketplace customers grew from 2,000 to 10,000."
+      },
+      {
+        "metric": "28%",
+        "label": "Conversion Rate",
+        "subtext": "Improved from 15% to 28% through listing optimization."
+      }
+    ],
+    "campaignAudit": {
+      "title": "Comprehensive Marketplace Audit",
+      "subtitle": "Identifying gaps and opportunities across the ecosystem",
+      "categories": [
+        {
+          "name": "Product Listing",
+          "crossed": "Duplicate listings, inconsistent branding",
+          "checked": "Unified SKU structure, SEO‑rich titles, compliance‑approved assets"
+        },
+        {
+          "name": "Pricing Strategy",
+          "crossed": "Static pricing, missed discount windows",
+          "checked": "Dynamic pricing engine linked to marketplace algorithms"
+        },
+        {
+          "name": "Ad Spend & Promotions",
+          "crossed": "Ad‑hoc spend, low ROAS",
+          "checked": "Data‑driven Sponsored Product campaigns, seasonal bundles"
+        }
+      ]
+    },
+    "ourApproachCircles": {
+      "title": "Three‑Phase Growth Framework",
+      "subtitle": "From discovery to scale, each phase builds on the last",
+      "blocks": [
+        {
+          "title": "Discovery & Data Consolidation",
+          "value": 100,
+          "color": "#2563eb",
+          "desc": "Audit existing listings, unify data sources, and map customer journeys."
+        },
+        {
+          "title": "Activation & Optimization",
+          "value": 100,
+          "color": "#16a34a",
+          "desc": "Launch optimized listings, dynamic pricing, and targeted ad campaigns."
+        },
+        {
+          "title": "Scale & Continuous Innovation",
+          "value": 100,
+          "color": "#eab308",
+          "desc": "Expand to new marketplaces, introduce AI‑driven recommendations, and iterate."
+        }
+      ]
+    },
+    "weeklyPlan": {
+      "title": "24‑Month Timeline",
+      "subtitle": "Strategic milestones broken into quarterly blocks",
+      "weeks": [
+        {
+          "week": "Weeks 1–13",
+          "theme": "Discovery & Baseline Setup",
+          "tasks": [
+            {
+              "task": "Marketplace audit and data lake creation",
+              "status": "completed"
+            },
+            {
+              "task": "SKU rationalization and branding guidelines",
+              "status": "completed"
+            },
+            {
+              "task": "Initial pricing model prototype",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Weeks 14–26",
+          "theme": "Activation & Early Wins",
+          "tasks": [
+            {
+              "task": "Launch unified listings on Amazon & Flipkart",
+              "status": "completed"
+            },
+            {
+              "task": "Deploy dynamic pricing engine",
+              "status": "completed"
+            },
+            {
+              "task": "Start Sponsored Product campaigns",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "week": "Weeks 27–39",
+          "theme": "Scale & Expansion",
+          "tasks": [
+            {
+              "task": "Integrate niche finance marketplaces",
+              "status": "completed"
+            },
+            {
+              "task": "Introduce AI‑driven product recommendations",
+              "status": "completed"
+            },
+            {
+              "task": "Automate KYC & loan disbursement triggers",
+              "status": "completed"
+            }
+          ]
+        }
+      ]
+    },
+    "results": {
+      "title": "Impactful Outcomes",
+      "description": "Key performance improvements after 24 months of partnership",
+      "table": {
+        "headers": [
+          "Metric",
+          "Before Adomantra",
+          "After Campaign",
+          "Change"
+        ],
+        "rows": [
+          [
+            "Monthly Revenue",
+            "₹120 Lakhs",
+            "₹540 Lakhs",
+            "+350%"
+          ],
+          [
+            "Active Customers",
+            "2,000",
+            "10,000",
+            "+400%"
+          ],
+          [
+            "Conversion Rate",
+            "15%",
+            "28%",
+            "+13 pts"
+          ],
+          [
+            "Average Order Value",
+            "₹6,000",
+            "₹7,500",
+            "+25%"
+          ],
+          [
+            "ROAS (Ad Spend)",
+            "3.2x",
+            "6.8x",
+            "+112%"
+          ]
+        ]
+      },
+      "quote": {
+        "body": "Adomantra transformed our marketplace strategy from a fragmented experiment into a high‑velocity growth engine. The revenue lift and customer acquisition we achieved together have set a new benchmark for our digital ambitions.",
+        "author": "Anand Sharma",
+        "authorTitle": "Head of Digital Channels, Bajaj Capital"
+      }
+    },
+    "summaryFooter": {
+      "title": "Key Takeaways",
+      "items": [
+        "<strong>Unified Data Backbone:</strong> Centralizing product, pricing, and inventory data eliminated duplication and enabled real‑time decision making.",
+        "<strong>Dynamic Pricing & AI:</strong> Leveraging marketplace algorithms and predictive analytics drove higher visibility and conversion.",
+        "<strong>End‑to‑End Fulfilment:</strong> Synchronizing KYC, loan disbursement, and inventory reduced friction, boosting trust and repeat purchases.",
+        "<strong>Scalable Framework:</strong> The three‑phase approach ensured sustainable growth and a clear roadmap for future expansion."
+      ]
+    }
+  }
+]

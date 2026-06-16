@@ -1,0 +1,162 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "slug": "what-are-rich-media-ads-and-how-can-they-boost-engagement",
+      "author": "Adomantra Editorial",
+      "category": "AdTech",
+      "year": "2026",
+      "title": "What Are Rich Media Ads and How Can They Boost Engagement?",
+      "images": {
+        "hero": {
+          "src": "https://www.adomantra.com/public/blogs/blog-155.jpg",
+          "alt": "What Are Rich Media Ads and How Can They Boost Engagement?"
+        },
+        "thumb": {
+          "src": "https://www.adomantra.com/public/uploads/67ac740f443ae..jpg",
+          "alt": "Rich Media Ads Engagement"
+        }
+      },
+      "seo": {
+        "title": "What Are Rich Media Ads and How Can They Boost Engagement?",
+        "description": "Traditional banners don’t cut it anymore. Learn how rich media ads boost engagement by up to 267% through interactive videos, carousels, maps, and gamification.",
+        "tags": ["Rich Media", "Ad Engagement", "Interactive Ads", "AdTech", "Adomantra"]
+      },
+      "content": {
+        "introduction": "Ever feel like your ads just don’t stick? That’s because traditional banners don’t cut it anymore. Today’s consumers scroll fast. They ignore static ads. So how do you grab attention and make an impact? Enter rich media ads—the future of digital advertising. Rich media isn’t just about showing ads. It’s about creating an experience. Think interactive videos, dynamic animations, and clickable content that makes users stop, look, and engage. Want to stand out? This blog will show you how rich media ads can boost engagement, keep your audience hooked, and drive real results!",
+        "sections": [
+          {
+            "title": "What Are Rich Media Ads?",
+            "text": "Let’s start with the basics. Rich media ads are not your average static banners. They’re dynamic, interactive, and packed with features that make users want to engage. Imagine an ad that plays a video when you hover over it. Or one where you can swipe through products or even play a mini-game. Here’s the magic: Rich media ads can adapt to users. They fit any screen size. They respond to clicks, swipes, or even hover actions. Fact: Rich media ads can increase click-through rates (CTR) by up to 267% compared to standard banners. Think of them as ads that don’t just tell a story—they invite your audience to be part of it.",
+            "image": "https://www.adomantra.com/public/blogs/blog-155.jpg",
+            "layout": {
+              "position": "center",
+              "aspectRatio": "21/9"
+            }
+          },
+          {
+            "title": "Why Do Rich Media Ads Matter?",
+            "text": "Because the old ways aren’t working anymore. Static banners? People skip them. Regular ads? They’re invisible. But rich media? It stops the scroll. It holds attention. And most importantly, it drives action. When users interact with an ad, their brand recall increases dramatically, paving the way for better conversions.",
+            "image": "https://www.adomantra.com/public/uploads/67ac740f443ae..jpg",
+            "layout": {
+              "position": "left",
+              "aspectRatio": "1/1"
+            }
+          },
+          {
+            "title": "1. Carousel Ads: A Showcase for Your Products",
+            "text": "Highlight multiple offerings in one ad. Interactive carousel ads allow businesses to display a collection of products or services in a single ad. Users can browse through various options effortlessly, making it a great way to showcase versatility. Maximize ad efficiency by presenting multiple products in one space, reducing the need for additional campaigns, while tracking customer preferences with click data.",
+            "image": "https://www.adomantra.com/public/uploads/67ac73d125465..gif",
+            "layout": {
+              "position": "right",
+              "aspectRatio": "1/1"
+            }
+          },
+          {
+            "title": "2. Video-Powered Rich Media",
+            "text": "Build strong brand awareness. Video ads enhance user engagement by combining visual storytelling with interactivity. They are ideal for explaining complex concepts or showcasing products dynamically. Saves on traditional video production by embedding videos directly into digital banners, reaching a broader audience through engaging, shareable content.",
+            "image": "https://www.adomantra.com/public/uploads/67ac73edf021d..gif",
+            "layout": {
+              "position": "left",
+              "aspectRatio": "1/1"
+            }
+          },
+          {
+            "title": "3. Location-Based Map Ads",
+            "text": "Attract local customers. Ads incorporating maps or geotargeting enable businesses to highlight specific locations, driving foot traffic to physical stores. Pinpoint areas of high engagement for smarter campaign planning, while giving customers immediate access to nearby store locations or services in user-friendly formats.",
+            "image": "https://www.adomantra.com/public/blogs/blog-155.jpg",
+            "layout": {
+              "position": "center",
+              "aspectRatio": "21/9"
+            }
+          },
+          {
+            "title": "4. Interactive Flip Cards",
+            "text": "Drive higher engagement rates. Flip card ads use a playful yet informative format, flipping to reveal details upon interaction. Present multiple features in a compact, creative manner. Eliminate the need for separate ads by embedding all details within one unit, giving customers a gamified, enjoyable experience.",
+            "image": "https://www.adomantra.com/public/uploads/67ac740f443ae..jpg",
+            "layout": {
+              "position": "right",
+              "aspectRatio": "1/1"
+            }
+          },
+          {
+            "title": "5. Form-Fill Ads for Seamless Lead Generation",
+            "text": "Collect customer data efficiently. Form-fill ads simplify lead generation by integrating interactive forms directly into ad units. Streamline data capture without needing external landing pages, reducing lead drop-offs with minimal navigation steps for the user.",
+            "image": "https://www.adomantra.com/public/uploads/67ac73d125465..gif",
+            "layout": {
+              "position": "left",
+              "aspectRatio": "1/1"
+            }
+          },
+          {
+            "title": "6. Drag-and-Drop Engagement Ads",
+            "text": "Immerse users in your product. Ads with drag-and-drop functionalities allow users to interact creatively with product visuals, fostering a hands-on experience. This reduces the need for physical product demonstrations and generates excitement around product features.",
+            "image": "https://www.adomantra.com/public/blogs/blog-155.jpg",
+            "layout": {
+              "position": "center",
+              "aspectRatio": "21/9"
+            }
+          },
+          {
+            "title": "7. Universal Link Integration Ads",
+            "text": "Simplify the user journey. Universal link ads guide users directly to a mobile app or its respective app store page, minimizing friction. Streamline the user's journey with single-tap app access, eliminating multiple steps and boosting download rates.",
+            "image": "https://www.adomantra.com/public/uploads/67ac73edf021d..gif",
+            "layout": {
+              "position": "right",
+              "aspectRatio": "1/1"
+            }
+          },
+          {
+            "title": "8. Social Media Boost Ads",
+            "text": "Amplify your online presence. Boost your social media engagement and attract new followers by placing social content in rich media formats across external platforms. Enhance brand visibility beyond social networks with production-ready templates.",
+            "image": "https://www.adomantra.com/public/uploads/67ac740f443ae..jpg",
+            "layout": {
+              "position": "left",
+              "aspectRatio": "1/1"
+            }
+          },
+          {
+            "title": "9. Gamified Ads for Active Engagement",
+            "text": "Boost user interaction through play. Gamified rich media ads add an element of fun and competition, encouraging users to actively engage with your content. Increase dwell time as users interact with gamified elements, creating memorable experiences.",
+            "image": "https://www.adomantra.com/public/uploads/67ac73d125465..gif",
+            "layout": {
+              "position": "right",
+              "aspectRatio": "1/1"
+            }
+          },
+          {
+            "title": "10. Augmented Reality (AR) Ads for Immersive Experiences",
+            "text": "Let users visualize products in real-world settings. AR-powered rich media ads allow users to interact with products in a virtual environment, bridging the gap between online and in-person shopping, letting users try products virtually.",
+            "image": "https://www.adomantra.com/public/uploads/67ac740f443ae..jpg",
+            "layout": {
+              "position": "center",
+              "aspectRatio": "21/9"
+            }
+          }
+        ],
+        "faqs": [
+          {
+            "question": "What exactly are CTV ads, and how do they work?",
+            "answer": "CTV ads are digital ads shown on internet-connected TVs and streaming devices. They use data to target specific audiences based on their interests, behavior, and location, making ads more relevant and less intrusive."
+          },
+          {
+            "question": "How are CTV ads different from traditional TV ads?",
+            "answer": "Unlike traditional ads, which are broad and untargeted, CTV ads use viewer data to deliver personalized, relevant ads. This means you're more likely to see ads that match your interests and viewing habits. At Adomantra, we specialize in creating hyper-targeted campaigns to make sure your ads hit the mark."
+          },
+          {
+            "question": "Can CTV ads be interactive?",
+            "answer": "Yes! CTV ads can include clickable prompts, QR codes, and even in-TV shopping, making ads more engaging and action-oriented."
+          },
+          {
+            "question": "How can I measure the success of my CTV ads?",
+            "answer": "With CTV ads, you get real-time metrics like impressions, clicks, and conversions, helping you track performance and adjust your campaigns on the fly. We offer detailed analytics to help you optimize your ad strategy for better results."
+          },
+          {
+            "question": "Are CTV ads affordable for small businesses?",
+            "answer": "CTV ads are flexible and cost-effective. You can start small, target specific areas, and scale up as you see results—perfect for local businesses. Let us help you craft a budget-friendly, targeted CTV strategy that works for you."
+          }
+        ]
+      }
+    }
+  ]
+}
