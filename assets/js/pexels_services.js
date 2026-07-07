@@ -184,7 +184,7 @@ function initPexelsServices() {
                 var delay = (0.2 * catIndex).toFixed(1);
 
                 var catHtml =
-                    '<div class="category-section mb-5 wow fadeInUp" data-wow-delay="' + delay + 's">' +
+                    '<div class="category-section mb-5 " data-wow-delay="' + delay + 's">' +
                     '<div class="row align-items-end mb-4">' +
                     '<div class="col-lg-8">' +
                     '<h3 class="category-title mb-2" style="border-left:5px solid var(--primary-color);padding-left:15px">' + categoryHtml + '</h3>' +

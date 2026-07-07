@@ -39,14 +39,14 @@ document.addEventListener("DOMContentLoaded", async function () {
         imgBlog1,
         imgBlog2
     ] = await Promise.all([
-        fetchPexelsImage('real estate property modern building aerial', 'assets/imgs/project/project-img-1.jpg'),
-        fetchPexelsImage('mobile app technology smartphone ride sharing urban', 'assets/imgs/project/project-img-1.jpg'),
-        fetchPexelsImage('luxury jewellery gold diamond ring premium store', 'assets/imgs/project/project-img-2.jpg'),
-        fetchPexelsImage('food delivery restaurant meal packaging courier', 'assets/imgs/project/project-img-2.jpg'),
-        fetchPexelsImage('beauty skin clinic healthcare consultation doctor woman', 'assets/imgs/project/project-img-3.jpg'),
-        fetchPexelsImage('online education student learning classroom technology', 'assets/imgs/project/project-img-3.jpg'),
-        fetchPexelsImage('generative AI creative design digital art media', 'assets/imgs/blog/blog.jpg'),
-        fetchPexelsImage('artificial intelligence business technology future', 'assets/imgs/blog/blog-2.jpg'),
+        fetchPexelsImage('real estate property modern building aerial', 'assets/images/project/project-img-1.jpg'),
+        fetchPexelsImage('mobile app technology smartphone ride sharing urban', 'assets/images/project/project-img-1.jpg'),
+        fetchPexelsImage('luxury jewellery gold diamond ring premium store', 'assets/images/project/project-img-2.jpg'),
+        fetchPexelsImage('food delivery restaurant meal packaging courier', 'assets/images/project/project-img-2.jpg'),
+        fetchPexelsImage('beauty skin clinic healthcare consultation doctor woman', 'assets/images/project/project-img-3.jpg'),
+        fetchPexelsImage('online education student learning classroom technology', 'assets/images/project/project-img-3.jpg'),
+        fetchPexelsImage('generative AI creative design digital art media', 'assets/images/blog/blog.jpg'),
+        fetchPexelsImage('artificial intelligence business technology future', 'assets/images/blog/blog-2.jpg'),
     ]);
 
     // ── Case Studies Section ─────────────────────────────────────────────────
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                         
                         <div class="approach-box gsap-reveal-column">
                             <h2 class="title">Consumer <br> Intelligence 
-                                <img src="assets/imgs/shape/shape-13.webp" alt="icon">
+                                <img src="assets/images/shape/shape-13.webp" alt="icon">
                             </h2>
                             <div class="approach-list">
                                 <ul>
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
                         <div class="approach-box gsap-reveal-column">
                             <h2 class="title">Strategic <br> Innovation 
-                                <img src="assets/imgs/shape/shape-13.webp" alt="icon">
+                                <img src="assets/images/shape/shape-13.webp" alt="icon">
                             </h2>
                             <div class="approach-list">
                                 <ul>

@@ -301,7 +301,7 @@
   var SIZES = ['ado-hs-card--lg', 'ado-hs-card--sm', 'ado-hs-card--xl', 'ado-hs-card--md', 'ado-hs-card--lg', 'ado-hs-card--md', 'ado-hs-card--sm', 'ado-hs-card--xl', 'ado-hs-card--md', 'ado-hs-card--lg', 'ado-hs-card--sm', 'ado-hs-card--md'];
   var ROTS = ['ado-hs-card--r1', 'ado-hs-card--r2', 'ado-hs-card--r3', 'ado-hs-card--r4', 'ado-hs-card--r5', 'ado-hs-card--r6'];
 
-  var FALLBACK = 'assets/imgs/inner/team/team-thumb1_2.jpg';
+  var FALLBACK = 'assets/images/inner/team/team-thumb1_2.jpg';
 
   var LABELS = (typeof ADOMANTRA_TEAM !== 'undefined' && ADOMANTRA_TEAM.length)
     ? ADOMANTRA_TEAM
@@ -495,28 +495,137 @@ function initPexelsServices() {
                         );
                     }).join('');
 
-                    var slideHtml =
-                        '<div class="swiper-slide h-auto">' +
-                        '<div class="project-area7__card section-item rr-ov-hidden features-card h-100" style="padding:0!important;margin:0;">' +
-                        '<div class="project-area7__card-content order-2 order-sm-1">' +
-                        '<a href="service-details.html?id=' + service.id + '" class="rr-btn contact-drawer-trigger">' +
-                        '<span class="btn-wrap">' +
-                        '<span class="text-one">' +
-                        '<i class="fa-solid fa-arrow-right"></i>' +
-                        '</span>' +
-                        '<span class="text-two">' +
-                        '<i class="fa-solid fa-arrow-right"></i>' +
-                        '</span>' +
-                        '</span>' +
-                        '</a>' +
-                        '<div class="project-area7__card-year"><i class="' + service.icon + '"></i></div>' +
-                        '<h3 class="project-area7__card-title">' + service.title + '</h3>' +
-                        '<p class="project-area7__card-desc" style="display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;height:4.5em;">' + service.metaDescription + '</p>' +
-                        '<div class="project-area7__card-tags flex-column d-none d-md-block">' + tagsHtml + '</div>' +
-                        '</div>' +
-                        '<div class="project-area7__card-thumb">' +
-                        '<img src="' + pexelsUrl + '" alt="' + service.title + '" style="object-fit:cover;width:100%;height:100%; aspect-ratio: 1/1">' +
-                        '</div></div></div>';
+                    var isServicePage = window.location.pathname.indexOf('service.html') !== -1;
+                    var slideHtml = '';
+
+                    if (isServicePage) {
+                        var extraDataHtml = '';
+                        var overviewText = service.description || service.metaDescription;
+                        if (service.sections) {
+                            if (service.sections.overview && service.sections.overview.content) {
+                                overviewText = service.sections.overview.content;
+                            }
+
+                            // 1. Core Benefits / Solutions (Limit to 3)
+                            var benefitsItems = [];
+                            if (service.sections.benefits && service.sections.benefits.benefits) {
+                                benefitsItems = service.sections.benefits.benefits;
+                            } else if (service.sections.solutions && service.sections.solutions.solutions) {
+                                benefitsItems = service.sections.solutions.solutions;
+                            }
+                            
+                            var benefitsHtml = '';
+                            if (benefitsItems && benefitsItems.length > 0) {
+                                benefitsHtml += '<div class="ado-expanded-features-grid mt-4">';
+                                benefitsHtml += '  <h5 class="ado-section-subtitle-small">Key Benefits</h5>';
+                                benefitsHtml += '  <ul class="ado-features-list">';
+                                $.each(benefitsItems.slice(0, 3), function(_, item) {
+                                    var iconClass = item.icon || 'fa-solid fa-check';
+                                    benefitsHtml += '    <li>';
+                                    benefitsHtml += '<div class="fl gap-1">';
+                                    benefitsHtml += '      <span class="feature-icon"><i class="' + iconClass + '"></i></span>';
+                                    benefitsHtml += '      <div class="feature-text">';
+                                    benefitsHtml += '        <strong>' + item.title + '<br></strong> ' + item.description;
+                                    benefitsHtml += '      </div>';
+                                    benefitsHtml += '      </div>';
+                                    benefitsHtml += '    </li>';
+                                });
+                                benefitsHtml += '  </ul>';
+                                benefitsHtml += '</div>';
+                            }
+
+                            // 2. Steps / Execution Process
+                            var stepsItems = [];
+                            if (service.sections.overview && service.sections.overview.steps) {
+                                stepsItems = service.sections.overview.steps;
+                            }
+                            var stepsHtml = '';
+                            if (stepsItems && stepsItems.length > 0) {
+                                stepsHtml += '<div class="ado-expanded-steps-grid mt-4">';
+                                stepsHtml += '  <h5 class="ado-section-subtitle-small">Execution Process</h5>';
+                                stepsHtml += '  <div class="ado-steps-flow">';
+                                $.each(stepsItems, function(idx, step) {
+                                    stepsHtml += '    <div class="ado-step-item mb-2 gap-2">';
+                                    stepsHtml += '      <li class="step-label">' + step + '</li>';
+                                    stepsHtml += '    </div>';
+                                });
+                                stepsHtml += '  </div>';
+                                stepsHtml += '</div>';
+                            }
+
+                            extraDataHtml = benefitsHtml + stepsHtml;
+                        }
+
+                        slideHtml =
+                            '<div class="swiper-slide h-auto">' +
+                            '<div class="project-area7__card accordion-card section-item rr-ov-hidden ado-accordion-card-custom" data-image="' + pexelsUrl + '">' +
+                            '  <div class="project-area7__card-header ado-accordion-card-header">' +
+                            
+                            '    <div class="header-main-info ado-header-main-info">' +
+                            '      <div class="project-area7__card-year"><i class="' + service.icon + '"></i></div>' +
+                            '      <h3 class="project-area7__card-title ado-header-main-info-title">' + service.title + '</h3>' +
+                            '    </div>' +
+                            '    <p class="project-area7__card-desc">' + service.metaDescription + '</p>' +
+                            '    <div class="accordion-toggle-btn ado-accordion-toggle-btn">' +
+                            '      <i class="fa-light fa-plus"></i>' +
+                            '    </div>' +
+                            '  </div>' +
+                            '  <div class="project-area7__card-body ado-accordion-card-body">' +
+                            '    <div class="body-inner-content ado-body-inner-content">' +
+                            '      <div class="grc g-4 align-items-center">' +
+                            '        <div class="grc-12">' +
+                            '          <div class="expanded-details-text ado-expanded-details-text">' +
+                            '            <h4>Service Overview</h4>' +
+                            '            <p>' + overviewText + '</p>' +
+                            '            ' + extraDataHtml +
+                            '            <div class="ado-core-focus-wrap">' +
+                            '              <span>Core Focus:</span>' +
+                            '              <div class="d-flex flex-wrap gap-2 mt-2">' + tagsHtml + '</div>' +
+                            '            </div>' +
+                            '            <div class="mt-4 d-flex flex-wrap gap-3">' +
+                            '              <a href="javascript:void(0)" class="rr-btn contact-drawer-trigger">' +
+                            '                <span class="btn-wrap">' +
+                            '                  <span class="text-one">Book This Service</span>' +
+                            '                  <span class="text-two">Book This Service</span>' +
+                            '                </span>' +
+                            '              </a>' +
+                            '              <a href="service-details.html?id=' + service.id + '" class="rr-btn is-btn-outline ado-action-btn-outline">' +
+                            '                <span class="btn-wrap">' +
+                            '                  <span class="text-one">Learn More</span>' +
+                            '                  <span class="text-two">Learn More</span>' +
+                            '                </span>' +
+                            '              </a>' +
+                            '            </div>' +
+                            '          </div>' +
+                            '        </div>' +
+                            '      </div>' +
+                            '    </div>' +
+                            '  </div>' +
+                            '</div></div>';
+                    } else {
+                        slideHtml =
+                            '<div class="swiper-slide h-auto">' +
+                            '<div class="project-area7__card section-item rr-ov-hidden features-card h-100 ado-index-card-custom">' +
+                            '<div class="project-area7__card-content order-2 order-sm-1">' +
+                            '<a href="service-details.html?id=' + service.id + '" class="rr-btn contact-drawer-trigger">' +
+                            '<span class="btn-wrap">' +
+                            '<span class="text-one">' +
+                            '<i class="fa-solid fa-arrow-right"></i>' +
+                            '</span>' +
+                            '<span class="text-two">' +
+                            '<i class="fa-solid fa-arrow-right"></i>' +
+                            '</span>' +
+                            '</span>' +
+                            '</a>' +
+                            '<div class="project-area7__card-year"><i class="' + service.icon + '"></i></div>' +
+                            '<h3 class="project-area7__card-title">' + service.title + '</h3>' +
+                            '<p class="project-area7__card-desc ado-index-card-desc">' + service.metaDescription + '</p>' +
+                            '<div class="project-area7__card-tags flex-column d-none d-md-block">' + tagsHtml + '</div>' +
+                            '</div>' +
+                            '<div class="project-area7__card-thumb">' +
+                            '<img src="' + pexelsUrl + '" alt="' + service.title + '" class="ado-index-card-img">' +
+                            '</div></div></div>';
+                    }
 
                     slideDeferred.resolve(slideHtml);
                 });
@@ -524,36 +633,73 @@ function initPexelsServices() {
                 slidePromises.push(slideDeferred.promise());
             });
 
+            var isServicePage = window.location.pathname.indexOf('service.html') !== -1;
+            if (isServicePage) {
+                var catImageDeferred = $.Deferred();
+                PexelsLoader.fetch(category + ' digital marketing corporate background', true, 'large').then(function(url) {
+                    catImageDeferred.resolve(url);
+                });
+                slidePromises.push(catImageDeferred.promise());
+            }
+
             var catDeferred = $.Deferred();
 
             $.when.apply($, slidePromises).then(function () {
-                var slidesHtml = Array.prototype.slice.call(arguments).join('');
+                var isServicePage = window.location.pathname.indexOf('service.html') !== -1;
+                var catImageUrl = '';
+                var slidesHtml = '';
+                if (isServicePage) {
+                    var resolvedValues = Array.prototype.slice.call(arguments);
+                    catImageUrl = resolvedValues.pop();
+                    slidesHtml = resolvedValues.join('');
+                } else {
+                    slidesHtml = Array.prototype.slice.call(arguments).join('');
+                }
                 var delay      = (0.2 * catIndex).toFixed(1);
+                var catHtml    = '';
 
-                var catHtml =
-                    '<div class="category-section mb-5 wow fadeInUp" data-wow-delay="' + delay + 's">' +
-                    '<div class="row align-items-end mb-4">' +
-                    '<div class="col-lg-8">' +
-                    '<h3 class="category-title mb-2" style="border-left:5px solid var(--primary-color);padding-left:15px">' + categoryHtml + '</h3>' +
-                    '<p class="category-desc text-muted mb-0" style="max-width:600px;padding-left:15px;">' + (description || '') + '</p>' +
-                    '</div>' +
-                    '<div class="col-lg-4 d-flex justify-content-end gap-3 pb-2 d-none d-lg-flex">' +
-                    '<div class="inner-nav-btn prev-' + catIndex + '"><i class="fa-solid fa-chevron-left"></i></div>' +
-                    '<div class="inner-nav-btn next-' + catIndex + '"><i class="fa-solid fa-chevron-right"></i></div>' +
-                    '</div></div>' +
-                    '<div class="swiper category-swiper-' + catIndex + ' rr-ov-hidden" style="padding:20px 0;">' +
-                    '<div class="swiper-wrapper">' + slidesHtml + '</div>' +
-                    '<div class="swiper-pagination pagination-' + catIndex + ' mt-4"></div>' +
-                    '</div>' +
-                    '</div>';
+                if (isServicePage) {
+                    // Grid-based layout for service.html only
+                    catHtml =
+                        '<div class="category-section grc" data-wow-delay="' + delay + 's" data-default-image="' + catImageUrl + '" data-default-desc="' + (description || '').replace(/"/g, '&quot;') + '">' +
+                        '<div class="grc-4">' +
+                        '<div class="ado-sticky-column">' +
+                        '<h3 class="category-title mb-2 ado-category-title-custom">' + categoryHtml + '</h3>' +
+                        '<div class="ado-category-img-wrap"><img src="' + catImageUrl + '" alt="' + category + '"></div>' +
+                        '</div>' +
+                        '</div>' +
+                        '<div class="grc-2"></div>' +
+                        '<div class="grc-6">' +
+                        slidesHtml.replace(/swiper-slide/g, 'grc-12 accordion-service') +
+                        '</div>' +
+                        '</div>';
+                } else {
+                    // Swiper slider layout for other pages (like index.html)
+                    catHtml =
+                        '<div class="category-section mb-5 " data-wow-delay="' + delay + 's">' +
+                        '<div class="row align-items-end mb-4">' +
+                        '<div class="col-lg-8">' +
+                        '<h3 class="category-title mb-2 ado-category-title-custom">' + categoryHtml + '</h3>' +
+                        '<p class="category-desc text-muted mb-0 ado-category-desc-custom">' + (description || '') + '</p>' +
+                        '</div>' +
+                        '<div class="col-lg-4 d-flex justify-content-end gap-3 pb-2 d-none d-lg-flex">' +
+                        '<div class="inner-nav-btn prev-' + catIndex + '"><i class="fa-solid fa-chevron-left"></i></div>' +
+                        '<div class="inner-nav-btn next-' + catIndex + '"><i class="fa-solid fa-chevron-right"></i></div>' +
+                        '</div></div>' +
+                        '<div class="swiper category-swiper-' + catIndex + ' ado-swiper-padding-custom">' +
+                        '<div class="swiper-wrapper">' + slidesHtml + '</div>' +
+                        '<div class="swiper-pagination pagination-' + catIndex + ' mt-4"></div>' +
+                        '</div>' +
+                        '</div>';
+                }
 
-                catDeferred.resolve({ catIndex: catIndex, html: catHtml, slideCount: grouped[category].length });
+                catDeferred.resolve({ catIndex: catIndex, html: catHtml, slideCount: grouped[category].length, isServicePage: isServicePage });
             });
 
             categoryPromises.push(catDeferred.promise());
         });
 
-        /* ── Inject HTML in original order, then init Swipers ── */
+        /* ── Inject HTML in original order, then init Swipers/Accordions ── */
         $.when.apply($, categoryPromises).then(function () {
             var results = $.map(Array.prototype.slice.call(arguments), function (r) { return r; });
 
@@ -561,30 +707,156 @@ function initPexelsServices() {
 
             $grid.html($.map(results, function (r) { return r.html; }).join(''));
 
-            $.each(results, function (_, r) {
-                new Swiper('.category-swiper-' + r.catIndex, {
-                    slidesPerView: 1,
-                    spaceBetween:  30,
-                    grabCursor:    true,
-                    loop:          r.slideCount > 2,
-                    speed:         800,
-                    autoplay: {
-                        delay:               4000,
-                        disableOnInteraction: false,
-                        pauseOnMouseEnter:    true
-                    },
-                    navigation: {
-                        nextEl: '.next-' + r.catIndex,
-                        prevEl: '.prev-' + r.catIndex
-                    },
-                    breakpoints: {
-                        768:  { slidesPerView: 1 },
-                        1200: { slidesPerView: 2 }
-                    },
-                    observer:       true,
-                    observeParents: true
+            var isServicePage = window.location.pathname.indexOf('service.html') !== -1;
+            if (isServicePage) {
+                // Toggle click handler on header
+                $('.project-area7__card-header').off('click').on('click', function() {
+                    var $card = $(this).closest('.project-area7__card');
+                    var $body = $card.find('.project-area7__card-body');
+                    var $icon = $(this).find('.accordion-toggle-btn i');
+
+                    if ($card.hasClass('active')) {
+                        $card.removeClass('active');
+                        $body.css('max-height', '0px');
+                        $icon.removeClass('fa-xmark').addClass('fa-plus');
+                    } else {
+                        // Close other items in the same section
+                        var $section = $(this).closest('.category-section');
+                        $section.find('.project-area7__card.active').removeClass('active')
+                                .find('.project-area7__card-body').css('max-height', '0px');
+                        $section.find('.accordion-toggle-btn i').removeClass('fa-xmark').addClass('fa-plus');
+
+                        $card.addClass('active');
+                        $body.css('max-height', $body[0].scrollHeight + 'px');
+                        $icon.removeClass('fa-plus').addClass('fa-xmark');
+
+                        // Smoothly scroll to the clicked card header to align it and prevent upward jumps
+                        setTimeout(function() {
+                            if (typeof ScrollSmoother !== 'undefined' && ScrollSmoother.get()) {
+                                ScrollSmoother.get().scrollTo($card[0], true, "top 120px");
+                            } else {
+                                $('html, body').animate({
+                                    scrollTop: $card.offset().top - 120
+                                }, 300);
+                            }
+                        }, 50);
+                    }
+
+                    // Refresh ScrollTrigger heights after accordion collapse/expand transition (400ms)
+                    setTimeout(function() {
+                        if (typeof ScrollTrigger !== 'undefined') {
+                            ScrollTrigger.refresh();
+                        }
+                    }, 450);
                 });
-            });
+
+                // GSAP smooth transition for Category card (image, title, description) on hover
+                $('.project-area7__card.accordion-card').off('mouseenter mouseleave mousemove').on('mouseenter', function() {
+                    if ($(this).hasClass('active')) return;
+                    
+                    var $section = $(this).closest('.category-section');
+                    var $img = $section.find('.ado-category-img-wrap img');
+                    var $descWrap = $section.find('.ado-category-desc-custom');
+
+                    var newImgUrl = $(this).attr('data-image');
+                    var serviceTitle = $(this).find('.project-area7__card-title').text();
+                    var serviceDesc = $(this).find('.project-area7__card-desc').text();
+
+                    gsap.killTweensOf([$img, $descWrap]);
+
+                    gsap.to([$img, $descWrap], {
+                        opacity: 0,
+                        y: -5,
+                        duration: 0.15,
+                        onComplete: function() {
+                            $img.attr('src', newImgUrl);
+                            $descWrap.html('<h4 class="ado-hover-title" style="font-size: var(--text-2xl); font-family: var(--style-blogs); font-style: italic; margin-top: 15px; margin-bottom: 8px; color: var(--neutral-800);">' + serviceTitle + '</h4><p class="ado-hover-desc">' + serviceDesc + '</p>');
+                            gsap.to([$img, $descWrap], {
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.25,
+                                ease: 'power2.out'
+                            });
+                        }
+                    });
+                }).on('mouseleave', function() {
+                    var $section = $(this).closest('.category-section');
+                    var $img = $section.find('.ado-category-img-wrap img');
+                    var $descWrap = $section.find('.ado-category-desc-custom');
+
+                    var defaultImgUrl = $section.attr('data-default-image');
+                    var defaultDesc = $section.attr('data-default-desc');
+
+                    gsap.killTweensOf([$img, $descWrap]);
+
+                    gsap.to([$img, $descWrap], {
+                        opacity: 0,
+                        y: 5,
+                        duration: 0.15,
+                        onComplete: function() {
+                            $img.attr('src', defaultImgUrl);
+                            $descWrap.html(defaultDesc);
+                            gsap.to([$img, $descWrap], {
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.25,
+                                ease: 'power2.out'
+                            });
+                        }
+                    });
+                });
+
+                // Initialize GSAP ScrollTrigger pinning for sticky left column (compatible with ScrollSmoother)
+                if (typeof ScrollTrigger !== 'undefined' && typeof gsap !== 'undefined') {
+                    var mm = gsap.matchMedia();
+                    mm.add("(min-width: 992px)", function() {
+                        $('.category-section').each(function() {
+                            var $section = $(this);
+                            var $sticky = $section.find('.ado-sticky-column');
+                            var $right = $section.find('.grc-6');
+                            if ($sticky.length && $right.length) {
+                                ScrollTrigger.create({
+                                    trigger: $sticky[0],
+                                    start: "top 120px",
+                                    end: function() {
+                                        return "+=" + ($right.outerHeight() - $sticky.outerHeight());
+                                    },
+                                    pin: true,
+                                    pinSpacing: false,
+                                    invalidateOnRefresh: true
+                                });
+                            }
+                        });
+                    });
+                }
+            } else {
+                $.each(results, function (_, r) {
+                    if (!r.isServicePage) {
+                        new Swiper('.category-swiper-' + r.catIndex, {
+                            slidesPerView: 1,
+                            spaceBetween:  30,
+                            grabCursor:    true,
+                            loop:          r.slideCount > 2,
+                            speed:         800,
+                            autoplay: {
+                                delay:               4000,
+                                disableOnInteraction: false,
+                                pauseOnMouseEnter:    true
+                            },
+                            navigation: {
+                                nextEl: '.next-' + r.catIndex,
+                                prevEl: '.prev-' + r.catIndex
+                            },
+                            breakpoints: {
+                                768:  { slidesPerView: 1 },
+                                1200: { slidesPerView: 2 }
+                            },
+                            observer:       true,
+                            observeParents: true
+                        });
+                    }
+                });
+            }
         });
 
     }).fail(function () {

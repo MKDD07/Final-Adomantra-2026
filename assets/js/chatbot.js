@@ -452,7 +452,7 @@ Rules:
 
   /* Mobile */
   @media (max-width: 440px) {
-    #ado-chat-window { width: calc(100vw - 18px); right: 9px; bottom: 96px; }
+    #ado-chat-window { bottom: 96px; }
     #ado-chat-fab    { right: 18px; bottom: 22px; }
   }
   `;

@@ -428,7 +428,7 @@ $(document).ready(function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
     const announcementBar = document.querySelector(".announcement-bar-wrapper");
-    const header = document.querySelector(".header-area-2");
+    const header = document.querySelector(".header");
     let lastScrollTop = 0;
 
     function getAnnouncementHeight() {

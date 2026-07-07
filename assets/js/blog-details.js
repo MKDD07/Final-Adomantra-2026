@@ -9,9 +9,9 @@
 
   /* ─── Fallback image pool ────────────────────────────────────────────── */
   const FALLBACKS = [
-    'assets/imgs/inner/blog-details/blog-details1_1.jpg',
-    'assets/imgs/inner/blog-details/blog-details1_2.jpg',
-    'assets/imgs/inner/blog-details/blog-details1_3.jpg',
+    'assets/images/inner/blog-details/blog-details1_1.jpg',
+    'assets/images/inner/blog-details/blog-details1_2.jpg',
+    'assets/images/inner/blog-details/blog-details1_3.jpg',
     'assets/images/service/services-card/service_0001.jpg',
     'assets/images/service/services-card/service_0002.jpg',
   ];

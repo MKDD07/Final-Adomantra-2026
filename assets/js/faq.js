@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const mbClass = index === activeCategories.length - 1 ? '' : 'mb-5';
 
             html += `
-                <div class="faq-category-box ${mbClass} wow fadeInUp" data-wow-delay="0.2s">
+                <div class="faq-category-box ${mbClass} " data-wow-delay="0.2s">
                     <div class="faq-category-header mb-4">
                         <h2 class="category-title">${cat.name}</h2>
                         <div class="category-divider"></div>

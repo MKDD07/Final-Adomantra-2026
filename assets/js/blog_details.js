@@ -142,7 +142,7 @@ async function renderSidebar(allBlogs, currentBlog) {
         for (const rb of recentBlogs) {
             const rbImage = rb.cover_image?.src || await fetchPexelsImage(rb.seo.title + " tech");
             recentHtml += `
-                <div class="main-sidebar2-widget__post-items wow fadeInUp">
+                <div class="main-sidebar2-widget__post-items ">
                     <div class="main-sidebar2-widget__post-items-thumb">
                         <img src="${rbImage}" alt="${rb.seo.title}" style="width:70px; height:70px; object-fit:cover;">
                     </div>

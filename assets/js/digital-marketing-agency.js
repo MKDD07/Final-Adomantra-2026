@@ -47,7 +47,7 @@ function renderServices() {
       .join('');
 
     return `
-      <div class="service-section-3__item wow fadeInUp" data-wow-delay="${service.wow_delay}">
+      <div class="service-section-3__item " data-wow-delay="${service.wow_delay}">
         <div class="service-section-3__number">
           <span>${service.id}.</span>
         </div>
@@ -81,31 +81,31 @@ document.addEventListener('DOMContentLoaded', function () {
       year: "2012",
       title: "The Inception",
       desc: "Adomantra was founded with a mission to turn bold digital ideas into powerful, measurable results.",
-      img: "assets/imgs/home-2/milestone/milestone-1.png"
+      img: "assets/images/home-2/milestone/milestone-1.png"
     },
     {
       year: "2015",
       title: "ISO 9001:2015 Certified",
       desc: "Achieved the gold standard in quality management, ensuring excellence in every campaign we deliver.",
-      img: "assets/imgs/home-2/milestone/milestone-2.png"
+      img: "assets/images/home-2/milestone/milestone-2.png"
     },
     {
       year: "2018",
       title: "Redefining Digital",
       desc: "Innovation became our heartbeat as we started scaling premium automation for global brands.",
-      img: "assets/imgs/home-2/milestone/milestone-3.png"
+      img: "assets/images/home-2/milestone/milestone-3.png"
     },
     {
       year: "2021",
       title: "Reaching the Unimaginable",
       desc: "Expanded our technological reach, integrating AI to drive impact-driven marketing worldwide.",
-      img: "assets/imgs/home-2/milestone/milestone-4.png"
+      img: "assets/images/home-2/milestone/milestone-4.png"
     },
     {
       year: "2024",
       title: "Bold Ideas, Powerful Results",
       desc: "Today, we stand as a leading certified media company, continuing to push the boundaries of what's possible.",
-      img: "assets/imgs/home-2/milestone/milestone-1.png"
+      img: "assets/images/home-2/milestone/milestone-1.png"
     }
   ];
 
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (timelineContainer) {
     timelineContainer.innerHTML = adomantraMilestones.map((item, index) => `
             <div class="swiper-slide">
-                <div class="milestone-2__item wow fadeInUp" data-wow-delay="${0.2 + (index * 0.1)}s">
+                <div class="milestone-2__item " data-wow-delay="${0.2 + (index * 0.1)}s">
                     <div class="milestone-2__content">
                         <span>${item.year}</span>
                         <h6 class="title">${item.title}</h6>

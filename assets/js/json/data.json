@@ -9,7 +9,7 @@
       "order": 1,
       "metaDescription": "Connect with TV viewers in the streaming age. Our CTV advertising solutions deliver targeted, high-impact ads across connected devices with precise audience segmentation and real-time performance tracking.",
       "metaKeywords": "CTV advertising, connected TV ads, streaming ads, OTT advertising, video advertising, cord-cutting advertising",
-      "serviceIcon": "assets/imgs/inner/service-details/services_geo_001.png",
+      "serviceIcon": "assets/images/inner/service-details/services_geo_001.png",
       "serviceThumb": "assets/images/service/services-card/service_0001.jpg",
       "sections": {
         "hero": {
@@ -29,7 +29,7 @@
           "enabled": true,
           "type": "content_section",
           "title": "Connected TV Advertising Explained",
-          "image": "assets/imgs/inner/service-details/services_geo_002.jpg",
+          "image": "assets/images/inner/service-details/services_geo_002.jpg",
           "content": "In a revolutionary era, CTV advertising is referred to as the next growth in digital media. Unlike traditional broadcast television, it delivers ads programmatically to viewers streaming content across internet-connected devices. This way, our approach combines the broad reach of television with the precision targeting of digital marketing. Result? It allows brands to reach the right audience at the right moment with compelling video content on platforms like JioCinema, Disney+ Hotstar, Amazon Prime Video, etc. And the best part? They can measure every impression, view, and conversation in real time.",
           "steps": [
             "Audience Identification.",
@@ -140,7 +140,7 @@
           "id": "faq",
           "enabled": true,
           "type": "faq_section",
-          "title": "FAQs about <r>CTV Advertising</r>",
+          "title": "FAQs",
           "faqs": [
             {
               "question": "What is CTV advertising, and how is it different from traditional TV?",
@@ -244,35 +244,43 @@
           "benefits": [
             {
               "title": "Time-Saving Automation",
-              "description": "Eliminate manual ad placement processes. Programmatic automation handles buying, placement, and optimization 24/7, freeing your team for strategic initiatives."
+              "description": "Eliminate manual ad placement processes. Programmatic automation handles buying, placement, and optimization 24/7, freeing your team for strategic initiatives.",
+              "icon": "fa-solid fa-clock"
             },
             {
               "title": "Pinpoint Audience Targeting",
-              "description": "Reach specific demographics, interests, and behaviors with 2,500+ targeting combinations. Show ads only to people most likely to convert."
+              "description": "Reach specific demographics, interests, and behaviors with 2,500+ targeting combinations. Show ads only to people most likely to convert.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "Real-Time Optimization",
-              "description": "See campaign performance instantly and adjust strategies on the fly. Real-time data enables continuous improvement without campaign delays."
+              "description": "See campaign performance instantly and adjust strategies on the fly. Real-time data enables continuous improvement without campaign delays.",
+              "icon": "fa-solid fa-chart-line"
             },
             {
               "title": "Cost Efficiency",
-              "description": "Automated bidding ensures you pay optimal prices for premium placements. Eliminate wasted spend and maximize your advertising budget efficiency."
+              "description": "Automated bidding ensures you pay optimal prices for premium placements. Eliminate wasted spend and maximize your advertising budget efficiency.",
+              "icon": "fa-solid fa-hand-holding-dollar"
             },
             {
               "title": "Massive Audience Reach",
-              "description": "Access 1.5 billion+ global audiences across thousands of websites and platforms. Scale your brand presence across the entire digital ecosystem."
+              "description": "Access 1.5 billion+ global audiences across thousands of websites and platforms. Scale your brand presence across the entire digital ecosystem.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "Personalized Ad Experience",
-              "description": "Deliver customized creative and messaging to different audience segments. Personalization increases relevance, engagement, and conversion rates."
+              "description": "Deliver customized creative and messaging to different audience segments. Personalization increases relevance, engagement, and conversion rates.",
+              "icon": "fa-solid fa-users"
             },
             {
               "title": "Easy Campaign Scaling",
-              "description": "Expand campaigns across platforms, regions, and audience segments instantly. Maintain consistent messaging while reaching new markets."
+              "description": "Expand campaigns across platforms, regions, and audience segments instantly. Maintain consistent messaging while reaching new markets.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "Brand Safety & Transparency",
-              "description": "Know exactly where your ads appear and who sees them. Industry-leading brand safety tools protect your reputation and ad quality."
+              "description": "Know exactly where your ads appear and who sees them. Industry-leading brand safety tools protect your reputation and ad quality.",
+              "icon": "fa-solid fa-crown"
             }
           ]
         },
@@ -345,7 +353,7 @@
           "id": "faq",
           "enabled": true,
           "type": "faq_section",
-          "title": "Frequently Asked Questions About Programmatic Advertising",
+          "title": "<r>FAQs</r> <br> Programmatic Advertising",
           "faqs": [
             {
               "question": "What is the difference between programmatic advertising and traditional media buying?",
@@ -445,35 +453,43 @@
           "benefits": [
             {
               "title": "Immediate Visibility",
-              "description": "Appear at the top of search results instantly. Unlike SEO which takes months, PPC puts your ads in front of potential customers immediately."
+              "description": "Appear at the top of search results instantly. Unlike SEO which takes months, PPC puts your ads in front of potential customers immediately.",
+              "icon": "fa-solid fa-magnifying-glass"
             },
             {
               "title": "High-Intent Customer Targeting",
-              "description": "Reach people actively searching for your products and services. PPC targets customers at the moment of peak purchase intent."
+              "description": "Reach people actively searching for your products and services. PPC targets customers at the moment of peak purchase intent.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "Cost Control & Transparency",
-              "description": "Set daily budgets and maximum bid amounts. You only pay for clicks, making budgeting predictable and efficient."
+              "description": "Set daily budgets and maximum bid amounts. You only pay for clicks, making budgeting predictable and efficient.",
+              "icon": "fa-solid fa-hand-holding-dollar"
             },
             {
               "title": "Measurable Results",
-              "description": "Track every metric: impressions, clicks, conversions, cost-per-acquisition, and ROI. Complete visibility into campaign performance and spending."
+              "description": "Track every metric: impressions, clicks, conversions, cost-per-acquisition, and ROI. Complete visibility into campaign performance and spending.",
+              "icon": "fa-solid fa-hand-holding-dollar"
             },
             {
               "title": "Precise Audience Targeting",
-              "description": "Target by keywords, location, device, time of day, demographics, and interests. Reach exactly the people most likely to convert."
+              "description": "Target by keywords, location, device, time of day, demographics, and interests. Reach exactly the people most likely to convert.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "A/B Testing & Optimization",
-              "description": "Test different ad copy, landing pages, and keywords. Continuous testing improves performance and reduces cost-per-conversion."
+              "description": "Test different ad copy, landing pages, and keywords. Continuous testing improves performance and reduces cost-per-conversion.",
+              "icon": "fa-solid fa-hand-holding-dollar"
             },
             {
               "title": "Flexible Campaign Management",
-              "description": "Pause, modify, or launch campaigns instantly. Respond quickly to market changes, seasonal trends, and performance data."
+              "description": "Pause, modify, or launch campaigns instantly. Respond quickly to market changes, seasonal trends, and performance data.",
+              "icon": "fa-solid fa-chart-line"
             },
             {
               "title": "Competitive Advantage",
-              "description": "Appear above competitors on search results. PPC ensures your brand has visibility in competitive markets where ranking organically is difficult."
+              "description": "Appear above competitors on search results. PPC ensures your brand has visibility in competitive markets where ranking organically is difficult.",
+              "icon": "fa-solid fa-magnifying-glass"
             }
           ]
         },
@@ -551,7 +567,7 @@
           "id": "faq",
           "enabled": true,
           "type": "faq_section",
-          "title": "Frequently Asked Questions About PPC Advertising",
+          "title": "<r>FAQs</r> <br> PPC Advertising",
           "faqs": [
             {
               "question": "How does pay-per-click (PPC) advertising work?",
@@ -651,35 +667,43 @@
           "benefits": [
             {
               "title": "Sustainable Long-Term Growth",
-              "description": "Unlike ads that stop working when you stop paying, SEO builds cumulative value. Strong rankings continue driving traffic indefinitely with maintenance."
+              "description": "Unlike ads that stop working when you stop paying, SEO builds cumulative value. Strong rankings continue driving traffic indefinitely with maintenance.",
+              "icon": "fa-solid fa-chart-line"
             },
             {
               "title": "High-Quality Qualified Traffic",
-              "description": "Organic traffic consists of people actively searching for what you offer. This intent-based audience converts at higher rates than other channels."
+              "description": "Organic traffic consists of people actively searching for what you offer. This intent-based audience converts at higher rates than other channels.",
+              "icon": "fa-solid fa-users"
             },
             {
               "title": "Cost-Effective Customer Acquisition",
-              "description": "While requiring upfront investment, SEO's long-term return on investment significantly exceeds paid advertising once rankings stabilize."
+              "description": "While requiring upfront investment, SEO's long-term return on investment significantly exceeds paid advertising once rankings stabilize.",
+              "icon": "fa-solid fa-hand-holding-dollar"
             },
             {
               "title": "Builds Brand Authority",
-              "description": "Ranking for competitive keywords positions your brand as an industry authority and builds trust with potential customers."
+              "description": "Ranking for competitive keywords positions your brand as an industry authority and builds trust with potential customers.",
+              "icon": "fa-solid fa-award"
             },
             {
               "title": "Competitive Advantage",
-              "description": "Outrank competitors in organic search. Customers often don't look past the first page of results—SEO ensures you're visible."
+              "description": "Outrank competitors in organic search. Customers often don't look past the first page of results—SEO ensures you're visible.",
+              "icon": "fa-solid fa-magnifying-glass"
             },
             {
               "title": "Better User Experience",
-              "description": "SEO best practices improve site speed, mobile experience, and usability—making your site better for all visitors, not just search engines."
+              "description": "SEO best practices improve site speed, mobile experience, and usability—making your site better for all visitors, not just search engines.",
+              "icon": "fa-solid fa-mobile-screen"
             },
             {
               "title": "Synergy with Other Channels",
-              "description": "SEO strengthens PPC, social media, and content marketing efforts. Improved site authority and relevance benefits all digital channels."
+              "description": "SEO strengthens PPC, social media, and content marketing efforts. Improved site authority and relevance benefits all digital channels.",
+              "icon": "fa-solid fa-award"
             },
             {
               "title": "Measurable Performance Tracking",
-              "description": "Monitor rankings, traffic, conversions, and revenue from organic search. Complete transparency into SEO performance and ROI."
+              "description": "Monitor rankings, traffic, conversions, and revenue from organic search. Complete transparency into SEO performance and ROI.",
+              "icon": "fa-solid fa-magnifying-glass-chart"
             }
           ]
         },
@@ -756,7 +780,7 @@
           "id": "faq",
           "enabled": true,
           "type": "faq_section",
-          "title": "Frequently Asked Questions About SEO",
+          "title": "<r>FAQs</r> <br> SEO",
           "faqs": [
             {
               "question": "How long does it take to see SEO results?",
@@ -856,35 +880,43 @@
           "benefits": [
             {
               "title": "Builds Trust & Authority",
-              "description": "Valuable, expert content positions your brand as a trusted industry authority. Customers trust companies that demonstrate expertise and provide genuine value."
+              "description": "Valuable, expert content positions your brand as a trusted industry authority. Customers trust companies that demonstrate expertise and provide genuine value.",
+              "icon": "fa-solid fa-award"
             },
             {
               "title": "Improves SEO Rankings",
-              "description": "Quality content optimized for keywords improves search rankings, driving organic traffic. Content marketing and SEO are synergistic—each strengthens the other."
+              "description": "Quality content optimized for keywords improves search rankings, driving organic traffic. Content marketing and SEO are synergistic—each strengthens the other.",
+              "icon": "fa-solid fa-crown"
             },
             {
               "title": "Cost-Effective Lead Generation",
-              "description": "Content attracts prospective customers through search and sharing. Once created, content continues generating leads long-term with minimal ongoing cost."
+              "description": "Content attracts prospective customers through search and sharing. Once created, content continues generating leads long-term with minimal ongoing cost.",
+              "icon": "fa-solid fa-hand-holding-dollar"
             },
             {
               "title": "Supports All Stages of Customer Journey",
-              "description": "Create content for awareness, consideration, and decision stages. Guide prospects from 'I have a problem' through 'I'm ready to buy'."
+              "description": "Create content for awareness, consideration, and decision stages. Guide prospects from 'I have a problem' through 'I'm ready to buy'.",
+              "icon": "fa-solid fa-pen-nib"
             },
             {
               "title": "Increases Website Traffic",
-              "description": "Quality content attracts visitors through search, social sharing, and backlinks. More traffic means more qualified leads and customers."
+              "description": "Quality content attracts visitors through search, social sharing, and backlinks. More traffic means more qualified leads and customers.",
+              "icon": "fa-solid fa-crown"
             },
             {
               "title": "Improves Conversion Rates",
-              "description": "Educated customers convert better. Content that addresses objections and explains benefits increases conversion likelihood."
+              "description": "Educated customers convert better. Content that addresses objections and explains benefits increases conversion likelihood.",
+              "icon": "fa-solid fa-pen-nib"
             },
             {
               "title": "Builds Email Lists & Engagement",
-              "description": "Content gives value in exchange for email signups. Use content to build engaged audience lists for email marketing and nurturing."
+              "description": "Content gives value in exchange for email signups. Use content to build engaged audience lists for email marketing and nurturing.",
+              "icon": "fa-solid fa-users"
             },
             {
               "title": "Long-Term Asset Value",
-              "description": "Unlike ads that stop working when funding ends, quality content continues attracting leads and building authority for years."
+              "description": "Unlike ads that stop working when funding ends, quality content continues attracting leads and building authority for years.",
+              "icon": "fa-solid fa-crown"
             }
           ]
         },
@@ -961,7 +993,7 @@
           "id": "faq",
           "enabled": true,
           "type": "faq_section",
-          "title": "Frequently Asked Questions About Content Marketing",
+          "title": "<r>FAQs</r> <br> Content Marketing",
           "faqs": [
             {
               "question": "How often should we publish new content?",
@@ -1061,35 +1093,43 @@
           "benefits": [
             {
               "title": "15X More Attention Capture",
-              "description": "Studies show rich media ads capture 15 times more attention than standard display ads. Interactive elements naturally draw viewer focus in cluttered digital environments."
+              "description": "Studies show rich media ads capture 15 times more attention than standard display ads. Interactive elements naturally draw viewer focus in cluttered digital environments.",
+              "icon": "fa-solid fa-clock"
             },
             {
               "title": "Higher Engagement Rates",
-              "description": "Interactive experiences encourage engagement. Click-through rates and interaction rates for rich media significantly exceed static ads."
+              "description": "Interactive experiences encourage engagement. Click-through rates and interaction rates for rich media significantly exceed static ads.",
+              "icon": "fa-solid fa-arrow-pointer"
             },
             {
               "title": "Better Brand Recall",
-              "description": "Interactive and animated experiences stick in memory better than static content. Users remember brands that engage them."
+              "description": "Interactive and animated experiences stick in memory better than static content. Users remember brands that engage them.",
+              "icon": "fa-solid fa-pen-nib"
             },
             {
               "title": "Improved Conversion Rates",
-              "description": "Engaging users directly within ads increases likelihood of conversion. Rich media ads can showcase products, gather information, and drive action."
+              "description": "Engaging users directly within ads increases likelihood of conversion. Rich media ads can showcase products, gather information, and drive action.",
+              "icon": "fa-solid fa-arrow-pointer"
             },
             {
               "title": "Measurable Interactions",
-              "description": "Track detailed engagement metrics: hover time, expansions, video plays, form submissions. Understand exactly how users interact with your brand."
+              "description": "Track detailed engagement metrics: hover time, expansions, video plays, form submissions. Understand exactly how users interact with your brand.",
+              "icon": "fa-solid fa-magnifying-glass-chart"
             },
             {
               "title": "Brand Differentiation",
-              "description": "Custom creative stands out against competitors. Unique, high-quality rich media establishes premium brand positioning."
+              "description": "Custom creative stands out against competitors. Unique, high-quality rich media establishes premium brand positioning.",
+              "icon": "fa-solid fa-crown"
             },
             {
               "title": "Cross-Platform Compatibility",
-              "description": "Modern rich media works across desktop, mobile, and tablet. Consistent experience across devices and browsers."
+              "description": "Modern rich media works across desktop, mobile, and tablet. Consistent experience across devices and browsers.",
+              "icon": "fa-solid fa-mobile-screen"
             },
             {
               "title": "Extended Engagement Window",
-              "description": "Rich media ads keep users engaged longer. Expandable ads, interactive games, and experiences extend time spent with your brand."
+              "description": "Rich media ads keep users engaged longer. Expandable ads, interactive games, and experiences extend time spent with your brand.",
+              "icon": "fa-solid fa-clock"
             }
           ]
         },
@@ -1166,7 +1206,7 @@
           "id": "faq",
           "enabled": true,
           "type": "faq_section",
-          "title": "Frequently Asked Questions About Rich Media Ads",
+          "title": "<r>FAQs</r> <br> Rich Media Ads",
           "faqs": [
             {
               "question": "What exactly is rich media advertising?",
@@ -1266,35 +1306,43 @@
           "benefits": [
             {
               "title": "Influences Customer Decisions",
-              "description": "93% of consumers read reviews before purchasing. Positive reputation directly drives sales; negative reputation prevents them."
+              "description": "93% of consumers read reviews before purchasing. Positive reputation directly drives sales; negative reputation prevents them.",
+              "icon": "fa-solid fa-star"
             },
             {
               "title": "Protects Brand Integrity",
-              "description": "Proactive reputation management prevents negative information from defining your brand. Control your narrative."
+              "description": "Proactive reputation management prevents negative information from defining your brand. Control your narrative.",
+              "icon": "fa-solid fa-star"
             },
             {
               "title": "Responds to Negative Feedback",
-              "description": "Professional, timely responses to criticism demonstrate care for customers. Proper responses can convert negative reviews into positive brand moments."
+              "description": "Professional, timely responses to criticism demonstrate care for customers. Proper responses can convert negative reviews into positive brand moments.",
+              "icon": "fa-solid fa-clock"
             },
             {
               "title": "Increases Customer Confidence",
-              "description": "Positive reviews and testimonials build trust and confidence. Higher ratings improve conversion rates and customer lifetime value."
+              "description": "Positive reviews and testimonials build trust and confidence. Higher ratings improve conversion rates and customer lifetime value.",
+              "icon": "fa-solid fa-clock"
             },
             {
               "title": "Improves Search Visibility",
-              "description": "Positive content ranks higher in search results. Reputation management helps your best content appear when people search your brand."
+              "description": "Positive content ranks higher in search results. Reputation management helps your best content appear when people search your brand.",
+              "icon": "fa-solid fa-star"
             },
             {
               "title": "Crisis Prevention & Management",
-              "description": "Monitoring alerts you to emerging issues before they become crises. Proactive management prevents reputational damage."
+              "description": "Monitoring alerts you to emerging issues before they become crises. Proactive management prevents reputational damage.",
+              "icon": "fa-solid fa-star"
             },
             {
               "title": "Competitive Advantage",
-              "description": "Better reputation than competitors attracts customers. Reputation management directly impacts market share."
+              "description": "Better reputation than competitors attracts customers. Reputation management directly impacts market share.",
+              "icon": "fa-solid fa-star"
             },
             {
               "title": "Employee Recruitment",
-              "description": "Strong reputation attracts top talent. Employees research employers—positive reputation improves hiring success."
+              "description": "Strong reputation attracts top talent. Employees research employers—positive reputation improves hiring success.",
+              "icon": "fa-solid fa-star"
             }
           ]
         },
@@ -1371,7 +1419,7 @@
           "id": "faq",
           "enabled": true,
           "type": "faq_section",
-          "title": "Frequently Asked Questions About Reputation Management",
+          "title": "<r>FAQs</r> <br> Reputation Management",
           "faqs": [
             {
               "question": "What is online reputation management and why does it matter?",
@@ -1471,35 +1519,43 @@
           "benefits": [
             {
               "title": "Massive Audience Reach",
-              "description": "Connect with billions of users across platforms. Social media reaches customers wherever they are throughout their day."
+              "description": "Connect with billions of users across platforms. Social media reaches customers wherever they are throughout their day.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "Direct Customer Communication",
-              "description": "Two-way communication with customers builds relationships. Social media enables dialogue, not just broadcasting."
+              "description": "Two-way communication with customers builds relationships. Social media enables dialogue, not just broadcasting.",
+              "icon": "fa-solid fa-share-nodes"
             },
             {
               "title": "Cost-Effective Advertising",
-              "description": "Social advertising offers granular targeting at lower cost than traditional media. Flexible budgets accommodate all business sizes."
+              "description": "Social advertising offers granular targeting at lower cost than traditional media. Flexible budgets accommodate all business sizes.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "Community Building",
-              "description": "Engaged social communities create brand advocates. Community members promote your brand and recruit others."
+              "description": "Engaged social communities create brand advocates. Community members promote your brand and recruit others.",
+              "icon": "fa-solid fa-tag"
             },
             {
               "title": "Brand Awareness & Recognition",
-              "description": "Consistent social presence builds brand familiarity. Repeated exposure increases brand recall and preference."
+              "description": "Consistent social presence builds brand familiarity. Repeated exposure increases brand recall and preference.",
+              "icon": "fa-solid fa-tag"
             },
             {
               "title": "Lead Generation & Sales",
-              "description": "Social platforms drive leads and sales through conversion-optimized content and advertising."
+              "description": "Social platforms drive leads and sales through conversion-optimized content and advertising.",
+              "icon": "fa-solid fa-pen-nib"
             },
             {
               "title": "Real-Time Marketing Opportunities",
-              "description": "Respond to trends, events, and customer interests in real-time. Social media enables agile, responsive marketing."
+              "description": "Respond to trends, events, and customer interests in real-time. Social media enables agile, responsive marketing.",
+              "icon": "fa-solid fa-clock"
             },
             {
               "title": "Valuable Customer Insights",
-              "description": "Learn directly from customers about preferences, behaviors, and needs. Use feedback for product and service improvements."
+              "description": "Learn directly from customers about preferences, behaviors, and needs. Use feedback for product and service improvements.",
+              "icon": "fa-solid fa-circle-check"
             }
           ]
         },
@@ -1576,7 +1632,7 @@
           "id": "faq",
           "enabled": true,
           "type": "faq_section",
-          "title": "Frequently Asked Questions About Social Media Marketing",
+          "title": "<r>FAQs</r> <br> Social Media Marketing",
           "faqs": [
             {
               "question": "Which social media platforms should we focus on?",
@@ -1676,35 +1732,43 @@
           "benefits": [
             {
               "title": "Tailored to Your Business",
-              "description": "Custom solutions address your specific business needs. Off-the-shelf software forces compromises; custom development aligns perfectly with your goals."
+              "description": "Custom solutions address your specific business needs. Off-the-shelf software forces compromises; custom development aligns perfectly with your goals.",
+              "icon": "fa-solid fa-code"
             },
             {
               "title": "Superior User Experience",
-              "description": "User-centered design creates intuitive interfaces that keep visitors engaged. Better UX improves conversions and customer satisfaction."
+              "description": "User-centered design creates intuitive interfaces that keep visitors engaged. Better UX improves conversions and customer satisfaction.",
+              "icon": "fa-solid fa-arrow-pointer"
             },
             {
               "title": "Performance Optimization",
-              "description": "Fast-loading, responsive websites improve user experience and SEO rankings. Performance is critical for conversion and retention."
+              "description": "Fast-loading, responsive websites improve user experience and SEO rankings. Performance is critical for conversion and retention.",
+              "icon": "fa-solid fa-chart-line"
             },
             {
               "title": "Scalability",
-              "description": "Built to grow with your business. Custom architecture scales from startup to enterprise without technical limitations."
+              "description": "Built to grow with your business. Custom architecture scales from startup to enterprise without technical limitations.",
+              "icon": "fa-solid fa-expand"
             },
             {
               "title": "Security & Compliance",
-              "description": "Enterprise-grade security protects user data and your business. Compliance with regulations like GDPR, CCPA built in."
+              "description": "Enterprise-grade security protects user data and your business. Compliance with regulations like GDPR, CCPA built in.",
+              "icon": "fa-solid fa-database"
             },
             {
               "title": "Integration Capabilities",
-              "description": "Seamlessly integrate with third-party services, payment processors, CRMs, and business systems."
+              "description": "Seamlessly integrate with third-party services, payment processors, CRMs, and business systems.",
+              "icon": "fa-solid fa-circle-check"
             },
             {
               "title": "Conversion Optimization",
-              "description": "Designs optimized for conversion. Strategic layouts, clear CTAs, and simplified processes improve conversion rates."
+              "description": "Designs optimized for conversion. Strategic layouts, clear CTAs, and simplified processes improve conversion rates.",
+              "icon": "fa-solid fa-arrow-pointer"
             },
             {
               "title": "Competitive Advantage",
-              "description": "Unique digital products differentiate you from competitors. Custom functionality provides capabilities competitors lack."
+              "description": "Unique digital products differentiate you from competitors. Custom functionality provides capabilities competitors lack.",
+              "icon": "fa-solid fa-circle-check"
             }
           ]
         },
@@ -1781,7 +1845,7 @@
           "id": "faq",
           "enabled": true,
           "type": "faq_section",
-          "title": "Frequently Asked Questions About Web & App Development",
+          "title": "<r>FAQs</r> <br> Web & App Development",
           "faqs": [
             {
               "question": "How much does website or app development cost?",
@@ -1881,35 +1945,43 @@
           "benefits": [
             {
               "title": "Optimized Budget Allocation",
-              "description": "Strategic planning ensures budget goes to highest-performing channels. Eliminate wasted spend on underperforming placements."
+              "description": "Strategic planning ensures budget goes to highest-performing channels. Eliminate wasted spend on underperforming placements.",
+              "icon": "fa-solid fa-money-bill-trend-up"
             },
             {
               "title": "Better Negotiating Rates",
-              "description": "Media buyer expertise and volume buying power achieve better rates than individual advertisers could negotiate alone."
+              "description": "Media buyer expertise and volume buying power achieve better rates than individual advertisers could negotiate alone.",
+              "icon": "fa-solid fa-circle-check"
             },
             {
               "title": "Audience Targeting",
-              "description": "Deep audience analysis ensures placements reach your target demographic at the right time with proper frequency."
+              "description": "Deep audience analysis ensures placements reach your target demographic at the right time with proper frequency.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "Omnichannel Integration",
-              "description": "Coordinated placement across TV, digital, radio, print, and OOH creates unified message and maximizes reach."
+              "description": "Coordinated placement across TV, digital, radio, print, and OOH creates unified message and maximizes reach.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "Performance Optimization",
-              "description": "Continuous monitoring and adjustment ensure media placement adapts to performance. Shift budget to winners; pause underperformers."
+              "description": "Continuous monitoring and adjustment ensure media placement adapts to performance. Shift budget to winners; pause underperformers.",
+              "icon": "fa-solid fa-money-bill-trend-up"
             },
             {
               "title": "Frequency Management",
-              "description": "Optimal frequency—enough to be seen without excessive repetition that creates ad fatigue. Right frequency improves conversion."
+              "description": "Optimal frequency—enough to be seen without excessive repetition that creates ad fatigue. Right frequency improves conversion.",
+              "icon": "fa-solid fa-arrow-pointer"
             },
             {
               "title": "Competitive Intelligence",
-              "description": "Monitor competitor media spending. Identify opportunities where you can dominate or competitive gaps to exploit."
+              "description": "Monitor competitor media spending. Identify opportunities where you can dominate or competitive gaps to exploit.",
+              "icon": "fa-solid fa-circle-check"
             },
             {
               "title": "Strategic Insights",
-              "description": "Media planning reveals insights about audience consumption habits, channel effectiveness, and market opportunities."
+              "description": "Media planning reveals insights about audience consumption habits, channel effectiveness, and market opportunities.",
+              "icon": "fa-solid fa-users"
             }
           ]
         },
@@ -1986,7 +2058,7 @@
           "id": "faq",
           "enabled": true,
           "type": "faq_section",
-          "title": "Frequently Asked Questions About Media Planning & Buying",
+          "title": "<r>FAQs</r> <br> Media Planning & Buying",
           "faqs": [
             {
               "question": "What's the difference between media planning and media buying?",
@@ -2086,35 +2158,43 @@
           "benefits": [
             {
               "title": "Exceptional ROI",
-              "description": "Email marketing delivers $42 return for every $1 spent. No other channel matches email's profitability when executed well."
+              "description": "Email marketing delivers $42 return for every $1 spent. No other channel matches email's profitability when executed well.",
+              "icon": "fa-solid fa-envelope"
             },
             {
               "title": "Direct Customer Communication",
-              "description": "Email reaches subscribers directly. No algorithm changes, no paid promotion needed. Direct line to engaged customers."
+              "description": "Email reaches subscribers directly. No algorithm changes, no paid promotion needed. Direct line to engaged customers.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "Highly Targeted Messaging",
-              "description": "Segment subscribers by behavior, interests, purchase history. Targeted messages drive higher engagement and conversion than generic broadcasts."
+              "description": "Segment subscribers by behavior, interests, purchase history. Targeted messages drive higher engagement and conversion than generic broadcasts.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "Lead Nurturing",
-              "description": "Guide prospects through buyer journey with automated, personalized email sequences. Nurture until they're ready to buy."
+              "description": "Guide prospects through buyer journey with automated, personalized email sequences. Nurture until they're ready to buy.",
+              "icon": "fa-solid fa-user-gear"
             },
             {
               "title": "Customer Relationship Building",
-              "description": "Regular email communication keeps your brand top-of-mind. Builds loyalty and encourages repeat purchases."
+              "description": "Regular email communication keeps your brand top-of-mind. Builds loyalty and encourages repeat purchases.",
+              "icon": "fa-solid fa-tag"
             },
             {
               "title": "Measurable Performance",
-              "description": "Track open rates, click rates, conversions, and revenue. Every metric shows what's working. Data guides optimization."
+              "description": "Track open rates, click rates, conversions, and revenue. Every metric shows what's working. Data guides optimization.",
+              "icon": "fa-solid fa-magnifying-glass-chart"
             },
             {
               "title": "Cost-Effective at Scale",
-              "description": "Email cost-per-contact is minimal. Reaches thousands economically. Perfect for budget-conscious businesses."
+              "description": "Email cost-per-contact is minimal. Reaches thousands economically. Perfect for budget-conscious businesses.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "Automation & Efficiency",
-              "description": "Marketing automation sends right messages at right time automatically. Nurture workflows operate while you sleep."
+              "description": "Marketing automation sends right messages at right time automatically. Nurture workflows operate while you sleep.",
+              "icon": "fa-solid fa-hand-holding-dollar"
             }
           ]
         },
@@ -2191,7 +2271,7 @@
           "id": "faq",
           "enabled": true,
           "type": "faq_section",
-          "title": "Frequently Asked Questions About Email Marketing",
+          "title": "<r>FAQs</r> <br> Email Marketing",
           "faqs": [
             {
               "question": "How often should we send marketing emails?",
@@ -2291,35 +2371,43 @@
           "benefits": [
             {
               "title": "Authentic Brand Advocacy",
-              "description": "Influencer recommendations feel authentic because influencers genuinely engage with their audience. Trust transfers to your brand."
+              "description": "Influencer recommendations feel authentic because influencers genuinely engage with their audience. Trust transfers to your brand.",
+              "icon": "fa-solid fa-users"
             },
             {
               "title": "Targeted Audience Reach",
-              "description": "Influencers have specific audience demographics and interests. Partner with influencers whose audience matches your target customer."
+              "description": "Influencers have specific audience demographics and interests. Partner with influencers whose audience matches your target customer.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "Cost-Effective Awareness",
-              "description": "Reach large engaged audiences without massive paid media budgets. Influencer partnerships deliver awareness cost-effectively."
+              "description": "Reach large engaged audiences without massive paid media budgets. Influencer partnerships deliver awareness cost-effectively.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "High Engagement Rates",
-              "description": "Influencer audiences are engaged and responsive. Content performs better than brand-created content to cold audiences."
+              "description": "Influencer audiences are engaged and responsive. Content performs better than brand-created content to cold audiences.",
+              "icon": "fa-solid fa-users"
             },
             {
               "title": "Credibility & Authority",
-              "description": "Association with respected influencers builds brand credibility. Third-party endorsement is more believable than self-promotion."
+              "description": "Association with respected influencers builds brand credibility. Third-party endorsement is more believable than self-promotion.",
+              "icon": "fa-solid fa-award"
             },
             {
               "title": "Content Generation",
-              "description": "Influencers create high-quality content featuring your brand. Repurpose content across your channels for maximum value."
+              "description": "Influencers create high-quality content featuring your brand. Repurpose content across your channels for maximum value.",
+              "icon": "fa-solid fa-crown"
             },
             {
               "title": "SEO Benefits",
-              "description": "Influencer mentions, backlinks, and social signals improve SEO. Influencer partnerships support search visibility."
+              "description": "Influencer mentions, backlinks, and social signals improve SEO. Influencer partnerships support search visibility.",
+              "icon": "fa-solid fa-magnifying-glass"
             },
             {
               "title": "Direct Sales Impact",
-              "description": "Influencer promotions drive measurable conversions and sales. Use codes, links, and tracking to measure ROI precisely."
+              "description": "Influencer promotions drive measurable conversions and sales. Use codes, links, and tracking to measure ROI precisely.",
+              "icon": "fa-solid fa-magnifying-glass-chart"
             }
           ]
         },
@@ -2396,7 +2484,7 @@
           "id": "faq",
           "enabled": true,
           "type": "faq_section",
-          "title": "Frequently Asked Questions About Influencer Marketing",
+          "title": "<r>FAQs</r> <br> Influencer Marketing",
           "faqs": [
             {
               "question": "What's the difference between mega, macro, and micro-influencers?",
@@ -2496,35 +2584,43 @@
           "benefits": [
             {
               "title": "Enhanced Customer Engagement",
-              "description": "Send personalized messages directly to customers, boosting engagement and building strong relationships. Real-time conversations create loyalty and repeat business unlike passive email or SMS."
+              "description": "Send personalized messages directly to customers, boosting engagement and building strong relationships. Real-time conversations create loyalty and repeat business unlike passive email or SMS.",
+              "icon": "fa-solid fa-clock"
             },
             {
               "title": "Wider Audience Reach",
-              "description": "Reach your audience among 2+ billion WhatsApp users globally. Connect with diverse audiences effortlessly across all demographics and geographies where WhatsApp dominates."
+              "description": "Reach your audience among 2+ billion WhatsApp users globally. Connect with diverse audiences effortlessly across all demographics and geographies where WhatsApp dominates.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "Instant Communication",
-              "description": "Messages are delivered and read within minutes. Enable real-time customer support, handle time-sensitive offers, and respond instantly to inquiries keeping your business agile."
+              "description": "Messages are delivered and read within minutes. Enable real-time customer support, handle time-sensitive offers, and respond instantly to inquiries keeping your business agile.",
+              "icon": "fa-solid fa-clock"
             },
             {
               "title": "Personalized Messaging",
-              "description": "Use advanced tools to create highly personalized messages tailored to individual preferences and purchase behavior. Increase effectiveness and conversion rates significantly."
+              "description": "Use advanced tools to create highly personalized messages tailored to individual preferences and purchase behavior. Increase effectiveness and conversion rates significantly.",
+              "icon": "fa-solid fa-user-gear"
             },
             {
               "title": "Cost-Effective Solution",
-              "description": "WhatsApp marketing costs 70% less than traditional advertising. Target the right audience with precision, ensuring every message counts and every rupee generates measurable results."
+              "description": "WhatsApp marketing costs 70% less than traditional advertising. Target the right audience with precision, ensuring every message counts and every rupee generates measurable results.",
+              "icon": "fa-solid fa-users"
             },
             {
               "title": "Higher Conversion Rates",
-              "description": "Experience 3-5x higher conversion rates compared to email marketing. WhatsApp's direct nature and high engagement make it ideal for driving immediate action from customers."
+              "description": "Experience 3-5x higher conversion rates compared to email marketing. WhatsApp's direct nature and high engagement make it ideal for driving immediate action from customers.",
+              "icon": "fa-solid fa-mobile-screen"
             },
             {
               "title": "Rich Media Support",
-              "description": "Send images, videos, documents, location data, and interactive buttons. Create engaging experiences that text-only channels cannot match, improving customer satisfaction."
+              "description": "Send images, videos, documents, location data, and interactive buttons. Create engaging experiences that text-only channels cannot match, improving customer satisfaction.",
+              "icon": "fa-solid fa-database"
             },
             {
               "title": "Measurable ROI",
-              "description": "Track every metric: delivery rates, open rates, click-through rates, conversions, and revenue. Measure campaign performance precisely with real-time analytics and dashboards."
+              "description": "Track every metric: delivery rates, open rates, click-through rates, conversions, and revenue. Measure campaign performance precisely with real-time analytics and dashboards.",
+              "icon": "fa-solid fa-magnifying-glass-chart"
             }
           ]
         },
@@ -2601,7 +2697,7 @@
           "id": "faq",
           "enabled": true,
           "type": "faq_section",
-          "title": "Frequently Asked Questions About WhatsApp Marketing",
+          "title": "<r>FAQs</r> <br> WhatsApp Marketing",
           "faqs": [
             {
               "question": "How is WhatsApp marketing different from SMS marketing?",
@@ -2693,35 +2789,43 @@
           "benefits": [
             {
               "title": "Higher Engagement Rates",
-              "description": "Video content generates 12 times more shares than other content types. Audiences engage longer with video, resulting in better brand recall and awareness."
+              "description": "Video content generates 12 times more shares than other content types. Audiences engage longer with video, resulting in better brand recall and awareness.",
+              "icon": "fa-solid fa-users"
             },
             {
               "title": "Increased Conversions",
-              "description": "Video on landing pages boosts conversions by up to 80%. Viewers remember 95% of a message when delivered via video versus 10% from text."
+              "description": "Video on landing pages boosts conversions by up to 80%. Viewers remember 95% of a message when delivered via video versus 10% from text.",
+              "icon": "fa-solid fa-arrow-pointer"
             },
             {
               "title": "Multi-Platform Performance",
-              "description": "Optimize content for YouTube, Instagram Reels, Facebook, LinkedIn, and TikTok. Reach audiences where they spend time with platform-specific formats."
+              "description": "Optimize content for YouTube, Instagram Reels, Facebook, LinkedIn, and TikTok. Reach audiences where they spend time with platform-specific formats.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "Cost-Effective Awareness",
-              "description": "Video advertising delivers awareness cost-effectively. Reach large audiences without massive paid media budgets through strategic video campaigns."
+              "description": "Video advertising delivers awareness cost-effectively. Reach large audiences without massive paid media budgets through strategic video campaigns.",
+              "icon": "fa-solid fa-bullseye"
             },
             {
               "title": "Brand Authority Building",
-              "description": "High-quality video content establishes your brand as an authority. Storytelling builds emotional connections and trust with your target audience."
+              "description": "High-quality video content establishes your brand as an authority. Storytelling builds emotional connections and trust with your target audience.",
+              "icon": "fa-solid fa-users"
             },
             {
               "title": "SEO Benefits",
-              "description": "Video content improves SEO through increased time-on-page, social signals, and backlinks. Video-rich pages rank higher in search results."
+              "description": "Video content improves SEO through increased time-on-page, social signals, and backlinks. Video-rich pages rank higher in search results.",
+              "icon": "fa-solid fa-clock"
             },
             {
               "title": "Complete Content Ownership",
-              "description": "In-house production means you own all content. Repurpose videos across channels, update content easily, and maintain full creative control."
+              "description": "In-house production means you own all content. Repurpose videos across channels, update content easily, and maintain full creative control.",
+              "icon": "fa-solid fa-pen-nib"
             },
             {
               "title": "Measurable Performance Metrics",
-              "description": "Track views, engagement, click-through rates, conversions, and ROI precisely. Optimize future campaigns based on real performance data."
+              "description": "Track views, engagement, click-through rates, conversions, and ROI precisely. Optimize future campaigns based on real performance data.",
+              "icon": "fa-solid fa-magnifying-glass-chart"
             }
           ]
         },
@@ -2798,7 +2902,7 @@
           "id": "faq",
           "enabled": true,
           "type": "faq_section",
-          "title": "Frequently Asked Questions About Video Advertising",
+          "title": "<r>FAQs</r> <br> Video Advertising",
           "faqs": [
             {
               "question": "What are digital video ads?",
@@ -2894,35 +2998,43 @@
           "benefits": [
             {
               "title": "Show Up in AI-Generated Answers",
-              "description": "Get featured in ChatGPT, Google SGE, Perplexity, and other AI answer engine responses. Be mentioned in the answers your customers read."
+              "description": "Get featured in ChatGPT, Google SGE, Perplexity, and other AI answer engine responses. Be mentioned in the answers your customers read.",
+              "icon": "fa-solid fa-circle-check"
             },
             {
               "title": "Boost Visibility Without Clicks",
-              "description": "Increase brand mentions and authority in zero-click answers where users get information directly without visiting your website."
+              "description": "Increase brand mentions and authority in zero-click answers where users get information directly without visiting your website.",
+              "icon": "fa-solid fa-award"
             },
             {
               "title": "Provide Accurate Data to LLMs",
-              "description": "Structure content so large language models understand, cite, and feature your information in responses. Become a preferred source."
+              "description": "Structure content so large language models understand, cite, and feature your information in responses. Become a preferred source.",
+              "icon": "fa-solid fa-database"
             },
             {
               "title": "Dominate Conversational Searches",
-              "description": "Get found in voice-first and conversational search queries growing rapidly among mobile users. Answer questions naturally."
+              "description": "Get found in voice-first and conversational search queries growing rapidly among mobile users. Answer questions naturally.",
+              "icon": "fa-solid fa-mobile-screen"
             },
             {
               "title": "Build Long-Term Authority",
-              "description": "Establish authority in AI-powered search before competition catches up. First-mover advantage in the next generation of search."
+              "description": "Establish authority in AI-powered search before competition catches up. First-mover advantage in the next generation of search.",
+              "icon": "fa-solid fa-award"
             },
             {
               "title": "Improve Traditional SEO",
-              "description": "GEO strategies improve traditional SEO simultaneously. Better-structured content benefits both AI systems and Google rankings."
+              "description": "GEO strategies improve traditional SEO simultaneously. Better-structured content benefits both AI systems and Google rankings.",
+              "icon": "fa-solid fa-pen-nib"
             },
             {
               "title": "Increase Brand Mentions",
-              "description": "Get cited and mentioned by AI systems when answering customer questions. Build authority through machine-recommended visibility."
+              "description": "Get cited and mentioned by AI systems when answering customer questions. Build authority through machine-recommended visibility.",
+              "icon": "fa-solid fa-award"
             },
             {
               "title": "Future-Proof Your Visibility",
-              "description": "As search evolves toward AI-first interfaces, GEO ensures your brand remains visible and competitive in emerging search landscape."
+              "description": "As search evolves toward AI-first interfaces, GEO ensures your brand remains visible and competitive in emerging search landscape.",
+              "icon": "fa-solid fa-magnifying-glass"
             }
           ]
         },
@@ -2999,7 +3111,7 @@
           "id": "faq",
           "enabled": true,
           "type": "faq_section",
-          "title": "Frequently Asked Questions About GEO Services",
+          "title": "<r>FAQs</r> <br> GEO Services",
           "faqs": [
             {
               "question": "How is Generative Engine Optimization different from traditional SEO?",
@@ -3065,7 +3177,7 @@
       "name": "Arjun Sharma",
       "position": "Marketing Director, Technova",
       "feedback": "Adomantra has completely transformed our presence in the CTV space. Their AI-driven approach for targeting is unmatched in the Indian market.",
-      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "image": "assets/images/home-4/testimonial/testimonial-image1_1.png",
       "rating": 5
     },
     {
@@ -3073,7 +3185,7 @@
       "name": "Priya Patel",
       "position": "Founder, EcoStyle India",
       "feedback": "The ROI we've seen since switching to Adomantra's performance marketing solutions has been incredible. Highly recommend their professional team.",
-      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "image": "assets/images/home-4/testimonial/testimonial-image1_1.png",
       "rating": 4
     },
     {
@@ -3081,7 +3193,7 @@
       "name": "Vikram Singh",
       "position": "CEO, Singh Logistics",
       "feedback": "Their expertise in GEO and programmatic advertising helped us scale across multiple states within months. Truly a growth partner.",
-      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "image": "assets/images/home-4/testimonial/testimonial-image1_1.png",
       "rating": 5
     },
     {
@@ -3089,7 +3201,7 @@
       "name": "Ananya Iyer",
       "position": "CMO, BrightFuture EdTech",
       "feedback": "The creativity and data-driven strategy Adomantra brings to the table is refreshing. They understand the Indian digital landscape perfectly.",
-      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "image": "assets/images/home-4/testimonial/testimonial-image1_1.png",
       "rating": 5
     },
     {
@@ -3097,7 +3209,7 @@
       "name": "Rohan Gupta",
       "position": "Operations Head, Gupta Retail",
       "feedback": "Working with Adomantra was the best decision for our digital transformation. Their transparency and results are what set them apart.",
-      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "image": "assets/images/home-4/testimonial/testimonial-image1_1.png",
       "rating": 4
     },
     {
@@ -3105,7 +3217,7 @@
       "name": "Sneha Reddy",
       "position": "Digital Lead, PharmaPulse",
       "feedback": "Exceptional service and deep technical knowledge. Their team handled our complex requirements with ease.",
-      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "image": "assets/images/home-4/testimonial/testimonial-image1_1.png",
       "rating": 5
     },
     {
@@ -3113,7 +3225,7 @@
       "name": "Rahul Verma",
       "position": "Founder, Verma Tech",
       "feedback": "Adomantra's ability to reach the right audience at the right time has significantly lowered our customer acquisition costs.",
-      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "image": "assets/images/home-4/testimonial/testimonial-image1_1.png",
       "rating": 5
     },
     {
@@ -3121,7 +3233,7 @@
       "name": "Kavita Rao",
       "position": "Marketing Head, Rao Enterprises",
       "feedback": "From SEO to CTV, they are a one-stop-shop for all things digital. Professional, punctual, and highly skilled.",
-      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "image": "assets/images/home-4/testimonial/testimonial-image1_1.png",
       "rating": 4
     },
     {
@@ -3129,7 +3241,7 @@
       "name": "Sameer Khan",
       "position": "Manager, Global Ventures",
       "feedback": "The custom dashboards and reporting Adomantra provides give us total clarity on where our ad spend is going.",
-      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "image": "assets/images/home-4/testimonial/testimonial-image1_1.png",
       "rating": 5
     },
     {
@@ -3137,7 +3249,7 @@
       "name": "Ishani Das",
       "position": "Creative Director, Studio Das",
       "feedback": "Creativity meets technology at Adomantra. Their team helped us build a brand identity that truly resonates with our audience.",
-      "image": "assets/imgs/home-4/testimonial/testimonial-image1_1.png",
+      "image": "assets/images/home-4/testimonial/testimonial-image1_1.png",
       "rating": 5
     }
   ]

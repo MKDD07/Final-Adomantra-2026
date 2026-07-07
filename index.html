@@ -125,11 +125,6 @@
     <div class="loader-inner">
       <div class="loader-container">
         <div id="loader-logo-svg">
-          <svg width="120" height="65" viewBox="0 0 120 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path id="house"
-              d="M28.8193 0.5H90.3086C106.428 0.500086 119.5 13.5721 119.5 29.6914V62.3398C119.5 63.4707 118.582 64.3885 117.451 64.3887H105.557C104.421 64.3885 103.508 63.4713 103.508 62.3398V34.8867C103.508 25.5461 95.9324 17.9707 86.5918 17.9707H72.5205V62.3398C72.5205 63.4708 71.6026 64.3886 70.4717 64.3887H57.0176C55.8822 64.3887 54.9688 63.4714 54.9688 62.3398V17.9707H32.5059C28.3454 17.9707 24.5791 19.6582 21.8535 22.3838V22.3848C19.1334 25.1102 17.4453 28.8758 17.4453 33.0361C17.4454 41.3518 24.1848 48.0967 32.5059 48.0967H43.5225C44.6534 48.0967 45.5723 49.0146 45.5723 50.1455V62.3398C45.5723 63.4708 44.6534 64.3887 43.5225 64.3887H28.8193C13.1794 64.3884 0.500118 51.7096 0.5 36.0645V28.8252L0.508789 28.0938C0.896469 12.7865 13.4237 0.500236 28.8193 0.5Z"
-              stroke="#1a1a1a" />
-          </svg>
         </div>
         <div class="percentage" id="percentage">0</div>
       </div>
@@ -145,14 +140,20 @@
 
   <!-- side toggle start -->
   <aside class="fix">
-    <div class="ado-sideinfo">
+    <div class="ado-sideinfo rounded-corner top">
       <div class="ado-sideinfo__panel">
 
         <!-- HEADER -->
         <div class="ado-sideinfo__header">
-          <a href="index.html" class="ado-sideinfo__logo">
-            <img src="assets/images/logo/logo.svg" alt="Adomantra Logo" />
-          </a>
+          <div class="ado-sideinfo__mobile-top">
+            <div class="ado-social">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
 
           <button id="side-info-close" class="ado-sideinfo__close">
             <i class="fas fa-times"></i>
@@ -160,22 +161,65 @@
         </div>
 
         <!-- MENU SLOT -->
-        <div class="ado-sideinfo__mobile-top">
-          <div class="ado-social">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          </div>
-          <a href="javascript:void(0)" class="rr-btn contact-drawer-trigger">
-            <span class="btn-wrap">
-              <span class="text-one">Let’s Talk</span>
-              <span class="text-two">Let’s Talk</span>
-            </span>
-          </a>
+        <div class="ado-sideinfo__content-menu">
+          <div class="mobile-menu ado-sideinfo__menu fix"></div>
         </div>
-        <div class="mobile-menu ado-sideinfo__menu d-xl-none fix"></div>
+
+        <!-- CONTACT US FORM VIEW -->
+        <div class="ado-sideinfo__content-contact" style="display: none;">
+          <div class="features-card pr rounded-corner top overflow-y-auto" style="padding: 0; background: transparent; border: none; box-shadow: none;">
+            <div class="mb-4">
+              <div class="mb-2 h2" style="color: var(--primary-color); font-size: 28px; font-weight: 400;">Ready to <r>get started?</r></div>
+              <p>Fill out the form below and we'll reach out within 24 hours.</p>
+            </div>
+
+            <form class="row g-3">
+              <div class="col-12">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control custom-field" placeholder="Name" required>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control custom-field" placeholder="Email ID" required>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control custom-field" placeholder="+91 999-999-9999">
+              </div>
+
+              <div class="col-12 f-col">
+                <label class="form-label">Service Required</label>
+                <select class="form-select custom-field w-100" required>
+                  <option selected disabled>Select a service</option>
+                  <option>CTV Advertising</option>
+                  <option>Performance Marketing</option>
+                  <option>SEO Services</option>
+                  <option>Social Media Marketing</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Tell us about your query</label>
+                <textarea class="form-control custom-field" rows="3" placeholder="How can we help you?"></textarea>
+              </div>
+
+              <div class="col-12 mt-4">
+                <button type="submit" class="rr-btn w-100">
+                  <span class="btn-wrap">
+                    <span class="text-one">Get Free Consultation</span>
+                    <span class="text-two">Get Free Consultation</span>
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- CHAT WINDOW VIEW -->
+        <div class="ado-sideinfo__content-chat" style="display: none;">
+          <!-- Chatbot window is dynamically moved here on mobile -->
+        </div>
 
         <!-- CONTACT -->
         
@@ -237,13 +281,13 @@
   <div class="contact-drawer-overlay"></div>
   <aside class="contact-drawer">
     <div class="contact-drawer-close">
-      <button id="closeDrawer" aria-label="Close button"><i class="fa-light fa-xmark"></i></button>
+      <button id="closeDrawer" class="ado-sideinfo__close" aria-label="Close button"><i class="fa-light fa-xmark"></i></button>
     </div>
     <div class="contact-drawer-content h-100">
-      <div class="features-card position-relative overflow-y-auto">
+      <div class="features-card pr rounded-corner top overflow-y-auto">
         <div class="mb-4">
           <div class="mb-2 h2" style="color: var(--primary-color); font-size: 28px; font-weight: 400;">Ready to <r>get started?</r></div>
-          <p class="text-secondary small">Fill out the form below and we'll reach out within 24 hours.</p>
+          <p>Fill out the form below and we'll reach out within 24 hours.</p>
         </div>
 
         <form class="row g-3">
@@ -437,150 +481,15 @@
     <div class="search-popup__content">
       <form action="#" class="search-popup__form">
         <input type="text" placeholder="Search here..." name="search" required>
-        <button type="submit" aria-label="Search submit"><i class="fa-light fa-magnifying-glass"></i></button>
+        <button type="submit" aria-label="Search submit"><i class="fa-regular fa-magnifying-glass"></i></button>
       </form>
     </div>
   </div>
   <!-- Search Popup End -->
 
   <!-- Header area start -->
-  <header class="header-area-2 bg-white rounded-corner">
-    <div class="header-main">
-      <div class="container rr-container-1800">
-        <div class="header-area-2__inner">
-          <div class="header__logo">
-            <a href="index.html">
-              <img src="assets/images/logo/logo.svg" class="normal-logo light-logo" alt="Site Logo">
-              <img src="assets/images/logo/logo-white.svg" class="dark-logo" alt="Site Logo">
-            </a>
-          </div>
-          <div class="header__nav pos-center d-md-none d-lg-block">
-            <nav class="main-menu">
-              <ul class="navigation clearfix">
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li class="menu-item-has-children">
-                  <a href="service.html">Services</a>
-                  <ul class="dp-menu">
-                    <li class="menu-item-has-children">
-                      <a href="service.html?category=media">Media &amp; Advertising</a>
-                      <ul class="dp-menu">
-                        <li><a href="service-details.html?service=ctv-advertising">CTV Advertising</a></li>
-                        <li><a href="service-details.html?service=programmatic-advertising">Programmatic Advertising</a></li>
-                        <li><a href="service-details.html?service=pay-per-click-advertising">Pay-Per-Click (PPC)</a></li>
-                        <li><a href="service-details.html?service=media-planning-buying">Media Planning &amp; Buying</a></li>
-                        <li><a href="service-details.html?service=video-advertising">Video Advertising</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="service.html?category=growth">Growth &amp; Strategy</a>
-                      <ul class="dp-menu">
-                        <li><a href="service-details.html?service=search-engine-optimization">Search Engine Optimization (SEO)</a></li>
-                        <li><a href="service-details.html?service=content-marketing">Content Marketing</a></li>
-                        <li><a href="service-details.html?service=online-reputation-management">Online Reputation Management (ORM)</a></li>
-                        <li><a href="service-details.html?service=social-media-marketing">Social Media Marketing</a></li>
-                        <li><a href="service-details.html?service=email-marketing">Email Marketing</a></li>
-                        <li><a href="service-details.html?service=influencer-marketing">Influencer Marketing</a></li>
-                        <li><a href="service-details.html?service=whatsapp-marketing">WhatsApp Marketing</a></li>
-                        <li><a href="service-details.html?service=geo-agency">Geo-Targeted Advertising</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="service.html?category=tech">Tech &amp; Development</a>
-                      <ul class="dp-menu">
-                        <li><a href="service-details.html?service=rich-media-innovations">Rich Media Innovations</a></li>
-                        <li><a href="service-details.html?service=website-app-development">Website &amp; App Development</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu-item-has-children">
-                  <a href="https://www.adomantra.com/insights">Insights</a>
-                  <ul class="dp-menu">
-                    <li class="menu-item-has-children">
-                      <a href="blog.html">Blog Post</a>
-                      <ul class="dp-menu">
-                        <li><a href="https://www.adomantra.com/blog/dv360-vs-the-trade-desk-vs-amazon-dsp">DV360 vs
-                            The Trade Desk vs Amazon DSP</a></li>
-                        <li><a href="https://www.adomantra.com/blog/what-is-real-time-bidding-rtb-guide">What is RTB
-                            — Real-Time Bidding Guide</a></li>
-                        <li><a
-                            href="https://www.adomantra.com/blog/digital-marketing-for-educational-institutes">Digital
-                            Marketing for Educational Institutes</a></li>
-                        <li><a href="https://www.adomantra.com/blog/near-me-searches-for-hospitals-and-clinic">"Near
-                            Me" Searches for Hospitals &amp; Clinics</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="https://www.adomantra.com/case-study">Case Studies</a>
-                      <ul class="dp-menu">
-                        <li><a href="https://www.adomantra.com/case-study-detail/malabar-jewellery"
-                            target="_blank">Malabar Jewellery</a></li>
-                        <li><a href="https://www.adomantra.com/case-study-detail/food-delivery" target="_blank">Food
-                            Delivery</a></li>
-                        <li><a href="https://www.adomantra.com/case-study-detail/ola-app-amp-play" target="_blank">Ola
-                            App &amp; Play</a></li>
-                        <li><a href="https://www.adomantra.com/case-study-detail/real-estate" target="_blank">Real
-                            Estate</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="https://www.adomantra.com/press-release">Press Release</a>
-                      <ul class="dp-menu">
-                        <li><a rel="nofollow"
-                            href="https://www.financialexpress.com/business/brandwagon-adomantra-digital-ropes-in-vikas-pandey-as-marketing-and-business-head-3083667/">Vikas
-                            Pandey as Marketing Head</a></li>
-                        <li><a rel="nofollow"
-                            href="https://www.business-standard.com/article/news-ani/mass-personalisation-key-to-gain-wallet-share-in-online-video-advertising-in-2018-117112800401_1.html">Video
-                            Advertising</a></li>
-                        <li><a rel="nofollow"
-                            href="https://www.business-standard.com/article/news-ani/national-e-governance-division-empanels-adomantra-as-digital-media-agency-116101300336_1.html">National
-                            E-Governance Division</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="https://www.adomantra.com/whats-new">What's New</a>
-                      <ul class="dp-menu">
-                        <li><a
-                            href="https://www.adomantra.com/whats-new/discover-how-companies-are-balancing-personalized-marketing-with-user-privacy-concerns">Personalized
-                            Marketing &amp; Privacy</a></li>
-                        <li><a
-                            href="https://www.adomantra.com/whats-new/the-growing-popularity-of-short-form-video-content">Short-form
-                            Video Content</a></li>
-                        <li><a
-                            href="https://www.adomantra.com/whats-new/increasing-importance-of-optimizing-content-for-voice-search">Optimizing
-                            for Voice Search</a></li>
-                        <li><a
-                            href="https://www.adomantra.com/whats-new/keeping-up-with-the-latest-updates-on-seo-and-algorithm-changes">SEO
-                            &amp; Algorithm Updates</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="header__button fl f-aic gap-3">
-            <button class="search-toggle" aria-label="Open search" type="button">
-              <i class="fa-light fa-magnifying-glass"></i>
-            </button>
-            <a href="javascript:void(0)" class="rr-btn contact-drawer-trigger">
-              <span class="btn-wrap">
-                <span class="text-one">Let’s Talk</span>
-                <span class="text-two">Let’s Talk</span>
-              </span>
-            </a>
-            <a href="javascript:void(0)" class="mob-nav__item ado-side-toggle">
-              <i class="fa-light fa-bars"></i>
-              <span>Menu</span>
-            </a>
-          </div>
+  <div data-id="header" data-src="htm/header.html"></div>
 
-        </div>
-      </div>
-    </div>
-  </header>
   <div class="has-smooth" id="has_smooth"></div>
   <div id="smooth-wrapper">
     <div id="smooth-content">
@@ -626,126 +535,185 @@
         </div>
       </section>
 
-      <section class="heading-text section-spacing-top pt-0">
-        <div class="container rr-container-1800 section-spacing-top-1920">
-          <div class="heading-text-inner section-spacing-top-xxl-1920 gra">
-            <h2 class="fs-2 grc-12 roated-text rr_title_anim">Years of
-              Experience</h2>
-            <div class="section-header mt-0 pt-0 fade-anim grc-12">
-              <div class=" grc align-items-center">
-                <div class="subtitle-wrapper grc-4">
 
-                  <div class="fw-semibold fs-200 gradient-text-animated">13+</div>
-                </div>
-                <div class="title-wrapper pr split-text-reveal grc-8">
-                  <h2 class="">We deliver creative
-                    ideas to a <r>crowded world.</r>
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  ABOUT SECTION                                            -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section class="about-section section-spacing-top container rr-container-1800">
+  <div class="about-section__inner">
+        <div class="grc">
+    <!-- Eyebrow -->
+     <div class="grc-3">
+          <span class="section__subtitle  mb-4 effectFade fadeUp" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1; visibility: inherit;">
+            <span></span>
+            About Us
+          </span>
+          </div>
+<div class="grc-9">
+    <!-- Headline -->
+    <h2 class="heading-text">
+      Dedicated experts working together
+      to <r>create impactful digital solutions</r> and results
+    </h2>
+    <!-- ── Two-column card row ── -->
+    <div class="grc">
 
-                  </h2>
-                </div>
+      <!-- LEFT: Stats card -->
+      <div class="grc-7 stats-card">
+        <div>
+          <div class="stats-number-row pr">
+            <span class="stats-big-number  gradient-text-animated fs-200">13+</span>
+          </div>
+          <div class="stats-badge">Digital Experience</div>
+        </div>
+        <p class="stats-description">
+          Years of Professional Experience in Digital
+          Strategy, Design, and Marketing
+        </p>
+      </div>
+
+      <!-- RIGHT: Info card -->
+      <div class="grc-5 info-card">
+        <p class="info-card__body">
+          We help businesses build a strong and impactful
+          digital presence through creative strategies and
+          innovative solutions tailored to their goals.
+        </p>
+
+        <div class="info-card__bottom">
+
+          <!-- Rotating contact ring -->
+          <div class="contact-ring">
+            <svg class="contact-ring__text" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg">
+              <path id="circlePath"
+                    d="M 55,55 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"
+                    fill="none"/>
+              <text font-size="10.5" font-family="Poppins, sans-serif" font-weight="500"
+                    fill="var(--neutral-600)" letter-spacing="3.2">
+                <textPath href="#circlePath">
+                  Contact Us ✦ Contact Us ✦ Contact Us ✦
+                </textPath>
+              </text>
+            </svg>
+            <div class="contact-ring__center">
+              <div class="contact-ring__btn">
+                <!-- Arrow up-right icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M7 17L17 7M17 7H7M17 7v10"/>
+                </svg>
               </div>
             </div>
-            
-            <div class="experience-section counter-wrapper-box container rr-container-1800 fade-anim grc-12">
+          </div>
 
-              <!-- ── Desktop grid (≥768px) ── -->
-              <div class="row g-5 justify-content-between grc-lg grc-none">
-                <div class="features-item ado-dark  grc-2 grc-lg-4 pr">
-                  <i class="fas fa-users"></i>
-                  <p class="text grc-12">Happy Clients</p>
-                  <div class="number t-counter h3">500+</div>
-                </div>
-                <div class="features-item ado-dark  grc-2 grc-lg-4 pr">
-                  <i class="fas fa-award"></i>
-                  <p class="text">Industry Expertise</p>
-                  <div class="number t-counter h3">20+</div>
-                </div>
-                <div class="features-item ado-dark  grc-2 grc-lg-4 pr">
-                  <i class="fas fa-bullhorn"></i>
-                  <p class="text">Active Campaigns</p>
-                  <div class="number t-counter h3">400+</div>
-                </div>
-                <div class="features-item ado-dark  grc-2 grc-lg-4 pr">
-                  <i class="fas fa-eye"></i>
-                  <p class="text">Monthly Impressions</p>
-                  <div class="number t-counter h3">100B+</div>
-                </div>
-                <div class="features-item ado-dark  grc-2 grc-lg-4 pr">
-                  <i class="fas fa-mouse-pointer"></i>
-                  <p class="text">Monthly Clicks</p>
-                  <div class="number t-counter h3">800M+</div>
-                </div>
-                <div class="features-item ado-dark  grc-2 grc-lg-4 pr">
-                  <i class="fas fa-play-circle"></i>
-                  <p class="text">Monthly Video Views</p>
-                  <div class="number t-counter h3">1B+</div>
-                </div>
+          <!-- Avatars + rating -->
+          <div class="social-proof">
+<div class="avatars">
+  <img class="avatar" src="https://i.pravatar.cc/160?img=1" alt="Avatar 1">
+  <img class="avatar" src="https://i.pravatar.cc/160?img=2" alt="Avatar 2">
+  <img class="avatar" src="https://i.pravatar.cc/160?img=3" alt="Avatar 3">
+  <img class="avatar" src="https://i.pravatar.cc/160?img=4" alt="Avatar 4">
+</div>
+            <div class="rating-row">
+              <!-- Google G logo (inline SVG) -->
+              <div class="rating-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22">
+                  <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                  <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                  <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                  <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                  <path fill="none" d="M0 0h48v48H0z"/>
+                </svg>
               </div>
-
-              <!-- ── Mobile Swiper cards (< 768px) ── -->
-              <div class="funfact-swiper-wrap d-md-none">
-                <div class="swiper funfact-swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="ffi funfact-card pr">
-                        <i class="fas fa-users"></i>
-                        <p class="text">Happy Clients</p>
-                        <div class="number t-counter h3">500+</div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="ffi funfact-card pr">
-                        <i class="fas fa-award"></i>
-                        <p class="text">Industry Expertise</p>
-                        <div class="number t-counter h3">20+</div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="ffi funfact-card pr">
-                        <i class="fas fa-bullhorn"></i>
-                        <p class="text">Active Campaigns</p>
-                        <div class="number t-counter h3">400+</div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="ffi funfact-card pr">
-                        <i class="fas fa-eye"></i>
-                        <p class="text">Monthly Impressions</p>
-                        <div class="number t-counter h3">100B+</div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="ffi funfact-card pr">
-                        <i class="fas fa-mouse-pointer"></i>
-                        <p class="text">Monthly Clicks</p>
-                        <div class="number t-counter h3">800M+</div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="ffi funfact-card pr">
-                        <i class="fas fa-play-circle"></i>
-                        <p class="text">Monthly Video Views</p>
-                        <div class="number t-counter h3">1B+</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-pagination funfact-swiper-pagination"></div>
+              <div class="rating-info">
+                <div class="rating-score">4.9/5
+                  <span class="rating-stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                  </span>
                 </div>
+                <div class="rating-count">Based on 2500 reviews</div>
               </div>
-
             </div>
-            <h3 class="text-center title-wrapper rr_title_anim section-spacing grc-12">Help to brands growing up
-              and
-              show
-              <br>their
-              success
-              stories to the
-              world
-            </h3>
-
           </div>
         </div>
-      </section>
+      </div>
+</div>
+      </div>
+
+      <div class="grc-12 section-spacing">
+    <!-- ── Partners Label ── -->
+         <div class="line-new-design"></div>
+
+    <p class="partners-label">Powered by Trusted Brand Partnerships</p>
+
+    <!-- ── Swiper ── -->
+    <div class="swiper partners-swiper">
+      <div class="swiper-wrapper">
+
+        <!-- 24 partner logos (_1 through _24) -->
+        <!-- Using placeholder divs that mirror the real image paths -->
+        <!-- Replace <img> src once assets are in place -->
+
+        <!-- We render all 24 as <img> tags; browser shows broken-img icon gracefully,
+             but we wrap each in a fallback flex pill so it always looks intentional. -->
+
+        <!-- Logo set icons cycle through 5 icon shapes to stay visually varied -->
+        <div class="swiper-slide">
+          <img class="partner-logo" src="assets/images/official-partners/brand-thumb1_1.png"
+               alt="Partner 1" onerror="this.parentNode.innerHTML=placeholderHTML(1)" />
+        </div>
+        <div class="swiper-slide">
+          <img class="partner-logo" src="assets/images/official-partners/brand-thumb1_2.png"
+               alt="Partner 2" onerror="this.parentNode.innerHTML=placeholderHTML(2)" />
+        </div>
+        <div class="swiper-slide">
+          <img class="partner-logo" src="assets/images/official-partners/brand-thumb1_3.png"
+               alt="Partner 3" onerror="this.parentNode.innerHTML=placeholderHTML(3)" />
+        </div>
+        <div class="swiper-slide">
+          <img class="partner-logo" src="assets/images/official-partners/brand-thumb1_4.png"
+               alt="Partner 4" onerror="this.parentNode.innerHTML=placeholderHTML(4)" />
+        </div>
+        <div class="swiper-slide">
+          <img class="partner-logo" src="assets/images/official-partners/brand-thumb1_5.png"
+               alt="Partner 5" onerror="this.parentNode.innerHTML=placeholderHTML(5)" />
+        </div>
+        <div class="swiper-slide">
+          <img class="partner-logo" src="assets/images/official-partners/brand-thumb1_6.png"
+               alt="Partner 6" onerror="this.parentNode.innerHTML=placeholderHTML(6)" />
+        </div>
+        <div class="swiper-slide">
+          <img class="partner-logo" src="assets/images/official-partners/brand-thumb1_7.png"
+               alt="Partner 7" onerror="this.parentNode.innerHTML=placeholderHTML(7)" />
+        </div>
+        <div class="swiper-slide">
+          <img class="partner-logo" src="assets/images/official-partners/brand-thumb1_8.png"
+               alt="Partner 8" onerror="this.parentNode.innerHTML=placeholderHTML(8)" />
+        </div>
+        <div class="swiper-slide">
+          <img class="partner-logo" src="assets/images/official-partners/brand-thumb1_9.png"
+               alt="Partner 9" onerror="this.parentNode.innerHTML=placeholderHTML(9)" />
+        </div>
+        <div class="swiper-slide">
+          <img class="partner-logo" src="assets/images/official-partners/brand-thumb1_10.png"
+               alt="Partner 10" onerror="this.parentNode.innerHTML=placeholderHTML(10)" />
+        </div>
+        <div class="swiper-slide">
+          <img class="partner-logo" src="assets/images/official-partners/brand-thumb1_11.png"
+               alt="Partner 11" onerror="this.parentNode.innerHTML=placeholderHTML(11)" />
+        </div>
+        </div>
+
+      </div>
+               <div class="line-new-design"></div>
+    </div><!-- /.swiper -->
+</section>
+
 
       <!-- hero area start  -->
       <section class="hero-area-5">
@@ -794,12 +762,12 @@
         <div class="">
 
           <div class="text-right fl f-aie f-col section-spacing-bottom">
-            <span class="section__subtitle d-none d-md-flex wow fadeInUp" data-wow-delay=".2s"><span></span>Elite
+            <span class="section__subtitle d-none d-md-flex " data-wow-delay=".2s"><span></span>Elite
               Partnerships</span>
 
             <h2 class="title wow mt-4 mb-4 " data-wow-delay="0.3s">Where Innovation <r>Meets Trust</r>
             </h2>
-            <p class="d-none d-md-block wow fadeInUp" data-wow-delay="0.4s">We partner with leading platforms to craft
+            <p class="d-none d-md-block " data-wow-delay="0.4s">We partner with leading platforms to craft
               refined,
               high-performance digital experiences that position your brand at the forefront of innovation and
               excellence.
@@ -885,25 +853,90 @@
       </section>
       
       <!--===== achievement Section    S T A R T =====-->
-<section class="container rr-container-1800">
-  <div
-    class="features-card style-black ovh achievement-dynamic">
+      <section class="achievement-immersive-section" id="immersive-journey-container">
+        <div class="achievement-pin-container" id="journey-achievement">
+          
+          <!-- Revealed Background behind split -->
+          <div class="achievement-revealed-bg">
+            <div class="revealed-content">
+              <h2 class="revealed-title">Crafting Impactful Digital Solutions</h2>
+              <a href="javascript:void(0)" class="rr-btn contact-drawer-trigger">
+              <span class="btn-wrap">
+                <span class="text-one">Let’s Talk</span>
+                <span class="text-two">Let’s Talk</span>
+              </span>
+            </a>
+              <div class="revealed-desc-left">
+                We empower brands with cutting-edge programmatic technology and high-impact custom creatives.
+              </div>
+              <div class="revealed-desc-right">
+                Our data-driven strategies ensure every campaign reaches the right audience at the perfect moment.
+              </div>
+            </div>
+          </div>
 
-    <div class="container">
-      <!-- Desktop Layout: > 768px -->
-      <div class="achievement-area6-wrapper d-none d-md-flex ovh fl justify-content-between f-wrap">
-        <!-- JS will inject desktop items here -->
-      </div>
-      <!-- Mobile Swiper Layout: < 768px -->
-      <div class="swiper achievement-swiper-mobile d-block d-md-none rr-ov-hidden">
-        <div class="swiper-wrapper achievement-swiper-wrapper-mobile">
-          <!-- JS will inject swiper slides here -->
+          <!-- Split Image Wrapper -->
+          <div class="achievement-split-wrapper">
+            
+            <!-- Halves -->
+            <div class="achievement-half half-left">
+              <div class="half-img-bg" data-pexels="corporate boardroom meeting success" data-pexels-size="original" data-pexels-random="true"></div>
+            </div>
+            <div class="achievement-half half-right">
+              <div class="half-img-bg" data-pexels="corporate boardroom meeting success" data-pexels-size="original" data-pexels-random="true"></div>
+            </div>
+
+            <!-- Slogan Overlay initially centered -->
+            <div class="achievement-slogan-overlay">
+              <h2 class="slogan-title">Our Growth in Numbers</h2>
+              <p class="slogan-subtitle">Transforming Vision into Performance</p>
+            </div>
+
+            <!-- Floating Stats inside the split wrapper so they move or sit on top -->
+            <div class="stat-item position-1">
+              <div class="stat-number-wrap">
+                <span class="odometer" data-count="2012">0</span>
+              </div>
+              <div class="stat-text-wrap">
+                <div class="stat-title">Year Established</div>
+                <div class="stat-subtitle">Over a decade of industry-leading innovation</div>
+              </div>
+            </div>
+
+            <div class="stat-item position-2">
+              <div class="stat-number-wrap">
+                <span class="odometer" data-count="299">0</span>+
+              </div>
+              <div class="stat-text-wrap">
+                <div class="stat-title">Projects Launched</div>
+                <div class="stat-subtitle">Successfully delivered high-impact campaigns</div>
+              </div>
+            </div>
+
+            <div class="stat-item position-3">
+              <div class="stat-number-wrap">
+                <span class="odometer" data-count="169">0</span>+
+              </div>
+              <div class="stat-text-wrap">
+                <div class="stat-title">Satisfied Clients</div>
+                <div class="stat-subtitle">Trusted by global brands and agencies</div>
+              </div>
+            </div>
+
+            <div class="stat-item position-4">
+              <div class="stat-number-wrap">
+                <span class="odometer" data-count="13">0</span>+
+              </div>
+              <div class="stat-text-wrap">
+                <div class="stat-title">Active Campaigns</div>
+                <div class="stat-subtitle">Running optimized programmatic strategies</div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
-        <div class="swiper-pagination achievement-mobile-pagination mt-4"></div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
       <section class="section-spacing-top project-area7-dynamic">
         <div class="container rr-container-1800">
           <span class="section__subtitle  mb-4 effectFade fadeUp">
@@ -1381,13 +1414,13 @@
           <div class="grc-7 visual-stack-box">
           <div class="main-image-wrapper reveal-image">
             <img data-pexels="modern office architecture"
-                src="assets/imgs/gallery/image-11.webp"
+                src="assets/images/gallery/image-11.webp"
                 alt="Global Results" />
           </div>
 
           <div class="floating-image-wrapper">
             <img data-pexels="abstract branding design"
-                src="assets/imgs/gallery/image-10.webp"
+                src="assets/images/gallery/image-10.webp"
                 alt="Creative Strategy" />
           </div>
 
@@ -1755,11 +1788,11 @@
           </div>
         </div>
       </section>
-      <section id="testimonials-section" class="heading-text container rr-container-1800 mb-40 wow fadeInUp"
+      <section id="testimonials-section" class="heading-text container rr-container-1800 mb-40 "
         data-wow-delay="0.2s">
         <div class="row gy-5 fl justify-content-center  ">
           <div class="text-center text-lg-start fl align-items-start f-col mb-40">
-            <span class="section__subtitle d-none d-md-flex wow fadeInUp" data-wow-delay=".2s"><span></span>Positive
+            <span class="section__subtitle d-none d-md-flex " data-wow-delay=".2s"><span></span>Positive
               Feedback</span>
             <div class="fl justify-content-between w-100">
               <h2 class="title text-right wow mt-4 mb-4" data-wow-delay="0.3s">Real Stories from <r>
@@ -1774,7 +1807,7 @@
                 </div>
               </div>
             </div>
-            <p class="d-none d-md-block wow fadeInUp" data-wow-delay="0.4s">See what we do and how we help businesses
+            <p class="d-none d-md-block " data-wow-delay="0.4s">See what we do and how we help businesses
               succeed
               through real experiences and results.</p>
           </div>
@@ -1912,7 +1945,7 @@
       <!--===== FAQ Section S T A R T =====-->
       <section class="container rr-container-1800 section-spacing-bottom">
         <div class="grc">
-          <div id="services-page-faq-section" class="features-card grc-8 wow fadeInUp" data-wow-delay="0.2s">
+          <div id="services-page-faq-section" class="features-card grc-8 " data-wow-delay="0.2s">
             <div class=" fl justify-content-between heading-text">
               <h2 class="mb-40 pr split-text-reveal" id="services-faq-title">Frequently Asked <r>Questions</r>
               </h2>
@@ -1923,9 +1956,9 @@
           <div class="grc-4">
             <div class="padding-32 grc-4 pst h-100 features-card">
               <div class="mb-4">
-                <h2 class="mb-2 title wow fadeUp">Ready to <r>get started?</r>
+                <h2 class="mb-2 title ">Ready to <r>get started?</r>
                 </h2>
-                <p class="text-secondary small">Fill out the form below and we'll reach out within 24 hours.</p>
+                <p>Fill out the form below and we'll reach out within 24 hours.</p>
               </div>
 
               <form class="grc">
@@ -1974,71 +2007,6 @@
         </div>
       </section>
       <!--===== FAQ Section E N D =====-->
-      <!--===== Dynamic Stacking Window Showcase =====-->
-      <section id="ado-window-showcase" class="ado-window-section">
-        <div class="ado-window-pinned">
-          <div class="ado-window-text-container">
-            <h2 class="ado-parallax-text font-sequelsans-romanbody">
-              Digital Marketing
-            </h2>
-            <p class="ado-parallax-p p-left">
-              Adomantra is at the forefront of digital creative excellence, building interactive environments that connect brands with audiences through visual storytelling.
-            </p>
-            <p class="ado-parallax-p p-right">
-              Through high-performance engineering, fluid GSAP scroll interactions, and dynamic design systems, we craft premium digital experiences. Every detail is meticulously planned and optimized to deliver maximum impact across all devices.
-            </p>
-          </div>
-
-
-          <div class="ado-window-layers">
-            <!-- Layer 1 (Split) -->
-            <div class="ado-window-layer layer-split layer-1" data-pexels="scenery colorful" data-pexels-random="true" data-pexels-mode="bg" data-pexels-quality="high">
-              <div class="ado-window-half half-left">
-                <div class="split-bg"></div>
-              </div>
-              <div class="ado-window-half half-right">
-                <div class="split-bg"></div>
-              </div>
-            </div>
-            
-            <!-- Layer 2 (Zoom) -->
-            <div class="ado-window-layer layer-zoom layer-2" data-pexels="mountains sunset colorful" data-pexels-random="true" data-pexels-mode="bg" data-pexels-quality="high">
-              <div class="zoom-bg-wrap">
-                <div class="zoom-bg"></div>
-              </div>
-            </div>
-
-            <!-- Layer 3 (Split) -->
-            <div class="ado-window-layer layer-split layer-3" data-pexels="forest autumn colorful" data-pexels-random="true" data-pexels-mode="bg" data-pexels-quality="high">
-              <div class="ado-window-half half-left">
-                <div class="split-bg"></div>
-              </div>
-              <div class="ado-window-half half-right">
-                <div class="split-bg"></div>
-              </div>
-            </div>
-
-            <!-- Layer 4 (Zoom) -->
-            <div class="ado-window-layer layer-zoom layer-4" data-pexels="neon city colorful" data-pexels-random="true" data-pexels-mode="bg" data-pexels-quality="high">
-              <div class="zoom-bg-wrap">
-                <div class="zoom-bg"></div>
-              </div>
-            </div>
-
-            <!-- Layer 5 (Split) -->
-            <div class="ado-window-layer layer-split layer-5" data-pexels="ocean waves beach colorful" data-pexels-random="true" data-pexels-mode="bg" data-pexels-quality="high">
-              <div class="ado-window-half half-left">
-                <div class="split-bg"></div>
-              </div>
-              <div class="ado-window-half half-right">
-                <div class="split-bg"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
       <div data-id="footer" data-src="htm/footer.html"></div>
     </div>
   </div>
@@ -2046,6 +2014,7 @@
 <script src="assets/vandor/bootstrap/bootstrap.bundle.min.js"></script>
 <script src="assets/vandor/popup/jquery.magnific-popup.min.js"></script>
 <script src="assets/vandor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/footer.js"></script>
 
 <!-- GSAP 3.15 -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
@@ -2084,7 +2053,6 @@
   <script src="assets/js/digital-marketing-agency.js"></script>
   <script src="assets/js/additional_codes.js"></script>
   <script src="assets/js/dynamic-services.js"></script>
-  <script src="assets/js/header.js"></script>
   <script src="assets/js/contact-drawer.js"></script>
   <script src="assets/js/offline-cache.js"></script>
   <script src="assets/js/pexels-service-final.js"></script>
@@ -2097,141 +2065,9 @@
   <script src="assets/js/chatbot.js"></script>
   <script src="assets/vandor/matter/matter.js"></script>
   <script src="assets/vandor/matter/throwable.js"></script>
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to("#dynamic-path", {
-      // The 'd' attribute is the path shape
-      attr: { d: "M0,0 Q50,500 100,0" },
-      scrollTrigger: {
-        trigger: "body",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 1, // This makes the line follow the scroll 1:1
-        ease: "power1.inOut" // Makes the spline transition feel "organic"
-      }
-    });
-    // Register ScrollTrigger if you're using the plugin
-    gsap.registerPlugin(ScrollTrigger);
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".hero-grid",
-        start: "top 80%",
-        toggleActions: "play none none reverse"
-      }
-    });
-
-    // Animate Text Elements
-    tl.from(".display-title", { y: 50, opacity: 0, duration: 1, ease: "power4.out" })
-      .from(".lead-text", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
-
-    // Animate Main Image (Scale & Clip Path)
-    tl.from(".main-image-wrapper", {
-      clipPath: "inset(0% 0% 100% 0%)",
-      duration: 1.5,
-      ease: "power4.inOut"
-    }, "-=1");
-
-    // Animate Floating Image with a "Pop"
-    tl.from(".floating-image-wrapper", {
-      scale: 0,
-      rotation: -15,
-      duration: 1,
-      ease: "back.out(1.7)"
-    }, "-=0.5");
-
-    // Continuous Floating Hover Effect
-    gsap.to(".floating-image-wrapper", {
-      y: 20,
-      duration: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut"
-    });
-  </script>
-  <script>
-    const section = document.getElementById('fade-reveal-section');
-    const textSteps = document.querySelectorAll('.reveal-step');
-    const imageItems = document.querySelectorAll('.reveal-image-item');
-
-    let currentIndex = 0;
-    const totalSteps = 3;
-    let ticking = false;
-
-    function updateContent(newIndex) {
-      if (newIndex === currentIndex) return;
-
-      // Remove active
-      textSteps[currentIndex].classList.remove('active');
-      imageItems[currentIndex].classList.remove('active');
-
-      // Add active
-      textSteps[newIndex].classList.add('active');
-      imageItems[newIndex].classList.add('active');
-
-      currentIndex = newIndex;
-    }
-
-    function onScroll() {
-      const rect = section.getBoundingClientRect();
-      const sectionTop = rect.top;
-      const sectionHeight = rect.height;
-      const viewportHeight = window.innerHeight;
-
-      // Calculate progress: how far section has scrolled through viewport
-      // -1 = section below viewport
-      // 0 = section top at viewport bottom
-      // 0.5 = section center at viewport center
-      // 1 = section top at viewport top
-      const progress = 0.8 - (sectionTop / viewportHeight);
-
-      // Clamp progress to 0-1
-      const clampedProgress = Math.max(0, Math.min(1, progress));
-
-      // Calculate which index (0, 1, or 2)
-      const newIndex = Math.floor(clampedProgress * totalSteps);
-      const finalIndex = Math.min(newIndex, totalSteps - 1);
-
-      updateContent(finalIndex);
-
-      ticking = false;
-    }
-
-    function requestTick() {
-      if (!ticking) {
-        window.requestAnimationFrame(onScroll);
-        ticking = true;
-      }
-    }
-
-    window.addEventListener('scroll', requestTick, { passive: true });
-  </script>
-
-  <script>
-    gsap.registerPlugin(TextPlugin);
-
-    const texts = [
-      'Redefining <span class="highlight">Media</span> with<br> <span class="highlight">Digital</span> Innovation',
-      'Transforming <span class="highlight">Media</span> with<br> <span class="highlight">Digital</span> Innovation',
-      'Reimagining <span class="highlight">Media</span> with<br> <span class="highlight">Digital</span> Innovation',
-      'Redefining <span class="highlight">Media</span> through<br> <span class="highlight">Digital</span> Innovation'
-    ];
-
-    let i = 0;
-
-    function changeText() {
-      i = (i + 1) % texts.length;
-
-      gsap.to("#heading-slider", {
-        duration: 0.5,
-        innerHTML: texts[i], // IMPORTANT for spans
-        ease: "none"
-      });
-    }
-
-    setInterval(changeText, 10000);
-  </script>
+  <script src="assets/js/gsap-hero-grid.js"></script>
+  <script src="assets/js/gsap-fade-reveal.js"></script>
+  <script src="assets/js/gsap-heading-slider.js"></script>
   <!-- Mobile Bottom Navigation -->
   <div class="mob-nav">
     <div class="mob-nav__container">
@@ -2243,10 +2079,9 @@
         <i class="fa-light fa-bars"></i>
         <span>Menu</span>
       </a>
-      <a href="service.html" class="mob-nav__item">
-        <i class="fa-light fa-briefcase"></i>
-        <span>Services</span>
-      </a>
+      <button class="search-toggle" aria-label="Open search" type="button">
+                    <i class="fa-regular fa-magnifying-glass"></i>
+                  </button>
       <a href="javascript:void(0)" class="mob-nav__item contact-drawer-trigger">
         <i class="fa-light fa-envelope"></i>
         <span>Contact</span>

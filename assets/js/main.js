@@ -170,44 +170,33 @@
       },
     },
   });
+// Testimonial Slider
+var swiper = new Swiper(".testimonial4-slider", {
+  loop: true,
+  slidesPerView: 1.1,
+  spaceBetween: 16,
+  autoplay: false,
 
-  // Testimonial Slider
-  var swiper = new Swiper(".testimonial4-slider", {
-    loop: true,
-    slidesPerView: 3,
-    spaceBetween: 20,
-    autoplay: false, /*{
-      delay: 3000,
-      disableOnInteraction: false,
-    },*/
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
+  breakpoints: {
+    // Tablets
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
     },
-    navigation: {
-      nextEl: ".inner-nav-btn.right",
-      prevEl: ".inner-nav-btn.left",
-    },
-  });
 
+    // Laptops
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+
+    // Large desktops
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  },
+});
   const clientsSwiper = new Swiper(".clients-line7__slider", {
     loop: true,
     speed: 600,

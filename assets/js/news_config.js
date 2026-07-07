@@ -41,7 +41,7 @@ async function fetchPexelsImages(query, count = 3) {
     }
     // Fallback: return placeholder images
     return Array.from({ length: count }, (_, i) => ({
-        src: `assets/imgs/inner/blog-details/blog-details1_1.jpg`,
+        src: `assets/images/inner/blog-details/blog-details1_1.jpg`,
         alt: query,
         photographer: ''
     }));

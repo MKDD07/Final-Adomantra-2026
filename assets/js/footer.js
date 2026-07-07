@@ -3,12 +3,8 @@ document.addEventListener("DOMContentLoaded", async () => {
    * Add any new files here. Format: "data-id": "filename"
    */
   const componentList = {
-    "header": "header.html",
     "footer": "footer.html",
-    "case-studies": "case-studies.html",
-    "case-studies-results": "case-studies-results.html",
-    "happy-clients": "happy-clients.html",
-    "official-partner": "official-partner.html",
+    "header": "header.html",
   };
 
   /** * 2. THE LOADING LOGIC
@@ -18,12 +14,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!element) return; // Skip if the ID isn't on the current page
 
     try {
-      const fileName = componentList[id];
-      const response = await fetch(`htm/${fileName}`);
+      const src = element.getAttribute("data-src") || `htm/${componentList[id]}`;
+      const response = await fetch(src);
 
       if (!response.ok) throw new Error(`Status: ${response.status}`);  
 
-      const html = await response.text();
+      let html = await response.text();
+
+      // If we are in a subdirectory (data-src starts with '../'), fix relative paths
+      if (element.getAttribute("data-src") && element.getAttribute("data-src").startsWith("../")) {
+        html = html.replace(/(src|href)="(?!(https?:|#|javascript:|\.\.\/))([^"]+)"/g, '$1="../$3"');
+      }
+
       element.innerHTML = html;
 
       console.log(`✅ Loaded: ${id}`);

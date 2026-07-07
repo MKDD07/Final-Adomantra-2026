@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;background:#05060a;overflow:hidden;font-family:Arial,Helvetica,sans-serif}
+
+#loader{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#ffffff}
+.logo span{display:inline-block;font-size:clamp(26px,6vw,48px);font-weight:600;letter-spacing:8px;color:#e8e8ee}
+.loader-track{width:160px;height:2px;margin-top:28px;background:rgba(255,255,255,.12);border-radius:2px;overflow:hidden}
+.loader-fill{width:0%;height:100%;background:#6fe3c4}
+
+#scene-wrap{position:fixed;inset:0;opacity:0}
+#canvas{position:absolute;inset:0;display:block}
+.ui{position:absolute;left:0;right:0;bottom:8%;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;color:#9a9aa6;pointer-events:none}
+.ui p{font-size:14px;letter-spacing:.5px}
+.ui a{font-size:13px;color:#0d00ff;text-decoration:none;letter-spacing:.5px;pointer-events:auto}
+.ui a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<div id="loader">
+  <div class="logo"><span>A</span><span>D</span><span>O</span><span>M</span><span>A</span><span>N</span><span>T</span><span>R</span><span>A</span></div>
+  <div class="loader-track"><div class="loader-fill"></div></div>
+</div>
+
+<div id="scene-wrap">
+  <canvas id="canvas"></canvas>
+  <div class="ui">
+    <p>this page got pulled into the void</p>
+    <a href="/">← back to home</a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+const canvas=document.getElementById('canvas');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+renderer.setSize(window.innerWidth,window.innerHeight);
+
+const scene=new THREE.Scene();
+scene.background=new THREE.Color(0x05060a);
+
+const camera=new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,1,2000);
+camera.position.set(0,0,600);
+
+function sampleText(text){
+  const c=document.createElement('canvas');
+  c.width=600;c.height=200;
+  const ctx=c.getContext('2d');
+  ctx.fillStyle='#000';ctx.fillRect(0,0,c.width,c.height);
+  ctx.fillStyle='#fff';ctx.font='bold 170px Arial';ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.fillText(text,c.width/2,c.height/2+10);
+  const data=ctx.getImageData(0,0,c.width,c.height).data;
+  const pts=[];
+  const step=3;
+  for(let y=0;y<c.height;y+=step){
+    for(let x=0;x<c.width;x+=step){
+      const i=(y*c.width+x)*4;
+      if(data[i+3]>128){
+        pts.push({x:(x-c.width/2)*0.6,y:-(y-c.height/2)*0.6,z:(Math.random()-0.5)*20});
+      }
+    }
+  }
+  return pts;
+}
+
+const homePts=sampleText('404');
+const count=homePts.length;
+
+const home=new Float32Array(count*3);
+const spawn=new Float32Array(count*3);
+const pos=new Float32Array(count*3);
+const vel=new Float32Array(count*3);
+
+for(let i=0;i<count;i++){
+  const p=homePts[i];
+  home[i*3]=p.x;home[i*3+1]=p.y;home[i*3+2]=p.z;
+  const r=320+Math.random()*220;
+  const theta=Math.random()*Math.PI*2;
+  const phi=Math.acos(2*Math.random()-1);
+  spawn[i*3]=r*Math.sin(phi)*Math.cos(theta);
+  spawn[i*3+1]=r*Math.sin(phi)*Math.sin(theta);
+  spawn[i*3+2]=r*Math.cos(phi);
+  pos[i*3]=spawn[i*3];pos[i*3+1]=spawn[i*3+1];pos[i*3+2]=spawn[i*3+2];
+}
+
+const geometry=new THREE.BufferGeometry();
+const posAttr=new THREE.BufferAttribute(pos,3);
+geometry.setAttribute('position',posAttr);
+
+function particleTexture(){
+  const size=64;
+  const c=document.createElement('canvas');
+  c.width=size;c.height=size;
+  const ctx=c.getContext('2d');
+  const g=ctx.createRadialGradient(size/2,size/2,0,size/2,size/2,size/2);
+  g.addColorStop(0,'rgba(255,255,255,1)');
+  g.addColorStop(0.4,'rgba(255,255,255,0.55)');
+  g.addColorStop(1,'rgba(255,255,255,0)');
+  ctx.fillStyle=g;ctx.fillRect(0,0,size,size);
+  return new THREE.CanvasTexture(c);
+}
+
+const material=new THREE.PointsMaterial({
+  size:3.2,
+  map:particleTexture(),
+  color:0x6fe3c4,
+  transparent:true,
+  depthWrite:false,
+  blending:THREE.AdditiveBlending,
+  sizeAttenuation:true
+});
+
+const points=new THREE.Points(geometry,material);
+scene.add(points);
+
+let mode='assembling';
+let assembleT=0;
+const mouseWorld=new THREE.Vector3(9999,9999,0);
+let gravityActive=0;
+
+function setMouseWorld(clientX,clientY){
+  const ndcX=(clientX/window.innerWidth)*2-1;
+  const ndcY=-(clientY/window.innerHeight)*2+1;
+  const v=new THREE.Vector3(ndcX,ndcY,0.5).unproject(camera);
+  const dir=v.sub(camera.position).normalize();
+  const dist=-camera.position.z/dir.z;
+  mouseWorld.copy(camera.position).add(dir.multiplyScalar(dist));
+  gravityActive=1;
+}
+
+window.addEventListener('mousemove',e=>setMouseWorld(e.clientX,e.clientY));
+window.addEventListener('mouseleave',()=>{gravityActive=0;});
+window.addEventListener('touchmove',e=>{
+  if(e.touches[0])setMouseWorld(e.touches[0].clientX,e.touches[0].clientY);
+},{passive:true});
+window.addEventListener('touchend',()=>{gravityActive=0;});
+
+const G=4200;
+const captureRadius=70;
+const springK=0.045;
+const damping=0.9;
+
+const clock=new THREE.Clock();
+
+function physicsStep(elapsed,dt){
+  for(let i=0;i<count;i++){
+    const ix=i*3,iy=i*3+1,iz=i*3+2;
+    const px=pos[ix],py=pos[iy],pz=pos[iz];
+    const hz=home[iz]+Math.sin(elapsed*0.6+i*0.07)*3;
+
+    const dx=mouseWorld.x-px,dy=mouseWorld.y-py,dz=0-pz;
+    const distSq=dx*dx+dy*dy+dz*dz+60;
+    const dist=Math.sqrt(distSq);
+    const force=Math.min(G/distSq,1.4)*gravityActive;
+
+    let ax=(dx/dist)*force;
+    let ay=(dy/dist)*force;
+    let az=(dz/dist)*force;
+
+    if(dist<captureRadius&&gravityActive){
+      const swirl=(1-dist/captureRadius)*0.9;
+      ax+=(-dy/dist)*swirl;
+      ay+=(dx/dist)*swirl;
+    }
+
+    ax+=(home[ix]-px)*springK;
+    ay+=(home[iy]-py)*springK;
+    az+=(hz-pz)*springK;
+
+    vel[ix]=(vel[ix]+ax*dt)*damping;
+    vel[iy]=(vel[iy]+ay*dt)*damping;
+    vel[iz]=(vel[iz]+az*dt)*damping;
+
+    pos[ix]+=vel[ix];
+    pos[iy]+=vel[iy];
+    pos[iz]+=vel[iz];
+  }
+  posAttr.needsUpdate=true;
+}
+
+function assembleStep(){
+  for(let i=0;i<count;i++){
+    const ix=i*3,iy=i*3+1,iz=i*3+2;
+    pos[ix]=spawn[ix]+(home[ix]-spawn[ix])*assembleT;
+    pos[iy]=spawn[iy]+(home[iy]-spawn[iy])*assembleT;
+    pos[iz]=spawn[iz]+(home[iz]-spawn[iz])*assembleT;
+  }
+  posAttr.needsUpdate=true;
+}
+
+function animate(){
+  requestAnimationFrame(animate);
+  const dt=Math.min(clock.getDelta(),0.05);
+  const elapsed=clock.elapsedTime;
+  if(mode==='assembling')assembleStep();
+  else physicsStep(elapsed,dt);
+  renderer.render(scene,camera);
+}
+animate();
+
+window.addEventListener('resize',()=>{
+  camera.aspect=window.innerWidth/window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth,window.innerHeight);
+});
+
+function startAssembly(){
+  gsap.to({},{duration:2.4,ease:'power3.out',onUpdate:function(){assembleT=this.progress();},onComplete:()=>{mode='physics';}});
+}
+
+const tl=gsap.timeline();
+tl.set('.logo span',{y:30,opacity:0})
+  .to('.logo span',{y:0,opacity:1,duration:0.6,stagger:0.04,ease:'power3.out'})
+  .to('.loader-fill',{width:'100%',duration:1.1,ease:'power2.inOut'},'-=0.1')
+  .to('#loader',{opacity:0,duration:0.6,ease:'power2.inOut'},'+=0.25')
+  .set('#loader',{display:'none'})
+  .to('#scene-wrap',{opacity:1,duration:0.8,ease:'power2.out'},'<')
+  .call(startAssembly);
+</script>
+</body>
+</html>

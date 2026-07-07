@@ -62,7 +62,7 @@
         .observe(document.getElementById('services-col-left'));
     }
     function syncCardHeight() {
-      var cards = document.querySelectorAll('.features-card.height-max');
+      var cards = document.querySelectorAll('.ado-sideinfo.height-max');
       if (!cards.length) return;
       var max = 0;
       cards.forEach(function (c) {
@@ -410,4 +410,105 @@ if (document.readyState === "loading") {
 } else {
   initWindowEffect();
 }
+
+// Mobile drawer views controller
+jQuery(document).ready(function ($) {
+  const sideInfo = document.querySelector('.ado-sideinfo');
+  const overlay = document.querySelector('.offcanvas-overlay');
+
+  function setView(view) {
+    if (!sideInfo) return;
+    
+    // Remove existing views
+    sideInfo.removeAttribute('data-view');
+    
+    // Hide all views first
+    const menuView = sideInfo.querySelector('.ado-sideinfo__content-menu');
+    const contactView = sideInfo.querySelector('.ado-sideinfo__content-contact');
+    const chatView = sideInfo.querySelector('.ado-sideinfo__content-chat');
+    
+    if (menuView) menuView.style.display = 'none';
+    if (contactView) contactView.style.display = 'none';
+    if (chatView) chatView.style.display = 'none';
+    
+    // Set new view
+    sideInfo.setAttribute('data-view', view);
+    
+    if (view === 'menu' && menuView) {
+      menuView.style.display = 'block';
+    } else if (view === 'contact' && contactView) {
+      contactView.style.display = 'block';
+    } else if (view === 'chat' && chatView) {
+      chatView.style.display = 'flex';
+      
+      // Move chatbot window to this container
+      const chatWindow = document.getElementById('ado-chat-window');
+      if (chatWindow && chatView) {
+        chatView.appendChild(chatWindow);
+        chatWindow.classList.add('visible');
+        
+        // Focus chatbot input
+        setTimeout(() => {
+          const inputEl = document.getElementById('ado-chat-input');
+          if (inputEl) inputEl.focus();
+        }, 100);
+      }
+    }
+  }
+
+  function closeSideInfo() {
+    if (sideInfo) sideInfo.classList.remove('info-open');
+    if (overlay) overlay.classList.remove('overlay-open');
+    
+    // Restore chatbot back to original location
+    const chatWindow = document.getElementById('ado-chat-window');
+    if (chatWindow) {
+      const chatRoot = document.getElementById('ado-chatbot-root') || document.body;
+      if (chatWindow.parentElement !== chatRoot) {
+        chatRoot.appendChild(chatWindow);
+        chatWindow.classList.remove('visible');
+      }
+    }
+  }
+
+  // 1. Menu Trigger (Mobile bottom nav + desktop toggle)
+  $(document).on('click', '.ado-side-toggle, .header__button .mob-nav__item.ado-side-toggle', function (e) {
+    e.preventDefault();
+    setView('menu');
+    if (sideInfo) sideInfo.classList.add('info-open');
+    if (overlay) overlay.classList.add('overlay-open');
+  });
+
+  // 2. Contact Trigger (Mobile bottom nav redirects to inline contact tab)
+  $(document).on('click', '.mob-nav__contact-trigger', function (e) {
+    e.preventDefault();
+    setView('contact');
+    if (sideInfo) sideInfo.classList.add('info-open');
+    if (overlay) overlay.classList.add('overlay-open');
+  });
+
+  // Support desktop trigger drawers for "Let's Talk" buttons when screen is mobile
+  $(document).on('click', '.contact-drawer-trigger', function (e) {
+    if (window.innerWidth < 576) {
+      e.preventDefault();
+      setView('contact');
+      if (sideInfo) sideInfo.classList.add('info-open');
+      if (overlay) overlay.classList.add('overlay-open');
+    }
+  });
+
+  // 3. Ado-chat Trigger
+  $(document).on('click', '.mob-nav__chat-trigger', function (e) {
+    e.preventDefault();
+    setView('chat');
+    if (sideInfo) sideInfo.classList.add('info-open');
+    if (overlay) overlay.classList.add('overlay-open');
+  });
+
+  // Close handlers
+  $(document).on('click', '#side-info-close, .offcanvas-overlay', function (e) {
+    e.preventDefault();
+    closeSideInfo();
+  });
+});
 

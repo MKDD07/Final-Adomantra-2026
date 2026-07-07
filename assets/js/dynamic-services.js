@@ -54,14 +54,14 @@
       $("#breadcrumb-current").text(service.title);
       $("#service-subtitle").text(sections.hero.subtitle || "");
       $("#service-description").text(sections.hero.description || service.metaDescription);
-      $("#service-thumb-1").attr("data-bg-src", service.serviceIcon || "assets/imgs/inner/service-details/service-details-thumb1_1.jpg");
+      $("#service-thumb-1").attr("data-bg-src", service.serviceIcon || "assets/images/inner/service-details/service-details-thumb1_1.jpg");
     }
 
     // 2. Overview Section
     if (sections.overview) {
       $("#how-it-works-title").text(sections.overview.title || "How it works?");
       $("#how-it-works-description").text(sections.overview.content || "");
-      $("#service-thumb-2").attr("data-bg-src", sections.overview.image || "assets/imgs/inner/service-details/service-details-thumb1_2.jpg");
+      $("#service-thumb-2").attr("data-bg-src", sections.overview.image || "assets/images/inner/service-details/service-details-thumb1_2.jpg");
       $("#benefit-description").text(sections.overview.content || "");
 
       // Populate steps/bullets
@@ -94,7 +94,7 @@
         sections.solutions.solutions.forEach((sol) => {
           $solutionsSwiperGrid.append(`
             <div class="swiper-slide">
-              <div class="features-card effectFade fadeUp h-100">
+              <div class="features-card h-100">
                 <div class="service-details__card-number"><i class="fa-solid fa-${sol.icon || 'check-circle'} fs-2"></i></div>
                 <h5 class="service-details__card-title mb-3">${sol.title}</h5>
                 <p class="service-details__card-subtitle">${sol.description}</p>
@@ -104,15 +104,16 @@
 
         // Initialize Swiper
         new Swiper("#benefits-swiper", {
-          slidesPerView: 1,
-          spaceBetween: 30,
+          slidesPerView: "1.1",
+          spaceBetween: 20,
           loop: true,
           autoplay: { delay: 4000, disableOnInteraction: false },
           pagination: { el: "#pagination0", type: "progressbar" },
           navigation: { nextEl: "#next0", prevEl: "#prev0" },
           breakpoints: {
-            768: { slidesPerView: 2 },
-            1200: { slidesPerView: 3 }
+            768: { slidesPerView: 2},
+            1200: { slidesPerView: 3 },
+            1400: { slidesPerView: 4 }
           }
         });
       }
@@ -143,7 +144,7 @@
       <div class="process-card">
         <div class="icon"><i></i></div>
         <div class="content">
-          <h4 class="title fw-semibold mb-3"></h4>
+          <h4 class="title mb-3"></h4>
           <p class="text text-secondary"></p>
         </div>
         <div class="bot">
@@ -171,9 +172,24 @@
 
     // 3. IMPORTANT: Re-initialize or update Swiper after adding dynamic slides
     if (typeof Swiper !== 'undefined') {
-      const swiperElement = document.querySelector('.tf-swiper');
-      if (swiperElement && swiperElement.swiper) {
-        swiperElement.swiper.update();
+      const swiperElement = document.querySelector('.process-slide .tf-swiper');
+      if (swiperElement) {
+        if (swiperElement.swiper) {
+          swiperElement.swiper.destroy(true, true);
+        }
+        new Swiper(swiperElement, {
+          slidesPerView: "1.1",
+          spaceBetween: 20,
+          loop: false,
+          navigation: {
+            nextEl: '.process-slide .next-2, .group-btn-slider .next-2',
+            prevEl: '.process-slide .prev-2, .group-btn-slider .prev-2',
+          },
+          breakpoints: {
+            768: { slidesPerView: 2, spaceBetween: 24 },
+            1200: { slidesPerView: 3, spaceBetween: 24 }
+          }
+        });
       }
     }
     // 5. Industries Section
@@ -183,7 +199,7 @@
         $industriesWrap.empty();
         const industries = sections.industries.industries || [];
         industries.forEach(industry => {
-          $industriesWrap.append(`<a href="#" class="tags-item fw-semibold">${industry}</a>`);
+          $industriesWrap.append(`<a href="#" class="tags-item">${industry}</a>`);
         });
       }
     }
@@ -193,7 +209,7 @@
       $("#faq-section").show();
       const $faqAccordion = $("#service-faq-accordion");
       const $faqTitle = $("#faq-title");
-      $faqTitle.html(sections.faq.title || "Frequently Asked Questions");
+      $faqTitle.html("FAQs");
 
       $faqAccordion.empty();
       sections.faq.faqs.forEach((faq, index) => {
@@ -201,7 +217,7 @@
         $faqAccordion.append(`
           <div class="accordion-items mb-3">
             <h2 class="accordion-header">
-              <button class="ado-faq-trigger w-100 d-flex justify-content-between align-items-center ${index !== 0 ? "collapsed" : ""}"
+              <button class="ado-faq-trigger w-100 fl justify-content-between align-items-center ${index !== 0 ? "collapsed" : ""}"
                 type="button" data-bs-toggle="collapse" data-bs-target="#${id}"
                 aria-expanded="${index === 0 ? "true" : "false"}" aria-controls="${id}">
                 <span>${faq.question}</span>
@@ -209,7 +225,7 @@
               </button>
             </h2>
             <div id="${id}" class="accordion-collapse collapse ${index === 0 ? "show" : ""}" data-bs-parent="#service-faq-accordion">
-              <div class="accordion-body">${faq.answer}</div>
+              <div class="accordion-body"><p>${faq.answer}</p></div>
             </div>
           </div>`);
       });
@@ -266,13 +282,13 @@
 
       const html = `
         <div class="swiper-slide">
-          <div class="features-item wow fadeInUp h-410 mb-3 p-5 d-flex flex-column justify-content-between" 
+          <div class="features-card h-410 mb-3 fl f-col f-jcsb" 
                data-wow-delay=".${2 + index}s" 
                style="background: ${style.bg}; border: none; position: relative; overflow: hidden; border-radius: 24px;">
             <div style="position: relative; z-index: 2;">
               <h3 class="service-details__content-title white mb-4 fs-4 ${titleColorClass}">${service.title}</h3>
               <p class="${textColorClass} opacity-75 mb-4" style="font-size: 15px; line-height: 1.6;">${service.metaDescription ? service.metaDescription.slice(0, 120) + "..." : ""}</p>
-              <ul class="service-2__list ${textColorClass} opacity-75 d-flex flex-column gap-2" style="list-style: none; padding: 0;">${bullets}</ul>
+              <ul class="service-2__list ${textColorClass} opacity-75 fl flex-column gap-2" style="list-style: none; padding: 0;">${bullets}</ul>
             </div>
             <div class="mt-4" style="position: relative; z-index: 2;">
               <a class="rr-btn-button2 btn-purple bg-white text-dark small py-2 px-4 rounded-pill" 
@@ -282,7 +298,7 @@
               </a>
             </div>
             <i style="font-size: 96px; opacity: 0.15; color: #fff;" 
-               class="position-absolute bottom-0 end-0 mb-4 me-3 ${service.icon || 'fa-solid fa-gear'}"></i>
+               class="pa bottom-0 end-0 mb-4 me-3 ${service.icon || 'fa-solid fa-gear'}"></i>
           </div>
         </div>`;
 
@@ -312,8 +328,6 @@
         prevEl: "#all-services-prev"
       },
       breakpoints: {
-        576: { slidesPerView: 1 },
-        768: { slidesPerView: 1 },
         1200: { slidesPerView: 1 }
       }
     });
@@ -326,10 +340,10 @@
     testimonials.forEach((tm, index) => {
       const html = `
            <div class="swiper-slide">
-          <div class="features-card mb-4 wow fadeInUp">
+          <div class="features-card p-3s m-2">
             <div class="testimonial-area4__card-items">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="testimonial-area4__card-items-mentor-items d-flex">
+            <div class="fl align-items-center justify-content-between mb-3 gap-2">
+                            <div class="testimonial-area4__card-items-mentor-items fl">
                 <div class="testimonial-area4__card-items-mentor-items-info">
                   <div class="testimonial-area4__card-items-mentor-items-info-thumb">
                     <img src="assets/images/service/services-card/service_0001.jpg" alt="${tm.name}"
@@ -341,16 +355,17 @@
                   <div class="testimonial-area4__card-items-mentor-items-info-content">
                     <h3 class="testimonial-area4__card-items-mentor-items-info-content-title">${tm.name}</h3>
                     <p class="testimonial-area4__card-items-mentor-items-info-content-subtitle">${tm.position}</p>
-                  </div>
-                </div>           
-              </div>
-              <div class="testimonial-area4__card-items-icon d-flex gap-1 mb-2 mt-4">
+                                                        <div class="testimonial-area4__card-items-icon fl">
                 <!-- Dynamic Stars (Random 4 or 5) -->
                 ${Array.from({ length: 5 }).map((_, i) => {
         const rating = tm.rating || (index % 3 === 0 ? 4 : 5); // Use JSON rating or a deterministic variation
         return `<i class="fa-solid fa-star ${i < rating ? 'text-warning' : 'text-muted opacity-25'}"></i>`;
       }).join('')}
               </div>
+                  </div>
+                </div>           
+              </div>
+
               </div>
               <div class="testimonial-area4__card-items-content">
                 <p class="testimonial-area4__card-items-content-subtitle">${tm.feedback}</p>
@@ -371,6 +386,33 @@
 
     $list.empty();
     if ($dropdownList.length) $dropdownList.empty();
+
+    const $mobileStuckList = $("#sidebar-categories-mobile-list");
+    if ($mobileStuckList.length) $mobileStuckList.empty();
+
+    // Populate Select Dropdowns (native and floating mobile selectors)
+    const $selects = $("#sidebar-categories-select, #sidebar-categories-select-mobile");
+    if ($selects.length) {
+      $selects.empty();
+      services.forEach((service) => {
+        const isActive = service.slug === activeSlug;
+        const option = `<option value="${service.slug}" ${isActive ? "selected" : ""}>${service.title}</option>`;
+        $selects.append(option);
+      });
+      
+      // Handle change event to navigate
+      $selects.off("change").on("change", function () {
+        const slug = $(this).val();
+        if (slug) {
+          window.location.href = `service-details.html?service=${slug}`;
+        }
+      });
+      
+      // Trigger niceSelect update if plugin is initialized
+      if ($.fn.niceSelect) {
+        $selects.niceSelect('update');
+      }
+    }
 
     services.forEach((service) => {
       const isActive = service.slug === activeSlug;
@@ -400,6 +442,18 @@
             </a>
           </li>`);
         $dropdownList.append(dropdownItem);
+      }
+
+      // Populate Stuck Mobile List
+      if ($mobileStuckList.length) {
+        const mobileStuckLi = $(`
+          <li class="${isActive ? "active" : ""}">
+            <a href="service-details.html?service=${service.slug}">
+              <span class="stuck-cat-icon"><i class="${icon}"></i></span>
+              <span class="stuck-cat-label">${service.title}</span>
+            </a>
+          </li>`);
+        $mobileStuckList.append(mobileStuckLi);
       }
     });
 

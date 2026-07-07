@@ -1711,6 +1711,105 @@ section {
   z-index: 20;
 }
 
+/* Dynamic loader text styles with linear gradient */
+.loader-dynamic-text {
+  font-family: var(--font_google_sans_flex), sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 40px;
+  background: linear-gradient(90deg, var(--primary-color, #1257a2) 0%, var(--fire, #ff4b2b) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0;
+  transform: translateY(10px);
+  min-height: 40px;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  z-index: 5;
+}
+
+/* Premium Staggered Curtain Loader & Glowing Rings */
+.loader-panels-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 1;
+}
+
+.loader-panel {
+  flex: 1;
+  height: 100%;
+  background: var(--primary-color, #1257a2); /* primary color background */
+  transform-origin: top;
+}
+
+.loader-content-premium {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.loader-ring-wrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: var(--primary-color, #1257a2);
+  border-bottom-color: var(--fire, #ff4b2b);
+  filter: drop-shadow(0 0 15px rgba(18, 87, 162, 0.45));
+}
+
+.loader-ring.inner {
+  width: 80%;
+  height: 80%;
+  border-top-color: var(--fire, #ff4b2b);
+  border-bottom-color: var(--primary-color, #1257a2);
+  filter: drop-shadow(0 0 15px rgba(255, 75, 43, 0.45));
+}
+
+.loader-percent-premium {
+  font-size: var(--text-2xl);
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  line-height: 1;
+  background: linear-gradient(135deg, #ffffff 0%, #a2a2a2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+
+.loader-subtitle-premium {
+  font-family: var(--font_google_sans_flex), sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 8px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
 @media only screen and (max-width: 767px) {
   .loader-wrap .loader-wrap-heading .load-text {
     font-size: 50px;
@@ -3963,30 +4062,30 @@ section {
   color: var(--natural-100);
 }
 
-.header-area-2 .header-area__inner {
+.header .header-area__inner {
   border-radius: var(--sp-1);
   background: rgba(255, 255, 255, 0.04);
   -webkit-backdrop-filter: blur(10.25px);
   backdrop-filter: blur(10.25px);
 }
 
-.header-area-2 .main-menu ul.dp-menu li {
+.header .main-menu ul.dp-menu li {
   position: relative;
   padding: 0 25px;
 }
 
-.header-area-2 .main-menu ul.dp-menu li:hover>a {
+.header .main-menu ul.dp-menu li:hover>a {
   color: var(--green);
   background-color: transparent;
 }
 
-.header-area-2 .main-menu ul.dp-menu li:hover>ul {
+.header .main-menu ul.dp-menu li:hover>ul {
   opacity: 1;
   transform: none !important;
   pointer-events: all;
 }
 
-.header-area-2 .main-menu ul.dp-menu li a {
+.header .main-menu ul.dp-menu li a {
   font-size: var(--text-sm);
   font-weight: var(--font-product-weight);
   color: var(--primary-color);
@@ -3996,31 +4095,31 @@ section {
   text-transform: capitalize;
 }
 
-.header-area-2 .main-menu ul.dp-menu li a:hover {
+.header .main-menu ul.dp-menu li a:hover {
   letter-spacing: 0.5px;
 }
 
-.header-area-2 .main-menu ul.dp-menu li a:after {
+.header .main-menu ul.dp-menu li a:after {
   transform: rotate(-90deg);
   margin-left: auto;
 }
 
-.header-area-2 .main-menu>ul {
+.header .main-menu>ul {
   display: flex;
 }
 
-.header-area-2 .navigation {
+.header .navigation {
   padding: 0 40px;
   background: white;
   color: var(--primary-color);
   border-radius: var(--sp-4);
 }
 
-.header-area-2 .main-menu>ul>li:hover>a {
+.header .main-menu>ul>li:hover>a {
   color: var(--green);
 }
 
-.header-area-2 .main-menu li a {
+.header .main-menu li a {
   font-size: var(--text-sm);
   font-weight: var(--font-body-weight);
   padding: 24px;
@@ -4029,12 +4128,12 @@ section {
 }
 
 @media only screen and (max-width: 1399px) {
-  .header-area-2 .main-menu li a {
+  .header .main-menu li a {
     padding: 29px 10px;
   }
 }
 
-.header-area-2 .main-menu li a:hover {
+.header .main-menu li a:hover {
   color: var(--green);
 }
 
@@ -29692,7 +29791,7 @@ body {
 :root {
   --natural-100: #ffffff;
   --black: #000000;
-  --primary: #09090B;
+  --primary: var(--neutral-800);
   --secondary: #71717A;
   --brand: #fd3a25;
   --neutral-50: #FAFAFA;
@@ -29705,7 +29804,7 @@ body {
   --neutral-700: #3F3F46;
   --neutral-800: #27272A;
   --neutral-900: #18181B;
-  --neutral-950: #09090B;
+  --neutral-950: var(--neutral-800);
 }
 
 /* --- Typography & Gradients --- */
@@ -29722,7 +29821,7 @@ body {
 }
 
 .text-gradient-3 {
-  background: linear-gradient(90deg, #09090B 0%, #71717A 100%);
+  background: linear-gradient(90deg, var(--neutral-800) 0%, #71717A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -59,6 +59,11 @@
         renderRelatedSlider(data, caseStudy.slug);
         initCirclesGSAP();
         initGSAPAnimations();
+
+        // Trigger mobile animations after all dynamic content is rendered
+        if (window.initMobileAnimations) {
+          window.initMobileAnimations();
+        }
       }
     } catch (error) {
       console.error("Error loading case study details:", error);
@@ -198,7 +203,7 @@
     cs.kpis.forEach((kpi, idx) => {
       const highlightClass = idx === 0 ? "highlight" : "";
       kpiHtml += `
-        <div class="pricing-item grc-4 p-30 w-100 fl f-jcsb f-aic ${highlightClass}">
+        <div class="m-anim-alternate pricing-item grc-4 p-30 w-100 fl f-jcsb f-aic ${highlightClass}">
         <div>
                     <label class="kpi-label">${kpi.label}</label>
 
@@ -210,7 +215,7 @@
     });
 
     $el.html(`
-      <header class="cs-hero-section container rr-container-1800">
+      <header class="cs-hero-section">
         <div class="fl f-jcsb f-aie my-2">
           <div class="cs-meta-upper w-100">
             <span class="cs-badge badge-primary">${cs.badge}</span>
@@ -218,7 +223,7 @@
           </div>
         </div>
         <div class="grc">
-          <div class="grc-6 p-30 cs-header-card">
+          <div class="grc-6 p-30 mobile block cs-header-card">
             <h2 class="title-cs" style="--color-white: var(--neutral-100) !important;">Summary</h2>
             <p class="cs-lead-paragraph">${cs.summary}</p>
           </div>
@@ -346,7 +351,7 @@
       let cleanTitle = title.replace(/\s*\([^)]+\)/g, "").replace(/:\s*<\/strong>$/, "</strong>");
 
       return `
-        <div class="pr blue-card border-radius-12 cursor-pointer" onclick="document.getElementById('comp-detail-${idx + 1}').scrollIntoView({ behavior: 'smooth' })">
+        <div class="pr blue-card border-radius-12 cursor-pointer m-anim-fade-up" onclick="document.getElementById('comp-detail-${idx + 1}').scrollIntoView({ behavior: 'smooth' })">
           <div class="d-flex align-items-center w-100 gap-3">
             <div class="flex-grow-1">
               <h5>${cleanTitle}</h5>
@@ -359,12 +364,12 @@
 
     // Map baseline benchmark items into horizontal bar graphs
     let benchmarkHtml = cs.clientOverview.dataBox2.items.map(item => {
-      const progress = typeof item.progress !== "undefined" ? item.progress : 20;
+      const progress = typeof item.progress !== "undefined" ? item.progress : 80;
       const hexColors = ["#e63946", "#e76f51", "#f4a261", "#e9c46a", "#a7c957", "#52b788", "#38b000"];
       const colorIndex = Math.min(Math.floor((progress / 100) * hexColors.length), hexColors.length - 1);
       const color = hexColors[colorIndex >= 0 ? colorIndex : 0];
       return `
-        <div class="mb-3 pr">
+        <div class="m-anim-fold-away  mb-3 pr">
           <div class="d-flex justify-content-between text-muted small mb-1">
             <span>${item.label}</span>
             <span class="vertical-text mr-4">${item.value}</span>
@@ -415,7 +420,7 @@
       const displayName = cat.name.split(" (")[0];
 
       return `
-        <div class="grc-4 audit-pricing-card state-solution effectFade fadeRotateX" data-delay="${0.1 * (idx + 1)}">
+        <div class="grc-4 audit-pricing-card m-anim-helix-out state-solution" data-delay="${0.1 * (idx + 1)}">
           <div class="top d-flex gap-12 align-items-center">
             <div class="d-flex gap-8 align-items-center">
               <i class="fa-solid ${config.icon} fs-24"></i>
@@ -439,7 +444,7 @@
 
     $el.html(`
       <section class="audit-section-container">
-        <div class="audit-wind-doodles">
+        <div class="audit-wind-doodles d-none d-md-block">
           <svg viewBox="0 0 1200 400" preserveAspectRatio="none" class="wind-svg">
             <path class="wind-path wind-path-1" d="M -50,180 C 200,60 500,340 800,180 C 1100,20 1300,150 1400,180" fill="none" stroke="rgba(18, 87, 162, 0.15)" stroke-width="2" stroke-dasharray="150, 300" />
             <path class="wind-path wind-path-2" d="M -50,100 C 300,280 650,40 950,220 C 1150,110 1300,140 1400,100" fill="none" stroke="rgba(228, 236, 247, 0.22)" stroke-width="1.5" stroke-dasharray="100, 200" />
@@ -516,7 +521,7 @@
       const bgGradient = bgGradients[idx % bgGradients.length];
 
       return `
-        <div class="grc-4">
+        <div class="grc-4 m-anim-scale-shrink">
           <article class="challenge-card features-card h-100" style="--accent-color: ${accentColor}; background: ${bgGradient};">
             <span class="challenge-bg-number">${card.num}</span>
             <div class="challenge-header mb-3">
@@ -531,7 +536,7 @@
     }).join("");
 
     $el.html(`
-      <section class="cs-challenge-section container rr-container-1800">
+      <section class="cs-challenge-section">
         <div class="section-header text-center mb-40">
           <h2 class="title" style="--color-white: var(--neutral-100) !important;">${cs.challenges.title}</h2>
           <p class="text-muted mx-auto mb-0" style="max-width: 720px; font-size: var(--text-base);">${cs.challenges.description}</p>
@@ -561,7 +566,7 @@ function renderDetailedParagraph(cs) {
   $el.append('<div class="grc-1"></div>');
   $el.append(`
     <div class="cs-absolute-sidebar grc-2">
-      <nav class="cs-index-nav">
+      <nav class="cs-index-nav d-none d-lg-block">
         <h5 class="mb-3">Index</h5>
         <ul class="list-unstyled" id="cs-toc-list"></ul>
       </nav>
@@ -611,7 +616,7 @@ function renderFinalTakeawayParagraph(cs) {
     const quoteHtml = `
     <div class="grc-8 d-none d-lg-block"><img src="assets/images/case-studies/image-card.png" width="300"></div>
       <div class="grc-4 mt-5 pt-4">
-        <blockquote class="features-card">
+        <blockquote class="features-card m-anim-squeeze ">
           <div class="quote-icon-bg" style="position: absolute; right: 20px; top: 10px; font-size: 100px; opacity: 0.04; color: var(--primary-color); pointer-events: none; font-family: serif; font-weight: bold; line-height: 1;">&rdquo;</div>
           <p class="quote-body" style="font-size: var(--text-xl); font-style: italic; color: var(--neutral-850); line-height: 1.8; margin-bottom: 24px; position: relative; z-index: 2;">${cs.results.quote.body}</p>
           <footer class="quote-footer d-flex align-items-center gap-3" style="position: relative; z-index: 2;">
@@ -658,7 +663,7 @@ function renderFinalTakeawayParagraph(cs) {
     }).join("");
 
     $el.html(`
-      <section class="cs-strategy-section container rr-container-1800">
+      <section class="cs-strategy-section">
         <div class="strategy-layout">
           <!-- Left Column: Sticky Title & Progress Tracker -->
           <div class="strategy-left-col">
@@ -710,7 +715,7 @@ function renderFinalTakeawayParagraph(cs) {
       }).join("");
 
       return `
-        <div class="week-card-stacked" id="week-card-${idx}">
+        <div class="week-card-stacked m-anim-zoom-snap" id="week-card-${idx}">
           <span class="overlay"></span>
           <div class="week-card-glow"></div>
           <div class="week-card-header-right">
@@ -725,7 +730,7 @@ function renderFinalTakeawayParagraph(cs) {
     }).join("");
 
     $el.html(`
-      <section class="weekly-checklist-container container rr-container-1800">
+      <section class="weekly-checklist-container">
         <div class="weekly-plan-layout">
           <!-- Left Column: Sticky Title -->
           <div class="weekly-plan-left-col">
@@ -781,7 +786,7 @@ function renderFinalTakeawayParagraph(cs) {
 
       if (mapping) {
         chartCardsHtml += `
-          <div class="grc-4">
+          <div class="grc-4 m-anim-blur-fade">
             <div class="chart-card features-card">
               <div class="d-flex justify-content-between align-items-center mb-4">
                 <h5 class="text-dark mb-0">${metricName}</h5>
@@ -816,7 +821,7 @@ function renderFinalTakeawayParagraph(cs) {
       } else {
         // Render text indicators for qualitative/rank metrics
         chartCardsHtml += `
-          <div class="grc-4">
+          <div class="grc-4 m-anim-blur-fade">
             <div class="chart-card features-card centered">
               <div class="d-flex justify-content-between align-items-center mb-4">
                 <h5 class="text-dark mb-0">${metricName}</h5>
@@ -867,11 +872,12 @@ function renderFinalTakeawayParagraph(cs) {
         bodyText = bodyText.substring(1).trim();
       }
       
-      const translateYVal = idx === 1 ? "50px" : "15px";
-
+      const translateYVal = window.innerWidth < 576
+        ? "15px"
+        : idx === 1 ? "50px" : "15px";
       return `
         <div class="grc-4 takeaway-card-col-${idx}" style="transform: translateY(${translateYVal});">
-          <div class="takeaway-card features-card h-100 p-4">
+          <div class="features-card h-100 p-4 m-anim-fold-away">
             <div class="d-flex align-items-center gap-3 mb-3">
               <h5>${title}</h5>
             </div>
@@ -882,7 +888,7 @@ function renderFinalTakeawayParagraph(cs) {
 
     $el.html(`
       <footer class="cs-summary-footer container rr-container-1800 mb-5" style="background: transparent; padding: 0; position: relative;">
-        <div class="section-header text-center mb-5">
+        <div class="section-header text-center mb-0 mb-md-5">
           <h2 class="title" style="--color-white: var(--neutral-100) !important;">${cs.summaryFooter.title}</h2>
         </div>
 
@@ -894,7 +900,7 @@ function renderFinalTakeawayParagraph(cs) {
         </div>
 
         <!-- SVG Connecting Lines -->
-        <div class="takeaway-flow-svg-wrap" style="position: absolute; top: 260px; left: 0; width: 100%; height: 180px; z-index: 1; pointer-events: none;">
+        <div class="takeaway-flow-svg-wrap d-none d-md-block" style="position: absolute; top: 260px; left: 0; width: 100%; height: 180px; z-index: 1; pointer-events: none;">
           <svg viewBox="0 0 1200 180" preserveAspectRatio="none" style="width: 100%; height: 100%;">
             <defs>
               <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -912,7 +918,7 @@ function renderFinalTakeawayParagraph(cs) {
           </svg>
         </div>
 
-        <div class="grc" style="position: relative; z-index: 5; margin-top: 132px;">
+        <div class="grc pr z-5 takeaway-card" style="margin-top: 130px">
           ${cardsHtml}
         </div>
       </footer>`);
@@ -959,7 +965,7 @@ function renderFinalTakeawayParagraph(cs) {
       <section class="related-cases-slider-section py-5 my-5">
         <div class="row gy-5 fl justify-content-center " style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
           <div class="text-center text-lg-start fl align-items-start f-col mb-40 w-100">
-            <span class="section__subtitle d-none d-md-flex wow fadeInUp" data-wow-delay=".2s"><span></span>Success Stories</span>
+            <span class="section__subtitle d-none d-md-flex " data-wow-delay=".2s"><span></span>Success Stories</span>
             <div class="fl justify-content-between w-100">
               <h2 class="title text-right wow mt-4 mb-4" data-wow-delay="0.3s">Explore Other <r>Case Studies</r></h2>
               <div class="testimonial-area4__controls d-none d-md-flex">
@@ -971,7 +977,7 @@ function renderFinalTakeawayParagraph(cs) {
                 </div>
               </div>
             </div>
-            <p class="d-none d-md-block wow fadeInUp" data-wow-delay="0.4s">See how we help businesses succeed through real experiences and results.</p>
+            <p class="d-none d-md-block " data-wow-delay="0.4s">See how we help businesses succeed through real experiences and results.</p>
           </div>
         </div>
         <div class="swiper related-cases-swiper" style="overflow: hidden; padding-bottom: 20px;">
@@ -1057,19 +1063,19 @@ function renderFinalTakeawayParagraph(cs) {
       }
     });
 
-    // Pin the left sticky content column using ScrollTrigger
-    if ($(".sticky-weekly-content").length && $(".weekly-plan-layout").length) {
+    // Pin the left sticky content column using ScrollTrigger (desktop only)
+    if (window.innerWidth >= 576 && $(".sticky-weekly-content").length && $(".weekly-plan-layout").length) {
       ScrollTrigger.create({
         trigger: ".weekly-plan-layout",
         start: "top 120px",
-        end: "bottom bottom-=450px", // Pin until the layout ends (offset by card height)
+        end: "bottom bottom-=450px",
         pin: ".sticky-weekly-content",
         pinSpacing: false
       });
     }
 
-    // Stacking timeline for weekly checklist cards
-    if ($(".week-card-stacked").length) {
+    // Stacking timeline for weekly checklist cards (desktop only – mobile uses m-anim-alternate)
+    if ($(".week-card-stacked").length && window.innerWidth >= 576) {
       const stackCards = gsap.utils.toArray(".week-card-stacked");
       stackCards.forEach((card, index) => {
         // Pin this card when it hits top 160px
@@ -1210,20 +1216,22 @@ function renderFinalTakeawayParagraph(cs) {
       }
     });
 
-    // Animate the approach circle cards on scroll
-    gsap.from(".approach-circle-block", {
-      opacity: 0,
-      y: 40,
-      scale: 0.95,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".circles-grid",
-        start: "top 85%",
-        toggleActions: "play none none reverse"
-      }
-    });
+    // Animate the approach circle cards on scroll (desktop only, mobile is pinned/scrubbed)
+    if (window.innerWidth >= 576) {
+      gsap.from(".approach-circle-block", {
+        opacity: 0,
+        y: 40,
+        scale: 0.95,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".circles-grid",
+          start: "top 85%",
+          toggleActions: "play none none reverse"
+        }
+      });
+    }
 
     // Strategy timeline ScrollTrigger animations
     if ($(".strategy-card").length && $(".strategy-progress-tracker").length) {

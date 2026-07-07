@@ -617,7 +617,7 @@ function initCapabilityHover() {
 // ============================================================================
 function initHeaderAnimation() {
     const announcementBar = document.querySelector(".announcement-bar-wrapper");
-    const header = document.querySelector(".header-area-2");
+    const header = document.querySelector(".header");
 
     if (!header) return;
 
@@ -864,27 +864,25 @@ function initParallaxSlider() {
     gsap.registerPlugin(ScrollTrigger);
 
     tracks.forEach((track) => {
-        const trackWrapper = track.querySelectorAll(".parallax-slider");
+        const trackWrapper = track.querySelector(".parallax-slider-inner");
+        if (!trackWrapper) return;
+
         const allImgs = track.querySelectorAll(".image");
 
-        function trackWrapperWidth() {
-            let width = 0;
-            trackWrapper.forEach((el) => (width += el.offsetWidth));
-            return width;
-        }
-
         gsap.defaults({ ease: "none" });
-        const gap = window.innerWidth * 0.05;
+
+        const getScrollAmount = () => {
+            return -(trackWrapper.scrollWidth - window.innerWidth);
+        };
 
         const scrollTween = gsap.to(trackWrapper, {
-            x: () => -trackWrapperWidth() + window.innerWidth + gap,
+            x: getScrollAmount,
             scrollTrigger: {
                 trigger: track,
                 pin: true,
                 scrub: 3,
                 start: "center center",
-                end: () => "+=" + (track.scrollWidth - window.innerWidth),
-                onRefresh: (self) => self.getTween().resetTo("totalProgress", 0),
+                end: () => "+=" + (trackWrapper.scrollWidth - window.innerWidth),
                 invalidateOnRefresh: true
             }
         });
@@ -908,36 +906,7 @@ function initParallaxSlider() {
 // 22. WORKS WRAPPER 2 - Staggered box animation
 // ============================================================================
 function initWorksWrapper2() {
-    const $wrapper = $(".works-wrapper-2");
-
-    if ($wrapper.length === 0) return;
-
-    const workBoxes = $wrapper.find(".work-box");
-
-    gsap.fromTo(
-        workBoxes,
-        {
-            opacity: 0,
-            scale: 0.8,
-            y: 50,
-        },
-        {
-            opacity: 1,
-            scale: 1,
-            y: 0,
-            duration: 0.8,
-            stagger: {
-                each: 0.2,
-                from: "random",
-            },
-            scrollTrigger: {
-                trigger: $wrapper[0],
-                start: "top bottom",
-                end: "bottom top",
-                scrub: false,
-            },
-        }
-    );
+    // GSAP animation removed for simple grid loading
 }
 
 // ============================================================================
@@ -1053,13 +1022,34 @@ function initBreadcrumbParallax() {
 
     $images.each(function () {
         const img = this;
-        const triggerElement = $(img).closest('.page-title-area-inner')[0] || $(img).closest('.page-title-wrapper')[0];
+        const triggerElement =
+            $(img).closest('.page-title-area-inner')[0] ||
+            $(img).closest('.page-title-wrapper')[0];
+
         if (!triggerElement) return;
 
-        gsap.fromTo(img,
-            { y: -10 },
+        // Y-axis parallax
+        gsap.fromTo(
+            img,
+            { y: -30 },
             {
-                y: 10,
+                y: 30,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: triggerElement,
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true
+                }
+            }
+        );
+
+        // Scale animation
+        gsap.fromTo(
+            img,
+            { scale: 1.1 },
+            {
+                scale: 1.3,
                 ease: "none",
                 scrollTrigger: {
                     trigger: triggerElement,
@@ -1092,8 +1082,9 @@ function initFitText() {
 
         if ($(window).width() < 576) {
             $element.css("fontSize", (10 * scale) + "px");
-        } else {
+            $element.css('margin-top', $('header').outerHeight() + 40 + 'px');        } else {
             $element.css("fontSize", (4 * scale) + "px");
+             $element.css('margin-top', $('header').outerHeight() + 30 + 'px');   
         }
     }
 
@@ -1159,86 +1150,98 @@ function initResponsiveText() {
 // 26. LOADING SCREEN - GSAP loader animation
 // ============================================================================
 function initLoaderAnimation() {
-    const percentageEl = document.getElementById("percentage");
-    const logoSvgContainer = document.getElementById("loader-logo-svg");
     const loaderWrap = document.querySelector(".loader-wrap");
+    if (!loaderWrap) return;
 
-    if (!percentageEl || !logoSvgContainer || !loaderWrap) return;
+    // Inject unique premium curtain loader layout with single-stroke progress ring and center logo
+    loaderWrap.innerHTML = `
+      <div class="loader-panels-container">
+        <div class="loader-panel"></div>
+        <div class="loader-panel"></div>
+        <div class="loader-panel"></div>
+        <div class="loader-panel"></div>
+        <div class="loader-panel"></div>
+        <div class="loader-panel"></div>
+        <div class="loader-panel"></div>
+        <div class="loader-panel"></div>
+      </div>
+      <div class="loader-content-premium">
+        <div class="loader-stroke-wrapper" style="position: relative; width: 180px; height: 180px; display: flex; align-items: center; justify-content: center;">
+          <svg class="loader-stroke-svg" width="140" height="77" viewBox="0 0 95 52" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; z-index: 4;">
+            <path id="lightning" d="M22.6895 0.5H71.0957C83.7312 0.500122 93.9697 10.7437 93.9697 23.374V49.0752C93.9695 49.9077 93.2929 50.5858 92.4639 50.5859H83.0977C82.2687 50.5857 81.5921 49.9076 81.5918 49.0752V27.4658C81.5918 20.0493 75.5813 14.0382 68.1699 14.0381H56.9883V49.0752C56.988 49.9042 56.31 50.5799 55.4775 50.5801H44.8867C44.0558 50.5801 43.3811 49.906 43.3809 49.0752V14.0381H25.5889C22.285 14.0381 19.2919 15.3777 17.1318 17.543C14.9668 19.708 13.626 22.6954 13.626 26C13.626 32.6087 18.9795 37.9678 25.5889 37.9678H34.2637C35.0947 37.9678 35.7695 38.6426 35.7695 39.4736V49.0752C35.7693 49.906 35.0946 50.5801 34.2637 50.5801H22.6895C10.4337 50.5801 0.500258 40.6473 0.5 28.3916V22.6895C0.5 10.4335 10.4335 0.5 22.6895 0.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="loader-dynamic-text" id="loader-dynamic-text">Adomantra Digital</div>
+      </div>
+      <div class="loader-percent-premium" id="percentage">00%</div>
+    `;
 
-    const pathElement = logoSvgContainer.querySelector("path");
+    const percentageEl = document.getElementById("percentage");
+    const textEl = document.getElementById("loader-dynamic-text");
+    const panels = loaderWrap.querySelectorAll(".loader-panel");
+
+    // Animate via stroke dash array / offset at center (remove MorphSVG)
+    const lightningPath = document.getElementById("lightning");
+    if (lightningPath) {
+        const length = lightningPath.getTotalLength();
+        gsap.set(lightningPath, {
+            strokeDasharray: length,
+            strokeDashoffset: length
+        });
+        gsap.to(lightningPath, {
+            strokeDashoffset: 0,
+            duration: 2.0,
+            repeat: -1,
+            ease: "power2.inOut",
+            yoyo: true
+        });
+    }
+
     const masterTl = gsap.timeline({
         onComplete: () => {
-            const exitTl = gsap.timeline({
-                onComplete: () => {
-                    loaderWrap.style.display = "none";
-                    if (typeof ScrollTrigger !== "undefined") {
-                        ScrollTrigger.refresh();
-                    }
+            gsap.to(".loader-content-premium", { scale: 0.9, opacity: 0, duration: 0.4, ease: "power2.inOut" });
+            gsap.to(".loader-percent-premium", { opacity: 0, duration: 0.3, ease: "power2.inOut" });
+            gsap.to(panels, { scaleY: 0, duration: 0.6, stagger: 0.05, ease: "power4.inOut", onComplete: () => {
+                loaderWrap.style.display = "none";
+                if (typeof window.startTextAnimation === "function") {
+                    window.startTextAnimation();
                 }
-            });
-
-            // Zoom in only the loader logo (becomes large) and fade out
-            exitTl.to("#loader-logo-svg", {
-                scale: 15,
-                opacity: 0,
-                duration: 1.5,
-                ease: "power3.inOut"
-            }, 0);
-
-            // Fade out the percentage separately
-            exitTl.to("#percentage", {
-                opacity: 0,
-                duration: 1.0,
-                ease: "power2.inOut"
-            }, 0);
-
-            // Fade out the loader wrap background
-            exitTl.to(loaderWrap, {
-                opacity: 0,
-                duration: 1.2,
-                ease: "power2.inOut"
-            }, 0.3);
+            } });
         }
     });
 
-    // Percentage counter
     let count = { val: 0 };
+    let lastStage = -1;
+    const stages = [
+        { min: 0, max: 25, text: "A Leading Digital Marketing Company" },
+        { min: 26, max: 55, text: "20 Million+ Lines of Code Delivered" },
+        { min: 56, max: 80, text: "Creative Videos Crafted & Shared" },
+        { min: 81, max: 100, text: "Redefining Media with Digital Innovation" }
+    ];
+
     masterTl.to(count, {
         val: 100,
-        duration: 3.5,
+        duration: 1.5,
         ease: "power2.inOut",
         onUpdate: function () {
-            percentageEl.textContent = Math.floor(count.val);
+            const val = Math.floor(count.val);
+            if (percentageEl) percentageEl.textContent = (val < 10 ? "0" + val : val) + "%";
+
+            if (textEl) {
+                const currentStageIdx = stages.findIndex(s => val >= s.min && val <= s.max);
+                if (currentStageIdx !== -1 && currentStageIdx !== lastStage) {
+                    lastStage = currentStageIdx;
+                    const newText = stages[currentStageIdx].text;
+                    gsap.to(textEl, {
+                        opacity: 0, y: -8, duration: 0.15, onComplete: () => {
+                            textEl.textContent = newText;
+                            gsap.fromTo(textEl, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.25, ease: "power2.out" });
+                        }
+                    });
+                }
+            }
         }
     }, 0);
-
-    // SVG path animation
-    if (pathElement && pathElement.getTotalLength) {
-        const pathLength = pathElement.getTotalLength();
-
-        pathElement.style.strokeDasharray = pathLength;
-        pathElement.style.strokeDashoffset = pathLength;
-
-        masterTl.to(pathElement, {
-            strokeDashoffset: 0,
-            duration: 3.5,
-            ease: "power2.inOut"
-        }, 0);
-
-        // Fill the path with dark color when loading reaches 100%
-        masterTl.to(pathElement, {
-            fill: "var(--primary-color)",
-            duration: 0.5,
-            ease: "power2.out"
-        }, 3.5);
-
-        masterTl.to(pathElement, {
-            stroke: "var(--primary-color)",
-            opacity: 1,
-            duration: 0.5,
-            ease: "power2.out"
-        }, 3.5);
-    }
 }
 
 // ============================================================================
@@ -1299,45 +1302,47 @@ function initPageTitleTextCycle() {
 // ============================================================================
 function initAllAnimations() {
     // Text & Typography
-    initTextRevealAnimation();
-    initTextMoveAnimation();
-    initFlipTextAnimation();
-    initTitleAnimation();
-    initMaskedTextReveal();
-    initFitText();
-    initResponsiveText();
-    initPageTitleTextCycle();
+    try { initTextRevealAnimation(); } catch (e) { console.warn("initTextRevealAnimation error:", e); }
+    try { initTextMoveAnimation(); } catch (e) { console.warn("initTextMoveAnimation error:", e); }
+    try { initFlipTextAnimation(); } catch (e) { console.warn("initFlipTextAnimation error:", e); }
+    try { initTitleAnimation(); } catch (e) { console.warn("initTitleAnimation error:", e); }
+    try { initMaskedTextReveal(); } catch (e) { console.warn("initMaskedTextReveal error:", e); }
+    try { initFitText(); } catch (e) { console.warn("initFitText error:", e); }
+    try { initResponsiveText(); } catch (e) { console.warn("initResponsiveText error:", e); }
+    try { initPageTitleTextCycle(); } catch (e) { console.warn("initPageTitleTextCycle error:", e); }
 
     // Scroll Animations
-    initServiceBoxGrowth();
-    initFunfactPinning();
-    initFunfactArea2();
-    initApproachArea();
+    try { initServiceBoxGrowth(); } catch (e) { console.warn("initServiceBoxGrowth error:", e); }
+    try { initFunfactPinning(); } catch (e) { console.warn("initFunfactPinning error:", e); }
+    try { initFunfactArea2(); } catch (e) { console.warn("initFunfactArea2 error:", e); }
+    try { initApproachArea(); } catch (e) { console.warn("initApproachArea error:", e); }
     // initApproachAreaDesktop();
-    initMovingTestimonial();
-    initHorizontalScroll();
-    initParallaxSlider();
-    initWorksWrapper2();
-    initAboutArea2();
-    initServiceArea4();
-    initBreadcrumbParallax();
+    try { initMovingTestimonial(); } catch (e) { console.warn("initMovingTestimonial error:", e); }
+    try { initHorizontalScroll(); } catch (e) { console.warn("initHorizontalScroll error:", e); }
+    try { initParallaxSlider(); } catch (e) { console.warn("initParallaxSlider error:", e); }
+    try { initWorksWrapper2(); } catch (e) { console.warn("initWorksWrapper2 error:", e); }
+    try { initAboutArea2(); } catch (e) { console.warn("initAboutArea2 error:", e); }
+    try { initServiceArea4(); } catch (e) { console.warn("initServiceArea4 error:", e); }
+    try { initBreadcrumbParallax(); } catch (e) { console.warn("initBreadcrumbParallax error:", e); }
 
     // Interactive
-    initPhysicsContainer();
+    try { initPhysicsContainer(); } catch (e) { console.warn("initPhysicsContainer error:", e); }
     // initDynamicUnderline();
-    initCapabilityHover();
+    try { initCapabilityHover(); } catch (e) { console.warn("initCapabilityHover error:", e); }
 
     // Gallery
-    initGalleryFlip();
-    initGallery8Flip();
+    try { initGalleryFlip(); } catch (e) { console.warn("initGalleryFlip error:", e); }
+    try { initGallery8Flip(); } catch (e) { console.warn("initGallery8Flip error:", e); }
 
     // Other
-    initHeaderAnimation();
-    initSideToggleSvg();
-    initFunfactSwiper();
-    initHeroVideoSync();
-    initLoaderAnimation();
+    try { initHeaderAnimation(); } catch (e) { console.warn("initHeaderAnimation error:", e); }
+    try { initSideToggleSvg(); } catch (e) { console.warn("initSideToggleSvg error:", e); }
+    try { initFunfactSwiper(); } catch (e) { console.warn("initFunfactSwiper error:", e); }
+    try { initHeroVideoSync(); } catch (e) { console.warn("initHeroVideoSync error:", e); }
 }
+
+// Call loader animation immediately to prevent the default HTML loader from showing
+initLoaderAnimation();
 
 // ============================================================================
 // INITIALIZATION
@@ -1462,7 +1467,7 @@ function initDynamicBreadcrumb() {
                 // Home item with SVG icon
                 html += `
                     <li class="service-breadcrumb__item fl">
-                      <a href="${item.href}" class="service-breadcrumb__link" style="width: 24px; display: flex; align-items: center;">
+                      <a href="${item.href}" class="service-breadcrumb__link" aria-label="Home" style="width: 24px; display: flex; align-items: center;">
                         <svg class="icon icon-home icon-sm" viewBox="0 0 20 21" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg" role="presentation" style="width: 20px; height: 20px;">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M18.333 14.667v-3.713c0-1.355 0-2.033-.165-2.66a5 5 0 0 0-.818-1.702c-.387-.521-.916-.945-1.974-1.791l-.378-.303h0c-1.784-1.427-2.676-2.14-3.665-2.414a5 5 0 0 0-2.666 0c-.99.274-1.881.987-3.665 2.414h0l-.378.303c-1.058.846-1.587 1.27-1.974 1.79a5 5 0 0 0-.818 1.703c-.165.627-.165 1.305-.165 2.66v3.713a4.167 4.167 0 0 0 4.166 4.166c.92 0 1.667-.746 1.667-1.666v-3.334a2.5 2.5 0 0 1 5 0v3.334c0 .92.746 1.666 1.667 1.666a4.167 4.167 0 0 0 4.166-4.166Z">
                           </path>
@@ -1579,3 +1584,194 @@ function initCaseStudiesSwiper() {
     handleResize();
     window.addEventListener('resize', handleResize);
 }
+// ============================================================================
+// 29. Policy Headings Decoration
+// ============================================================================
+document.querySelectorAll(".policy-container h2, .policy-container h3").forEach(el => {
+  // Normalize internal whitespace and newlines, not just outer trim
+  const text = el.textContent.replace(/\s+/g, ' ').trim();
+
+  // Match the number, allow optional trailing dot/spaces, then capture the title
+  const match = text.match(/^(\d+(?:\.\d+)*)\.?\s+(.*)$/);
+
+  if (!match) return;
+
+  const number = match[1]; // keeps: 2, 2.1, 2.1.1
+  const title = match[2];
+
+  el.innerHTML = `
+    <span class="policy-num">${number}</span>
+    <span class="policy-text">${title}</span>
+  `;
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.policy-container').forEach(container => {
+        // Build the layout and TOC only if there are h2 elements to index
+        const h2s = container.querySelectorAll('h2');
+        if (h2s.length > 0) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'grc';
+
+            const mainCol = document.createElement('div');
+            mainCol.className = 'grc-7 policy-text-content';
+
+            // Move existing children of container into mainCol
+            while (container.firstChild) {
+                mainCol.appendChild(container.firstChild);
+            }
+
+            // Create sidebar column
+            const emptyCol = document.createElement('div');
+            emptyCol.className = 'grc-1';
+            const sidebarCol = document.createElement('div');
+            sidebarCol.className = 'cs-absolute-sidebar grc-4';
+            sidebarCol.innerHTML = `
+              <nav class="cs-index-nav d-none d-lg-block">
+                <h5 class="mb-3">Table of Contents</h5>
+                <ul class="list-unstyled" id="cs-toc-list"></ul>
+              </nav>
+            `;
+
+            wrapper.appendChild(mainCol);
+            wrapper.appendChild(emptyCol);
+            wrapper.appendChild(sidebarCol);
+            container.appendChild(wrapper);
+
+            // Populate the TOC
+            const list = sidebarCol.querySelector('#cs-toc-list');
+            if (list) {
+                const sections = [];
+                const updatedH2s = mainCol.querySelectorAll('h2');
+                updatedH2s.forEach((h2, idx) => {
+                    let id = h2.id;
+                    if (!id) {
+                        id = 'policy-sec-' + (idx + 1);
+                        h2.id = id;
+                    }
+
+                    const labelSpan = h2.querySelector('.policy-text');
+                    const label = labelSpan ? labelSpan.textContent.trim() : h2.textContent.replace(/\s+/g, ' ').trim();
+
+                    sections.push({ id: id, label: label });
+
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = '#' + id;
+                    a.className = 'toc-link';
+                    a.textContent = label;
+                    li.appendChild(a);
+                    list.appendChild(li);
+                });
+
+                // Smooth scroll handler
+                $(list).find('.toc-link').off('click').on('click', function (e) {
+                    e.preventDefault();
+                    const target = $(this).attr('href');
+                    if ($(target).length) {
+                        $('html, body').animate({
+                            scrollTop: $(target).offset().top - 100
+                        }, 600);
+                    }
+                });
+
+                // ScrollSpy to highlight active section
+                $(window).off('scroll.policy-toc').on('scroll.policy-toc', function () {
+                    const scrollPos = $(document).scrollTop();
+                    let activeId = null;
+
+                    for (let i = 0; i < sections.length; i++) {
+                        const sec = sections[i];
+                        const $el = $('#' + sec.id);
+                        if ($el.length) {
+                            const top = $el.offset().top - 120;
+                            if (scrollPos >= top) {
+                                activeId = sec.id;
+                            } else {
+                                break;
+                            }
+                        }
+                    }
+
+                    if (activeId) {
+                        $(list).find('.toc-link').removeClass('active');
+                        $(list).find(`.toc-link[href="#${activeId}"]`).addClass('active');
+                    }
+                });
+                
+                // Trigger initial scroll Spy
+                $(window).trigger('scroll.policy-toc');
+            }
+            
+            // Validate heading hierarchy on the new mainCol container
+            validateHeadingHierarchy(mainCol);
+        } else {
+            validateHeadingHierarchy(container);
+        }
+    });
+});
+// ============================================================================
+// 29. Heading Hierarchy Checker
+// ============================================================================
+function validateHeadingHierarchy(container) {
+    const headings = container.querySelectorAll('h1,h2,h3,h4,h5,h6');
+
+    headings.forEach(el => {
+        el.classList.remove('heading-error');
+        el.removeAttribute('data-error');
+    });
+
+    let previousLevel = null;
+
+    headings.forEach(heading => {
+        const currentLevel = Number(heading.tagName.substring(1));
+
+        if (previousLevel !== null) {
+            const invalidJump = currentLevel > previousLevel + 1;
+
+            if (invalidJump) {
+                heading.classList.add('heading-error');
+                heading.setAttribute(
+                    'data-error',
+                    `Expected H${previousLevel + 1} before ${heading.tagName}`
+                );
+            }
+        }
+
+        previousLevel = currentLevel;
+    });
+}
+
+  /* ── Fallback placeholder rendered on image error ── */
+  const icons = [
+    // 5 rotating SVG mark shapes
+    `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 8v8M8 12h8"/></svg>`,
+    `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`,
+    `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`,
+    `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+    `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="M21 21l-4.35-4.35"/></svg>`,
+  ];
+ 
+  window.placeholderHTML = function(n) {
+    const icon = icons[(n - 1) % icons.length];
+    return `<div class="partner-placeholder">
+      <div class="partner-placeholder__icon">${icon}</div>
+      <span class="partner-placeholder__name">Logoipsum</span>
+    </div>`;
+  };
+ 
+  /* ── Swiper infinite auto-scroll ── */
+  new Swiper('.partners-swiper', {
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    speed: 4500,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    freeMode: {
+      enabled: true,
+      momentum: false,
+    },
+  });
